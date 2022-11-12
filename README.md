@@ -2,7 +2,7 @@
 Operational data for [vmst.io](https://vmst.io)
 
 ## Description
-vmst.io is an English speaking Mastodon instance that is open to anyone who is interested in interacting with respectful people who are passionate about what we do. Geeks and nerds of every type and stripe.
+[vmst.io](https://vmst.io) is an English speaking Mastodon instance that is open to anyone who is interested in interacting with respectful people who are passionate about what we do. Geeks and nerds of every type and stripe.
 
 ## Rules
 - No harassment, dogpiling or doxxing of other users.
@@ -15,3 +15,8 @@ vmst.io is an English speaking Mastodon instance that is open to anyone who is i
 
 ## Custom Emoji
 The full list of currently available emoji on our instance is at [https://emojos.in/vmst.io](https://emojos.in/vmst.io)
+
+## Community Monitoring
+- [FediDB Entry](https://fedidb.org/network/instance?domain=vmst.io)
+- [Fediverse Observer Entry](https://fediverse.observer/vmst.io)
+- [the federation Entry](https://the-federation.info/node/vmst.io)
