@@ -363,3 +363,8 @@ mirr0r.city
 vuju.com
 calobar.club
 berserker.town
+fans.sonichu.com
+mastodon.se
+privex.social
+elekk.xyz
+pinksheep.org
