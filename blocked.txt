@@ -7,9 +7,11 @@
 80percent.social
 accela.online
 afterlife.masto.host
+akko.saturno.black
 albin.social
 alive.bar
 alongtheray.social
+amala.schwartzwelt.xyz
 angrytoday.com
 animalliberation.social
 anime.website
@@ -28,6 +30,7 @@ beefyboys.club
 beefyboys.win
 beehub.org
 benis.freemyip.com
+berserker.town
 bestgore.fun
 bigguys.club
 bikeshed.party
@@ -39,6 +42,7 @@ brighteon.social
 buckeye.social
 buildthatwallandmakeamericagreatagain.trumpislovetrumpis.life
 cachapa.moe
+calobar.club
 cawfee.club
 childpawn.shop
 cliterati.club
@@ -50,6 +54,7 @@ coom.club
 counter.fedi.live
 crucible.world
 crypto-group-buy.com
+cryptodon.lol
 cum.desupost.soy
 cum.salon
 cunny.finance
@@ -69,12 +74,16 @@ djitter.com
 dlf.social
 dobbs.town
 eientei.org
+eientei.org
+elekk.xyz
 etiketi.de
 eveningzoo.club
 exited.eu
+fans.sonichu.com
 fedi.absturztau.be
 fedi.anti-degeneracy.club
 fedi.app
+fedi.intkos.link
 fedi.murky.club
 fedichive.tk
 feminism.lgbt
@@ -133,7 +142,6 @@ hunk.city
 husk.site
 iddqd.social
 ihatebeinga.live
-iljp.masto.host
 inex.rocks
 is.badat.dev
 itmslaves.com
@@ -170,6 +178,7 @@ masochi.st
 masthead.social
 mastodon.bgzashtita.es
 mastodon.city
+mastodon.se
 mastodon.someotherguy.xyz
 mastodon.starrevolution.org
 memehub.eu
@@ -177,11 +186,13 @@ mentality.rip
 meta-tube.de
 midnightride.rs
 milker.cafe
+mirr0r.city
 mobile.co
 mobile.tmediatech.io
 mstdn.foxfam.club
 mstdn.jp
 mu.zaitcev.nu
+mugicha.club
 mulmeyun.church
 nazi.social
 neckbeard.xyz
@@ -192,7 +203,9 @@ nicecrew.digital
 nnia.space
 NoAgenda.social
 noagendasocial.com
+nobodyhasthe.biz
 nomoresha.me
+novoa.nagoya
 ns.auction
 oneway.masto.host
 ost.social
@@ -202,6 +215,7 @@ paypig.org
 pedo.school
 peertube.sharivegas.com
 pieville.net
+pinksheep.org
 pl.765racing.com
 pl.anon-kenkai.com
 pl.i2p.rocks
@@ -217,6 +231,7 @@ pl.wysteriary.art
 pleroma.comfy.moe
 pleroma.cucked.me
 pleroma.eientei.org
+pleroma.elementality.org
 pleroma.kitsunemimi.club
 pleroma.kiwifarms.net
 pleroma.miria.love
@@ -235,6 +250,7 @@ porntoot.com
 posting.lolicon.rocks
 preteengirls.biz
 princess.cat
+privex.social
 psimon.world
 pt.pube.tk
 qoto.org
@@ -258,6 +274,7 @@ s.sneak.berlin
 sad.cab
 santsenques.cat
 sayit.world
+seal.cafe
 sealion.club
 shigusegubu.club
 shitposter.club
@@ -304,6 +321,7 @@ strelizia.net
 stupid.moe
 sylveon.club
 take.iteasy.club
+tastingtraffic.net
 tcode.kenfm.de
 terrible.place
 the.hedgehoghunter.club
@@ -329,8 +347,10 @@ varishangout.net
 video.nobodyhasthe.biz
 videos.lukesmith.xyz
 videos.martinezperspective.org
+vuju.com
 wagesofsinisdeath.com
 waifuappreciation.club
+waifuism.life
 weedis.life
 wetfish.space
 wiki-tube.de
@@ -347,19 +367,3 @@ yorishiro.space
 youjo.love
 zetamu.club
 zetsubou.xn--q9jyb4c
-tastingtraffic.net
-pleroma.elementality.org
-akko.saturno.black
-mugicha.club
-fedi.intkos.link
-novoa.nagoya
-nobodyhasthe.biz
-cryptodon.lol
-seal.cafe
-waifuism.life
-amala.schwartzwelt.xyz
-eientei.org
-mirr0r.city
-vuju.com
-calobar.club
-berserker.town
