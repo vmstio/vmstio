@@ -1,0 +1,13 @@
+/* NONE OF THIS IS CURRENTLY USED */
+
+.compose-form__publish-button-wrapper button, .button[href = "/publish"] {
+  text-indent: -9999px;
+  line-height: 0; /* Collapse the original line */
+}
+
+.compose-form__publish-button-wrapper button:after, .button[href = "/publish"]:after {
+  content:'Toot!'; 
+  text-indent: 0;
+  display: block;
+  line-height: initial; /* New content takes up original line height */
+}
