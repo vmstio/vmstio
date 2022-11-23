@@ -303,7 +303,6 @@ lush.moelc.imexile.moe
 mao.mastodonhub.com
 marsey.club
 masochi.st
-masthead.social
 mastodon.bgzashtita.es
 mastodon.city
 mastodon.loliandstuff.moe
@@ -571,7 +570,6 @@ wetfish.space
 whinge.town
 wiki-tube.de
 wintermute.fr.to
-witches.live
 wolfgirl.bar
 woofer.alfter.us
 workers.dev
