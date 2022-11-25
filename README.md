@@ -20,6 +20,9 @@ Operational data for [vmst.io](https://vmst.io)
 ## Custom Emoji
 The full list of currently available emoji on our instance is at [https://emojos.in/vmst.io](https://emojos.in/vmst.io)
 
+## Server Status Monitoring
+- [status.vmst.io](https://status.vmst.io/)
+
 ## Community Monitoring
 - [FediDB Entry](https://fedidb.org/network/instance?domain=vmst.io)
 - [Fediverse Observer Entry](https://fediverse.observer/vmst.io)
