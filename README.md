@@ -13,6 +13,10 @@ Operational data for [vmst.io](https://vmst.io)
 - No sexually explicit or graphically violent media.
 - No intentionally false or misleading information.
 
+## Administration
+
+- <a rel="me" href="https://vmst.io/@vmstan">@vmstan</a>
+
 ## Custom Emoji
 The full list of currently available emoji on our instance is at [https://emojos.in/vmst.io](https://emojos.in/vmst.io)
 
