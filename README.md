@@ -1,8 +1,10 @@
 # Mastodon
 Operational data for [vmst.io](https://vmst.io)
 
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=6c1d754bacec&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
 ## Description
-[vmst.io](https://vmst.io) is an English speaking Mastodon instance that is open to anyone who is interested in interacting with respectful people who are passionate about what we do. Geeks and nerds of every type and stripe.
+[vmst.io](https://vmst.io) is an English speaking instance for folks who are interested in interacting with respectful technologists, who are passionate about what we do. Geeks and nerds of every type and stripe.
 
 ## Rules
 - No harassment, dogpiling or doxxing of other users.
@@ -17,13 +19,6 @@ Operational data for [vmst.io](https://vmst.io)
 
 - <a rel="me" href="https://vmst.io/@vmstan">@vmstan</a>
 
-## Custom Emoji
-The full list of currently available emoji on our instance is at [https://emojos.in/vmst.io](https://emojos.in/vmst.io)
+## Documentation
 
-## Server Status Monitoring
-- [status.vmst.io](https://status.vmst.io/)
-
-## Community Monitoring
-- [FediDB Entry](https://fedidb.org/network/instance?domain=vmst.io)
-- [Fediverse Observer Entry](https://fediverse.observer/vmst.io)
-- [the federation Entry](https://the-federation.info/node/vmst.io)
+- [docs.vmst.io](https://docs.vmst.io)
