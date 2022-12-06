@@ -1,3 +1,15 @@
+bitcointv.com
+bitcoin.ninja
+bitcoinlizard.net
+cryptocartel.social
+cryptotalks.social
+cryptotooter.com
+onevery.ignorelist.com
+fed.celp.de
+mastodong.lol
+repl.co
+misskey-forkbomb.cf
+activitypub-troll.cf
 beta.mstdn.cf
 genderheretics.xyz
 101010.pl
@@ -417,7 +429,6 @@ privex.social
 prout.social
 psimon.world
 pt.pube.tk
-qoto.org
 quanta.wiki
 quey.org
 rage.lol
