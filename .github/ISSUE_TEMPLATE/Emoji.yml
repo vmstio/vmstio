@@ -1,0 +1,22 @@
+name: Emoji 🐘
+description: |
+  If you're looking to add or remove an emoji, this is the right place!
+labels: ["Emoji"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What emoji would you like us to add or change? If you are looking for us to add an emoji you must include the emoji file(s) or links to the files in this request.
+
+        If there is an emoji that needs to be removed from the emoji set for whatever reason, please include the full shortcode to the emoji, e.g. :blobfoxcomfy:, and let us know how it violates our server rules.
+
+        Please note that you can see emoji render on statuses of other Mastodon users that are *not* on vmst.io, so those emojis are not locally hosted by vmst.io. We cannot moderate the emoji on other servers. If you are unsure if the emoji is on our server or not, please take a look at [our server emoji list](https://emojos.in/vmst.io).
+  - type: textarea
+    attributes:
+      label: |
+        So what emoji are you looking for?
+      description: |
+        Remember to link / upload the file!
+    validations:
+      required: true
+

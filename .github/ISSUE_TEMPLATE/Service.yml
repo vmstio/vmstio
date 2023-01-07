@@ -1,0 +1,47 @@
+name: Service
+description: Something isn't working right, or there is a partial/full outage on vmst.io
+labels:
+  - Service
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to let us know you're experiencing a problem vmst.io
+  - type: textarea
+    attributes:
+      label: |
+        Please describe the issue you are seeing.
+      description: |
+        Use as much detail as possible.
+      value: |
+        1. Are you seeing error codes? If so please include the full error message and,
+        if it makes sense to, a screenshot.
+        2. When are you seeing the issue? When you are submitting posts? Uploading media?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: When did you first notice this issue?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: What geographic region are you accessing vmst.io from?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: What browsers and/or apps are you accessing vmst.io from?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Do you get any specific error codes?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Is there anything else that we should know?
+    validations:
+      required: false
+

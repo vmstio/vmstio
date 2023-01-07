@@ -1,0 +1,18 @@
+name: Enhancement
+description: |
+  Suggestions for changes in vmst.io service offerings.
+labels: ["Enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If this is a new suggestion, please succinctly describe it in the Title.
+  - type: textarea
+    attributes:
+      label: |
+        What is your suggestion?
+      description: |
+        Use as much detail as possible.
+    validations:
+      required: true
+

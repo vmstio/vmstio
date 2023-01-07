@@ -1,0 +1,18 @@
+name: Federation
+description: |
+  This issue type is for questions about federating with vmst.io, or requesting instance blocks/removals.
+labels: ["Federation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If your request needs to be brought to our attention in a non-public venue, you can also email us directly.
+  - type: textarea
+    attributes:
+      label: |
+        What domain(s) are you having issues with?
+      description: |
+        Please include as much context as possible, even if it seems obvious.
+    validations:
+      required: true
+
