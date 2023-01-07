@@ -1,13 +1,12 @@
-name: General Mastodon Questions 
+name: Questions 
 description: |
-  Whether new or experienced with the Fediverse, this is where you
-  ask questions about how to use features and participate.
+  Whether new or experienced with Mastodon or the Fediverse, this is where you can ask questions about how to use features and participate.
 labels: ["Questions"]
 body:
   - type: markdown
     attributes:
       value: |
-        Please note: although we can do Q&A about Mastodon and how to interact with both Hachyderm and the Fediverse, we are
+        Please note: although we can do Q&A about Mastodon and how to interact with both vmst.io and the Fediverse, we are
         not maintainers of the Mastodon project. If you want to submit a feature or bug report directly to Mastodon,
         please reach out to them on [the Mastodon GitHub repo](https://github.com/mastodon/mastodon/issues).
   - type: textarea
