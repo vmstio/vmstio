@@ -1,0 +1,94 @@
+theme: PaperMod
+relativeURLs: true
+baseURL: 'https://docs.vmst.io'
+title: docs·vmst·io
+author: vmst·io
+copyright: Copyright © 2022 vmst·io Team
+languageCode: en
+paginate: 5
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+DefaultContentLanguage: en
+enableEmoji: true
+outputs:
+  home:
+      - HTML
+      - RSS
+      - JSON # is necessary
+
+menu:
+  main:
+#    - identifier: home
+#      name: Home
+#      url: /
+#      weight: 1
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 2
+    - identifier: fund
+      name: Funding
+      url: '/funding'
+      weight: 4
+    - identifier: rules
+      name: Rules
+      url: '/rules'
+      weight: 5
+    - identifier: monitor
+      name: Monitoring
+      url: '/monitoring'
+      weight: 6
+    - identifier: vmstio
+      name: vmst·io
+      url: 'https://vmst.io'
+      weight: 10
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+      
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+  
+  twitter:
+    disabled: true
+    
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+    
+minify:
+  disableXML: true
+
+markup:
+  goldmark:
+      renderer:
+          unsafe: true
+  highlight:
+      noClasses: false
+
+params:
+  ShowCodeCopyButtons: true
+  ShowReadingTime: true
+  homeInfoParams:
+      Title: "vmst·io Documentation"
+      Content: "vmst·io is an English speaking Mastodon instance for folks interested in interacting with respectful technologists, who are passionate about what we do. Geeks and nerds of every type and stripe."
+  socialIcons: # optional
+    - name: Rss
+      url: "index.xml"
+    - name: "GitHub"
+      url: "https://github.com/vmstan/vmstio-hugo"
+    - name: "Mastodon"
+      url: "https://vmst.io"
+  editPost:
+    URL: "https://github.com/vmstan/vmstio-hugo/tree/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
