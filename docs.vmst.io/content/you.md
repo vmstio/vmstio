@@ -1,7 +1,6 @@
 ---
 title: You
 description: Who are you? Who who, who who?
-date: '2022-11-29'
 aliases:
   - your-account
 category:

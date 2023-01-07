@@ -1,7 +1,6 @@
 ---
 title: Staff
 description: Who's running this place?
-date: '2022-11-29'
 aliases:
   - moderators
   - about

@@ -1,7 +1,6 @@
 ---
 title: Monitoring
 description: Who watches the watchers?
-date: '2022-11-29'
 aliases:
   - status
   - monitor

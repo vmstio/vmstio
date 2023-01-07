@@ -1,7 +1,6 @@
 ---
 title: Mailer
 description: 'Where do e-mails come from, Dad?'
-date: '2022-11-28'
 aliases:
   - mailer
   - email

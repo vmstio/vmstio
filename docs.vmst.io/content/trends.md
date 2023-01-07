@@ -1,7 +1,6 @@
 ---
 title: Trends
 description: Are you a human or a robot?
-date: '2022-11-29'
 aliases:
   - trending
 category:

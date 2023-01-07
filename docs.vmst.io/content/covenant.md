@@ -1,7 +1,6 @@
 ---
 title: Server Covenant
 description: Who are you? Who who, who who?
-date: '2022-11-29'
 aliases:
   - join-mastodon
 category:

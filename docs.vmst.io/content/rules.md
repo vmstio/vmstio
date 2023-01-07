@@ -1,7 +1,6 @@
 ---
 title: Rules
 description: What can you get away with?
-date: '2022-11-29'
 aliases:
   - norms
 category:

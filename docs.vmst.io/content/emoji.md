@@ -1,7 +1,6 @@
 ---
 title: Custom Emoji
 description: How do I add the verification image to my username?
-date: '2022-11-29'
 aliases:
   - trending
 category:

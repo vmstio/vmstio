@@ -1,7 +1,6 @@
 ---
 title: Brands & Corporate Accounts
 description: Are you just here to sell something?
-date: '2022-11-29'
 aliases:
   - corporate
 category:

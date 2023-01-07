@@ -1,7 +1,6 @@
 ---
 title: Funding
 description: How can I help?
-date: '2022-11-29'
 aliases:
   - funding
   - donations
