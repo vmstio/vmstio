@@ -17,7 +17,7 @@ There are three levels of moderation staff with different abilities:
 * Director
 * Moderator
 
-All staff should be intimately familiar with the Rules on[https://docs.vmst.io/rules/](https://docs.vmst.io/rules/)
+All staff should be intimately familiar with the [Rules](https://docs.vmst.io/rules/)
 
 ### Moderators
 
