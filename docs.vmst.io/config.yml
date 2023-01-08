@@ -85,10 +85,10 @@ params:
     - name: Rss
       url: "index.xml"
     - name: "GitHub"
-      url: "https://github.com/vmstan/vmstio-hugo"
+      url: "https://github.com/vmstan/vmstio/docs.vmst.io"
     - name: "Mastodon"
       url: "https://vmst.io"
   editPost:
-    URL: "https://github.com/vmstan/vmstio-hugo/tree/main/content"
+    URL: "https://github.com/vmstan/vmstio/tree/main/docs.vmst.io/content"
     Text: "Suggest Changes"
     appendFilePath: true
