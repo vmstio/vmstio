@@ -32,12 +32,9 @@ Not ideal.
 ### Changes Since December
 
 - "Scotty" is now responsible for handling the bulk of Sidekiq activity, including the Ingress queues. The front end nodes now only handle the primary Mastodon Web functions.
-- "Uhura" is now responsible for handling the Mastodon Streaming API, as well as acting as a HTTPS proxy for other backend services like our internal metrics and monitoring. One deviation from Kirk and Spock that handle web traffic, is that Uhura is running Caddy as a web proxy instead of nginx. This is somewhat experimental but has not presented any known issues.
-- "McCoy" which previously was just our internal Prometheus server now also hosts our [status.vmst.io](https://status.vmst.io) system powered by a self-hosted instance of Uptime Kuma. This replaces the services of Uptime Robot.
-- "Exec" no longer hosts Elastic Search, which has been moved to the free tier of AWS and replaced with Open Search. Exec still runs some small Sidekiq queues, but is primarily responsible for the management, backups and automation of the entire Mastodon system.
+- "Uhura" is now responsible for handling the Mastodon Streaming API, as well as acting as a HTTPS proxy for other backend services like our internal metrics and monitoring. One deviation from Kirk and Spock that handle web traffic, is that Uhura is running Caddy as a web proxy instead of nginx. This is somewhat experimental but has not presented any known issues. Uhura now also hosts our [status.vmst.io](https://status.vmst.io) system powered by a self-hosted instance of Uptime Kuma. This replaces the services of Uptime Robot.
+- "Exec" no longer hosts Elastic Search, which has been moved to the free tier of AWS and replaced with Open Search. Exec runs smaller versions of Scotty's Sidekiq queues plus the scheduler queue, but is primarily responsible for the management, backups and automation of the entire Mastodon system.
 - "Kirk" and "Spock" are now running fully updated versions of nginx, with restrictions on TLS versions (1.2 or higher now required) and ciphers. As a result support for older browsers (IE8) or systems (Java 7) have been dropped. This is unlikely to actually effect anyone negatively.
-- Our PostgreSQL server resources have been doubled, which allows twice as many concurrent thread operations via Sidekiq and Puma (web). Unfortunately the database instances don't have fun Star Trek names.
-- We technically have two Redis instances now (represented as one in the diagram above) -- one for holding the live backend activity coordinated with Sidekiq and another for the active cache of things like user timelines that the Web instances communicate with.
 
 I have also moved this site back to the Digital Ocean static site generator.
 I was running there previously, then moved to Netlify as a test.
@@ -50,7 +47,7 @@ The backup processes have been streamlined.
 - The native `b2-cli` utility is then used to make a copy to a Backblaze B2 bucket.
 - The CDN/media data is sync'd directly to Backblaze B2 via `rclone`.
 - This is done using some custom script that process each task and then fire off notifications to our backend Slack.
-- Backups run every 8 hours. Database backups are retained for 14 days, currently. This may be adjusted for size/cost considerations down the road.
+- Backups run every 6 hours. Database backups are retained for 14 days, currently. This may be adjusted for size/cost considerations down the road.
 - All backups are encrypted both in transit and at rest.
 
 Previously a lot of the automation functions for things like firing off notifications to the Mod Squad in Slack about reported posts, new users, or various server activities were done using Zapier.
