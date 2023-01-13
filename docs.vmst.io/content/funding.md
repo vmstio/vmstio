@@ -41,26 +41,30 @@ Folks who commit to regular contributions gain the ability to invite new members
 
 Paying members can see the invite ability by logging into the the website and under “Preferences > Invite people” to generate your codes. You have flexibility to set limits on their use, and please use these. If you’re a massive influencer who sets unlimited use and tomorrow we have 2,000,000 new accounts without any oversight, then the servers will probably fall over and burst into flames.
 
-## Costs & Funding (Jan 4, 2023)
+## Costs & Funding
 
 ### Income
 
-Donating members: 70
+Patrons: 77
 
 | **Source**      | **Monthly** | **Yearly** | **One Time** |
 |-----------------|-------------|------------|----------|
 | Patreon         | $171        | -          | -        |
-| Open Collective | $9          | $60        | $148     |
-| Ko-Fi           | $78         | -          | $218     |
-| Other           | -           | -          | $72      |
+| Open Collective | $9          | $60        | $128     |
+| Ko-Fi           | $106        | -          | $228     |
+| Other           | $24         | -          | $72      |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
+
+Last Updated: Jan 13, 2023.
 
 ### Expenses
 
 | **Vendor**    | **Monthly** | **Yearly** |
 |---------------|-------------|------------|
-| Digital Ocean | $329        | $0         |
+| Digital Ocean | $291        | $0         |
 | Sendgrid      | $20         | $0         |
 | DNSimple      | $6          | $153       |
 | Backblaze     | $1          | $0         |
+
+Last Updated: Jan 13, 2023.
