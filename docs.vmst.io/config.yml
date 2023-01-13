@@ -43,6 +43,10 @@ menu:
       name: Staff
       url: '/staff'
       weight: 6
+    - identifier: archives
+      name: Archives
+      url: '/archives'
+      weight: 7
 
 taxonomies:
   category: categories
