@@ -31,6 +31,10 @@ menu:
       name: Search
       url: /search
       weight: 2
+    - identifier: docs
+      name: Docs
+      url: '/tags/docs'
+      weight: 4
     - identifier: fund
       name: Funding
       url: '/funding'
@@ -86,13 +90,10 @@ params:
   ShowToc: true
   TocOpen: true
   homeInfoParams:
-      Title: "Mastodon instance for respectful technologists, who are passionate about what we do. Geeks and nerds of every type and stripe."
+      Title: "Mastodon for respectful technologists, geeks and nerds of every type and stripe."
       Content: |
         - [Your account on vmst·io](https://docs.vmst.io/you)
         - [Interpreting our rules](https://docs.vmst.io/rules)
-        
-        ### Frequently asked questions
-        
         - [Who's paying for this to exist?](https://docs.vmst.io/funding)
         - [Can my company sign up?](https://docs.vmst.io/brands)
         - [Are you on joinmastodon.org?](https://docs.vmst.io/covenant)
