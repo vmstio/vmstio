@@ -19,6 +19,7 @@ A few disclaimers:
 - I'm running straight from the dev branch, and will periodically compile and restart the service as needed to bring in updates.
 - This is not behind our primary load balancer, so when I bounce the service for updates, it just won't work, but come back in a few minutes and it'll probably be fine.
 - There are no SLAs or anything fancy around this, but I am monitoring uptime on [status.vmst.io](https://status.vmst.io).
-- If it breaks, it could be me or it could be the upstream developers. While you're free to let me know directly if there are issues as it relates to availability, it's probably better to leave a comment on their [GitHub](https://github.com/elk-zone/elk).
+- If it breaks, it could be me or it could be the upstream developers. While you're free to let me know directly if there are issues as it relates to availability, if it's a bug in the product or something you'd like done differently please leave a comment on their [GitHub](https://github.com/elk-zone/elk).
 - This is not and will never be a replacement for the main web interface on [vmst.io](https://vmst.io), it's just a fun option for folks to use and help test.
-- The ability to do these things is funded by our members, so if you'd like me to be able to stand up additional "Flings" for other tools or platforms please visit our [Funding](https://docs.vmst.io/funding) page and sign up to be a monthly contributor.
+
+Lastly, the ability to do these things is funded by our members, so if you'd like me to be able to stand up additional "Flings" for other tools or platforms please visit our [Funding](https://docs.vmst.io/funding) page and sign up to be a monthly contributor.
