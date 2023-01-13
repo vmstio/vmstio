@@ -77,18 +77,26 @@ markup:
 
 params:
   ShowCodeCopyButtons: true
+  defaultTheme: auto
+  # disableThemeToggle: true
   TocSide: 'left'
   EnableInstantClick: true
   ShowReadingTime: true
+  ShowWordCount: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  EnableImageZoom: true
+  ShowToc: true
+  TocOpen: true
   homeInfoParams:
       Title: "vmst·io Documentation"
       Content: "vmst·io is an English speaking Mastodon instance for folks interested in interacting with respectful technologists, who are passionate about what we do. Geeks and nerds of every type and stripe."
   socialIcons: # optional
-    - name: Rss
+    - name: rss-simple
       url: "index.xml"
-    - name: "GitHub"
-      url: "https://github.com/vmstan/vmstio/docs.vmst.io"
-    - name: "Mastodon"
+    - name: github-simple
+      url: "https://github.com/vmstan/vmstio"
+    - name: mastodon-simple
       url: "https://vmst.io"
   editPost:
     URL: "https://github.com/vmstan/vmstio/tree/main/docs.vmst.io/content"
