@@ -3,7 +3,7 @@ title: Brands & Corporate Accounts
 description: Are you just here to sell something?
 aliases:
   - corporate
-category:
+tags:
   - docs
 ---
 

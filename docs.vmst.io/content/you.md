@@ -3,7 +3,7 @@ title: You
 description: Who are you? Who who, who who?
 aliases:
   - your-account
-category:
+tags:
   - docs
 ---
 

@@ -6,7 +6,7 @@ aliases:
   - monitor
   - stats
   - metrics
-category:
+tags:
   - docs
 ---
 

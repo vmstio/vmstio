@@ -3,7 +3,7 @@ title: Issues
 description: Where can I report a problem?
 aliases:
   - tracking
-category:
+tags:
   - docs
 ---
 

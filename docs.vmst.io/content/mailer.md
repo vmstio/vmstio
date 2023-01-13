@@ -4,7 +4,7 @@ description: 'Where do e-mails come from, Dad?'
 aliases:
   - mailer
   - email
-category:
+tags:
   - docs
 ---
 

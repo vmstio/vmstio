@@ -3,7 +3,7 @@ title: Trends
 description: Are you a human or a robot?
 aliases:
   - trending
-category:
+tags:
   - docs
 ---
 

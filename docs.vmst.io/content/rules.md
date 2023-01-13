@@ -3,7 +3,7 @@ title: Rules
 description: What can you get away with?
 aliases:
   - norms
-category:
+tags:
   - docs
 ---
 

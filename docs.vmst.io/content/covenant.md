@@ -3,7 +3,7 @@ title: Server Covenant
 description: Who are you? Who who, who who?
 aliases:
   - join-mastodon
-category:
+tags:
   - docs
 ---
 

@@ -6,7 +6,7 @@ aliases:
   - donations
   - donate
   - fund
-category:
+tags:
   - docs
 ---
 

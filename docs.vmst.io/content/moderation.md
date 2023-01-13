@@ -1,7 +1,7 @@
 ---
 title: Moderation
 description: Our internal guidance
-category:
+tags:
   - docs
 ---
 

@@ -4,7 +4,7 @@ description: Who's running this place?
 aliases:
   - moderators
   - about
-category:
+tags:
   - docs
 ---
 
