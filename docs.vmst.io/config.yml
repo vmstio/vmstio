@@ -47,11 +47,6 @@ menu:
       name: Archives
       url: '/archives'
       weight: 7
-
-taxonomies:
-  category: categories
-  tag: tags
-  series: series
       
 privacy:
   vimeo:
@@ -70,10 +65,12 @@ minify:
 
 markup:
   goldmark:
-      renderer:
-          unsafe: true
+    renderer:
+      unsafe: true
   highlight:
-      noClasses: false
+    style: dracula
+    lineNos: false
+    noClasses: false
 
 params:
   ShowCodeCopyButtons: true
