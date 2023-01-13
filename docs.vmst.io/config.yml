@@ -14,7 +14,7 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 DefaultContentLanguage: en
-enableEmoji: true
+
 outputs:
   home:
       - HTML
@@ -79,10 +79,10 @@ markup:
 params:
   ShowCodeCopyButtons: true
   defaultTheme: auto
-  # disableThemeToggle: true
+  disableThemeToggle: true
   TocSide: 'left'
   EnableInstantClick: true
-  ShowReadingTime: true
+  ShowReadingTime: false
   ShowWordCount: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
@@ -94,6 +94,7 @@ params:
       Content: |
         - [Why do you want to be here?](https://docs.vmst.io/you)
         - [What are the rules?](https://docs.vmst.io/rules)
+        - [How do you moderate?](https://docs.vmst.io/moderation)
         - [Who's paying for this to exist?](https://docs.vmst.io/funding)
         - [Can my company sign up?](https://docs.vmst.io/brands)
         - [Are you on joinmastodon.org?](https://docs.vmst.io/covenant)
