@@ -1,4 +1,4 @@
-theme: PaperMod
+theme: PaperModX
 relativeURLs: true
 baseURL: 'https://docs.vmst.io'
 title: docs·vmst·io
@@ -77,6 +77,8 @@ markup:
 
 params:
   ShowCodeCopyButtons: true
+  TocSide: 'left'
+  EnableInstantClick: true
   ShowReadingTime: true
   homeInfoParams:
       Title: "vmst·io Documentation"
