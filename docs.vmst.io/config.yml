@@ -92,18 +92,18 @@ params:
   homeInfoParams:
       Title: "Mastodon for respectful technologists, geeks and nerds of every type and stripe."
       Content: |
-        - [Why do you want to be here?](https://docs.vmst.io/you)
+        - [Why do **you** want to be *here*?](https://docs.vmst.io/you)
         - [What are the rules?](https://docs.vmst.io/rules)
-        - [How do you moderate?](https://docs.vmst.io/moderation)
+        - [How do we moderate?](https://docs.vmst.io/moderation)
         - [Who's paying for this to exist?](https://docs.vmst.io/funding)
-        - [Can my company sign up?](https://docs.vmst.io/brands)
-        - [Are you on joinmastodon.org?](https://docs.vmst.io/covenant)
+        - [Can your company sign up?](https://docs.vmst.io/brands)
+        - [Are we on joinmastodon.org?](https://docs.vmst.io/covenant)
         - [Who's running this place?](https://docs.vmst.io/staff)
-        - [Where are you hosted?](https://docs.vmst.io/post/2023/01/systems-2023/)
+        - [Where are we hosted?](https://docs.vmst.io/post/2023/01/systems-2023/)
         - [Where is the algorithm at?](https://docs.vmst.io/trends)
-        - [Can the admins read my DMs?](https://docs.vmst.io/you#data-security)
-        - [How reliable is your service?](https://docs.vmst.io/monitoring)
-        - [Where can I report a problem?](https://docs.vmst.io/issues)
+        - [Can the admins read your DMs?](https://docs.vmst.io/you#data-security)
+        - [How reliable is this service?](https://docs.vmst.io/monitoring)
+        - [Where can you report a problem?](https://docs.vmst.io/issues)
       
   socialIcons: # optional
     - name: rss-simple
