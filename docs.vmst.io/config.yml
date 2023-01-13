@@ -39,14 +39,10 @@ menu:
       name: Rules
       url: '/rules'
       weight: 5
-    - identifier: monitor
-      name: Monitoring
-      url: '/monitoring'
+    - identifier: staff
+      name: Staff
+      url: '/staff'
       weight: 6
-    - identifier: vmstio
-      name: vmst·io
-      url: 'https://vmst.io'
-      weight: 10
 
 taxonomies:
   category: categories

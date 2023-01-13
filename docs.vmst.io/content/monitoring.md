@@ -10,18 +10,18 @@ category:
   - docs
 ---
 
-## [status.vmst.io](https://status.vmst.io/)
+## status.vmst.io
 
-This is our external monitoring powered by Uptime Kuma. It runs from a virtual server in a different cloud (Linode) than where our production systems run (Digital Ocean). It monitors the status of:
+This is our external monitoring powered by Uptime Kuma.
+It monitors the status of:
 
 - Mastodon (vmst.io)
-- Object Store (cdn.vmst.io)
+- Streaming API (streaming.vmst.io)
+- Media Storage (cdn.vmst.io)
 - This Site (docs.vmst.io)
 - Redis Cache
-- Redis Database
 - PostgreSQL Database
-- Elastic Search
-- Grafana
+- Advanced Search
 
 Uptime is calculated for the last 24 hours.
 
