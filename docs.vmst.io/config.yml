@@ -90,13 +90,30 @@ params:
   TocOpen: true
   homeInfoParams:
       Title: "vmst·io Documentation"
-      Content: "vmst·io is an English speaking Mastodon instance for folks interested in interacting with respectful technologists, who are passionate about what we do. Geeks and nerds of every type and stripe."
+      Content: |
+        vmst·io is an English speaking Mastodon instance for folks interested in interacting with respectful technologists, who are passionate about what we do. Geeks and nerds of every type and stripe.
+        
+        - [Your account on vmst·io](https://docs.vmst.io/you)
+        - [Interpreting our rules](https://docs.vmst.io/rules)
+        
+        ### Frequently asked questions
+        
+        - [Who's paying for this to exist?](https://docs.vmst.io/funding)
+        - [Can my company sign up?](https://docs.vmst.io/brands)
+        - [Are you on joinmastodon.org?](https://docs.vmst.io/covenant)
+        - [Who's running this place?](https://docs.vmst.io/staff)
+        - [Where are you hosted?](https://docs.vmst.io/post/2023/01/systems-2023/)
+        - [Where is the algorithm at?](https://docs.vmst.io/trends)
+        - [Can the admins read my DMs?](https://docs.vmst.io/you#data-security)
+        - [How reliable is your service?](https://docs.vmst.io/monitoring)
+        - [Where can I report a problem?](https://docs.vmst.io/issues)
+      
   socialIcons: # optional
     - name: rss-simple
       url: "index.xml"
     - name: github-simple
       url: "https://github.com/vmstan/vmstio"
-    - name: mastodon-simple
+    - name: mastodon
       url: "https://vmst.io"
   editPost:
     URL: "https://github.com/vmstan/vmstio/tree/main/docs.vmst.io/content"
