@@ -92,8 +92,8 @@ params:
   homeInfoParams:
       Title: "Mastodon for respectful technologists, geeks and nerds of every type and stripe."
       Content: |
-        - [Your account on vmst·io](https://docs.vmst.io/you)
-        - [Interpreting our rules](https://docs.vmst.io/rules)
+        - [Why do you want to be here?](https://docs.vmst.io/you)
+        - [What are the rules?](https://docs.vmst.io/rules)
         - [Who's paying for this to exist?](https://docs.vmst.io/funding)
         - [Can my company sign up?](https://docs.vmst.io/brands)
         - [Are you on joinmastodon.org?](https://docs.vmst.io/covenant)
