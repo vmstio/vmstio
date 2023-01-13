@@ -1,6 +1,7 @@
 ---
-title: "Archive"
-layout: "archives"
-url: "/archives/"
-summary: archives
+title: "Catagories"
+layout: "catagories"
+url: "/catagories/"
+summary: catagories
 ---
+
