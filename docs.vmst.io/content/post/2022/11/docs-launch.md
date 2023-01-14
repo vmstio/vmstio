@@ -28,4 +28,6 @@ A few pages to highlight:
 - [Trends](/trends)
 - [Your Account](/you)
 
-We hope that this site can be used to help new users find their way on vmst·io, but also across the rest of the Fediverse. If you'd like to contribute to this site, reach out! If you know how to, we will take pull requests to via this [GitHub repo](https://github.com/vmstan/vmstio-hugo).
+We hope that this site can be used to help new users find their way on vmst·io, but also across the rest of the Fediverse.
+If you'd like to contribute to this site, reach out!
+If you know how to, we will take pull requests to via this [GitHub repo](https://github.com/vmstan/vmstio).
