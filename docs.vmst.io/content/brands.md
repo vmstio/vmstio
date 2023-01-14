@@ -30,4 +30,4 @@ If you are the maintainer of an free open source project, and want to maintain a
 
 ## Development Accounts
 
-If you are the developer of an Mastodon/ActivityPub client or other project and would like to use a vmst.io to test with, please contact [@vmstan@vmst.io](https://vmst.io/@vmstan) before doing so. While we are generally supportive of such things we like to know ahead of time should it cause disruptions in service to other members.
+If you are the developer of an Mastodon/ActivityPub client or other project and would like to use an account on vmst.io to test with, please contact [@vmstan@vmst.io](https://vmst.io/@vmstan) before doing so. While we are generally supportive of such things we like to know ahead of time should it cause disruptions in service to other members.
