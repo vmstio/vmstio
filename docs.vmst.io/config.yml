@@ -78,7 +78,7 @@ markup:
 
 params:
   ShowCodeCopyButtons: true
-  defaultTheme: auto
+  defaultTheme: light
   disableThemeToggle: true
   TocSide: 'left'
   EnableInstantClick: true
