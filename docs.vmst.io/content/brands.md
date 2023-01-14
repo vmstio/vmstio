@@ -20,4 +20,14 @@ If you use your personal account simply as a proxy for such groups in violation 
 We feel that brands and companies should be setting up their own instances under domains they're identified with and control.
 This not only benefits the brands in terms of verifying that their accounts are self-verified, but helps users control their interactions with those brands.
 
-If you are an on-topic non-profit organization, community group of or other association (ex: Kansas City Information Technology Professionals) we may permit your account. If you are unsure if you qualify please contact [@vmstan@vmst.io](https://vmst.io/@vmstan).
+## Associations & Groups
+
+If you are an "on-topic" non-profit organization, community group of or other association (ex: Kansas City Information Technology Professionals) we may permit your account. If you are unsure if you qualify please contact [@vmstan@vmst.io](https://vmst.io/@vmstan).
+
+## Open Source Projects
+
+If you are the maintainer of an free open source project, and want to maintain an account distinct from your personal account, you may be permitted to do so. If you are unsure if you qualify please contact [@vmstan@vmst.io](https://vmst.io/@vmstan).
+
+## Development Accounts
+
+If you are the developer of an Mastodon/ActivityPub client or other project and would like to use a vmst.io to test with, please contact [@vmstan@vmst.io](https://vmst.io/@vmstan) before doing so. While we are generally supportive of such things we like to know ahead of time should it cause disruptions in service to other members.
