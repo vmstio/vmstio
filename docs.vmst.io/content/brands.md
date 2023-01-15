@@ -28,7 +28,7 @@ This not only benefits the brands in terms of verifying that their accounts are 
 
 Examples of the types of accounts prohibited under this policy would be accounts identifying as the official account for VMware, Digital Ocean, Fastmail, Chipotle, Delta Airlines, etc. Unofficial or parody accounts for brands are prohibited by our [account impersonation policy](/rules).
 
-This policy in no way prohibits members of vmst.io frok interacting or boosting content from brands, nor prohibits brand accounts from interacting or federating with our instance.
+This policy in no way prohibits members of vmst.io from interacting or boosting content from brands, nor prohibits brand accounts from interacting or federating with our instance.
 It only prohibits such accounts from being hosted by vmst.io.
 
 ## Groups & Associations
