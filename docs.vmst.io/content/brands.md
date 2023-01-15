@@ -39,7 +39,7 @@ Examples of accounts allowed under this policy would be the hypothetical "Kansas
 
 ## Open Source Projects
 
-If you are the maintainer of an free open source project, and want to maintain an account distinct from your personal account, you may be permitted to do so. If you are unsure if you qualify please contact [@vmstan@vmst.io](https://vmst.io/@vmstan).
+If you are the maintainer of an open source project, and want to maintain an account distinct from your personal account, you may be permitted to do so. If you are unsure if you qualify please contact [@vmstan@vmst.io](https://vmst.io/@vmstan).
 
 Examples of accounts allowed under this policy would be a hypothetical official account for the Pi-hole project. Accounts that may be prohibited by this policy would be ones where there is a direct financial relationship or major sponsorship with a corporate brand.
 
