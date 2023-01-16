@@ -33,13 +33,13 @@ It only prohibits such accounts from being hosted by vmst.io.
 
 ## Groups & Associations
 
-If you are an "on-topic" non-profit organization, community group of or other association we may permit your account. If you are unsure if you qualify please contact [@vmstan@vmst.io](https://vmst.io/@vmstan).
+If you are an "on-topic" non-profit organization, community group of or other association we may permit your account. If you are unsure if you qualify please contact [@vmstan](https://vmst.io/@vmstan) or file a [GitHub issue](https://github.com/vmstan/vmstio/issues/new?assignees=&labels=&template=7-Other.yml).
 
 Examples of accounts allowed under this policy would be the non-profit [@WestportObservatory](https://vmst.io/@WestportObservatory) or the hypothetical "Kansas City Anker Power Cable User Group" where there may be a loose affiliation with the brand but is otherwise run for fun or user networking. 
 
 ## Open Source Projects
 
-If you are the maintainer of an open source project, and want to maintain an account distinct from your personal account, you may be permitted to do so. If you are unsure if you qualify please contact [@vmstan@vmst.io](https://vmst.io/@vmstan).
+If you are the maintainer of an open source project, and want to maintain an account distinct from your personal account, you may be permitted to do so. If you are unsure if you qualify please contact [@vmstan](https://vmst.io/@vmstan) or file a [GitHub issue](https://github.com/vmstan/vmstio/issues/new?assignees=&labels=&template=7-Other.yml).
 
 Examples of accounts allowed under this policy would be a hypothetical official account for the Pi-hole project. Accounts that may be prohibited by this policy would be ones where there is a direct financial relationship or major sponsorship with a corporate brand.
 
