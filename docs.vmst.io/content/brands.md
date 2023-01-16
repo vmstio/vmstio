@@ -57,3 +57,5 @@ If you are the developer of an Mastodon/ActivityPub client (either open/closed s
 While we are generally supportive of such things we like to know ahead of time should it cause disruptions in service to other members.
 
 Accounts allowed by this policy would be a test account for a hypothetical Mastodon client called "Ebony" that wanted to test integration with our advanced search implementation.
+
+Development accounts designed to scrape and or index user data via our API or other means, **are prohibited.**
