@@ -53,7 +53,7 @@ Bot accounts that repost content from other social networks or sites, without th
 
 ## Development Accounts
 
-If you are the developer of an Mastodon/ActivityPub client or other Fediverse project and would like to use an account on vmst.io to test the functionality of your application, please contact [@vmstan@vmst.io](https://vmst.io/@vmstan) before doing so.
+If you are the developer of an Mastodon/ActivityPub client or other Fediverse project and would like to use an account on vmst.io to test the functionality of your application, please contact [@vmstan](https://vmst.io/@vmstan) or file a [GitHub issue](https://github.com/vmstan/vmstio/issues/new?assignees=&labels=&template=7-Other.yml) before doing so.
 While we are generally supportive of such things we like to know ahead of time should it cause disruptions in service to other members.
 
 Accounts allowed by this policy would be a test account for a hypothetical Mastodon client called "Ebony" that wanted to test integration with our advanced search implementation.
