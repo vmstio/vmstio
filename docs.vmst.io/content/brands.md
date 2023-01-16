@@ -7,7 +7,7 @@ tags:
   - docs
 ---
 
-We encourage you to be yourself on vmst·io, not every account on social media is a person, although there are technically people behind them.
+We encourage you to be yourself on vmst·io. We understand that not every account on social media is a person, even if there are technically people behind them.
 
 Centralized platforms require all different types of accounts to be in the same place.
 Decentralized platforms like Mastodon offer an opportunity for each instance to set policies on the types of accounts that they allow.
