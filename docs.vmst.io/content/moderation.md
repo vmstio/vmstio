@@ -152,6 +152,6 @@ Users are not prohibited from following accounts from other instances that post 
 As a result explicit content may show up on the Federated timeline where it’s viewable by all members.
 
 Moderators may issue limitations to remote accounts who regularly post explicit content.
-Limiting the account will enable those who directly follow the account to continue accessing it, while preventing its visibility on the Federated timeline. 
+Limiting the account will enable those who directly follow the account to continue accessing it, while preventing its visibility on the Federated timeline.
 
 If local accounts are deemed to be following such content in an attempt to “poison” the federated timeline, those accounts should be suspended after consultation with a Director or Administrator.

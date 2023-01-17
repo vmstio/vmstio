@@ -35,7 +35,7 @@ It only prohibits such accounts from being hosted by vmst.io.
 
 If you are an "on-topic" non-profit organization, community group of or other association we may permit your account. If you are unsure if you qualify please contact [@vmstan](https://vmst.io/@vmstan) or file a [GitHub issue](https://github.com/vmstan/vmstio/issues/new?assignees=&labels=&template=7-Other.yml).
 
-Examples of accounts allowed under this policy would be the non-profit [@WestportObservatory](https://vmst.io/@WestportObservatory) or the hypothetical "Kansas City Anker Power Cable User Group" where there may be a loose affiliation with the brand but is otherwise run for fun or user networking. 
+Examples of accounts allowed under this policy would be the non-profit [@WestportObservatory](https://vmst.io/@WestportObservatory) or the hypothetical "Kansas City Anker Power Cable User Group" where there may be a loose affiliation with the brand but is otherwise run for fun or user networking.
 
 ## Open Source Projects
 
