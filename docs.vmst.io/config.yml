@@ -93,7 +93,7 @@ params:
       Title: "Mastodon for respectful technologists, geeks and nerds of every type and stripe."
       Content: |
         Why choose vmst.io as your Mastodon instance?
-        - We respect your fundamental right to privacy. We have an [A+ rating from Mozilla Observatory](https://observatory.mozilla.org/analyze/vmst.io), have [no ads, third party cookies or trackers](https://themarkup.org/blacklight) and use the best possible TLS encryption for all connections as [verified by Cryptcheck](https://cryptcheck.fr/https/vmst.io) and [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html?d=vmst.io).
+        - We respect your fundamental right to privacy. We have an [A+ rating from Mozilla Observatory](https://observatory.mozilla.org/analyze/vmst.io), have [no ads, third party cookies or trackers](https://themarkup.org/blacklight?url=vmst.io) and use the best possible TLS encryption for all connections as [verified by Cryptcheck](https://cryptcheck.fr/https/vmst.io) and [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html?d=vmst.io).
         - We're highly available, and take ownership of issues when we're not. We publish [our realtime system status](https://status.vmst.io), and have a better than 99% observed availibility from Instances.social.
         - We are well moderated, with multiple volunteer [staffers around the world](/staff) monitoring for user reports, and clear [rules against hate speech and harrassment](/rules).
 
