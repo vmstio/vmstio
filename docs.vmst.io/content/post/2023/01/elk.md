@@ -16,7 +16,7 @@ I have decided to stand up an instance of Elk at [elk.vmst.io](https://elk.vmst.
 
 A few disclaimers:
 - I consider this (to grab a VMware term) a "Fling" and not part of our core services offering, at least for the time being.
-- I'm running straight from the dev branch, and will periodically compile and restart the service as needed to bring in updates.
+- I'm running straight from the dev branch, and roughly every three hours will automatically pull in updates, recompile and restart the service.
 - This is not behind our primary load balancer, so when I bounce the service for updates, it just won't work, but come back in a few minutes and it'll probably be fine.
 - There are no SLAs or anything fancy around this, but I am monitoring uptime on [status.vmst.io](https://status.vmst.io).
 - If it breaks, it could be me or it could be the upstream developers. While you're free to let me know directly if there are issues as it relates to availability, if it's a bug in the product or something you'd like done differently please leave a comment on their [GitHub](https://github.com/elk-zone/elk).
