@@ -51,20 +51,20 @@ Patrons: 77
 |-----------------|-------------|------------|----------|
 | Patreon         | $171        | -          | -        |
 | Open Collective | $9          | $60        | $128     |
-| Ko-Fi           | $106        | -          | $228     |
+| Ko-Fi           | $108        | -          | $328     |
 | Other           | $24         | -          | $72      |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
-Last Updated: Jan 13, 2023.
+Last Updated: Jan 17, 2023.
 
 ### Expenses
 
 | **Vendor**    | **Monthly** | **Yearly** |
 |---------------|-------------|------------|
-| Digital Ocean | $291        | $0         |
+| Digital Ocean | $341        | $0         |
 | Sendgrid      | $20         | $0         |
 | DNSimple      | $6          | $153       |
 | Backblaze     | $1          | $0         |
 
-Last Updated: Jan 13, 2023.
+Last Updated: Jan 17, 2023.
