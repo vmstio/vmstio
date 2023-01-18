@@ -11,7 +11,7 @@ While it doesn't use ActivityPub it does use WebFinger to communicate server to 
 
 Your "homeserver" will be matrix.vmst.io, and when you login you'll use your Mastodon credentials, so there's no second set of passwords to manage. When you set two factor authentication on your Mastodon account, it carries over to Matrix. (Notice a theme here?)
 
-![http://cdn.vmst.io/docs/matrix-login.png]
+![matrix.vmst.io](https://cdn.vmst.io/docs/matrix-login.png)
 
 The first time you login you'll need to establish your Matrix account, your vmst.io username may automatically populate, but needs to stay the same as your Mastodon username for consistency.
 
