@@ -45,18 +45,16 @@ Paying members can see the invite ability by logging into the the website and un
 
 ### Income
 
-Patrons: 77
-
 | **Source**      | **Monthly** | **Yearly** | **One Time** |
 |-----------------|-------------|------------|----------|
 | Patreon         | $171        | -          | -        |
 | Open Collective | $9          | $60        | $128     |
-| Ko-Fi           | $108        | -          | $328     |
+| Ko-Fi           | $136        | -          | $328     |
 | Other           | $24         | -          | $72      |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
-Last Updated: Jan 17, 2023.
+Last Updated: Jan 19, 2023.
 
 ### Expenses
 
