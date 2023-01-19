@@ -5,11 +5,13 @@ tags:
   - docs
 ---
 
-Due to the generous nature of the [folks that are contributors](https://docs.vmst.io/funding) to vmst.io, we now have our own instance of WriteFreely that we host. WriteFreely is free and open source software for easily publishing writing that may be longer than the 500 character limit on Mastodon.
+Due to the generous nature of the [folks that are contributors](https://docs.vmst.io/funding) to vmst.io, we now have our own instance of WriteFreely.
 
 ## write.vmst.io
 
-Users can follow and boost your posts on write.vmst.io just like your regular Mastodon account, because it's uses ActivityPub. The format of your WriteFreely account will be @_username_@write.vmst.io.
+WriteFreely is free and open source software for easily publishing writing that may be longer than the 500 character limit on Mastodon.
+
+Users can follow and boost your posts on write.vmst.io just like your regular Mastodon account, because it uses ActivityPub. The format of your WriteFreely account will be @username@write.vmst.io.
 
 They can also follow your blog using good ole' RSS.
 
