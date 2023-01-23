@@ -97,6 +97,7 @@ params:
         - We're highly available, and take ownership of issues when we're not. We publish [our realtime system status](https://status.vmst.io), and have a better than 99% observed availability from Instances.social.
         - We are well moderated, with multiple volunteer [staffers around the world](/staff) monitoring for user reports, and clear [rules against hate speech and harassment](/rules).
         - Your Mastodon account here also gets you a blog on [write.vmst.io](https://write.vmst.io) and [@username:vmst.io on Matrix](/matrix), all integrated through a single sign-on.
+        - If you're not a fan of the default Mastodon Web interface, we also host our own instances of alternative feature-rich web clients like [Elk](https://elk.vmst.io) or accessibility focused ones like [Semaphore](https://semaphore.vmst.io).
 
   socialIcons:
   - name: github-simple
