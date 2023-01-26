@@ -44,6 +44,7 @@ They are free for anyone to use.
 | Elk | [@elk@webtoo.ls](@elk@webtoo.ls) | [Open](https://github.com/elk-zone/elk) | [elk.zone](https://elk.zone) | Free |
 | Semaphore | [@nickcolley@toot.cat](https://toot.cat/@nickcolley) | [Open](https://github.com/NickColley/semaphore) | [semaphore.social](https://semaphore.social) | Free |
 | Mastodeck | [@mastodeck@mastodon.social](https://mastodon.social/@mastodeck) | Closed | [mastodeck.com](https://mastodeck.com) | Free |
+| Cuckoo | Nana Morse | [Open](https://github.com/NanaMorse/Cuckoo.Plus) | [cuckoo.social](https://www.cuckoo.social) | Free |
 
 ## iOS Clients
 
@@ -54,13 +55,14 @@ They are free for anyone to use.
 | **Client** | **Developer**                      | **Code** | **Download** | **Cost** |
 |------------|------------------------------------|----------|--------------|-------------|
 | Mastodon   | [joinmastodon.org](https://joinmastodon.org)                   | [Open](https://github.com/mastodon/mastodon-ios)     | [App Store](https://apps.apple.com/us/app/mastodon-for-iphone-and-ipad/id1571998974)    | Free       |
-| Mastoot    | [libei@mastodon.social](https://mastodon.social/@libei)              | Closed   | [App Store](https://apps.apple.com/us/app/mastoot/id1501485410)    | Free      |
-| Tusker     | [shadowfacts@social.shadowfacts.net](https://social.shadowfacts.net/@shadowfacts) | [Open](https://git.shadowfacts.net/shadowfacts/Tusker)     | [TestFlight](https://testflight.apple.com/join/wtB7HYvG)   | Free |
-| Metatext   | [metabolist@mastodon.social](https://mastodon.social/@metabolist)         | [Open](https://github.com/metabolist/metatext)     | [App Store](https://apps.apple.com/us/app/metatext/id1523996615)    | Free       |
-| tooot      | [tooot@xmflsct.com](https://xmflsct.com/@tooot)                  | [Open](https://github.com/tooot-app/app)     | [App Store](https://apps.apple.com/us/app/tooot/id1549772269)    | Paid       |
-| Mammoth    | [JPEGuin@mastodon.social](https://mastodon.social/@JPEGuin)            | Closed   | [TestFlight](https://testflight.apple.com/join/66c1wW8y)   | Beta    |
-| Toot!      | [WAHa_06x36@mastodon.social](https://mastodon.social/@WAHa_06x36)         | Closed   | [App Store](https://apps.apple.com/us/app/toot/id1229021451)    | Paid        |
-| Ivory      | [tapbots@tapbots.social](https://tapbots.social/@tapbots)             | Closed   | [App Store](https://apps.apple.com/app/id6444602274)          | Paid         |
+| Mastoot    | [@libei@mastodon.social](https://mastodon.social/@libei)              | Closed   | [App Store](https://apps.apple.com/us/app/mastoot/id1501485410)    | Free      |
+| Tusker     | [@shadowfacts@social.shadowfacts.net](https://social.shadowfacts.net/@shadowfacts) | [Open](https://git.shadowfacts.net/shadowfacts/Tusker)     | [TestFlight](https://testflight.apple.com/join/wtB7HYvG)   | Free |
+| Metatext   | [@metabolist@mastodon.social](https://mastodon.social/@metabolist)         | [Open](https://github.com/metabolist/metatext)     | [App Store](https://apps.apple.com/us/app/metatext/id1523996615)    | Free       |
+| tooot      | [@tooot@xmflsct.com](https://xmflsct.com/@tooot)                  | [Open](https://github.com/tooot-app/app)     | [App Store](https://apps.apple.com/us/app/tooot/id1549772269)    | Paid       |
+| Mammoth    | [@JPEGuin@mastodon.social](https://mastodon.social/@JPEGuin)            | Closed   | [TestFlight](https://testflight.apple.com/join/66c1wW8y)   | Beta    |
+| Toot!      | [@WAHa_06x36@mastodon.social](https://mastodon.social/@WAHa_06x36)         | Closed   | [App Store](https://apps.apple.com/us/app/toot/id1229021451)    | Paid        |
+| Ivory      | [@tapbots@tapbots.social](https://tapbots.social/@tapbots)             | Closed   | [App Store](https://apps.apple.com/app/id6444602274)          | Paid         |
+| Ice Cubes  | [@dimillian@mastodon.social](https://mastodon.social/@dimillian)             | [Open](https://github.com/Dimillian/IceCubesApp)   | [App Store](https://apps.apple.com/us/app/ice-cubes-for-mastodon/id6444915884)          | Free         |
 
 ## Android Clients
 
