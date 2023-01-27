@@ -36,6 +36,7 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 - Redis Database/Cache
 - Stunnel
 - Elastic Search
+- Translation API
 - Object Store
 - SMTP
 
@@ -104,7 +105,23 @@ There are multiple queues which are distributed across two dedicated worker node
 - Mailers
 - Scheduler (only on Exec)
 
-An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues)
+An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
+
+### Elastic Search
+
+This is considered an optional component for Mastodon deployments, but it utilized on vmst.io.
+We use a dedicated VM running [Open Search](https://opensearch.org) to provide the ability to perform full text searches on your posts and other content you've interacted with.
+Open Search is a fork of Elastic Search 7, that started in 2021.
+
+### Translation API
+
+We use the free tier of DeepL as a translation API for our Mastodon Web client interface.
+Since the translation feature is not used extensively on vmst.io, we do not plan to go beyond the free tier and begin paying for a different tier, or stand up our own self-hosted translation API, but will evaluate this again in the future should the need arise.
+
+### SMTP
+
+We use Sendmail as our managed SMTP service, for sending new user sign-up verifications, and other account notifications
+For more information please refer to our [Mailer](/mailer) page. 
 
 ## Flings
 
