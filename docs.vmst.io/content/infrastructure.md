@@ -65,7 +65,7 @@ The Nginx tier provides TLS/SSL termination for both the core Mastodon service a
 ### Mastodon Web
 
 The Mastodon Web tier consists of the Core Mastodon experience which is a Ruby application with Puma as the web/presentation service, and a Streaming API which is a node.js application.
-We use the Ruby and node.js versions which are recommended in the documentation for installing Mastodon from source on docs.joinmastodon.org.
+We use the Ruby and node.js versions which are recommended in the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
 ### Persistence
 
@@ -81,7 +81,30 @@ We use the Digital Ocean managed object store (Spaces), which includes a content
 
 ### Redis
 
-We use the 
+We use the Digital Ocean managed database service, this delivers a highly available database backend.
+
+#### Stunnel
+
+Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capibility.
+Stunnel is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the client and Redis.
+This process is used on our Mastodon Web and Sidekiq nodes.
+
+### Sidekiq
+
+Sidekiq is an essential part of the Mastodon environment and delivered as part of the Mastodon code.
+Everything that happens when you interact with Mastodon and the wider Fediverse through our instance, has to pass through Sidekiq.
+It communicates with Redis, Postgres, Elastic Search, and other instances on a regular basis.
+
+There are multiple queues which are distributed across two dedicated worker nodes.
+
+- Default
+- Ingress
+- Push
+- Pull
+- Mailers
+- Scheduler (only on Exec)
+
+An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues)
 
 ## Flings
 
