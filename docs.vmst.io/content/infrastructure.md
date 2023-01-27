@@ -37,6 +37,7 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 - Stunnel
 - Elastic Search
 - Object Store
+- SMTP
 
 ### Code Purity
 
@@ -47,6 +48,40 @@ In order to do this we run **unmodified** versions of the Mastodon code found on
 We do not run run any of the available Mastodon forks (such as Glitch, Hometown or Treehouse) or perform any other local modifications to the Mastodon stack, unless it is specifically required to run on our infrastructure.
 
 Other than those changes necessary for the functionality of our system, we do not intend to modify or customize Mastodon code in any other way that changes the user experience.
+
+### Virtual Machines
+
+We use Debian 11 as the base operating system for our self-managed virtual machines.
+
+### Load Balancing 
+
+We use the Digital Ocean managed load balancer objects to distribute user traffic across our frontend revese proxies.
+
+### Reverse Proxies
+
+We use Nginx as our reverse proxy software running on dedicated nodes.
+The Nginx tier provides TLS/SSL termination for both the core Mastodon service and any of our Flings.
+
+### Mastodon Web
+
+The Mastodon Web tier consists of the Core Mastodon experience which is a Ruby application with Puma as the web/presentation service, and a Streaming API which is a node.js application.
+We use the Ruby and node.js versions which are recommended in the documentation for installing Mastodon from source on docs.joinmastodon.org.
+
+### Persistence
+
+The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media attachments which are stored in an S3-compatible object store.
+
+#### Postgres
+
+We use the Digital Ocean managed database service, this delivers a highly available database backend.
+
+#### Object Store
+
+We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute uesr uploaded media around the world to reduce latency for users.
+
+### Redis
+
+We use the 
 
 ## Flings
 
