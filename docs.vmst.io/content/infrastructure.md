@@ -201,4 +201,13 @@ These alerts are sent to our internal Slack and to the email of our server admin
 We have a self-hosted instance of Prometheus which collects metrics from Mastodon via it's integrated StatsD system.
 Grafana is used to visualize the metrics on dashboards.
 
-These dashboards are only used by our team, and are currently not publicly accessible. 
+These dashboards are only used by our team, and are currently not publicly accessible.
+
+## Security
+
+In order to protect our user's privacy and data we implement a number of different security measures on our systems.
+
+While it wouldn't be prudent to document all of the active measures, they also include:
+
+- Preventing unnecessary external access to systems provider firewalls, and limiting communication between internal systems only to ports and systems required for functionality.
+- Using a web application firewall (WAF) on ingress nodes, and leveraging threat intelligence providers to block access from known bad actors.
