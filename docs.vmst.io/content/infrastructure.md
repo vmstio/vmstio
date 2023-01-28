@@ -212,4 +212,5 @@ While it wouldn't be prudent to document all of the active measures, they also i
 
 - Preventing unnecessary external access to systems provider firewalls, and limiting communication between internal systems only to ports and systems required for functionality.
 - Using a web application firewall (WAF) on ingress nodes, and leveraging threat intelligence providers to block access from known bad actors.
- 
+- Using updated versions from trusted sources of the base operating system, libraries and applications.
+- Requiring TLS connections to all public facing elements, deprecating insecure ciphers, and using TLS and/or private networks for communication between internal systems.
