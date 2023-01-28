@@ -46,22 +46,23 @@ Our goal is to run the latest released version of the Mastodon experience as soo
 If there are security related updates we intend to take those on even quicker to protect our infrastructure, users and your data.
 
 In order to do this we run **unmodified** versions of the Mastodon code found on [GitHub](https://github.com/mastodon/mastodon).
-We do not run run any of the available Mastodon forks (such as Glitch, Hometown or Treehouse) or perform any other local modifications to the Mastodon stack, unless it is specifically required to run on our infrastructure.
+We do not run any of the available Mastodon forks (such as Glitch, Hometown or Treehouse) or perform any other local modifications to the Mastodon stack, unless it is specifically required to run on our infrastructure.
 
 Other than those changes necessary for the functionality of our system, we do not intend to modify or customize Mastodon code in any other way that changes the user experience.
 
 ### Virtual Machines
 
-We use Debian 11 as the base operating system for our self-managed virtual machines.
+We use Digital Ocean "Droplets" with Debian 11 as the base operating system for our self-managed virtual machines.
 
 ### Load Balancing 
 
-We use the Digital Ocean managed load balancer objects to distribute user traffic across our frontend revese proxies.
+We use the Digital Ocean managed load balancer objects to distribute user traffic across our frontend reverse proxies.
 
 ### Reverse Proxies
 
 We use Nginx as our reverse proxy software running on dedicated nodes.
 The Nginx tier provides TLS/SSL termination for both the core Mastodon service and any of our Flings.
+We use the upstream stable Nginx repos.
 
 ### Mastodon Web
 
@@ -86,7 +87,7 @@ We use the Digital Ocean managed database service, this delivers a highly availa
 
 #### Stunnel
 
-Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capibility.
+Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capability.
 Stunnel is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the client and Redis.
 This process is used on our Mastodon Web and Sidekiq nodes.
 
@@ -201,13 +202,4 @@ These alerts are sent to our internal Slack and to the email of our server admin
 We have a self-hosted instance of Prometheus which collects metrics from Mastodon via it's integrated StatsD system.
 Grafana is used to visualize the metrics on dashboards.
 
-These dashboards are only used by our team, and are currently not publicly accessible.
-
-## Security
-
-In order to protect our user's privacy and data we implement a number of different security measures on our systems.
-
-While it wouldn't be prudent to document all of the active measures, they also include:
-
-- Preventing unnecessary external access to systems provider firewalls, and limiting communication between internal systems only to ports and systems required for functionality.
-- Using a web application firewall (WAF) on ingress nodes, and leveraging threat intelligence providers to block access from known bad actors.
+These dashboards are only used by our team, and are currently not publicly accessible. 
