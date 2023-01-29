@@ -27,7 +27,7 @@ tags:
 
 Our core service is the Mastodon platform located at [vmst.io](https://vmst.io). 
 
-[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3.
+[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the workloads and New York for the object store and this site.
 
 ### Mastodon Components
 
@@ -46,9 +46,9 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
 Our goal is to run the latest released version of the Mastodon experience within 48 hours of being published.
 
-In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on [GitHub](https://github.com/mastodon/mastodon).
+In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repo.
 
-We do not run any of the available Mastodon forks (such as Glitch, Hometown or Treehouse) or perform any other local modifications to the Mastodon stack. We do not intend to modify or customize Mastodon code in any other way that changes the user experience.
+We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack. We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
 
 ### Virtual Machines
 
@@ -67,7 +67,7 @@ We use the upstream stable Nginx repos.
 
 ### Mastodon Web
 
-The Mastodon Web tier consists of the Core Mastodon experience which is a Ruby application with Puma as the web/presentation service, and a Streaming API which is a node.js application.
+The Mastodon Web tier consists of the Core Mastodon experience which is a Ruby application with Puma as the web/presentation service, providing both ActivityPub/Federation and the web user experiance, and the seperate Streaming API service which is a node.js application.
 We use the Ruby and node.js versions which are recommended in the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
 ### Persistence
@@ -217,7 +217,7 @@ In order to protect our user's privacy and data we implement a number of differe
 While it wouldn't be prudent to document all of the active measures, they also include:
 
 - Preventing unnecessary external access to systems through OS and service provider firewalls, and limiting communication between internal systems only to ports and systems required for functionality.
-- Using a web application firewall (WAF) on Nginx nodes, and leveraging threat intelligence providers to block access from known bad actors.
+- Using a web application firewall (WAF) on Nginx nodes, and leveraging threat intelligence providers to detect block (IPS) access from known bad actors.
 - Using updated versions from trusted sources of the base operating system, libraries and applications.
 - Requiring TLS connections to all public facing elements, deprecating insecure ciphers, and using TLS and/or private networks for communication between internal systems.
 
