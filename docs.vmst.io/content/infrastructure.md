@@ -27,7 +27,7 @@ tags:
 
 Our core service is the Mastodon platform located at [vmst.io](https://vmst.io). 
 
-[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service.
+[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3.
 
 ### Mastodon Components
 
@@ -76,7 +76,7 @@ The persistent data in the Mastodon environment are represented by user posts wh
 
 #### Postgres
 
-We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. 
+We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. We the the integrated pgBouncer connection pool.
 
 #### Object Store
 
@@ -216,7 +216,12 @@ In order to protect our user's privacy and data we implement a number of differe
 
 While it wouldn't be prudent to document all of the active measures, they also include:
 
-- Preventing unnecessary external access to systems provider firewalls, and limiting communication between internal systems only to ports and systems required for functionality.
-- Using a web application firewall (WAF) on ingress nodes, and leveraging threat intelligence providers to block access from known bad actors.
+- Preventing unnecessary external access to systems through OS and service provider firewalls, and limiting communication between internal systems only to ports and systems required for functionality.
+- Using a web application firewall (WAF) on Nginx nodes, and leveraging threat intelligence providers to block access from known bad actors.
 - Using updated versions from trusted sources of the base operating system, libraries and applications.
 - Requiring TLS connections to all public facing elements, deprecating insecure ciphers, and using TLS and/or private networks for communication between internal systems.
+
+### Certificates
+
+We use Sectigo as our primary certificate authority, with the exception of our docs.vmst.io which uses a certificate issued by Cloudflare.
+
