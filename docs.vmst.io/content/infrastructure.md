@@ -25,7 +25,9 @@ tags:
 
 ## Core Services
 
-Our core service is the Mastodon platform located at [vmst.io](https://vmst.io). Digital Ocean is our primary hosting provider for this service.
+Our core service is the Mastodon platform located at [vmst.io](https://vmst.io). 
+
+[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service.
 
 ### Mastodon Components
 
@@ -52,7 +54,7 @@ Other than those changes necessary for the functionality of our system, we do no
 
 ### Virtual Machines
 
-We use Digital Ocean "Droplets" with Debian 11 as the base operating system for our self-managed virtual machines.
+We use Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the base operating system for our self-managed virtual machines.
 
 ### Load Balancing 
 
@@ -79,7 +81,7 @@ We use the Digital Ocean managed database service, this delivers a highly availa
 
 #### Object Store
 
-We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute uesr uploaded media around the world to reduce latency for users.
+We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute user uploaded media around the world to reduce latency for users.
 
 ### Redis
 
@@ -88,7 +90,7 @@ We use the Digital Ocean managed database service, this delivers a highly availa
 #### Stunnel
 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capability.
-Stunnel is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the client and Redis.
+[Stunnel](https://www.stunnel.org) is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
 This process is used on our Mastodon Web and Sidekiq nodes.
 
 ### Sidekiq
@@ -112,11 +114,12 @@ An explanation for the purpose of each queue can be found on [docs.joinmastodon.
 
 This is considered an optional component for Mastodon deployments, but it utilized on vmst.io.
 We use a dedicated VM running [Open Search](https://opensearch.org) to provide the ability to perform full text searches on your posts and other content you've interacted with.
-Open Search is a fork of Elastic Search 7, that started in 2021.
+
+Open Search is a fork of Elastic Search 7, which started in 2021.
 
 ### Translation API
 
-We use the free tier of DeepL as a translation API for our Mastodon Web client interface.
+We use the free tier of [DeepL](https://www.deepl.com/translator) as a translation API for our Mastodon Web client interface.
 Since the translation feature is not used extensively on vmst.io, we do not plan to go beyond the free tier and begin paying for a different tier, or stand up our own self-hosted translation API, but will evaluate this again in the future should the need arise.
 
 ### SMTP
@@ -141,6 +144,10 @@ Our flings leverage much of the existing core service infrastructure like the Ng
 
 - Dedicated virtual machines for Fling applications
 - MySQL Database
+
+### Matrix
+
+Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse). Although it is behind our load balancer and multiple reverse proxies, it is currently **not** in a true high availability configuration as it only exists on one Fling backend node.
 
 ### Code Purity
 
