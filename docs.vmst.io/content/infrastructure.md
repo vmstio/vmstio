@@ -32,8 +32,8 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 ### Mastodon Components
 
 - Nginx Reverse Proxy
-- Mastodon Web Service (Puma/Streaming)
-- Mastodon Sidekiq Services
+- Mastodon Core (Puma/Streaming)
+- Mastodon Sidekiq
 - PostgresSQL Database
 - Redis Database/Cache
 - Stunnel
@@ -44,13 +44,11 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
 ### Code Purity
 
-Our goal is to run the latest released version of the Mastodon experience as soon as it's available, with a goal of being live here within 48 hours of being published.
-If there are security related updates we intend to take those on even quicker to protect our infrastructure, users and your data.
+Our goal is to run the latest released version of the Mastodon experience within 48 hours of being published.
 
-In order to do this we run **unmodified** versions of the Mastodon code found on [GitHub](https://github.com/mastodon/mastodon).
-We do not run any of the available Mastodon forks (such as Glitch, Hometown or Treehouse) or perform any other local modifications to the Mastodon stack, unless it is specifically required to run on our infrastructure.
+In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on [GitHub](https://github.com/mastodon/mastodon).
 
-Other than those changes necessary for the functionality of our system, we do not intend to modify or customize Mastodon code in any other way that changes the user experience.
+We do not run any of the available Mastodon forks (such as Glitch, Hometown or Treehouse) or perform any other local modifications to the Mastodon stack. We do not intend to modify or customize Mastodon code in any other way that changes the user experience.
 
 ### Virtual Machines
 
@@ -58,12 +56,13 @@ We use Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the 
 
 ### Load Balancing 
 
-We use the Digital Ocean managed load balancer objects to distribute user traffic across our frontend reverse proxies.
+We use Digital Ocean managed load balancer objects, based on HAProxy, to distribute user traffic across our frontend reverse proxies.
 
 ### Reverse Proxies
 
-We use Nginx as our reverse proxy software running on dedicated nodes.
-The Nginx tier provides TLS/SSL termination for both the core Mastodon service and any of our Flings.
+We use Nginx as the reverse proxy software running on dedicated Droplets.
+The Nginx tier provides TLS/SSL termination and internal load balancing for both the core Mastodon service and any of our Flings.
+
 We use the upstream stable Nginx repos.
 
 ### Mastodon Web
@@ -73,15 +72,15 @@ We use the Ruby and node.js versions which are recommended in the documentation 
 
 ### Persistence
 
-The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media attachments which are stored in an S3-compatible object store.
+The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media/attachments which are stored in an S3-compatible object store.
 
 #### Postgres
 
-We use the Digital Ocean managed database service, this delivers a highly available database backend.
+We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. 
 
 #### Object Store
 
-We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute user uploaded media around the world to reduce latency for users.
+We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute uploaded and federated media around the world, to reduce access latency for users.
 
 ### Redis
 
