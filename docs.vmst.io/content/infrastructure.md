@@ -225,3 +225,6 @@ While it wouldn't be prudent to document all of the active measures, they also i
 
 We use Sectigo as our primary certificate authority, with the exception of our docs.vmst.io which uses a certificate issued by Cloudflare.
 
+## Naming Conventions
+
+Our servers are named after characters and actors from the original Star Trek series, and other 23rd century derivatives.
