@@ -163,11 +163,13 @@ We utilize Backblaze B2 as our backup provider.
 
 Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgres and MySQL) with Redis used as a key value store and timeline cache for vmst.io.
 
-- For the backup of Postgres we use `pg_dump` and `redis-cli` for Redis.
+- For the backup of Postgres we use `pg_dump`.
+- For the backup of Redis we use `redis-cli`.
+- For the backup of MySQL we use `mysqldump`.
 - The native `b2-cli` utility is then used to make a copy of those backups a Backblaze B2 bucket.
 - This is done using some custom scripts that process each task and then fire off notifications to our backend Slack.
-- Database backups are currently made daily.
-- Database backups are retained for 14 days, currently.
+- Database backups are currently made every 4 hours.
+- Database backups are retained for 14 days.
 - All backups are encrypted both in transit and at rest.
 
 ### Media/CDN Store Backups
