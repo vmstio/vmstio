@@ -58,6 +58,8 @@ We use Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the 
 
 We use Digital Ocean managed load balancer objects, based on HAProxy, to distribute user traffic across our frontend reverse proxies.
 
+A single load balancer object (Pike) is rated for 10,000 concurrent connections, but even under extreme load we consume 10% of that capacity.
+
 ### Reverse Proxies
 
 We use Nginx as the reverse proxy software running on dedicated Droplets.
@@ -65,10 +67,14 @@ The Nginx tier provides TLS/SSL termination and internal load balancing for both
 
 We use the upstream stable Nginx repos.
 
+There are two virtual machines (Sulu and Chekov) with 1 vCPU and 1 GB of memory each.
+
 ### Mastodon Web
 
-The Mastodon Web tier consists of the Core Mastodon experience which is a Ruby application with Puma as the web/presentation service, providing both ActivityPub/Federation and the web user experiance, and the seperate Streaming API service which is a node.js application.
+The Mastodon Web tier consists of the Core Mastodon experience which is a Ruby application with Puma as the web/presentation service, providing both ActivityPub/Federation and the web user experience, and the separate Streaming API service which is a node.js application.
 We use the Ruby and node.js versions which are recommended in the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
+
+There are three virtual machines (Kirk, Spock & April) with 2 vCPU and 4 GB of memory each.
 
 ### Persistence
 
@@ -78,6 +84,8 @@ The persistent data in the Mastodon environment are represented by user posts wh
 
 We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. We the the integrated pgBouncer connection pool.
 
+There is one Postgres database instance (Majel) with 2 vCPU and 4GB of memory.
+
 #### Object Store
 
 We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute uploaded and federated media around the world, to reduce access latency for users.
@@ -85,6 +93,8 @@ We use the Digital Ocean managed object store (Spaces), which includes a content
 ### Redis
 
 We use the Digital Ocean managed database service, this delivers a highly available database backend.
+
+There is one Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory.
 
 #### Stunnel
 
@@ -109,12 +119,16 @@ There are multiple queues which are distributed across two dedicated worker node
 
 An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
 
+There are two virtual machines (Scotty and Decker) with 2 vCPU and 4 GB of memory each.
+
 ### Elastic Search
 
 This is considered an optional component for Mastodon deployments, but it utilized on vmst.io.
 We use a dedicated VM running [Open Search](https://opensearch.org) to provide the ability to perform full text searches on your posts and other content you've interacted with.
 
 Open Search is a fork of Elastic Search 7, which started in 2021.
+
+There is one virtual machine (Khan) with 1 vCPU and 2GB of memory. It provides _khantext_. Get it?
 
 ### Translation API
 
@@ -136,6 +150,8 @@ Outside of our core service we run a number of "Flings" such as:
 - matrix.vmst.io
 
 When possible we will run these in a highly available way, behind our security systems and load balancers, on redundant backend nodes.
+
+There are two virtual machines (Uhura and Rand) with 2 vCPU and 4 GB of memory each.
 
 ### Fling Components
 
@@ -196,6 +212,8 @@ It runs on a dedicated VM for this purpose, with it's own Nginx frontend.
 In addition to providing a page for members to check when there might be issues, it actively alerts our team in our internal Slack to any issues.
 
 For more information on this topic please see our [Monitoring](/monitoring) page.
+
+There is one virtual machines (Kyle) with 1 vCPU and 1 GB of memory.
 
 ### Digital Ocean
 
