@@ -115,7 +115,7 @@ There are multiple queues which are distributed across two dedicated worker node
 - Push
 - Pull
 - Mailers
-- Scheduler (only on Exec)
+- Scheduler (only on Decker)
 
 An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
 
@@ -149,16 +149,10 @@ Outside of our core service we run a number of "Flings" such as:
 - write.vmst.io
 - matrix.vmst.io
 
-When possible we will run these in a highly available way, behind our security systems and load balancers, on redundant backend nodes.
+When possible we will run these in a highly available way, behind our security systems and load balancers, on redundant backend nodes. Our flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and Postgres. In addition we have the following specific to our Flings:
 
-There are two virtual machines (Uhura and Rand) with 2 vCPU and 4 GB of memory each.
-
-### Fling Components
-
-Our flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and Postgres. In addition we have the following specific to our Flings:
-
-- Dedicated virtual machines for Fling applications
-- MySQL Database
+- Two virtual machines (Uhura and Rand) with 2 vCPU and 4 GB of memory each.
+- MySQL running on one managed instance with 1 vCPU and 1 GB of memory.
 
 ### Matrix
 
