@@ -34,7 +34,7 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 - Nginx Reverse Proxy
 - Mastodon Core (Puma/Streaming)
 - Mastodon Sidekiq
-- PostgresSQL Database
+- Postgres Database
 - Redis Database/Cache
 - Stunnel
 - Elastic Search
@@ -144,10 +144,10 @@ For more information please refer to our [Mailer](/mailer) page.
 
 Outside of our core service we run a number of "Flings" such as:
 
-- elk.vmst.io
-- semaphore.vmst.io
-- write.vmst.io
-- matrix.vmst.io
+- [elk.vmst.io](https://elk.vmst.io)
+- [semaphore.vmst.io](https://semaphore.vmst.io)
+- [write.vmst.io](https://write.vmst.io)
+- [matrix.vmst.io](https://matrix.vmst.io)
 
 When possible we will run these in a highly available way, behind our security systems and load balancers, on redundant backend nodes. Our flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and Postgres. In addition we have the following specific to our Flings:
 
@@ -158,12 +158,16 @@ When possible we will run these in a highly available way, behind our security s
 
 Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse). Although it is behind our load balancer and multiple reverse proxies, it is currently **not** in a true high availability configuration as it only exists on one Fling backend node.
 
-### Code Purity
+### Other Sources
 
 Similar to our policy on our core services, we seek to run the latest released version of our Fling components from their upstream projects.
 However in some cases we are contributing to the development of these projects, and from time to time may run modified versions to assist with this task.
 
 Our activity level may vary from Fling to Fling with our contributions to the upstream project.
+
+- [Elk](https://github.com/elk-zone/elk)
+- [Semaphore](https://github.com/NickColley/semaphore)
+- [WriteFreely](https://writefreely.org)
 
 ## Backups
 
