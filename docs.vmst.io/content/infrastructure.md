@@ -204,6 +204,13 @@ Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgre
 - All configuration files for core applications, documentation and flings are stored on GitHub with changes committed there before being applied to servers.
 - Each VM tier has an updated snapshot on Digital Ocean for easy deployment to horizontally scale, or to replace failed systems quickly.
 
+## Documentation
+
+Our documentation website runs directly from the free tier of Digital Ocean's app platform.
+It is a [Hugo](https://gohugo.io) static website using the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme.
+It's automatically generated anytime there is an push event to the [underlying Git repo](https://github.com/vmstan/vmstio).
+It uses an integrated CDN provided by Digital Ocean.
+
 ## Monitoring
 
 We monitor the health and availability of our infrastructure in a few different ways.
