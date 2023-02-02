@@ -12,6 +12,11 @@ tags:
 
 ![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-tall.png)
 
+## Architecture Goals
+
+- Be highly available for critical components. No one server going offline should impact system availibility.
+- Be scalable both vertically and horizontally. Increased activity/load should be easily obsorbed, and unused resources shed when they're not needed.
+
 ## Providers
 
 | **Vendor** | **Service** |
@@ -74,7 +79,7 @@ There are two virtual machines (Sulu and Chekov) with 1 vCPU and 1 GB of memory 
 The Mastodon Web tier consists of the Core Mastodon experience which is a Ruby application with Puma as the web/presentation service, providing both ActivityPub/Federation and the web user experience, and the separate Streaming API service which is a node.js application.
 We use the Ruby and node.js versions which are recommended in the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
-There are three virtual machines (Kirk, Spock & April) with 2 vCPU and 4 GB of memory each.
+There are two virtual machines (Kirk, Spock) with 2 vCPU and 4 GB of memory each.
 
 ### Persistence
 
@@ -84,7 +89,7 @@ The persistent data in the Mastodon environment are represented by user posts wh
 
 We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. We the the integrated pgBouncer connection pool.
 
-There is one Postgres database instance (Majel) with 2 vCPU and 4GB of memory.
+There is one active Postgres database instance (Majel) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 
 #### Object Store
 
@@ -94,7 +99,7 @@ We use the Digital Ocean managed object store (Spaces), which includes a content
 
 We use the Digital Ocean managed database service, this delivers a highly available database backend.
 
-There is one Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory.
+There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 
 #### Stunnel
 
@@ -149,9 +154,9 @@ Outside of our core service we run a number of "Flings" such as:
 - [write.vmst.io](https://write.vmst.io)
 - [matrix.vmst.io](https://matrix.vmst.io)
 
-When possible we will run these in a highly available way, behind our security systems and load balancers, on redundant backend nodes. Our flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and Postgres. In addition we have the following specific to our Flings:
+When possible we will run these in a highly available way, behind our security systems and load balancers, but may only be on single backend nodes. Our flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and Postgres. In addition we have the following specific to our Flings:
 
-- Two virtual machines (Uhura and Rand) with 2 vCPU and 4 GB of memory each.
+- One virtual machines (Uhura) with 2 vCPU and 4 GB of memory.
 - MySQL running on one managed instance with 1 vCPU and 1 GB of memory.
 
 ### Matrix
