@@ -78,6 +78,10 @@ We do not run any of the available Mastodon forks (such as [Glitch](https://glit
 
 We use Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the base operating system for our self-managed virtual machines.
 
+We use the snapshot functionality to keep updated customized base images for each tier, this was should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
+
+![Digital Ocean Snapshots](https://cdn.vmst.io/docs/do-snapshots.png)
+
 ### Load Balancing 
 
 We use Digital Ocean managed load balancer objects, based on HAProxy, to distribute user traffic across our frontend reverse proxies.
