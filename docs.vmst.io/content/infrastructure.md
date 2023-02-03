@@ -14,8 +14,8 @@ tags:
 
 ## Architecture Goals
 
-- Be highly available for critical components. No one server going offline should impact system availibility.
-- Be scalable both vertically and horizontally. Increased activity/load should be easily obsorbed, and unused resources shed when they're not needed.
+- Be highly available for critical components. No one server going offline should impact system availability.
+- Be scalable both vertically and horizontally. Increased activity/load should be easily absorbed, and unused resources shed when they're not needed.
 
 ## Providers
 
@@ -106,6 +106,19 @@ There is one active Redis database instance (it doesn't have a fun name) with 1 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capability.
 [Stunnel](https://www.stunnel.org) is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
 This process is used on our Mastodon Web and Sidekiq nodes.
+
+Example Config:
+
+```
+pid = /run/stunnel-redis.pid
+delay = yes
+[redis-client]
+client = yes
+accept = 127.0.0.1:6379
+connect = path-to-redis-database.ondigitalocean.com:25061
+```
+
+We've found that the `delay = yes` component is essential to this configuration, otherwise anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database leaving Mastodon services in a failed state without the ability to communicate to Redis until the Stunnel service is restarted.
 
 ### Sidekiq
 
