@@ -27,7 +27,7 @@ tags:
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
 | Sendgrid | SMTP Relay |
-| GitHub | Configuration repositorysitory |
+| GitHub | Configuration repository |
 | Slack | Team Communications |
 
 ## Core Services
@@ -73,7 +73,7 @@ We do not currently leverage Kubernetes for any part of the vmst.io configuratio
 
 Our goal is to run the latest released version of the Mastodon experience within 48 hours of being published.
 
-In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repositorysitory.
+In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository.
 
 We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack. We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
 
