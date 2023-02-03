@@ -32,7 +32,7 @@ tags:
 
 ## Core Services
 
-Our core service is the Mastodon platform located at [vmst.io](https://vmst.io). 
+Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
 [Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the workloads and New York for the object store and this site.
 
@@ -85,7 +85,7 @@ Should there be a failure of a node or a need to scale horizontally and add addi
 
 ![Digital Ocean Snapshots](https://cdn.vmst.io/docs/do-snapshots.png)
 
-### Load Balancing 
+### Load Balancing
 
 We use Digital Ocean managed load balancer objects, based on HAProxy, to distribute user traffic across our frontend reverse proxies.
 
@@ -97,7 +97,7 @@ A single load balancer object (Pike) is rated for 10,000 concurrent connections,
 
 We use Nginx as the reverse proxy software running on dedicated Droplets.
 
-What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/): 
+What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/):
 
 > It's a server that sits in front of one or more web servers, intercepting requests from clients. This is different from a forward proxy, where the proxy sits in front of the clients. With a reverse proxy, when clients send requests to the origin server of a website, those requests are intercepted at the network edge by the reverse proxy server. The reverse proxy server will then send requests to and receive responses from the origin server. The reverse proxy ... ensures that no client ever communicates directly with that origin server.
   
@@ -146,7 +146,7 @@ This process is used on our Mastodon Web and Sidekiq nodes.
 
 Example of `/etc/stunnel/redis.conf` configuration file:
 
-```
+```text
 pid = /run/stunnel-redis.pid
 delay = yes
 [redis-client]
@@ -196,7 +196,7 @@ Since the translation feature is not used extensively on vmst.io, we do not plan
 ### SMTP
 
 We use Sendmail as our managed SMTP service, for sending new user sign-up verifications, and other account notifications
-For more information please refer to our [Mailer](/mailer) page. 
+For more information please refer to our [Mailer](/mailer) page.
 
 ## Flings
 
