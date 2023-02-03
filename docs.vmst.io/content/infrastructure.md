@@ -17,7 +17,7 @@ tags:
 - Be highly available for all critical components.
 - Be scalable both vertically and horizontally.
 - Be a highly performant experience for our users.
-- Be a healthy member of the decentralized and federated ActivityPub network.
+- Be a good actor on the ActivityPub network.
 
 ## Providers
 
@@ -105,7 +105,7 @@ Our Nginx reverse proxies provide TLS/SSL termination as well as internal load b
 
 ![Reverse Proxy Diagram](https://cdn.vmst.io/docs/reverse-proxy-diagram.png)
 
-There are two virtual machines (Sulu and Chekov) with 1 vCPU and 1 GB of memory each.
+Under normal circumstances there are at least two virtual machines (Sulu and Chekov) running Nginx, with 1 vCPU and 1 GB of memory each.
 
 ## Mastodon Core
 
