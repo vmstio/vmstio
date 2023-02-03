@@ -56,6 +56,7 @@ When vmst.io originally moved away from managed hosting with [Masto Host](https:
 - Three consolidated core nodes using Docker containers for all essential servers
 - One backend node running Redis, Elastic Search, and Sidekiq.
 - One managed PostgreSQL database instance.
+- The object store and CDN.
 
 (More information on that original configuration [can be found here](https://docs.vmst.io/post/2022/11/new-infrastructure/).)
 
@@ -87,15 +88,15 @@ Should there be a failure of a node or a need to scale horizontally and add addi
 
 ### Load Balancing
 
-We use Digital Ocean managed load balancer objects, based on HAProxy, to distribute user traffic across our frontend reverse proxies.
+We use Digital Ocean managed load balancer objects, based on [HAProxy](https://www.haproxy.org), to distribute user traffic across our frontend reverse proxies.
 
 ![Digital Ocean Load Balancer](https://cdn.vmst.io/docs/do-loadbalancer.png)
 
-A single load balancer object (Pike) is rated for 10,000 concurrent connections, but even under heavy load we only consume 10% of that capacity.
+Our single load balancer object (Pike) is rated for 10,000 concurrent connections, but even under heavy load we only consume 10% of that capacity.
 
 ### Reverse Proxies
 
-We use Nginx as the reverse proxy software running on dedicated Droplets.
+We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets.
 
 What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/):
 
