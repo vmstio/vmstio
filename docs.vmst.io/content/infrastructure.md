@@ -107,7 +107,9 @@ Digital Ocean requires encrypted/TLS connections to their managed Redis instance
 [Stunnel](https://www.stunnel.org) is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
 This process is used on our Mastodon Web and Sidekiq nodes.
 
-Example Config:
+![Stunnel Workflow](https://cdn.vmst.io/docs/stunnel-workflow.png)
+
+Example of `/etc/stunnel/redis.conf` configuration file:
 
 ```
 pid = /run/stunnel-redis.pid
@@ -118,7 +120,8 @@ accept = 127.0.0.1:6379
 connect = path-to-redis-database.ondigitalocean.com:25061
 ```
 
-We've found that the `delay = yes` component is essential to this configuration, otherwise anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database leaving Mastodon services in a failed state without the ability to communicate to Redis until the Stunnel service is restarted.
+We've found that the `delay = yes` component is essential to this configuration but is not well documented or in the default configuration files.
+Without this setting, anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database, leaving Mastodon services in a failed state and without the ability to communicate to Redis until the Stunnel service is restarted.
 
 ### Sidekiq
 
