@@ -110,18 +110,24 @@ Under normal circumstances there are at least two virtual machines (Sulu and Che
 
 ## Mastodon Core
 
-### Mastodon Web
+Aside from the various external dependencies, Mastodon is three main applications:
 
-The Mastodon Web tier consists of the Core Mastodon experience and the separate Streaming API service.
+- Web UI & API
+- Streaming API
+- Sidekiq
 
-Under normal circumstances there are at least two virtual machines (Kirk, Spock) running the Mastodon Web and Mastodon Streaming API, with 2 vCPU and 4 GB of memory each.
+### Web
+
+The Mastodon Web tier consists of the Mastodon Web UI/API and the separate Streaming API service.
+
+Under normal circumstances there are at least two virtual machines (Kirk, Spock) running these components, with 2 vCPU and 4 GB of memory each.
 
 #### Puma
 
-What users perceive as "Mastodon" is a Ruby application running with Puma running as the web/presentation, providing both ActivityPub/Federation and the web user experience.
+What users perceive as "Mastodon" is a [Ruby on Rails](https://rubyonrails.org) application (with [Puma](https://puma.io) running as the web/presentation layer) providing both ActivityPub/Federation and the web user experience.
 We use the Ruby versions and modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
-Based on recommendations by the developer of Puma, and others in the Mastodon administration community, we have Puma configured in our `.env.production` and `mastodon-web.service` are as follows:
+Based on recommendations by the developer of Puma, and others in the Mastodon administration community, we have Puma configured in `.env.production` and `mastodon-web.service`, as follows:
 
 ```text
 WEB_CONCURRENCY=3
@@ -133,7 +139,7 @@ The number of threads is then `concurrency * 3`.
 
 #### Streaming
 
-The Streaming API is a separate node.js application which provides a background WebSockets connection between your browser session and the Mastodon server to provide real-time "streaming" updates as new posts are loaded to your timeline, to send notifications, etc.
+The Streaming API is a separate [node.js](https://nodejs.org/en/) application which provides a background WebSockets connection between your browser session and the Mastodon server to provide real-time "streaming" updates as new posts are loaded to your timeline, to send notifications, etc.
 
 We currently use the node.js versions that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/), which at this time is node.js 16.x LTS but due to it's pending end of life will be upgraded to node.js 18.x LTS as soon as it's confirmed to be supported.
 
