@@ -89,6 +89,8 @@ Should there be a failure of a node or a need to scale horizontally and add addi
 
 We use Digital Ocean managed load balancer objects, based on HAProxy, to distribute user traffic across our frontend reverse proxies.
 
+![Digital Ocean Load Balancer](https://cdn.vmst.io/docs/do-loadbalancer.png)
+
 A single load balancer object (Pike) is rated for 10,000 concurrent connections, but even under extreme load we consume 10% of that capacity.
 
 ### Reverse Proxies
@@ -236,6 +238,8 @@ Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgre
 - Database backups are currently made every 4 hours.
 - Database backups are retained for 14 days.
 - All backups are encrypted both in transit and at rest.
+
+![SQL Backups](https://cdn.vmst.io/docs/sql-backups.png)
 
 ### Media/CDN Store Backups
 
