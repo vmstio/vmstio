@@ -34,7 +34,7 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
 [Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the workloads and New York for the object store and this site.
 
-### Mastodon Components
+### Required Components
 
 - Nginx Reverse Proxy
 - Mastodon Core (Puma/Streaming)
@@ -92,6 +92,8 @@ The Nginx tier provides TLS/SSL termination and internal load balancing for both
 We use the upstream stable Nginx repos.
 
 There are two virtual machines (Sulu and Chekov) with 1 vCPU and 1 GB of memory each.
+
+## Mastodon Core
 
 ### Mastodon Web
 
