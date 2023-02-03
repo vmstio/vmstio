@@ -27,7 +27,7 @@ tags:
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
 | Sendgrid | SMTP Relay |
-| GitHub | Configuration Repository |
+| GitHub | Configuration repositorysitory |
 | Slack | Team Communications |
 
 ## Core Services
@@ -51,28 +51,28 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
 ## Deployment Overview
 
-When vmst.io originally moved from managed hosting with [Masto Host](https://masto.host), the deployment was done with:
+When vmst.io originally moved away from managed hosting with [Masto Host](https://masto.host), the deployment was done with:
 
 - Three consolidated core nodes using Docker containers for all essential servers
 - One backend node running Redis, Elastic Search, and Sidekiq.
 - One managed PostgreSQL database instance.
 
-Over many iterations and changes, we eventually moved Redis to a managed instance, separated Elastic Search, and got better about controlling Sidekiq queues.
+(More information on that original configuration [can be found here](https://docs.vmst.io/post/2022/11/new-infrastructure/).)
+
+Over many iterations and changes, we eventually moved Redis to a managed instance, separated Elastic Search to it's own host, and got better about controlling Sidekiq queues.
 What also became apparent over time is that the Docker containers for Mastodon burn a lot of CPU cycles when deployed as we had done.
 
 We have since moved all of the Mastodon components to locally compiled code running with Linux systemd services.
 
-Docker is still used to deploy some of our "Flings" as documented below.
-
 ### Kubernetes
 
-We do not currently leverage Kubernetes for any part of the vmst.io configuration.
+We do not currently leverage Kubernetes for any part of the vmst.io configuration. Docker containers are still used to deploy some of our "Flings" as documented below.
 
 ### Code Purity
 
 Our goal is to run the latest released version of the Mastodon experience within 48 hours of being published.
 
-In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repo.
+In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repositorysitory.
 
 We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack. We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
 
@@ -263,7 +263,7 @@ Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgre
 
 Our documentation website runs directly from the free tier of Digital Ocean's app platform.
 It is a [Hugo](https://gohugo.io) static website using the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme.
-It's automatically generated anytime there is an push event to the [underlying Git repo](https://github.com/vmstan/vmstio).
+It's automatically generated anytime there is an push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
 It uses an integrated CDN provided by Digital Ocean.
 
 ## Monitoring
