@@ -17,7 +17,7 @@ tags:
 - Be highly available for all critical components.
 - Be scalable both vertically and horizontally.
 - Be a highly performant experience for our users.
-- Be a good actor on the ActivityPub network.
+- Be a stable endpoint on the ActivityPub network.
 
 ## Providers
 
