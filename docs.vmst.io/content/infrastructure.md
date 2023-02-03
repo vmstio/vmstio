@@ -47,6 +47,25 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 - Object Store
 - SMTP
 
+## Deployment Overview
+
+When vmst.io originally moved from managed hosting with [Masto Host](https://masto.host), the deployment was done with:
+
+- Three consolidated core nodes using Docker containers for all essential servers
+- One backend node running Redis, Elastic Search, and Sidekiq.
+- One managed PostgreSQL database instance.
+
+Over many iterations and changes, we eventually moved Redis to a managed instance, separated Elastic Search, and got better about controlling Sidekiq queues.
+What also became apparent over time is that the Docker containers for Mastodon burn a lot of CPU cycles when deployed as we had done.
+
+We have since moved all of the Mastodon components to locally compiled code running with Linux systemd services.
+
+Docker is still used to deploy some of our "Flings" as documented below.
+
+### Kubernetes
+
+We do not currently leverage Kubernetes for any part of the vmst.io configuration.
+
 ### Code Purity
 
 Our goal is to run the latest released version of the Mastodon experience within 48 hours of being published.
