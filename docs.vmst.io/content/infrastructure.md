@@ -14,8 +14,10 @@ tags:
 
 ## Architecture Goals
 
-- Be highly available for critical components. No one server going offline should impact system availability.
-- Be scalable both vertically and horizontally. Increased activity/load should be easily absorbed, and unused resources shed when they're not needed.
+- Be highly available for all critical components.
+- Be scalable both vertically and horizontally.
+- Be a highly performant experience for our users.
+- Be a healthy member of the decentralized and federated ActivityPub network.
 
 ## Providers
 
@@ -76,9 +78,10 @@ We do not run any of the available Mastodon forks (such as [Glitch](https://glit
 
 ### Virtual Machines
 
-We use Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the base operating system for our self-managed virtual machines.
+We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the base operating system for our self-managed systems.
 
-We use the snapshot functionality to keep updated customized base images for each tier, this was should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
+We use the snapshot functionality to keep updated customized base images for each tier.
+Should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
 
 ![Digital Ocean Snapshots](https://cdn.vmst.io/docs/do-snapshots.png)
 
