@@ -149,7 +149,25 @@ There is one active Postgres database instance (Majel) with 2 vCPU and 4GB of me
 Digital Ocean instance "T-Shirt" sizes for databases are done by vCPU, memory, disk size, and connections to the database.
 The connection count limits are based on sizing best practices for PostgreSQL, with a few held in reserve for their use to manage the service.
 Digital Ocean has an integrated "Connection Pool" feature of their platform which in effect puts the pgBouncer utility in front of the database.
-This effectively acts as a load balancer for the database, to make sure that connections to the database by Mastodon cannot stay open and consume resources
+This effectively acts as a reverse proxy / load balancer for the database, to make sure that connections to the database by Mastodon cannot stay open and consume resources longer than needed.
+
+There are a [few options for pooling modes](https://docs.digitalocean.com/products/databases/postgresql/how-to/manage-connection-pools/#pooling-modes) with Digital Ocean, but the default _Transaction Mode_ is the required option for Mastodon.
+
+Example of `.env.production` configuration settings relevant to Postgres:
+
+```text
+# PostgreSQL
+DB_HOST=path-to-postgres-database.ondigitalocean.com
+DB_PORT=25061
+DB_NAME=the_mastodon_connection_pool
+DB_USER=the_mastodon_user
+DB_PASS=Ourpassw0rd!sNoneofyourbu$iness
+PREPARED_STATEMENTS=false
+```
+
+The `PREPARED_STATEMENTS=false` is [required of Mastodon to use pgBouncer](https://docs.joinmastodon.org/admin/scaling/#pgbouncer).
+When performing upgrades of Mastodon that require changes to the database schema, you **must** temporarily modify the configuration on the system running the schema change to bypass pgBouncer and go directly to the database.
+You will need to remove the line with the prepared statement configuration or set it to true, then change the DB port and DB name values.
 
 #### Object Store
 
@@ -333,7 +351,7 @@ While it wouldn't be prudent to document all of the active measures, they also i
 
 ### Certificates
 
-We use Sectigo as our primary certificate authority, with the exception of our docs.vmst.io which uses a certificate issued by Cloudflare.
+We use Sectigo as our primary certificate authority, with the exception of docs.vmst.io which uses a certificate issued by Cloudflare.
 
 ## Naming Conventions
 
