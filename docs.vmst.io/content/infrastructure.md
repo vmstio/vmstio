@@ -38,12 +38,20 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
 ### Required Components
 
-- Nginx Reverse Proxy
-- Mastodon Core (Puma/Streaming)
-- Mastodon Sidekiq
-- Postgres Database
-- Redis Database/Cache
-- Stunnel
+The following reflect the required software components to have a functional deployment of Mastodon:
+
+- HTTP Proxy (typically Nginx)
+- Mastodon
+- PostgreSQL
+- Redis
+
+Depending on the sizing of the instance, this could all be done on one host operating system.
+
+### Additional Components
+
+Most Mastodon deployments leverage one or more additional components to provide additional functionality
+Some of them include:
+
 - Elastic Search
 - Translation API
 - Object Store
