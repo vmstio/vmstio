@@ -136,6 +136,19 @@ The Streaming API is a separate node.js application which provides a background 
 
 We currently use the node.js versions that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/), which at this time is node.js 16.x LTS but due to it's pending end of life will be upgraded to node.js 18.x LTS as soon as it's confirmed to be supported.
 
+As explained more in-depth in another section, the connection to the Digital Ocean managed Redis database must be done via TLS. For the Streaming API, there are additional configuration options that must be set to allow node.js to connect when it expected an non-encrypted connection by default.
+
+Example of `.env.production` configuration settings relevant to Streaming:
+
+```text
+# Streaming
+STREAMING_API_BASE_URL=wss://streaming.vmst.io
+DB_SSLMODE=require
+NODE_EXTRA_CA_CERTS=/path/to/certs/do-internal.crt
+```
+
+The `DB_SSLMODE` and `NODE_EXTRA_CA_CERTS` settings are not there by default. The Digital Ocean databases use self-signed/private certificates, but the variable set will tell the Streaming API to trust that connection based on the CA that are downloaded from Digital Ocean and upload to the server.
+
 ### Persistence
 
 The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media/attachments which are stored in an S3-compatible object store.
