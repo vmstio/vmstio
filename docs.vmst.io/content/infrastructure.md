@@ -91,14 +91,19 @@ We use Digital Ocean managed load balancer objects, based on HAProxy, to distrib
 
 ![Digital Ocean Load Balancer](https://cdn.vmst.io/docs/do-loadbalancer.png)
 
-A single load balancer object (Pike) is rated for 10,000 concurrent connections, but even under extreme load we consume 10% of that capacity.
+A single load balancer object (Pike) is rated for 10,000 concurrent connections, but even under extreme load we only consume 10% of that capacity.
 
 ### Reverse Proxies
 
 We use Nginx as the reverse proxy software running on dedicated Droplets.
-The Nginx tier provides TLS/SSL termination and internal load balancing for both the core Mastodon service and any of our Flings.
 
-We use the upstream stable Nginx repos.
+What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/): 
+
+  It's a server that sits in front of one or more web servers, intercepting requests from clients. This is different from a forward proxy, where the proxy sits in front of the clients. With a reverse proxy, when clients send requests to the origin server of a website, those requests are intercepted at the network edge by the reverse proxy server. The reverse proxy server will then send requests to and receive responses from the origin server. The reverse proxy ... ensures that no client ever communicates directly with that origin server.
+  
+Our Nginx reverse proxies provide TLS/SSL termination as well as internal load balancing for both the core Mastodon service and any of our Flings.
+
+![Reverse Proxy Diagram](https://cdn.vmst.io/docs/reverse-proxy-diagram.png)
 
 There are two virtual machines (Sulu and Chekov) with 1 vCPU and 1 GB of memory each.
 
