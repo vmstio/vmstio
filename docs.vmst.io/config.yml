@@ -86,7 +86,7 @@ params:
   ShowWordCount: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  EnableImageZoom: true
+  EnableImageZoom: false
   ShowToc: true
   TocOpen: true
   homeInfoParams:

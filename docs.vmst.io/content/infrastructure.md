@@ -120,7 +120,7 @@ Under normal circumstances there are at least two virtual machines (Kirk, Spock)
 What users perceive as "Mastodon" is a Ruby application running with Puma running as the web/presentation, providing both ActivityPub/Federation and the web user experience.
 We use the Ruby versions and modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
-Based on recommendations by the developer of Puma, and others in the Mastodon administration community, we have Puma configured in our `.env.production` as follows:
+Based on recommendations by the developer of Puma, and others in the Mastodon administration community, we have Puma configured in our `.env.production` and `mastodon-web.service` are as follows:
 
 ```text
 WEB_CONCURRENCY=3
@@ -142,9 +142,14 @@ The persistent data in the Mastodon environment are represented by user posts wh
 
 #### Postgres
 
-We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. We the the integrated pgBouncer connection pool.
+We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. Updates and maintenance are performed by Digital Ocean, independent of our administration efforts. 
 
 There is one active Postgres database instance (Majel) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+
+Digital Ocean instance "T-Shirt" sizes for databases are done by vCPU, memory, disk size, and connections to the database.
+The connection count limits are based on sizing best practices for PostgreSQL, with a few held in reserve for their use to manage the service.
+Digital Ocean has an integrated "Connection Pool" feature of their platform which in effect puts the pgBouncer utility in front of the database.
+This effectively acts as a load balancer for the database, to make sure that connections to the database by Mastodon cannot stay open and consume resources
 
 #### Object Store
 
