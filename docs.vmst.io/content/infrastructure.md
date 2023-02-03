@@ -186,6 +186,24 @@ You will need to remove the line with the prepared statement configuration or se
 
 We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute uploaded and federated media around the world, to reduce access latency for users.
 
+Example of `.env.production` configuration settings relevant to Digital Ocean's Object Store:
+
+```text
+# Object Store
+S3_ENABLED=true
+S3_PROTOCOL=https
+S3_BUCKET=ourbucketname
+S3_REGION=nyc3
+S3_HOSTNAME=nyc3.digitaloceanspaces.com
+S3_ENDPOINT=https://nyc3.digitaloceanspaces.com
+AWS_ACCESS_KEY_ID=NOTINAMILLI0NYEARS
+AWS_SECRET_ACCESS_KEY=hahahahahahahahahahahahaha
+S3_ALIAS_HOST=cdn.vmst.io
+```
+
+Our Object Store (Spaces) is in the Digital Ocean NYC3 data center, which is separate from the rest of the workloads which exist in the TOR1 (Toronto) data center.
+By default, the items in the Space are accessible through a non-CDN accessible endpoint, but once that is created on the Digital Ocean side, is set in Mastodon by using the `S3_ALIAS_HOST` variable.
+
 ### Redis
 
 We use the Digital Ocean managed database service, this delivers a highly available database backend.
