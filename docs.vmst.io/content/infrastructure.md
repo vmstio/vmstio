@@ -109,7 +109,7 @@ We use Digital Ocean managed load balancer objects, based on [HAProxy](https://w
 
 ![Digital Ocean Load Balancer](https://cdn.vmst.io/docs/do-loadbalancer.png)
 
-Our single load balancer object (Pike) is rated for 10,000 concurrent connections, but even under heavy load we only consume 10% of that capacity.
+Our single load balancer object ([Pike](https://memory-alpha.fandom.com/wiki/Christopher_Pike)) is rated for 10,000 concurrent connections, but even under heavy load we only consume 10% of that capacity.
 
 ### Reverse Proxies
 
@@ -123,7 +123,7 @@ Our Nginx reverse proxies provide TLS/SSL termination as well as internal load b
 
 ![Reverse Proxy Diagram](https://cdn.vmst.io/docs/reverse-proxy-diagram.png)
 
-Under normal circumstances there are at least two virtual machines (Sulu and Chekov) running Nginx, with 1 vCPU and 1 GB of memory each. Any major changes are usually tested by a temporary third node, which is then validated, and used as a new base image for the remaining nodes.
+Under normal circumstances there are at least two virtual machines (Sulu  and Chekov) running Nginx, with 1 vCPU and 1 GB of memory each. Any major changes are usually tested by a temporary third node, which is then validated, and used as a new base image for the remaining nodes.
 
 ## Mastodon Elements
 
