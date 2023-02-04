@@ -17,7 +17,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 - Be highly available for all critical components.
 - Be scalable both vertically and horizontally.
 - Be a highly performant experience for our users.
-- Be a stable endpoint on the ActivityPub network.
+- Be a stable endpoint on the [ActivityPub](https://activitypub.rocks) network.
 
 ## Layout
 
@@ -27,7 +27,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 | **Vendor** | **Service** |
 |---|---|
-| Digital Ocean | Managed Databases, Load Balancer, CDN/Object Storage, Virtual Machines (Droplets) |
+| Digital Ocean | Managed Databases, Load Balancer Services, CDN/Object Store, Virtual Machines (Droplets) |
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
 | Sendgrid | SMTP Relay |
@@ -38,20 +38,22 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
-[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 (Toronto) and NYC3 (New York), with Toronto holding the bulk of the workloads and New York hosting the object storage and application platform on which this documentation site is built.
+[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the workloads and New York for the object store and this site.
 
 ### Required Components
 
-The following list reflects the required software components to have a minimum viable  deployment of Mastodon:
+The following reflect the required software components to have a functional deployment of Mastodon:
 
-- [Nginx](https://nginx.org/)
+- HTTP Proxy (typically, [Nginx](https://nginx.org/))
 - [Mastodon](https://github.com/mastodon/mastodon) (obviously)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Redis](https://redis.io/)
 
+Depending on the sizing of the instance, this could all be deployed on one Linux machine.
+
 ### Additional Components
 
-Most Mastodon deployments leverage one or more of these components to provide additional functionality.
+Most Mastodon deployments leverage one or more additional components to provide additional functionality.
 
 Some of them include:
 
@@ -67,7 +69,7 @@ When vmst.io originally moved away from managed hosting with [Masto Host](https:
 - Three consolidated core nodes using Docker containers for all essential services.
 - One backend node running Redis, Elastic Search, and Sidekiq. These components also ran in Docker containers.
 - One managed PostgreSQL database instance.
-- S3 object storage for media uploads.
+- The object store for media uploads.
 
 (More information on that original configuration [can be found here](https://docs.vmst.io/post/2022/11/new-infrastructure/).)
 
@@ -109,7 +111,7 @@ We use Digital Ocean managed load balancer objects, based on [HAProxy](https://w
 
 ![Digital Ocean Load Balancer](https://cdn.vmst.io/docs/do-loadbalancer.png)
 
-Our single load balancer object ([Pike](https://memory-alpha.fandom.com/wiki/Christopher_Pike)) is rated for 10,000 concurrent connections, but even under heavy load we only consume 10% of that capacity.
+Our single load balancer object (Pike) is rated for 10,000 concurrent connections, but even under heavy load we only consume 10% of that capacity.
 
 ### Reverse Proxies
 
@@ -123,7 +125,7 @@ Our Nginx reverse proxies provide TLS/SSL termination as well as internal load b
 
 ![Reverse Proxy Diagram](https://cdn.vmst.io/docs/reverse-proxy-diagram.png)
 
-Under normal circumstances there are at least two virtual machines ([Sulu](https://memory-alpha.fandom.com/wiki/Hikaru_Sulu) and [Chekov](https://memory-alpha.fandom.com/wiki/Pavel_Chekov)) running Nginx, with 1 vCPU and 1 GB of memory each. Any major changes are usually tested by a temporary third node, which is then validated, and used as a new base image for the remaining nodes.
+Under normal circumstances there are at least two virtual machines (Sulu and Chekov) running Nginx, with 1 vCPU and 1 GB of memory each. Any major changes are usually tested by a temporary third node, which is then validated, and used as a new base image for the remaining nodes.
 
 ## Mastodon Elements
 
@@ -137,7 +139,7 @@ Aside from the various external dependencies, Mastodon is three main application
 
 The Mastodon Web tier consists of the Mastodon Web UI/API and the separate Streaming API service.
 
-Under normal circumstances there are at least two virtual machines ([Kirk](https://memory-alpha.fandom.com/wiki/James_T._Kirk) and [Spock](https://memory-alpha.fandom.com/wiki/Spock)) running these components, with 2 vCPU and 4 GB of memory each.
+Under normal circumstances there are at least two virtual machines (Kirk, Spock) running these components, with 2 vCPU and 4 GB of memory each.
 
 #### Puma
 
@@ -153,6 +155,15 @@ MAX_THREADS=9
 
 This follows a ratio of `vCPU * 1.5` for concurrency.
 The number of threads is then `concurrency * 3`.
+
+Additionally, in the default configuration where Nginx and Mastodon Puma would run on the same node, there are static files (CSS and image) that make up the user interface that are served directly by Nginx.
+Because we seperate Nginx into it's own tier on different machines, there is a setting to tell the Mastodon web server to serve these files instead.
+
+```text
+RAILS_SERVE_STATIC_FILES=true
+```
+
+According to [the Mastodon documentation](https://docs.joinmastodon.org/admin/config/#rails_serve_static_files) this does increase load on the Mastodon server but in our experiance it's not been a measurable difference.
 
 #### Streaming
 
@@ -191,17 +202,17 @@ There are multiple queues which are distributed across two dedicated worker node
 
 An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
 
-There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)) with 2 vCPU and 4 GB of memory each.
+There are two virtual machines (Scotty and Decker) with 2 vCPU and 4 GB of memory each.
 
 ### Persistence
 
-The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media/attachments which are stored on S3-compatible object storage.
+The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media/attachments which are stored in an S3-compatible object store.
 
 #### Postgres
 
 We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. Updates and maintenance are performed by Digital Ocean, independent of our administration efforts. 
 
-There is one active Postgres database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+There is one active Postgres database instance (Majel) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 
 Digital Ocean instance "T-Shirt" sizes for databases are done by vCPU, memory, disk size, and connections to the database.
 The connection count limits are based on sizing best practices for PostgreSQL, with a few held in reserve for their use to manage the service.
@@ -226,11 +237,11 @@ The `PREPARED_STATEMENTS=false` is [required of Mastodon to use pgBouncer](https
 When performing upgrades of Mastodon that require changes to the database schema, you **must** temporarily modify the configuration on the system running the schema change to bypass pgBouncer and go directly to the database.
 You will need to remove the line with the prepared statement configuration or set it to true, then change the DB port and DB name values.
 
-#### Object Storage
+#### Object Store
 
-We use the Digital Ocean object storage service, Spaces, which includes a content delivery network (CDN) to distribute media around the world, to reduce access latency for users and federated instances.
+We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute uploaded and federated media around the world, to reduce access latency for users.
 
-Example of `.env.production` configuration settings relevant to Digital Ocean's Object Storage:
+Example of `.env.production` configuration settings relevant to Digital Ocean's Object Store:
 
 ```text
 # Object Store
@@ -245,7 +256,7 @@ AWS_SECRET_ACCESS_KEY=hahahahahahahahahahahahaha
 S3_ALIAS_HOST=cdn.vmst.io
 ```
 
-Our Spaces instance is in the Digital Ocean NYC3 data center, which is separate from the rest of the workloads which exist in the TOR1 (Toronto) data center.
+Our Object Store (Spaces) is in the Digital Ocean NYC3 data center, which is separate from the rest of the workloads which exist in the TOR1 (Toronto) data center.
 By default, the items in the Space are accessible through a non-CDN accessible endpoint, but once that is created on the Digital Ocean side, is set in Mastodon by using the `S3_ALIAS_HOST` variable.
 
 ### Redis
@@ -283,7 +294,7 @@ We use a dedicated VM running [Open Search](https://opensearch.org) to provide t
 
 Open Search is a fork of Elastic Search 7, which started in 2021.
 
-There is one virtual machine ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh)) with 1 vCPU and 2GB of memory. It provides _khantext_. Get it?
+There is one virtual machine (Khan) with 1 vCPU and 2GB of memory. It provides _khantext_. Get it?
 
 While full text search is a great feature, since it only runs on one Droplet so in the event of a failure or reboot of the node there is only a temporary service distruption.
 That said, the long term plan is to add high availibility to this component at a later date.
@@ -297,7 +308,7 @@ Since the translation feature is not used extensively on vmst.io, we do not plan
 
 ### SMTP Relay
 
-We use Twilo [Sendgrid](https://sendgrid.com) as our managed SMTP service, for sending new user sign-up verifications, and other account notifications.
+We use Sendmail as our managed SMTP service, for sending new user sign-up verifications, and other account notifications.
 
 Example of `.env.production` configuration settings relevant to SMTP:
 
@@ -312,8 +323,6 @@ SMTP_SSL=true
 SMTP_DELIVERY_METHOD=smtp
 ```
 
-Unlike the other examples in this document which use fake API keys or passwords in the case of the SMTP relay with Sendgrid, the login for **every** user on the service is 'apikey'.
-
 For more information please refer to our [Mailer](/mailer) page.
 
 ## Flings
@@ -327,8 +336,8 @@ Outside of our core service we run a number of "Flings" such as:
 
 When possible we will run these in a highly available way, behind our security systems and load balancers, but may only be on single backend nodes. Our flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and Postgres. In addition we have the following specific to our Flings:
 
-- One virtual machines ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 4 GB of memory.
-- MySQL running on one managed instance ([McCoy](https://memory-alpha.fandom.com/wiki/Leonard_McCoy)) with 1 vCPU and 1 GB of memory.
+- One virtual machines (Uhura) with 2 vCPU and 4 GB of memory.
+- MySQL running on one managed instance with 1 vCPU and 1 GB of memory.
 
 ### Matrix
 
@@ -394,29 +403,22 @@ This powers our [status.vmst.io](https://status.vmst.io) page.
 It runs on a dedicated VM for this purpose, with it's own Nginx frontend.
 In addition to providing a page for members to check when there might be issues, it actively alerts our team in our internal Slack to any issues.
 
-![Kuma Alerts](https://cdn.vmst.io/docs/kuma-alert.png)
-
 For more information on this topic please see our [Monitoring](/monitoring) page.
 
-There is one virtual machines ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 1 GB of memory.
+There is one virtual machines (Kyle) with 1 vCPU and 1 GB of memory.
 
 ### Digital Ocean
 
 We use integrated metrics monitoring available through Digital Ocean to monitor and alert based CPU, memory, disk and other performance metrics of the host virtual machine and managed database systems.
 These alerts are sent to our internal Slack.
 
-![Digital Ocean Alerts](https://cdn.vmst.io/docs/do-alert.png)
-
 We also have active monitoring of the worldwide accessibility of our web frontends.
 These alerts are sent to our internal Slack and to the email of our server administrators.
 
 ### Prometheus & Grafana
 
-We have a self-hosted instance of [Prometheus](https://prometheus.io) which collects metrics from Mastodon via it's integrated StatsD system.
-[Loki](https://grafana.com/oss/loki/) is additionally used to collect logging from various components such as Nginx.
-[Grafana](https://grafana.com/grafana/) is then used to visualize the metrics on dashboards, or to search logs.
-
-![Grafana Screenshot](https://cdn.vmst.io/docs/grafana-screenshot.png)
+We have a self-hosted instance of Prometheus which collects metrics from Mastodon via it's integrated StatsD system.
+Grafana is used to visualize the metrics on dashboards.
 
 These dashboards are only used by our team, and are currently not publicly accessible.
 
@@ -441,6 +443,10 @@ This does not include sites behind any CDN provider which may respond with any v
 At this time none of our systems are accessible via IPv6. This is due to a [known limitation](https://docs.digitalocean.com/products/networking/load-balancers/details/limits/) of Digital Ocean's managed load balancer service.
 
 As the load balancer is our entry point for all other services, we do not enable IPv6 for Droplets even though it is technically supported.
+
+#### DNS Resolution
+
+We use [DNSimple](https://dnsimple.com/) for our domain registrar and nameserver. We have DNSSEC enabled on our domain.
 
 ## Security
 
