@@ -312,6 +312,8 @@ SMTP_SSL=true
 SMTP_DELIVERY_METHOD=smtp
 ```
 
+Unlike the other examples in this document which use fake API keys or passwords in the case of the SMTP relay with Sendgrid, the login for **every** user on the service is 'apikey'.
+
 For more information please refer to our [Mailer](/mailer) page.
 
 ## Flings
