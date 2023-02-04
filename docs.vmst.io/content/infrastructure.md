@@ -296,7 +296,21 @@ Since the translation feature is not used extensively on vmst.io, we do not plan
 
 ### SMTP
 
-We use Sendmail as our managed SMTP service, for sending new user sign-up verifications, and other account notifications
+We use Sendmail as our managed SMTP service, for sending new user sign-up verifications, and other account notifications.
+
+Example of `.env.production` configuration settings relevant to SMTP:
+
+```text
+# Mail
+SMTP_SERVER=smtp.sendgrid.net
+SMTP_PORT=465
+SMTP_LOGIN=apikey
+SMTP_PASSWORD=nevergonnagiveyouup
+SMTP_FROM_ADDRESS='Mastodon <mastodon@mailer.vmst.io>'
+SMTP_SSL=true
+SMTP_DELIVERY_METHOD=smtp
+```
+
 For more information please refer to our [Mailer](/mailer) page.
 
 ## Flings
