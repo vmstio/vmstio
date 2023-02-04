@@ -40,12 +40,12 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
 The following reflect the required software components to have a functional deployment of Mastodon:
 
-- HTTP Proxy (typically Nginx)
-- Mastodon
-- PostgreSQL
-- Redis
+- HTTP Proxy (typically, [Nginx](https://nginx.org/))
+- [Mastodon](https://github.com/mastodon/mastodon) (obviously)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Redis](https://redis.io/)
 
-Depending on the sizing of the instance, this could all be done on one host operating system.
+Depending on the sizing of the instance, this could all be deployed on one Linux machine.
 
 ### Additional Components
 
@@ -53,10 +53,10 @@ Most Mastodon deployments leverage one or more additional components to provide 
 
 Some of them include:
 
-- Elastic Search
+- Full Text Search
 - Translation API
-- Object Store
-- SMTP
+- [Object Storage](https://en.wikipedia.org/wiki/Object_storage)
+- [SMTP Server](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
 
 ## Deployment Overview
 
