@@ -394,6 +394,8 @@ This powers our [status.vmst.io](https://status.vmst.io) page.
 It runs on a dedicated VM for this purpose, with it's own Nginx frontend.
 In addition to providing a page for members to check when there might be issues, it actively alerts our team in our internal Slack to any issues.
 
+![Kuma Alerts](https://cdn.vmst.io/docs/kuma-alerts.png)
+
 For more information on this topic please see our [Monitoring](/monitoring) page.
 
 There is one virtual machines (Kyle) with 1 vCPU and 1 GB of memory.
@@ -403,13 +405,16 @@ There is one virtual machines (Kyle) with 1 vCPU and 1 GB of memory.
 We use integrated metrics monitoring available through Digital Ocean to monitor and alert based CPU, memory, disk and other performance metrics of the host virtual machine and managed database systems.
 These alerts are sent to our internal Slack.
 
+![Digital Ocean Alerts](https://cdn.vmst.io/docs/do-alerts.png)
+
 We also have active monitoring of the worldwide accessibility of our web frontends.
 These alerts are sent to our internal Slack and to the email of our server administrators.
 
 ### Prometheus & Grafana
 
 We have a self-hosted instance of Prometheus which collects metrics from Mastodon via it's integrated StatsD system.
-Grafana is used to visualize the metrics on dashboards.
+Loki is additionally used to collect logging from various components such as Nginx.
+Grafana is used to visualize the metrics on dashboards, or search logs.
 
 These dashboards are only used by our team, and are currently not publicly accessible.
 
