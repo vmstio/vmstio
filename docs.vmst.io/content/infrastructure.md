@@ -287,6 +287,9 @@ Open Search is a fork of Elastic Search 7, which started in 2021.
 
 There is one virtual machine (Khan) with 1 vCPU and 2GB of memory. It provides _khantext_. Get it?
 
+While full text search is a great feature, since it only runs on one Droplet so in the event of a failure or reboot of the node there is only a temporary service distruption.
+That said, the long term plan is to add high availibility to this component at a later date.
+
 ### Translation API
 
 We use the free tier of [DeepL](https://www.deepl.com/translator) as a translation API for our Mastodon Web client interface.
@@ -294,7 +297,7 @@ Since the translation feature is not used extensively on vmst.io, we do not plan
 
 ![DeepL Usage](https://cdn.vmst.io/docs/deepl-usage.png)
 
-### SMTP
+### SMTP Relay
 
 We use Sendmail as our managed SMTP service, for sending new user sign-up verifications, and other account notifications.
 
@@ -344,7 +347,7 @@ Our activity level may vary from Fling to Fling with our contributions to the up
 
 ## Backups
 
-We utilize Backblaze B2 as our backup provider.
+We utilize [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) as our backup provider.
 
 ### Database Backups
 
@@ -353,7 +356,7 @@ Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgre
 - For the backup of Postgres we use `pg_dump`.
 - For the backup of Redis we use `redis-cli`.
 - For the backup of MySQL we use `mysqldump`.
-- The native `b2-cli` utility is then used to make a copy of those backups a Backblaze B2 bucket.
+- The [Backblaze native](https://www.backblaze.com/b2/docs/quick_command_line.html) `b2-cli` utility is then used to make a copy of those backups a Backblaze B2 bucket.
 - This is done using some custom scripts that process each task and then fire off notifications to our backend Slack.
 - Database backups are currently made every 4 hours.
 - Database backups are retained for 14 days.
@@ -363,7 +366,7 @@ Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgre
 
 ### Media/CDN Store Backups
 
-- The CDN/media data is sync'd directly to Backblaze B2 via `rclone`.
+- The CDN/media data is sync'd directly to Backblaze B2 via the `rclone` [utility](https://rclone.org).
 - This is done using some custom scripts that process each task and then fire off notifications to our backend Slack.
 - CDN backups currently run every 4 hours.
 - Only the latest copy of CDN data is retained.
@@ -372,7 +375,7 @@ Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgre
 ### Configuration Backups
 
 - All configuration files for core applications, documentation and flings are stored on GitHub with changes committed there before being applied to servers.
-- Each VM tier has an updated snapshot on Digital Ocean for easy deployment to horizontally scale, or to replace failed systems quickly.
+- Each virtual machine tier has an updated snapshot on Digital Ocean for easy deployment to horizontally scale, or to replace failed systems quickly.
 
 ## Documentation
 
