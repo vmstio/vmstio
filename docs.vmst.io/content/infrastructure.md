@@ -4,13 +4,13 @@ description: Where the bits go, to and fro
 tags:
   - servers
   - docs
-  - infrastructure
-  - digital ocean
-  - redis
-  - postgres
 ---
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-tall.png)
+## Introduction
+
+The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance, and ancillary services, that make up vmst.io. It should explain how the various services are interdependant, and how _the magic happens_  when our users open the Mastodon app on their phone or enter our address in their web browser.
+
+Unfortunately it's not really magic, but a series of databases and micro-services from  various open source vendors, running in _The Cloud_.
 
 ## Architecture Goals
 
@@ -18,6 +18,10 @@ tags:
 - Be scalable both vertically and horizontally.
 - Be a highly performant experience for our users.
 - Be a stable endpoint on the ActivityPub network.
+
+## Layout
+
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-tall.png)
 
 ## Providers
 
