@@ -49,7 +49,8 @@ Depending on the sizing of the instance, this could all be done on one host oper
 
 ### Additional Components
 
-Most Mastodon deployments leverage one or more additional components to provide additional functionality
+Most Mastodon deployments leverage one or more additional components to provide additional functionality.
+
 Some of them include:
 
 - Elastic Search
@@ -61,21 +62,25 @@ Some of them include:
 
 When vmst.io originally moved away from managed hosting with [Masto Host](https://masto.host), the deployment was done with:
 
-- Three consolidated core nodes using Docker containers for all essential servers
-- One backend node running Redis, Elastic Search, and Sidekiq.
+- Three consolidated core nodes using Docker containers for all essential services.
+- One backend node running Redis, Elastic Search, and Sidekiq. These components also ran in Docker containers.
 - One managed PostgreSQL database instance.
-- The object store and CDN.
+- The object store for media uploads.
 
 (More information on that original configuration [can be found here](https://docs.vmst.io/post/2022/11/new-infrastructure/).)
 
-Over many iterations and changes, we eventually moved Redis to a managed instance, separated Elastic Search to it's own host, and got better about controlling Sidekiq queues.
-What also became apparent over time is that the Docker containers for Mastodon burn a lot of CPU cycles when deployed as we had done.
+Over many iterations, we eventually moved Redis to a managed instance, separated Elastic Search to it's own host, and got better about controlling Sidekiq queues.
+
+What also became apparent over time is that the Docker containers for Mastodon burn a lot of CPU cycles, when deployed as we had done.
 
 We have since moved all of the Mastodon components to locally compiled code running with Linux systemd services.
+Not only has this proven more efficent, it's provided more flexibility.
 
 ### Kubernetes
 
-We do not currently leverage Kubernetes for any part of the vmst.io configuration. Docker containers are still used to deploy some of our "Flings" as documented below.
+We do not currently leverage Kubernetes for any part of the vmst.io configuration. We may explore this again in the future. 
+
+Docker containers are still used to deploy some of our "Flings" as documented below.
 
 ### Code Purity
 
