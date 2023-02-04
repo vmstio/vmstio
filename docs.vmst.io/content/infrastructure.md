@@ -115,7 +115,7 @@ Our single load balancer object (Pike) is rated for 10,000 concurrent connection
 
 ### Reverse Proxies
 
-We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets.
+We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets. Nginx is installed using the [stable branch repository] for Debian. Currently this is version 1.22.
 
 What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/):
 
@@ -125,7 +125,7 @@ Our Nginx reverse proxies provide TLS/SSL termination as well as internal load b
 
 ![Reverse Proxy Diagram](https://cdn.vmst.io/docs/reverse-proxy-diagram.png)
 
-Under normal circumstances there are at least two virtual machines (Sulu and Chekov) running Nginx, with 1 vCPU and 1 GB of memory each.
+Under normal circumstances there are at least two virtual machines (Sulu and Chekov) running Nginx, with 1 vCPU and 1 GB of memory each. Any major changes are usually tested by a temporary third node, which is then validated, and used as a new base image for the remaining nodes.
 
 ## Mastodon Elements
 
