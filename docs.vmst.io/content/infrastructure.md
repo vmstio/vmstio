@@ -69,7 +69,7 @@ When vmst.io originally moved away from managed hosting with [Masto Host](https:
 - Three consolidated core nodes using Docker containers for all essential services.
 - One backend node running Redis, Elastic Search, and Sidekiq. These components also ran in Docker containers.
 - One managed PostgreSQL database instance.
-- The object store for media uploads.
+- S3 object storage for media uploads.
 
 (More information on that original configuration [can be found here](https://docs.vmst.io/post/2022/11/new-infrastructure/).)
 
@@ -197,7 +197,7 @@ There are two virtual machines (Scotty and Decker) with 2 vCPU and 4 GB of memor
 
 ### Persistence
 
-The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media/attachments which are stored in an S3-compatible object store.
+The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media/attachments which are stored on S3-compatible object storage.
 
 #### Postgres
 
@@ -228,11 +228,11 @@ The `PREPARED_STATEMENTS=false` is [required of Mastodon to use pgBouncer](https
 When performing upgrades of Mastodon that require changes to the database schema, you **must** temporarily modify the configuration on the system running the schema change to bypass pgBouncer and go directly to the database.
 You will need to remove the line with the prepared statement configuration or set it to true, then change the DB port and DB name values.
 
-#### Object Store
+#### Object Storage
 
-We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute uploaded and federated media around the world, to reduce access latency for users.
+We use the Digital Ocean object storage service, Spaces, which includes a content delivery network (CDN) to distribute media around the world, to reduce access latency for users and federated instances.
 
-Example of `.env.production` configuration settings relevant to Digital Ocean's Object Store:
+Example of `.env.production` configuration settings relevant to Digital Ocean's Object Storage:
 
 ```text
 # Object Store
@@ -247,7 +247,7 @@ AWS_SECRET_ACCESS_KEY=hahahahahahahahahahahahaha
 S3_ALIAS_HOST=cdn.vmst.io
 ```
 
-Our Object Store (Spaces) is in the Digital Ocean NYC3 data center, which is separate from the rest of the workloads which exist in the TOR1 (Toronto) data center.
+Our Spaces instance is in the Digital Ocean NYC3 data center, which is separate from the rest of the workloads which exist in the TOR1 (Toronto) data center.
 By default, the items in the Space are accessible through a non-CDN accessible endpoint, but once that is created on the Digital Ocean side, is set in Mastodon by using the `S3_ALIAS_HOST` variable.
 
 ### Redis
