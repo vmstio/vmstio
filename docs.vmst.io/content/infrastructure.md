@@ -27,7 +27,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 | **Vendor** | **Service** |
 |---|---|
-| Digital Ocean | Managed Databases, Load Balancer Services, CDN/Object Store, Virtual Machines (Droplets) |
+| Digital Ocean | Managed Databases, Load Balancer, CDN/Object Storage, Virtual Machines (Droplets) |
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
 | Sendgrid | SMTP Relay |
@@ -38,7 +38,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
-[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the workloads and New York for the object store and this site.
+[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 (Toronto) and NYC3 (New York), with Toronto holding the bulk of the workloads and New York hosting the object storage and application platform on which this documentation site is built.
 
 ### Required Components
 
