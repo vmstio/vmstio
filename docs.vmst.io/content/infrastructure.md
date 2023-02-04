@@ -42,18 +42,16 @@ Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
 ### Required Components
 
-The following reflect the required software components to have a functional deployment of Mastodon:
+The following list reflects the required software components to have a minimum viable  deployment of Mastodon:
 
-- HTTP Proxy (typically, [Nginx](https://nginx.org/))
+- [Nginx](https://nginx.org/)
 - [Mastodon](https://github.com/mastodon/mastodon) (obviously)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Redis](https://redis.io/)
 
-Depending on the sizing of the instance, this could all be deployed on one Linux machine.
-
 ### Additional Components
 
-Most Mastodon deployments leverage one or more additional components to provide additional functionality.
+Most Mastodon deployments leverage one or more of these components to provide additional functionality.
 
 Some of them include:
 
