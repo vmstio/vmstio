@@ -410,21 +410,49 @@ Grafana is used to visualize the metrics on dashboards.
 
 These dashboards are only used by our team, and are currently not publicly accessible.
 
+## Networking
+
+The local IP space used between systems on our virtual private cloud (VPC) network, is issued by Digital Ocean, with static IP addresses that are assigned at creation of the Droplet and persist throughout the lifecycle of the virtual machines. 
+
+Where possible any communication between internal nodes is encrypted even though the communication takes place on the VPC network.
+
+There are a few cases where traffic leaves our VPC but still communicates within the Digital Ocean network, such as when data is moved between Droplets in Toronto and the Object Storage in NYC.
+
+### Public IPs
+
+The public IP addresses assigned to our load balancer and virtual machines, are static IP addresses issued and owned by Digital Ocean. They are assigned at creation and persist throughout the lifecycle of the virtual machine.
+
+status.vmst.io and sites which are behind our load balancer (which is used as the entry point for all traffic) are the only user  accessible systems via a public address.
+
+This does not include sites behind any CDN provider which may respond with any variety of addresses which we also do not control.
+
+#### IPv6
+
+At this time none of our systems are accessible via IPv6. This is due to a [known limitation](https://docs.digitalocean.com/products/networking/load-balancers/details/limits/) of Digital Ocean's managed load balancer service.
+
+As the load balancer is our entry point for all other services, we do not enable IPv6 for Droplets even though it is technically supported.
+
 ## Security
 
 In order to protect our user's privacy and data we implement a number of different security measures on our systems.
 
-While it wouldn't be prudent to document all of the active measures, they also include:
+They include:
 
-- Preventing unnecessary external access to systems through OS and service provider firewalls, and limiting communication between internal systems only to ports and systems required for functionality.
-- Using a web application firewall (WAF) on Nginx nodes, and leveraging threat intelligence providers to detect block (IPS) access from known bad actors.
-- Using updated versions from trusted sources of the base operating system, libraries and applications.
-- Requiring TLS connections to all public facing elements, deprecating insecure ciphers, and using TLS and/or private networks for communication between internal systems.
+- Preventing unnecessary external access to systems through OS and service provider firewalls, and limiting communication between internal systems only to the source/destination ports and protocols required for functionality.
+- Blocking any access to the system from known problematic networks, and leveraging an intrusion detection system to detect and deny access to active bad actors.
+- Using updated versions, from trusted sources, of the source code and binaries downloaded to our systems.
+- Requiring encrypted connections to all public facing elements, deprecating insecure ciphers, and using secure commections where possible even on private networks, for communication between internal systems.
 
 ### Certificates
 
-We use Sectigo as our primary certificate authority, with the exception of docs.vmst.io which uses a certificate issued by Cloudflare.
+We use [Sectigo](https://sectigo.com/) as our primary certificate authority, with the exception of docs.vmst.io which uses a certificate issued by Cloudflare.
+
+Sectigo was utilized after testing [Let's Encrypt](https://letsencrypt.org/), but the automated validation system presented some challenges for us that were solved by using a legacy commerical CA.
+
+Once our existing wildcard certificate has expired in late 2023, we intend to try again to use Let's Encrypt.
 
 ## Naming Conventions
 
 Our servers are named after characters and actors from the original Star Trek series, and other 23rd century derivatives.
+
+Live long and prosper.
