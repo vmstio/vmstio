@@ -8,9 +8,9 @@ tags:
 
 ## Introduction
 
-The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance, and ancillary services, that make up vmst.io. It should explain how the various services are interdependant, and how _the magic happens_  when our users open the Mastodon app on their phone or enter our address in their web browser.
+The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance, and ancillary services, that make up [vmst.io](https://vmst.io). It should explain how the various services interact, and how _the magic happens_ when our users open the Mastodon app on their phone or enter our address in their web browser.
 
-Unfortunately it's not really magic, but a series of databases and micro-services from  various open source vendors, running in _The Cloud_.
+Unfortunately though it's not really magic, but a series of databases and micro-services from  various open source vendors, running in _The Cloud_.
 
 ## Architecture Goals
 
@@ -31,7 +31,7 @@ Unfortunately it's not really magic, but a series of databases and micro-service
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
 | Sendgrid | SMTP Relay |
-| GitHub | Configuration repository |
+| GitHub | Configuration Repository |
 | Slack | Team Communications |
 
 ## Core Services
@@ -60,9 +60,9 @@ Some of them include:
 - Full Text Search
 - Translation API
 - [Object Storage](https://en.wikipedia.org/wiki/Object_storage)
-- [SMTP Server](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
+- [SMTP Relay](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
 
-## Deployment Overview
+## Deployment History
 
 When vmst.io originally moved away from managed hosting with [Masto Host](https://masto.host), the deployment was done with:
 
@@ -86,13 +86,15 @@ We do not currently leverage Kubernetes for any part of the vmst.io configuratio
 
 Docker containers are still used to deploy some of our "Flings" as documented below.
 
-### Code Purity
+## Code Purity
 
 Our goal is to run the latest released version of the Mastodon experience within 48 hours of being published.
 
 In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository.
 
 We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack. We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
+
+## Core Elements
 
 ### Virtual Machines
 
@@ -125,7 +127,7 @@ Our Nginx reverse proxies provide TLS/SSL termination as well as internal load b
 
 Under normal circumstances there are at least two virtual machines (Sulu and Chekov) running Nginx, with 1 vCPU and 1 GB of memory each.
 
-## Mastodon Core
+## Mastodon Elements
 
 Aside from the various external dependencies, Mastodon is three main applications:
 
@@ -172,6 +174,26 @@ NODE_EXTRA_CA_CERTS=/path/to/certs/do-internal.crt
 ```
 
 The `DB_SSLMODE` and `NODE_EXTRA_CA_CERTS` settings are not there by default. The Digital Ocean databases use self-signed/private certificates, but the variable set will tell the Streaming API to trust that connection based on the CA that are downloaded from Digital Ocean and upload to the server.
+
+### Sidekiq
+
+Sidekiq is an essential part of the Mastodon environment and delivered as part of the Mastodon code.
+
+Everything that happens when you interact with Mastodon and the wider Fediverse through our instance, has to pass through Sidekiq.
+It communicates with Redis, Postgres, Elastic Search, and other instances on a regular basis.
+
+There are multiple queues which are distributed across two dedicated worker nodes.
+
+- Default
+- Ingress
+- Push
+- Pull
+- Mailers
+- Scheduler (only on Decker)
+
+An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
+
+There are two virtual machines (Scotty and Decker) with 2 vCPU and 4 GB of memory each.
 
 ### Persistence
 
@@ -255,25 +277,6 @@ connect = path-to-redis-database.ondigitalocean.com:25061
 
 We've found that the `delay = yes` component is essential to this configuration but is not well documented or in the default configuration files.
 Without this setting, anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database, leaving Mastodon services in a failed state and without the ability to communicate to Redis until the Stunnel service is restarted.
-
-### Sidekiq
-
-Sidekiq is an essential part of the Mastodon environment and delivered as part of the Mastodon code.
-Everything that happens when you interact with Mastodon and the wider Fediverse through our instance, has to pass through Sidekiq.
-It communicates with Redis, Postgres, Elastic Search, and other instances on a regular basis.
-
-There are multiple queues which are distributed across two dedicated worker nodes.
-
-- Default
-- Ingress
-- Push
-- Pull
-- Mailers
-- Scheduler (only on Decker)
-
-An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
-
-There are two virtual machines (Scotty and Decker) with 2 vCPU and 4 GB of memory each.
 
 ### Elastic Search
 
