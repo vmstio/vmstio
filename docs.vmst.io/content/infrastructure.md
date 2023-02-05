@@ -27,7 +27,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 | **Vendor** | **Service** |
 |---|---|
-| Digital Ocean | Managed Databases, Load Balancer Services, CDN/Object Store, Virtual Machines (Droplets) |
+| Digital Ocean | Managed Databases, Load Balancer Services, CDN/Object Storage, Virtual Machines (Droplets) |
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
 | Sendgrid | SMTP Relay |
@@ -38,7 +38,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
-[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the workloads and New York for the object store and this site.
+[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the workloads and New York for the object storage and this site.
 
 ### Required Components
 
@@ -69,7 +69,7 @@ When vmst.io originally moved away from managed hosting with [Masto Host](https:
 - Three consolidated core nodes using Docker containers for all essential services.
 - One backend node running Redis, Elastic Search, and Sidekiq. These components also ran in Docker containers.
 - One managed PostgreSQL database instance.
-- The object store for media uploads.
+- The object storage for media uploads.
 
 (More information on that original configuration [can be found here](https://docs.vmst.io/post/2022/11/new-infrastructure/).)
 
@@ -210,7 +210,7 @@ There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Mo
 
 Bootstrapping a Mastodon instance is about 30% community management, 20% general server management, and 50% of figuring out what you've done to anger Sidekiq.
 
-The default install of Mastodon, when deployed from source, generates one Sidekiq service which 25 threads.
+The default install of Mastodon, when deployed from source, generates one Sidekiq service with 25 threads.
 
 Each thread when active has _the potential_ to be an active connection to the Postgres database, but it might also do something else entirely, like send an email notification or fetch a remote image, or tell another server that users have posted.
 It's somewhat unpredictable.
@@ -262,7 +262,7 @@ We have our Sidekiq queues configured as such:
 | Pull      | 25   | 25  |
 | Default   | 25   | 25  |
 | Ingress   | 40   | 25  |
-| Scheduler |      | 15  |
+| Scheduler | -    | 15  |
 | Mailer    | 5    | 5   |
 | Total     | **120**  | **120** |
 
@@ -279,7 +279,7 @@ With the exception of scheduled tasks the loss of one Sidekiq host or the other 
 
 ### Persistence
 
-The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media/attachments which are stored in an S3-compatible object store.
+The persistent data in the Mastodon environment are represented by user posts which are stored in a PostgreSQL database, and user media/attachments which are stored in an S3-compatible object storage.
 
 #### Postgres
 
@@ -310,14 +310,14 @@ The `PREPARED_STATEMENTS=false` is [required of Mastodon to use pgBouncer](https
 When performing upgrades of Mastodon that require changes to the database schema, you **must** temporarily modify the configuration on the system running the schema change to bypass pgBouncer and go directly to the database.
 You will need to remove the line with the prepared statement configuration or set it to true, then change the DB port and DB name values.
 
-#### Object Store
+#### Object Storage
 
-We use the Digital Ocean managed object store (Spaces), which includes a content delivery network (CDN) to distribute uploaded and federated media around the world, to reduce access latency for users.
+We use the Digital Ocean Spaces service, which is an S3-compatible object storage provider and includes a content delivery network (CDN) to distribute attached media to multiple points, reducing access latency for users and federated instances.
 
-Example of `.env.production` configuration settings relevant to Digital Ocean's Object Store:
+Example of `.env.production` configuration settings relevant to Digital Ocean Spaces:
 
 ```text
-# Object Store
+# Object Storage
 S3_ENABLED=true
 S3_PROTOCOL=https
 S3_BUCKET=ourbucketname
@@ -329,7 +329,7 @@ AWS_SECRET_ACCESS_KEY=hahahahahahahahahahahahaha
 S3_ALIAS_HOST=cdn.vmst.io
 ```
 
-Our Object Store (Spaces) is in the Digital Ocean NYC3 data center, which is separate from the rest of the workloads which exist in the TOR1 (Toronto) data center.
+Our Spaces is in the Digital Ocean NYC3 data center, which is separate from the rest of the workloads which exist in the TOR1 (Toronto) data center.
 By default, the items in the Space are accessible through a non-CDN accessible endpoint, but once that is created on the Digital Ocean side, is set in Mastodon by using the `S3_ALIAS_HOST` variable.
 
 ### Redis
@@ -362,15 +362,16 @@ Without this setting, anytime there is a change in Redis services backend locati
 
 ### Elastic Search
 
-This is considered an optional component for Mastodon deployments, but it utilized on vmst.io.
-We use a dedicated VM running [Open Search](https://opensearch.org) to provide the ability to perform full text searches on your posts and other content you've interacted with.
+Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, favoriting or boosting.
+While this is considered an optional component for Mastodon deployments, but it utilized on vmst.io.
+We use a dedicated VM running [Open Search](https://opensearch.org) 2.5 to provide the ability to perform full text searches on your posts and other content you've interacted with.
 
-Open Search is a fork of Elastic Search 7, which started in 2021.
+Open Search is a fork of Elastic Search 7, which was started in 2021. While it lacks some of the more advanced features found in newer versions of Elastic Search, it is supported by Mastodon.
 
 There is one virtual machine ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh)) with 1 vCPU and 2GB of memory. It provides _khantext_. Get it?
 
-While full text search is a great feature, since it only runs on one Droplet so in the event of a failure or reboot of the node there is only a temporary service disruption.
-That said, the long term plan is to add high availability to this component at a later date.
+While full text search is a great feature, it only runs on one Droplet currently so in the event of a failure or reboot of the node there may only a temporary service disruption.
+That said, we intend to add high availability by adding clustering to this component, at a later date.
 
 ### Translation API
 
@@ -396,6 +397,8 @@ SMTP_SSL=true
 SMTP_DELIVERY_METHOD=smtp
 ```
 
+Unlike the other examples in this document which use fake API keys or passwords in the case of the SMTP relay with Sendgrid, the login for **every** user on the service is 'apikey'.
+
 For more information please refer to our [Mailer](/mailer) page.
 
 ## Flings
@@ -407,7 +410,7 @@ Outside of our core service we run a number of "Flings" such as:
 - [write.vmst.io](https://write.vmst.io)
 - [matrix.vmst.io](https://matrix.vmst.io)
 
-When possible we will run these in a highly available way, behind our security systems and load balancers, but may only be on single backend nodes. Our flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and Postgres. In addition we have the following specific to our Flings:
+When possible we will run these in a highly available way, behind our security systems and load balancers, but may only be on single backend nodes. Our Flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and Postgres. In addition we have the following specific to our Flings:
 
 - One virtual machines ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 4 GB of memory.
 - MySQL running on one managed instance ([McCoy](https://memory-alpha.fandom.com/wiki/Leonard_McCoy)) with 1 vCPU and 1 GB of memory.
@@ -456,7 +459,7 @@ Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgre
 
 ### Configuration Backups
 
-- All configuration files for core applications, documentation and flings are stored on GitHub with changes committed there before being applied to servers.
+- All configuration files for core applications, documentation and Flings are stored on GitHub with changes committed there before being applied to servers.
 - Each virtual machine tier has an updated snapshot on Digital Ocean for easy deployment to horizontally scale, or to replace failed systems quickly.
 
 ## Documentation
@@ -476,6 +479,8 @@ This powers our [status.vmst.io](https://status.vmst.io) page.
 It runs on a dedicated VM for this purpose, with it's own Nginx frontend.
 In addition to providing a page for members to check when there might be issues, it actively alerts our team in our internal Slack to any issues.
 
+![Kuma Alerts](https://cdn.vmst.io/docs/kuma-alert.png)
+
 For more information on this topic please see our [Monitoring](/monitoring) page.
 
 There is one virtual machines ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 1 GB of memory.
@@ -485,13 +490,18 @@ There is one virtual machines ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)
 We use integrated metrics monitoring available through Digital Ocean to monitor and alert based CPU, memory, disk and other performance metrics of the host virtual machine and managed database systems.
 These alerts are sent to our internal Slack.
 
+![Digital Ocean Alerts](https://cdn.vmst.io/docs/do-alert.png)
+
 We also have active monitoring of the worldwide accessibility of our web frontends.
 These alerts are sent to our internal Slack and to the email of our server administrators.
 
 ### Prometheus & Grafana
 
-We have a self-hosted instance of Prometheus which collects metrics from Mastodon via it's integrated StatsD system.
-Grafana is used to visualize the metrics on dashboards.
+We have a self-hosted instance of [Prometheus](https://prometheus.io) which collects metrics from Mastodon via it's integrated StatsD system.
+[Loki](https://grafana.com/oss/loki/) is additionally used to collect logging from various components such as Nginx.
+[Grafana](https://grafana.com/grafana/) is then used to visualize the metrics on dashboards, or to search logs.
+
+![Grafana Screenshot](https://cdn.vmst.io/docs/grafana-screenshot.png)
 
 These dashboards are only used by our team, and are currently not publicly accessible.
 
