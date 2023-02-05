@@ -64,7 +64,7 @@ Some of them include:
 
 ## Deployment History
 
-When vmst.io originally moved away from managed hosting with [Masto Host](https://masto.host), the deployment was done with:
+When [vmst.io](https://vmst.io) originally moved away from managed hosting with [Masto Host](https://masto.host), the deployment was done with:
 
 - Three consolidated core nodes using Docker containers for all essential services.
 - One backend node running Redis, Elastic Search, and Sidekiq. These components also ran in Docker containers.
@@ -82,7 +82,7 @@ Not only has this proven more efficient, it's provided more flexibility.
 
 ### Kubernetes
 
-We do not currently leverage Kubernetes for any part of the vmst.io configuration. We may explore this again in the future.
+We do not currently leverage Kubernetes for any part of the [vmst.io](https://vmst.io) configuration. We may explore this again in the future.
 
 Docker containers are still used to deploy some of our "Flings" as documented below.
 
@@ -363,7 +363,7 @@ Without this setting, anytime there is a change in Redis services backend locati
 ### Elastic Search
 
 Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, favoriting or boosting.
-While this is considered an optional component for Mastodon deployments, but it utilized on vmst.io.
+While this is considered an optional component for Mastodon deployments, but it utilized on [vmst.io](https://vmst.io).
 We use a dedicated VM running [Open Search](https://opensearch.org) 2.5 to provide the ability to perform full text searches on your posts and other content you've interacted with.
 
 Open Search is a fork of Elastic Search 7, which was started in 2021. While it lacks some of the more advanced features found in newer versions of Elastic Search, it is supported by Mastodon.
@@ -376,7 +376,7 @@ That said, we intend to add high availability by adding clustering to this compo
 ### Translation API
 
 We use the free tier of [DeepL](https://www.deepl.com/translator) as a translation API for our Mastodon Web client interface.
-Since the translation feature is not used extensively on vmst.io, we do not plan to go beyond the free tier and begin paying for a different tier, or stand up our own self-hosted translation API, but will evaluate this again in the future should the need arise.
+Since the translation feature is not used extensively on [vmst.io](https://vmst.io), we do not plan to go beyond the free tier and begin paying for a different tier, or stand up our own self-hosted translation API, but will evaluate this again in the future should the need arise.
 
 ![DeepL Usage](https://cdn.vmst.io/docs/deepl-usage.png)
 
@@ -424,7 +424,7 @@ We run the native Go application locally on our Fling backend servers.
 
 For more information please refer to our dedicated [Write](/write) documentation.
 
-Our implementation is configured to authenticate against vmst.io, so your Mastodon username and password is a single sign-on to this service. This is done by creating a client ID and secret with Mastodon.
+Our implementation is configured to authenticate against [vmst.io](https://vmst.io), so your Mastodon username and password is a single sign-on to this service. This is done by creating a client ID and secret with Mastodon.
 
 Example of the WriteFreely `config.ini` relevant to authentication:
 
@@ -455,7 +455,7 @@ There is an [open request](https://github.com/writefreely/writefreely/discussion
 
 Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse). Although it is behind our load balancer and multiple reverse proxies, it is currently **not** in a true high availability configuration as it only exists on one Fling backend node.
 
-Our implementation is configured to authenticate against vmst.io, so your Mastodon username and password is a single sign-on to this service.
+Our implementation is configured to authenticate against [vmst.io](https://vmst.io), so your Mastodon username and password is a single sign-on to this service.
 
 Example of the Synapse `homeserver.yaml` relevant to authentication:
 
@@ -525,7 +525,7 @@ We utilize [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) as ou
 
 ### Database Backups
 
-Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgres and MySQL) with Redis used as a key value store and timeline cache for vmst.io.
+Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.io) are stored in backend databases (Postgres and MySQL) with Redis used as a key value store and timeline cache for [vmst.io](https://vmst.io).
 
 - For the backup of Postgres we use `pg_dump`.
 - For the backup of Redis we use `redis-cli`.
@@ -553,10 +553,14 @@ Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgre
 
 ## Documentation
 
-Our documentation website runs directly from the free tier of Digital Ocean's app platform.
+Our documentation website [docs.vmst.io](https://docs.vmst.io) runs directly from the free tier of Digital Ocean's app platform.
 It is a [Hugo](https://gohugo.io) static website using the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme.
 It's automatically generated anytime there is a push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
 It uses an integrated CDN provided by Digital Ocean.
+
+There is a staging version of the documentation, which also generates automatically from pushes to the `staging` branch on GitHub.
+
+If you would like to edit or contribute to the documentation on this site, you may [fork the site](https://github.com/vmstan/vmstio/tree/staging) and submit pull requests to our staging branch.
 
 ## Monitoring
 
