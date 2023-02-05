@@ -115,7 +115,7 @@ Our single load balancer object ([Pike](https://memory-alpha.fandom.com/wiki/Chr
 
 ### Reverse Proxies
 
-We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets. Nginx is installed using the [stable branch repository] for Debian. Currently this is version 1.22.
+We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets. Nginx is installed using the [stable branch repository](https://nginx.org/en/download.html) for Debian. Currently this is version 1.22.
 
 What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/):
 
