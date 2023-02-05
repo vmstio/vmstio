@@ -171,7 +171,7 @@ The Streaming API is a separate [node.js](https://nodejs.org/en/) application wh
 
 We currently use the node.js versions that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/), which at this time is node.js 16.x LTS but due to it's pending end of life will be upgraded to node.js 18.x LTS as soon as it's confirmed to be supported.
 
-As explained more in-depth in another section, the connection to the Digital Ocean managed Redis database must be done via TLS. For the Streaming API, there are additional configuration options that must be set to allow node.js to connect when it expected an non-encrypted connection by default.
+As explained more in-depth in another section, the connection to the Digital Ocean managed Redis database must be done via TLS. For the Streaming API, there are additional configuration options that must be set to allow node.js to connect when it expected a non-encrypted connection by default.
 
 Example of `.env.production` configuration settings relevant to Streaming:
 
@@ -415,9 +415,100 @@ When possible we will run these in a highly available way, behind our security s
 - One virtual machines ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 4 GB of memory.
 - MySQL running on one managed instance ([McCoy](https://memory-alpha.fandom.com/wiki/Leonard_McCoy)) with 1 vCPU and 1 GB of memory.
 
+### WriteFreely
+
+WriteFreely is an open source blogging platform written in [Go](https://go.dev).
+This hosts our [write.vmst.io](https://write.vmst.io) instance.
+It is backed by a single MySQL database instance (McCoy) which was established for this purpose.
+We run the native Go application locally on our Fling backend servers.
+
+For more information please refer to our dedicated [Write](/write) documentation.
+
+Our implementation is configured to authenticate against vmst.io, so your Mastodon username and password is a single sign-on to this service. This is done by creating a client ID and secret with Mastodon.
+
+Example of the WriteFreely `config.ini` relevant to authentication:
+
+```text
+[oauth.generic]
+client_id          = randomstringofnumbersandlettersgeneratedbyvmstio
+client_secret      = wheninthecourseofhumaneventsitbecomesnecessaryto
+host               = https://vmst.io
+display_name       = Mastodon
+callback_proxy     = 
+callback_proxy_api = 
+token_endpoint     = /oauth/token
+inspect_endpoint   = /api/v1/accounts/verify_credentials
+auth_endpoint      = /oauth/authorize
+scope              = read:accounts
+allow_disconnect   = false
+map_user_id        = id
+map_username       = 
+map_display_name   = 
+map_email          = 
+```
+
+We additionally set `disable_password_auth = true` to **only** allow authentication via Mastodon.
+At the moment this prohibits our users from using some types of clients that do not also support OAuth, such as the [writeas-cli](https://github.com/writeas/writeas-cli).
+There is an [open request](https://github.com/writefreely/writefreely/discussions/634) with WriteFreely to allow this with out configuration type.
+
 ### Matrix
 
 Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse). Although it is behind our load balancer and multiple reverse proxies, it is currently **not** in a true high availability configuration as it only exists on one Fling backend node.
+
+Our implementation is configured to authenticate against vmst.io, so your Mastodon username and password is a single sign-on to this service.
+
+Example of the Synapse `homeserver.yaml` relevant to authentication:
+
+```text
+oidc_providers:
+- idp_id: my_mastodon
+  idp_name: "Mastodon"
+  discover: false
+  issuer: "https://vmst.io/@whodoyouthink"
+  client_id: "theitsybitsyspiderwentupthewaterspout"    
+  client_secret: "downcametherainandwashedthespiderout"
+  authorization_endpoint: "https://vmst.io/oauth/authorize"
+  token_endpoint: "https://vmst.io/oauth/token"
+  userinfo_endpoint: "https://vmst.io/api/v1/accounts/verify_credentials"
+  scopes: ["read"]
+  user_mapping_provider:
+    config:
+      subject_claim: "id"
+
+password_config:
+       enabled: false
+```
+
+_Out came the sun and dried up all the..._ sorry.
+
+### Elk
+
+Elk is an [open source project](https://github.com/elk-zone/elk) to build an alternative web frontend for Mastodon.
+It’s in very active development, but is considered “alpha” by their team.
+
+Elk is a node.js application, and we use node.js 19.x as installed on our Fling backend servers. Our Elk install runs a local complication of the code.
+
+As Elk is very popular among our most active users, and we are also listed on the official project page as an alternative host to their own instance, we seek to run the latest released version Elk components from their upstream projects.
+
+We use a basic bash script, as outlined below, to automatically update our deployment shortly after release.
+
+```bash
+cd /path/to/elk
+git fetch
+git checkout $(git tag -l | grep -v 'rc[0-9]*$' | sort -V | tail -n 1)
+pnpm i
+pnpm build
+systemctl restart elk-web.service
+```
+
+The `elk-web.service` is based off the Mastodon Streaming API service template, with the paths changed to the Elk executable:
+
+```text
+WorkingDirectory=/path/to/elk
+ExecStart=node .output/server/index.mjs
+```
+
+For more information please refer to our original [Elk](/post/2023/01/elk/) announcement.
 
 ### Other Sources
 
@@ -426,9 +517,7 @@ However in some cases we are contributing to the development of these projects, 
 
 Our activity level may vary from Fling to Fling with our contributions to the upstream project.
 
-- [Elk](https://github.com/elk-zone/elk)
 - [Semaphore](https://github.com/NickColley/semaphore)
-- [WriteFreely](https://writefreely.org)
 
 ## Backups
 
@@ -466,7 +555,7 @@ Posts made to vmst.io and write.vmst.io are stored in backend databases (Postgre
 
 Our documentation website runs directly from the free tier of Digital Ocean's app platform.
 It is a [Hugo](https://gohugo.io) static website using the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme.
-It's automatically generated anytime there is an push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
+It's automatically generated anytime there is a push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
 It uses an integrated CDN provided by Digital Ocean.
 
 ## Monitoring
