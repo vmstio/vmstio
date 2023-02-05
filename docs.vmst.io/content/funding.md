@@ -47,9 +47,9 @@ Paying members can see the invite ability by logging into the the website and un
 
 | **Source**      | **Monthly** | **Yearly** | **One Time** |
 |-----------------|-------------|------------|----------|
-| Patreon         | $171        | -          | -        |
+| Patreon         | $180        | -          | -        |
 | Open Collective | $9          | $60        | $128     |
-| Ko-Fi           | $173        | -          | $328     |
+| Ko-Fi           | $177        | -          | $353     |
 | Other           | $24         | -          | $72      |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
@@ -60,9 +60,9 @@ Last Updated: Jan 25, 2023.
 
 | **Vendor**    | **Monthly** | **Yearly** |
 |---------------|-------------|------------|
-| Digital Ocean | $342        | $0         |
+| Digital Ocean | $404        | $0         |
 | Sendgrid      | $20         | $0         |
 | DNSimple      | $6          | $153       |
 | Backblaze     | $1          | $0         |
 
-Last Updated: Jan 25, 2023.
+Last Updated: Feb 4, 2023.
