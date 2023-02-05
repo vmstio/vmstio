@@ -12,7 +12,14 @@ All of the staff members of vmst·io are volunteers.
 
 ## Administrator
 
-* Michael Stanclift [@vmstan](https://vmst.io/@vmstan) 🇺🇸
+### Michael Stanclift 
+
+[@vmstan](https://vmst.io/@vmstan) 🇺🇸
+Email: [vmstan@vmst.io](mailto:vmstan@vmst.io)
+
+* Building and maintaining online communities since 1999.
+* Systems administrator since age 13.
+* Former Birdsite addict.
 
 ## Directors
 
