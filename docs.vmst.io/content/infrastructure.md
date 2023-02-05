@@ -78,7 +78,7 @@ Over many iterations, we eventually moved Redis to a managed instance, separated
 What also became apparent over time is that the Docker containers for Mastodon burn a lot of CPU cycles, when deployed as we had done.
 
 We have since moved all of the Mastodon components to locally compiled code running with Linux systemd services.
-Not only has this proven more efficent, it's provided more flexibility.
+Not only has this proven more efficient, it's provided more flexibility.
 
 ### Kubernetes
 
@@ -111,7 +111,7 @@ We use Digital Ocean managed load balancer objects, based on [HAProxy](https://w
 
 ![Digital Ocean Load Balancer](https://cdn.vmst.io/docs/do-loadbalancer.png)
 
-Our single load balancer object (Pike) is rated for 10,000 concurrent connections, but even under heavy load we only consume 10% of that capacity.
+Our single load balancer object ([Pike](https://memory-alpha.fandom.com/wiki/Christopher_Pike)) is rated for 10,000 concurrent connections, but even under heavy load we only consume 10% of that capacity.
 
 ### Reverse Proxies
 
@@ -125,7 +125,7 @@ Our Nginx reverse proxies provide TLS/SSL termination as well as internal load b
 
 ![Reverse Proxy Diagram](https://cdn.vmst.io/docs/reverse-proxy-diagram.png)
 
-Under normal circumstances there are at least two virtual machines (Sulu and Chekov) running Nginx, with 1 vCPU and 1 GB of memory each. Any major changes are usually tested by a temporary third node, which is then validated, and used as a new base image for the remaining nodes.
+Under normal circumstances there are at least two virtual machines ([Sulu](https://memory-alpha.fandom.com/wiki/Hikaru_Sulu) and [Chekov](https://memory-alpha.fandom.com/wiki/Pavel_Chekov)) running Nginx, with 1 vCPU and 1 GB of memory each. Any major changes are usually tested by a temporary third node, which is then validated, and used as a new base image for the remaining nodes.
 
 ## Mastodon Elements
 
@@ -139,7 +139,7 @@ Aside from the various external dependencies, Mastodon is three main application
 
 The Mastodon Web tier consists of the Mastodon Web UI/API and the separate Streaming API service.
 
-Under normal circumstances there are at least two virtual machines (Kirk, Spock) running these components, with 2 vCPU and 4 GB of memory each.
+Under normal circumstances there are at least two virtual machines ([Kirk](https://memory-alpha.fandom.com/wiki/James_T._Kirk) and [Spock](https://memory-alpha.fandom.com/wiki/Spock)) running these components, with 2 vCPU and 4 GB of memory each.
 
 #### Puma
 
@@ -204,7 +204,7 @@ There are multiple queues which are distributed across two dedicated worker node
 
 An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
 
-There are two virtual machines (Scotty and Decker) with 2 vCPU and 4 GB of memory each.
+There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)) with 2 vCPU and 4 GB of memory each.
 
 #### Tuning
 
@@ -285,7 +285,7 @@ The persistent data in the Mastodon environment are represented by user posts wh
 
 We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. Updates and maintenance are performed by Digital Ocean, independent of our administration efforts. 
 
-There is one active Postgres database instance (Majel) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+There is one active Postgres database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 
 Digital Ocean instance "T-Shirt" sizes for databases are done by vCPU, memory, disk size, and connections to the database.
 The connection count limits are based on sizing best practices for PostgreSQL, with a few held in reserve for their use to manage the service.
@@ -367,7 +367,7 @@ We use a dedicated VM running [Open Search](https://opensearch.org) to provide t
 
 Open Search is a fork of Elastic Search 7, which started in 2021.
 
-There is one virtual machine (Khan) with 1 vCPU and 2GB of memory. It provides _khantext_. Get it?
+There is one virtual machine ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh)) with 1 vCPU and 2GB of memory. It provides _khantext_. Get it?
 
 While full text search is a great feature, since it only runs on one Droplet so in the event of a failure or reboot of the node there is only a temporary service distruption.
 That said, the long term plan is to add high availibility to this component at a later date.
@@ -381,7 +381,7 @@ Since the translation feature is not used extensively on vmst.io, we do not plan
 
 ### SMTP Relay
 
-We use Sendmail as our managed SMTP service, for sending new user sign-up verifications, and other account notifications.
+We use Twilo [Sendgrid](https://sendgrid.com) as our managed SMTP service, for sending new user sign-up verifications, and other account notifications.
 
 Example of `.env.production` configuration settings relevant to SMTP:
 
@@ -409,8 +409,8 @@ Outside of our core service we run a number of "Flings" such as:
 
 When possible we will run these in a highly available way, behind our security systems and load balancers, but may only be on single backend nodes. Our flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and Postgres. In addition we have the following specific to our Flings:
 
-- One virtual machines (Uhura) with 2 vCPU and 4 GB of memory.
-- MySQL running on one managed instance with 1 vCPU and 1 GB of memory.
+- One virtual machines ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 4 GB of memory.
+- MySQL running on one managed instance ([McCoy](https://memory-alpha.fandom.com/wiki/Leonard_McCoy)) with 1 vCPU and 1 GB of memory.
 
 ### Matrix
 
@@ -478,7 +478,7 @@ In addition to providing a page for members to check when there might be issues,
 
 For more information on this topic please see our [Monitoring](/monitoring) page.
 
-There is one virtual machines (Kyle) with 1 vCPU and 1 GB of memory.
+There is one virtual machines ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 1 GB of memory.
 
 ### Digital Ocean
 
