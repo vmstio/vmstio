@@ -639,6 +639,19 @@ Sectigo was utilized after testing [Let's Encrypt](https://letsencrypt.org/), bu
 
 Once our existing wildcard certificate has expired in late 2023, we intend to try again to use Let's Encrypt.
 
+## Command and Control
+
+### Automation
+
+We use the open source [n8n](https://n8n.io/) platform to perform automation tasks and send notifications. n8n is similar to Zapier, IFTTT or Power Automate but can be self hosted. 
+
+n8n connects various APIs from Mastodon, Slack, Matrix, Patreon, Ko-fi, Google, and GitHub.
+
+### People
+
+There is a limited set of people with administrative controls to our core applications and infrastructure.
+In the event of a disaster which limits those people from performing their duties, alternative people have been identified to take control of our system and insure continuity of operations.
+
 ## Naming Conventions
 
 Our servers are named after characters and actors from the original Star Trek series, and other 23rd century derivatives.
