@@ -1,7 +1,5 @@
 ---
 title: Mastodon Client Options
-date: '2022-11-30'
-draft: true
 tags:
   - ios
   - android

@@ -49,12 +49,12 @@ Paying members can see the invite ability by logging into the the website and un
 |-----------------|-------------|------------|----------|
 | Patreon         | $180        | -          | -        |
 | Open Collective | $9          | $60        | $128     |
-| Ko-Fi           | $177        | -          | $353     |
+| Ko-Fi           | $181        | -          | $353     |
 | Other           | $24         | -          | $72      |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
-Last Updated: Jan 25, 2023.
+Last Updated: Feb 5, 2023.
 
 ### Expenses
 
@@ -65,4 +65,4 @@ Last Updated: Jan 25, 2023.
 | DNSimple      | $6          | $153       |
 | Backblaze     | $1          | $0         |
 
-Last Updated: Feb 4, 2023.
+Last Updated: Feb 5, 2023.
