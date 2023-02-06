@@ -8,7 +8,7 @@ tags:
 
 ## Introduction
 
-The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance, and ancillary services, that make up [vmst.io](https://vmst.io). It should explain how the various services interact, and how _the magic happens_ when our users open the Mastodon app on their phone or enter our address in their web browser.
+The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance, and ancillary services, that make up [vmst.io](https://vmst.io).It should explain how the various services interact, and how _the magic happens_ when our users open the Mastodon app on their phone or enter our address in their web browser.
 
 Unfortunately though it's not really magic, but a series of databases and micro-services from various open source vendors, running in _The Cloud_.
 
@@ -38,7 +38,8 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
 
-[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service. Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the workloads and New York for the object storage and this site.
+[Digital Ocean](https://www.digitalocean.com) is our primary hosting provider for this service.
+Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the workloads and New York for the object storage and this site.
 
 ### Required Components
 
@@ -67,7 +68,8 @@ Some of them include:
 When [vmst.io](https://vmst.io) originally moved away from managed hosting with [Masto Host](https://masto.host), the deployment was done with:
 
 - Three consolidated core nodes using Docker containers for all essential services.
-- One backend node running Redis, Elastic Search, and Sidekiq. These components also ran in Docker containers.
+- One backend node running Redis, Elastic Search, and Sidekiq.
+These components also ran in Docker containers.
 - One managed PostgreSQL database instance.
 - The object storage for media uploads.
 
@@ -82,7 +84,8 @@ Not only has this proven more efficient, it's provided more flexibility.
 
 ### Kubernetes
 
-We do not currently leverage Kubernetes for any part of the [vmst.io](https://vmst.io) configuration. We may explore this again in the future.
+We do not currently leverage Kubernetes for any part of the [vmst.io](https://vmst.io) configuration.
+We may explore this again in the future.
 
 Docker containers are still used to deploy some of our "Flings" as documented below.
 
@@ -92,7 +95,8 @@ Our goal is to run the latest released version of the Mastodon experience within
 
 In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository.
 
-We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack. We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
+We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack.
+We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
 
 ## Core Elements
 
@@ -100,7 +104,8 @@ We do not run any of the available Mastodon forks (such as [Glitch](https://glit
 
 We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the base operating system for our self-managed systems.
 
-We use the snapshot functionality to keep updated customized base images for each tier. Should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
+We use the snapshot functionality to keep updated customized base images for each tier.
+Should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
 
 ![Digital Ocean Snapshots](https://cdn.vmst.io/docs/do-snapshots.png)
 
@@ -114,17 +119,20 @@ Our single load balancer object ([Pike](https://memory-alpha.fandom.com/wiki/Chr
 
 ### Reverse Proxies
 
-We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets. Nginx is installed using the [stable branch repository](https://nginx.org/en/download.html) for Debian. Currently this is version 1.22.
+We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets.
+Nginx is installed using the [stable branch repository](https://nginx.org/en/download.html) for Debian.
+Currently this is version 1.22.
 
 What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/):
 
 > It's a server that sits in front of one or more web servers, intercepting requests from clients. This is different from a forward proxy, where the proxy sits in front of the clients. With a reverse proxy, when clients send requests to the origin server of a website, those requests are intercepted at the network edge by the reverse proxy server. The reverse proxy server will then send requests to and receive responses from the origin server. The reverse proxy ... ensures that no client ever communicates directly with that origin server.
- 
+
 Our Nginx reverse proxies provide TLS/SSL termination as well as internal load balancing for both the core Mastodon service and any of our Flings.
 
 ![Reverse Proxy Diagram](https://cdn.vmst.io/docs/reverse-proxy-diagram.png)
 
-Under normal circumstances there are at least two virtual machines ([Sulu](https://memory-alpha.fandom.com/wiki/Hikaru_Sulu) and [Chekov](https://memory-alpha.fandom.com/wiki/Pavel_Chekov)) running Nginx, with 1 vCPU and 1 GB of memory each. Any major changes are usually tested by a temporary third node, which is then validated, and used as a new base image for the remaining nodes.
+Under normal circumstances there are at least two virtual machines ([Sulu](https://memory-alpha.fandom.com/wiki/Hikaru_Sulu) and [Chekov](https://memory-alpha.fandom.com/wiki/Pavel_Chekov)) running Nginx, with 1 vCPU and 1 GB of memory each.
+Any major changes are usually tested by a temporary third node, which is then validated, and used as a new base image for the remaining nodes.
 
 ## Mastodon Elements
 
@@ -142,7 +150,8 @@ Under normal circumstances there are at least two virtual machines ([Kirk](https
 
 #### Puma
 
-What users perceive as "Mastodon" is a [Ruby on Rails](https://rubyonrails.org) application (with [Puma](https://puma.io) running as the web/presentation layer) providing both ActivityPub/Federation and the web user experience. We use the Ruby versions and modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
+What users perceive as "Mastodon" is a [Ruby on Rails](https://rubyonrails.org) application (with [Puma](https://puma.io) running as the web/presentation layer) providing both ActivityPub/Federation and the web user experience.
+We use the Ruby versions and modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
 Based on recommendations by the developer of Puma, and others in the Mastodon administration community, we have Puma configured in `.env.production` and `mastodon-web.service`, as follows:
 
@@ -169,7 +178,8 @@ The Streaming API is a separate [node.js](https://nodejs.org/en/) application wh
 
 We currently use the node.js versions that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/), which at this time is node.js 16.x LTS, but due to its pending end of life, will be upgraded to node.js 18.x LTS as soon as it's confirmed to be supported.
 
-As explained more in-depth in another section, the connection to the Digital Ocean-managed Redis database must be done via TLS. For the Streaming API, there are additional configuration options that must be set to allow node.js to connect when it expects a non-encrypted connection by default.
+As explained more in-depth in another section, the connection to the Digital Ocean-managed Redis database must be done via TLS.
+For the Streaming API, there are additional configuration options that must be set to allow node.js to connect when it expects a non-encrypted connection by default.
 
 Example of `.env.production` configuration settings relevant to Streaming:
 
@@ -180,7 +190,8 @@ DB_SSLMODE=require
 NODE_EXTRA_CA_CERTS=/path/to/certs/do-internal.crt
 ```
 
-The `DB_SSLMODE` and `NODE_EXTRA_CA_CERTS` settings are not there by default. The Digital Ocean databases use self-signed/private certificates, but the variable set will tell the Streaming API to trust that connection based on the CA certs that are downloaded from Digital Ocean and uploaded to the server.
+The `DB_SSLMODE` and `NODE_EXTRA_CA_CERTS` settings are not there by default.
+The Digital Ocean databases use self-signed/private certificates, but the variable set will tell the Streaming API to trust that connection based on the CA certs that are downloaded from Digital Ocean and uploaded to the server.
 
 ### Sidekiq
 
@@ -210,20 +221,23 @@ Bootstrapping a Mastodon instance is about 30% community management, 20% general
 
 The default install of Mastodon, when deployed from source, generates one Sidekiq service with 25 threads.
 
-Each thread when active has _the potential_ to be an active connection to the PostgreSQL database, but it might also do something else entirely, like send an email notification or fetch a remote image, or tell another server that users have posted. It's somewhat unpredictable.
+Each thread when active has _the potential_ to be an active connection to the PostgreSQL database, but it might also do something else entirely, like send an email notification or fetch a remote image, or tell another server that users have posted.
+It's somewhat unpredictable.
 
 There are two values that must be managed for Sidekiq:
 
 - The threads assigned to the service (which can be done in the `.service` file or in the `docker-compose.yml` file depending on the deployment type.)
 - The `DB_POOL` variable sets the maximum amount of open connections that the service can have to the database (keeping in mind that not every thread is going to open a connection.)
 
-It's best practice for these values to always be the same, for each instance of Sidekiq. Again, by default there is only one instance of Sidekiq.
+It's best practice for these values to always be the same, for each instance of Sidekiq.
+Again, by default there is only one instance of Sidekiq.
 
 25 threads may be enough for a deployment of a few hundred active users in an instance, or a larger one under light load, but one user with a popular toot that goes viral could quickly cause the queues to back up and timelines to stop updating with content until the backlog is processed.
 
 Furthermore, when one instance struggles it causes other instances in the federation to be delayed as well, causing "red light" errors and other issues.
 
-The solution to this could be to add additional threads to your service, but as explained this comes at a cost in additional database connections. PostgreSQL has limits based on the size of the deployment, and as explained more below this can be overcome by utilizing pgBouncer as part of the deployment.
+The solution to this could be to add additional threads to your service, but as explained this comes at a cost in additional database connections.
+PostgreSQL has limits based on the size of the deployment, and as explained more below this can be overcome by utilizing pgBouncer as part of the deployment.
 
 The first thought would be to increase the number of threads in your Sidekiq service file from 25 to 50, 100, etc.
 
@@ -280,7 +294,8 @@ The persistent data in the Mastodon environment are represented by user posts—
 
 #### PostgreSQL
 
-We use the Digital Ocean managed SQL database service, this delivers a highly available database backend. Updates and maintenance are performed by Digital Ocean, independent of our administration efforts.
+We use the Digital Ocean managed SQL database service, this delivers a highly available database backend.
+Updates and maintenance are performed by Digital Ocean, independent of our administration efforts.
 
 There is one active PostgreSQL database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 
@@ -359,11 +374,16 @@ Without this setting, anytime there is a change in Redis services backend locati
 
 ### Elastic Search
 
-Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, favoriting or boosting. While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io). We use a dedicated VM running [Open Search](https://opensearch.org) 2.5 to provide the ability to perform full text searches on your posts and other content you've interacted with.
+Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, favoriting or boosting.
+While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
+We use a dedicated VM running [Open Search](https://opensearch.org) 2.5 to provide the ability to perform full text searches on your posts and other content you've interacted with.
 
-Open Search is a fork of Elastic Search 7, which was started in 2021. While it lacks some of the more advanced features found in newer versions of Elastic Search, it is supported by Mastodon.
+Open Search is a fork of Elastic Search 7, which was started in 2021.
+While it lacks some of the more advanced features found in newer versions of Elastic Search, it is supported by Mastodon.
 
-There is one virtual machine ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh)) with 1 vCPU and 2GB of memory. It provides _khantext_. Get it?
+There is one virtual machine ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh)) with 1 vCPU and 2GB of memory.
+It provides _khantext_.
+Get it?
 
 While full text search is a great feature, it only runs on one Droplet currently so in the event of a failure or reboot of the node there may only a temporary service disruption.
 That said, we intend to add high availability by adding clustering to this component at a later date.
@@ -405,18 +425,24 @@ Outside of our core service we run a number of "Flings" such as:
 - [write.vmst.io](https://write.vmst.io)
 - [matrix.vmst.io](https://matrix.vmst.io)
 
-When possible we will run these in a highly available way, behind our security systems and load balancers, but may only be on single backend nodes. Our Flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and PostgreSQL. In addition we have the following specific to our Flings:
+When possible we will run these in a highly available way, behind our security systems and load balancers, but may only be on single backend nodes.
+Our Flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and PostgreSQL.
+In addition we have the following specific to our Flings:
 
 - One virtual machine ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 4 GB of memory.
 - MySQL running on one managed instance ([McCoy](https://memory-alpha.fandom.com/wiki/Leonard_McCoy)) with 1 vCPU and 1 GB of memory.
 
 ### WriteFreely
 
-WriteFreely is an open source blogging platform written in [Go](https://go.dev). This hosts our [write.vmst.io](https://write.vmst.io) instance. It is backed by a single MySQL database instance (McCoy) which was established for this purpose. We run the native Go application locally on our Fling backend servers.
+WriteFreely is an open source blogging platform written in [Go](https://go.dev).
+This hosts our [write.vmst.io](https://write.vmst.io) instance.
+It is backed by a single MySQL database instance (McCoy) which was established for this purpose.
+We run the native Go application locally on our Fling backend servers.
 
 For more information please refer to our dedicated [Write](/write) documentation.
 
-Our implementation is configured to authenticate against [vmst.io](https://vmst.io), so your Mastodon username and password is a single sign-on to this service. This is done by creating a client ID and secret with Mastodon.
+Our implementation is configured to authenticate against [vmst.io](https://vmst.io), so your Mastodon username and password is a single sign-on to this service.
+This is done by creating a client ID and secret with Mastodon.
 
 Example of the WriteFreely `config.ini` relevant to authentication:
 
@@ -439,11 +465,14 @@ map_display_name   =
 map_email          = 
 ```
 
-We additionally set `disable_password_auth = true` to **only** allow authentication via Mastodon. At the moment this prohibits our users from using some types of clients that do not also support OAuth, such as the [writeas-cli](https://github.com/writeas/writeas-cli). There is an [open request](https://github.com/writefreely/writefreely/discussions/634) with WriteFreely to allow this with out configuration type.
+We additionally set `disable_password_auth = true` to **only** allow authentication via Mastodon.
+At the moment this prohibits our users from using some types of clients that do not also support OAuth, such as the [writeas-cli](https://github.com/writeas/writeas-cli).
+There is an [open request](https://github.com/writefreely/writefreely/discussions/634) with WriteFreely to allow this with out configuration type.
 
 ### Matrix
 
-Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse). Although it is behind our load balancer and multiple reverse proxies, it is currently **not** in a true high availability configuration as it only exists on one Fling backend node.
+Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse).
+Although it is behind our load balancer and multiple reverse proxies, it is currently **not** in a true high availability configuration as it only exists on one Fling backend node.
 
 Our implementation is configured to authenticate against [vmst.io](https://vmst.io), so your Mastodon username and password is a single sign-on to this service.
 
@@ -473,9 +502,11 @@ _Out came the sun and dried up all the..._ sorry.
 
 ### Elk
 
-Elk is an [open source project](https://github.com/elk-zone/elk) to build an alternative web frontend for Mastodon. It’s in very active development, but is considered “alpha” by their team.
+Elk is an [open source project](https://github.com/elk-zone/elk) to build an alternative web frontend for Mastodon.
+It’s in very active development, but is considered “alpha” by their team.
 
-Elk is a node.js application, and we use node.js 19.x as installed on our Fling backend servers. Our Elk install runs a local complication of the code.
+Elk is a node.js application, and we use node.js 19.x as installed on our Fling backend servers.
+Our Elk install runs a local complication of the code.
 
 As Elk is very popular among our most active users, and we are also listed on the official project page as an alternative host to their own instance, we seek to run the latest released version Elk components from their upstream projects.
 
@@ -501,7 +532,8 @@ For more information please refer to our original [Elk](/post/2023/01/elk/) anno
 
 ### Other Sources
 
-Similar to our policy on our core services, we seek to run the latest released version of our Fling components from their upstream projects. However in some cases we are contributing to the development of these projects, and from time to time may run modified versions to assist with this task.
+Similar to our policy on our core services, we seek to run the latest released version of our Fling components from their upstream projects.
+However in some cases we are contributing to the development of these projects, and from time to time may run modified versions to assist with this task.
 
 Our activity level may vary from Fling to Fling with our contributions to the upstream project.
 
@@ -556,7 +588,9 @@ We monitor the health and availability of our infrastructure in a few different 
 
 ### Uptime Kuma
 
-This powers our [status.vmst.io](https://status.vmst.io) page. It runs on a dedicated VM for this purpose, with its own Nginx frontend. In addition to providing a page for members to check when there might be issues, it actively alerts our team in our internal Slack to any issues.
+This powers our [status.vmst.io](https://status.vmst.io) page.
+It runs on a dedicated VM for this purpose, with its own Nginx frontend.
+In addition to providing a page for members to check when there might be issues, it actively alerts our team in our internal Slack to any issues.
 
 ![Kuma Alerts](https://cdn.vmst.io/docs/kuma-alert.png)
 
@@ -566,15 +600,19 @@ There is one virtual machine ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle))
 
 ### Digital Ocean
 
-We use integrated metrics monitoring available through Digital Ocean to monitor and alert on CPU, memory, disk and other performance metrics of the host virtual machine and managed database systems. These alerts are sent to our internal Slack.
+We use integrated metrics monitoring available through Digital Ocean to monitor and alert on CPU, memory, disk and other performance metrics of the host virtual machine and managed database systems.
+These alerts are sent to our internal Slack.
 
 ![Digital Ocean Alerts](https://cdn.vmst.io/docs/do-alert.png)
 
-We also have active monitoring of the worldwide accessibility of our web frontends. These alerts are sent to our internal Slack and to the email of our server administrators.
+We also have active monitoring of the worldwide accessibility of our web frontends.
+These alerts are sent to our internal Slack and to the email of our server administrators.
 
 ### Prometheus & Grafana
 
-We have a self-hosted instance of [Prometheus](https://prometheus.io) which collects metrics from Mastodon via its integrated StatsD system. [Loki](https://grafana.com/oss/loki/) is additionally used to collect logging from various components such as Nginx. [Grafana](https://grafana.com/grafana/) is then used to visualize the metrics on dashboards, or to search logs.
+We have a self-hosted instance of [Prometheus](https://prometheus.io) which collects metrics from Mastodon via its integrated StatsD system.
+[Loki](https://grafana.com/oss/loki/) is additionally used to collect logging from various components such as Nginx.
+[Grafana](https://grafana.com/grafana/) is then used to visualize the metrics on dashboards, or to search logs.
 
 ![Grafana Screenshot](https://cdn.vmst.io/docs/grafana-screenshot.png)
 
@@ -590,7 +628,8 @@ There are a few cases where traffic leaves our VPC but still communicates within
 
 ### Public IPs
 
-The public IP addresses assigned to our load balancer and virtual machines are static IP addresses issued and owned by Digital Ocean. They are assigned at creation and persist throughout the lifecycle of the virtual machine.
+The public IP addresses assigned to our load balancer and virtual machines are static IP addresses issued and owned by Digital Ocean.
+They are assigned at creation and persist throughout the lifecycle of the virtual machine.
 
 status.vmst.io and sites which are behind our load balancer (which is used as the entry point for all traffic) are the only user accessible systems via a public address.
 
@@ -598,13 +637,15 @@ This does not include sites behind any CDN provider which may respond with any v
 
 #### IPv6
 
-At this time none of our systems are accessible via IPv6. This is due to a [known limitation](https://docs.digitalocean.com/products/networking/load-balancers/details/limits/) of Digital Ocean's managed load balancer service.
+At this time none of our systems are accessible via IPv6.
+This is due to a [known limitation](https://docs.digitalocean.com/products/networking/load-balancers/details/limits/) of Digital Ocean's managed load balancer service.
 
 As the load balancer is our entry point for all other services, we do not enable IPv6 for Droplets even though it is technically supported.
 
 #### DNS Resolution
 
-We use [DNSimple](https://dnsimple.com/) for our domain registrar and nameserver. We have DNSSEC enabled on our domain.
+We use [DNSimple](https://dnsimple.com/) for our domain registrar and nameserver.
+We have DNSSEC enabled on our domain.
 
 ## Security
 
@@ -630,13 +671,15 @@ Once our existing wildcard certificate has expired in late 2023, we intend to tr
 
 ### Automation
 
-We use the open source [n8n](https://n8n.io/) platform to perform automation tasks and send notifications. n8n is similar to Zapier, IFTTT, or Power Automate, but can be self-hosted. 
+We use the open source [n8n](https://n8n.io/) platform to perform automation tasks and send notifications.
+n8n is similar to Zapier, IFTTT, or Power Automate, but can be self-hosted.
 
 n8n connects various APIs from Mastodon, Slack, Matrix, Patreon, Ko-fi, Google, and GitHub.
 
 ### People
 
-There is a limited set of people with administrative controls to our core applications and infrastructure. In the event of a disaster which limits those people from performing their duties, alternatives have been identified to take control of our system and insure continuity of operations.
+There is a limited set of people with administrative controls to our core applications and infrastructure.
+In the event of a disaster which limits those people from performing their duties, alternatives have been identified to take control of our system and insure continuity of operations.
 
 ## Naming Conventions
 
