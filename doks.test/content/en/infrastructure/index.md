@@ -1,9 +1,6 @@
 ---
 title: Infrastructure
 description: Where the bits go, to and fro
-tags:
-  - servers
-  - docs
 ---
 
 ## Introduction
