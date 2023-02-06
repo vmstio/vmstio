@@ -1,3 +1,6 @@
 [submodule "docs.vmst.io/themes/PaperModX"]
 	path = docs.vmst.io/themes/PaperModX
 	url = https://github.com/reorx/hugo-PaperModX.git
+[submodule "docs.vmst.io/themes/PaperModXRand"]
+	path = docs.vmst.io/themes/PaperModXRand
+	url = https://github.com/vmstan/hugo-PaperModXRand
