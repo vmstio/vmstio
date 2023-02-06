@@ -23,8 +23,8 @@ Ko-fi is the preferred option as they have the lowest overhead (as low as 7%) fo
 
 ## Contribution Tiers
 
-| **Tier**            | **Cost** | **Benefits**                                   |
-|---------------------|----------|------------------------------------------------|
+| **Tier**   | **Cost** | **Benefits**                                   |
+|------------|----------|------------------------------------------------|
 | **Red**    | $2       | Invite codes                                   |
 | **Blue**   | $4       | Invite codes, monthly shout-out                |
 | **Purple** | $8       | Invite codes, monthly shout-out, maybe more 😉 |
@@ -42,6 +42,8 @@ Folks who commit to regular contributions gain the ability to invite new members
 Paying members can see the invite ability by logging into the the website and under “Preferences > Invite people” to generate your codes. You have flexibility to set limits on their use, and please use these. If you’re a massive influencer who sets unlimited use and tomorrow we have 2,000,000 new accounts without any oversight, then the servers will probably fall over and burst into flames.
 
 ## Costs & Funding
+
+For a line item breakdown of all income and expenses to date, please see the [Ledger](/ledger).
 
 ### Income
 
