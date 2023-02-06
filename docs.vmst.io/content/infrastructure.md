@@ -171,7 +171,7 @@ Because we separate Nginx into its own tier on different machines, there is a se
 RAILS_SERVE_STATIC_FILES=true
 ```
 
-According to [the Mastodon documentation](https://docs.joinmastodon.org/admin/config/#rails_serve_static_files) this does increase load on the Mastodon server, but in our experiance it's not been a measurable difference.
+According to [the Mastodon documentation](https://docs.joinmastodon.org/admin/config/#rails_serve_static_files) this does increase load on the Mastodon server, but in our experience it's not been a measurable difference.
 
 #### Streaming
 
@@ -399,22 +399,20 @@ Since the translation feature is not used extensively on [vmst.io](https://vmst.
 
 ### SMTP Relay
 
-We use Twilo [Sendgrid](https://sendgrid.com) as our managed SMTP service, used for sending new user sign-up verifications, and other account notifications.
+We use [Mailgun](https://mailgun.com) as our managed SMTP service, used for sending new user sign-up verifications, and other account notifications.
 
 Example of `.env.production` configuration settings relevant to SMTP:
 
 ```text
 # Mail
-SMTP_SERVER=smtp.sendgrid.net
+SMTP_SERVER=smtp.mailgun.org
 SMTP_PORT=465
-SMTP_LOGIN=apikey
+SMTP_LOGIN=gonepostal@sender.vmst.io
 SMTP_PASSWORD=nevergonnagiveyouup
-SMTP_FROM_ADDRESS='Mastodon <mastodon@mailer.vmst.io>'
+SMTP_FROM_ADDRESS='Mastodon <mastodon@sender.vmst.io>'
 SMTP_SSL=true
 SMTP_DELIVERY_METHOD=smtp
 ```
-
-Unlike the other examples in this document which use fake API keys or passwords in the case of the SMTP relay with Sendgrid, the login for **every** user on the service is 'apikey'.
 
 For more information please refer to our [Mailer](/mailer) page.
 
@@ -576,7 +574,7 @@ Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.
 ## Documentation
 
 Our documentation website [docs.vmst.io](https://docs.vmst.io) runs directly from the free tier of Digital Ocean's app platform.
-It is a [Hugo](https://gohugo.io) static website using the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme.
+It is a [Hugo](https://gohugo.io) static website using [a custom version](https://github.com/vmstan/hugo-PaperModXRand) of the the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme.
 It's automatically generated anytime there is a push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
 It uses an integrated CDN provided by Digital Ocean.
 
@@ -592,13 +590,13 @@ We monitor the health and availability of our infrastructure in a few different 
 
 This powers our [status.vmst.io](https://status.vmst.io) page.
 It runs on a dedicated VM for this purpose, with its own Nginx frontend.
-In addition to providing a page for members to check when there might be issues, it actively alerts our team in our internal Slack to any issues.
+In addition to providing a page for members to check when there might be issues, it actively alerts our team in our internal [Slack](https://slack.com) to any issues.
 
 ![Kuma Alerts](https://cdn.vmst.io/docs/kuma-alert.png)
 
 For more information on this topic please see our [Monitoring](/monitoring) page.
 
-There is one virtual machine ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 1 GB of memory.
+There is one virtual machine ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 2 GB of memory.
 
 ### Digital Ocean
 
@@ -663,7 +661,7 @@ They include:
 
 ### Certificates
 
-We use [Sectigo](https://sectigo.com/) as our primary certificate authority, with the exception of docs.vmst.io which uses a certificate issued by Cloudflare.
+We use [Sectigo](https://sectigo.com/) as our primary certificate authority, with the exception of [docs.vmst.io](https://docs.vmst.io) which uses a certificate issued by Cloudflare.
 
 Sectigo was utilized after testing [Let's Encrypt](https://letsencrypt.org/), but the automated validation system presented some challenges for us that were solved by using a legacy commercial CA.
 
