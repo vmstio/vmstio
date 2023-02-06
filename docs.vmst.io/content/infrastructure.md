@@ -376,6 +376,7 @@ Without this setting, anytime there is a change in Redis services backend locati
 ### Elastic Search
 
 Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, favoriting or boosting.
+
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
 We use a dedicated VM running [Open Search](https://opensearch.org) 2.5 to provide the ability to perform full text searches on your posts and other content you've interacted with.
 
