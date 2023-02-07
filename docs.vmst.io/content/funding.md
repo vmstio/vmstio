@@ -23,8 +23,8 @@ Ko-fi is the preferred option as they have the lowest overhead (as low as 7%) fo
 
 ## Contribution Tiers
 
-| **Tier**            | **Cost** | **Benefits**                                   |
-|---------------------|----------|------------------------------------------------|
+| **Tier**   | **Cost** | **Benefits**                                   |
+|------------|----------|------------------------------------------------|
 | **Red**    | $2       | Invite codes                                   |
 | **Blue**   | $4       | Invite codes, monthly shout-out                |
 | **Purple** | $8       | Invite codes, monthly shout-out, maybe more 😉 |
@@ -42,6 +42,8 @@ Folks who commit to regular contributions gain the ability to invite new members
 Paying members can see the invite ability by logging into the the website and under “Preferences > Invite people” to generate your codes. You have flexibility to set limits on their use, and please use these. If you’re a massive influencer who sets unlimited use and tomorrow we have 2,000,000 new accounts without any oversight, then the servers will probably fall over and burst into flames.
 
 ## Costs & Funding
+
+For a line item breakdown of all income and expenses to date, please see the [Ledger](/ledger).
 
 ### Income
 
@@ -66,3 +68,27 @@ Last Updated: Feb 5, 2023.
 | Backblaze     | $1          | $0         |
 
 Last Updated: Feb 5, 2023.
+
+## Processing Fees
+
+We want you to make an informed choice about how you spend your money to help support vmst.io.
+Each of our providers have different rates, and some vary based on the size of your support.
+
+| **Frontend**        | **Transaction**                                            |
+|---------------------|------------------------------------------------------------|
+| **Patreon**         | 8% per donation & 5% + $0.10 under $3 or 2.9% + $0.30      |
+| **Ko-Fi**           | $6 flat fee per month & 2.9% + $0.30 in fees               |
+| **Open Collective** | 5% per donation & 2.9% + $0.30 in fees                     |
+
+An example of how far your donation goes based on each monthly tier:
+
+|             | **$2.00** |          | **$4.00** |          | **$8.00** |     |
+|-------------|-----------|----------|-----------|----------|-----------|-----|
+| **Patreon** | $1.64     | 18%      | $3.26     | 18%      | $6.83     | 15% |
+| **Ko-Fi**   | $1.64     | 18%      | $3.58     | 10%      | $7.47     | 7%  |
+
+For the annual tier:
+
+|             | **$24.00** |          | **$48.00** |          | **$96.00** |     |
+|-------------|-----------|----------|-----------|----------|-----------|-----|
+| **Open Collective** | $21.80     | 9%      | $43.91     | 9%      | $88.12     | 8% |
