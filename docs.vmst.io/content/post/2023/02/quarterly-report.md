@@ -20,7 +20,7 @@ Two of those contributors have actually been administrators of other instances, 
 
 The instance went online on October 6, 2022.
 I did not open up for registration until October 26, and it was sometime later that I began taking contributions on Patreon.
-There were expenses paid to Masto Host, and but then a large bit of our initial expenses in moving to Digital Ocean were cut by a $200 credit.
+There were expenses paid to Masto Host, but then a large bit of our initial expenses in moving to Digital Ocean were cut by a $200 credit.
 
 As of February 6, 2023
 
@@ -36,6 +36,8 @@ As such I only have reliable data for the full months of December and January in
 | **January** | $532.53 | -$207.32 |
 
 I like having a cushion, especially because our bills are typically loaded on the front-end of the month where as our Patreon and Stripe payments come in through the rest of the month.
+
+There is also some unknowns in that both months were heavy in one-time and yearly contributions, which I don't expect to continue to be the case every month.
 
 For instance, our month to date finances are as such:
 
@@ -59,6 +61,8 @@ It also currently makes up half of our monthly contributors.
 
 Our Ko-Fi and Open Collective options provide much lower rates, and more control.
 While we're not asking anyone to stop contributing through Patreon, or move to another system, I have decided to temporarily pause new subscriptions there.
+
+When I plan for what I can build in terms of our Infrastructure(/infrastructure) I do this based mostly on what comes in from monthly subscribers.
 
 ## Future
 
