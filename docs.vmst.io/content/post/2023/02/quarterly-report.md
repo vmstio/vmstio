@@ -22,6 +22,8 @@ The instance went online on October 6, 2022.
 I did not open up for registration until October 26, and it was sometime later that I began taking contributions on Patreon.
 There were expenses paid to Masto Host, but then a large bit of our initial expenses in moving to Digital Ocean were cut by a $200 credit.
 
+There were also a couple of larger expenses that I took while one-time donations were coming in, like extending our domain registration by three years (.io domains are not very cheap) and purchasing our commercial wildcard certificate for this year.
+
 As of February 6, 2023
 
 - **Total Income:** $ 1,424.21
