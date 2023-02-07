@@ -64,7 +64,7 @@ It also currently makes up half of our monthly contributors.
 Our Ko-Fi and Open Collective options provide much lower rates, and more control.
 While we're not asking anyone to stop contributing through Patreon, or move to another system, I have decided to temporarily pause new subscriptions there.
 
-When I plan for what I can build in terms of our Infrastructure(/infrastructure) I do this based mostly on what comes in from monthly subscribers.
+When I plan for what I can build in terms of our [Infrastructure](/infrastructure) I do this based mostly on what comes in from monthly subscribers.
 
 ## Future
 
