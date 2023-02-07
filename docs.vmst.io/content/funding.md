@@ -13,13 +13,12 @@ tags:
 vmst·io is funded by the membership of the instance.
 While access to your account does not require payments, if you desire to help cover the cost of running vmst·io, we have multiple options available:
 
-- [Ko-fi](https://ko-fi.com/vmstio) - One-time or monthly contributions (preferred)
-- [Open Collective](https://opencollective.com/vmstio) - One-time or annual contributions
-- [Patreon](https://patreon.com/vmstan) - Monthly contributions only
-
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D3GP7JN)
 
-Ko-fi is the preferred option as they have the lowest overhead (as low as 7%) for us to accept payments, while Patreon can be as high as 18%.
+- [Ko-fi](https://ko-fi.com/vmstio) - One-time or monthly contributions (preferred)
+- [Open Collective](https://opencollective.com/vmstio) - One-time or annual contributions
+
+Ko-fi is the preferred option as they have the lowest overhead for us to accept payments.
 
 ## Contribution Tiers
 
@@ -49,9 +48,9 @@ For a line item breakdown of all income and expenses to date, please see the [Le
 
 | **Source**      | **Monthly** | **Yearly** | **One Time** |
 |-----------------|-------------|------------|----------|
+| Ko-Fi           | $181        | -          | $353     |
 | Patreon         | $180        | -          | -        |
 | Open Collective | $9          | $60        | $128     |
-| Ko-Fi           | $181        | -          | $353     |
 | Other           | $24         | -          | $72      |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
