@@ -383,12 +383,9 @@ We use a dedicated VM running [Open Search](https://opensearch.org) 2.5 to provi
 Open Search is a fork of Elastic Search 7, which was started in 2021.
 While it lacks some of the more advanced features found in newer versions of Elastic Search, it is supported by Mastodon.
 
-There is one virtual machine ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh)) with 1 vCPU and 2GB of memory.
-It provides _khantext_.
+There are two virtual machines ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh) and Text) with 1 vCPU and 2GB of memory. They form a single instance to query, from behind our load balancers.
+Together they provide _khantext_.
 Get it?
-
-While full text search is a great feature, it only runs on one Droplet currently so in the event of a failure or reboot of the node there may only a temporary service disruption.
-That said, we intend to add high availability by adding clustering to this component at a later date.
 
 ### Translation API
 
