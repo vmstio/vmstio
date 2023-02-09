@@ -375,15 +375,13 @@ Without this setting, anytime there is a change in Redis services backend locati
 
 ### Elastic Search
 
-Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, favoriting or boosting.
+Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, bookmarked, favorited or boosted.
 
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
-We use a dedicated VM running [Open Search](https://opensearch.org) 2.5 to provide the ability to perform full text searches on your posts and other content you've interacted with.
-
-Open Search is a fork of Elastic Search 7, which was started in 2021.
+We use a dedicated Droplets running [Open Search](https://opensearch.org) 2.5. Open Search is a fork of Elastic Search 7, which was started in 2021.
 While it lacks some of the more advanced features found in newer versions of Elastic Search, it is supported by Mastodon.
 
-There are two virtual machines ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh) and Text) with 1 vCPU and 2GB of memory. They form a single instance to query, from behind our load balancers.
+There are two virtual machines ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh) and Text) with 1 vCPU and 2GB of memory each. They form a single instance to query, from behind our load balancers.
 Together they provide _khantext_.
 Get it?
 
