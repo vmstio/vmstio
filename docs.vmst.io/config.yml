@@ -93,6 +93,7 @@ params:
       Title: "Mastodon for respectful technologists, geeks and nerds of every type and stripe."
       Content: |
         Why choose [vmst.io](https://vmst.io) as your Mastodon instance?
+        - We are party to the [joinmastodon.org Server Covenant](https://joinmastodon.org/covenant).
         - We respect your fundamental right to privacy. We have an [A+ rating from Mozilla Observatory](https://observatory.mozilla.org/analyze/vmst.io), and have [no ads, third party cookies or trackers](https://themarkup.org/blacklight?url=vmst.io).
         - We're [highly available](/infrastructure), and take ownership of issues when we're not. We publish [our realtime system status](https://status.vmst.io), and have a better than 99.9% observed availability from [Instances.social](https://instances.social/vmst.io).
         - We are well moderated, with multiple volunteer [staffers around the world](/staff) monitoring for user reports, and clear [rules against hate speech and harassment](/rules).
