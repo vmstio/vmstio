@@ -31,7 +31,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 | Digital Ocean | Managed Databases, Load Balancer Services, CDN/Object Storage, Virtual Machines (Droplets) |
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
-| Sendgrid | SMTP Relay |
+| Mailgun | SMTP Relay |
 | GitHub | Configuration Repository |
 | Slack | Team Communications |
 
