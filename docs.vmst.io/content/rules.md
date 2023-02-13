@@ -22,6 +22,10 @@ tags:
 If you find content that is in violation of the Server Rules, please [report the offending account](https://docs.joinmastodon.org/user/moderating/#report).
 You may also [take other actions](https://docs.joinmastodon.org/user/moderating/) on your own, such as muting or blocking the account, or the entire domain/instance.
 
+### Moderation Process
+
+We have documented our [moderation process](/moderation) to be as open as possible.
+
 ### Defederation
 
 We actively "defederate" vmst·io from other instances that are incompatible with our fundamental rules, in an effort to protect our users.
