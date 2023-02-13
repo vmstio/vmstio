@@ -43,7 +43,7 @@ This includes direct messages sent to other users of vmst·io!
 This is not a choice of the administrator, but a limitation of the Mastodon platform.
 Additionally, our hosting provider may have access to your data as part of the general administration of the server infrastructure.
 
-You should use Signal, Matrix, or another E2E messaging app for the things you really want to be private.
+You should use Signal, [Matrix](/matrix), or another E2E messaging app for the things you really want to be private.
 
 ## Privacy Policy
 
