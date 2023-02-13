@@ -1,6 +1,5 @@
 ---
 title: Rules
-description: What can you get away with?
 aliases:
   - norms
 tags:
@@ -22,16 +21,30 @@ tags:
 If you find content that is in violation of the Server Rules, please [report the offending account](https://docs.joinmastodon.org/user/moderating/#report).
 You may also [take other actions](https://docs.joinmastodon.org/user/moderating/) on your own, such as muting or blocking the account, or the entire domain/instance.
 
+### Moderation Process
+
+We have documented our [moderation process](/moderation) to be as open as possible.
+
 ### Defederation
 
 We actively "defederate" vmst·io from other instances that are incompatible with our fundamental rules, in an effort to protect our users.
 The decision to defederate can come from reports by our users but is also based on community discussion around such bad actors.
 We would rather be proactive in blocking bad actors versus waiting for abuse to happen.
 
-### Reporting an instance for Fediblocking
+Any visitors or registered members can view the list of limited/suspended domains from [vmst.io/about](https://vmst.io/about) under "Moderated servers".
+Domains are classified inline with our core Rules.
+Additionally, domains related to Cryptocurrency are limited.
+
+While many of the suspended domains could be classified under multiple combinations of the categories, only one is listed.
+
+### Reporting
 
 If during your use of the platform, you find another instance that you think needs to be restricted from interacting with ours **or** if you feel that another instance may have been blocked by our staff in error, please file an issue on our [GitHub](https://github.com/vmstan/mastodon/issues/new/choose).
 If you'd feel more comfortable, you can also reach out to one or more of our staff directly via direct message.
+
+## Brand Accounts
+
+Please see our policy page on [Brand & Bot](/brands) accounts.
 
 ## Our Discretion
 
