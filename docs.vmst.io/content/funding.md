@@ -22,11 +22,12 @@ Ko-fi is the preferred option as they have the lowest overhead for us to accept 
 
 ## Contribution Tiers
 
-| **Tier**   | **Cost** | **Benefits**                                   |
-|------------|----------|------------------------------------------------|
-| **Red**    | $2       | Invite codes                                   |
-| **Blue**   | $4       | Invite codes, monthly shout-out                |
-| **Purple** | $8       | Invite codes, monthly shout-out, maybe more 😉 |
+| **Tier**   | **Cost** | **Benefits**                            | **#** |
+|------------|----------|-----------------------------------------|----|
+| **Red**    | $2       | Invite codes                            | 21 |
+| **Blue**   | $4       | Invite codes, shout-out                 | 30 |
+| **Purple** | $8       | Invite codes, shout-out, warm fuzzies   | 20 |
+| **Tartan** | $24      | All of the above PLUS immense gratitude | 3  |
 
 ## Contribution Benefits
 
@@ -48,14 +49,14 @@ For a line item breakdown of all income and expenses to date, please see the [Le
 
 | **Source**      | **Monthly** | **Yearly** | **One Time** |
 |-----------------|-------------|------------|----------|
-| Ko-Fi           | $219        | -          | $353     |
+| Ko-Fi           | $231        | -          | $353     |
 | Patreon         | $144        | -          | -        |
-| Open Collective | $9          | $60        | $128     |
+| Open Collective | $9          | $60        | $168     |
 | Other           | $24         | -          | $72      |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
-Last Updated: Feb 8, 2023.
+Last Updated: Feb 17, 2023.
 
 ### Expenses
 
