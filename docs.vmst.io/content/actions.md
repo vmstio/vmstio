@@ -20,7 +20,7 @@ _These numbers were last updated on February 17, 2023._
 | Local Users vs Remote Users | 29 |
 | Remote Users vs Local Users | 10 |
 
-_Unique Reporting Events_ are defined as an single report **or** a group of multiple reports against a single user, during narrow time period.
+_Unique Reporting Events_ are defined as an single report **or** a group of multiple reports against a single user, during a specific time period.
 So for example, if a user's post generates two different user reports (regardless of their source) this is treated as a single event because there is one, unified action, that is taken by our moderator team.
 
 After a unique report is resolved, and then a subsequent report is made related to a different event, requiring additional moderator action, this is treated as a separate and unique event.
