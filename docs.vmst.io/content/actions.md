@@ -9,6 +9,8 @@ tags:
 We have decided to periodically publish a high level summary of moderator actions on vmst.io.
 These statistics are cumulative starting when the instance opened on October 6, 2022.
 
+Future updates are planned quarterly.
+
 _These numbers were last updated on February 17, 2023._
 
 ## Summary
