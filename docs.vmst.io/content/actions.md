@@ -13,8 +13,8 @@ _These numbers were last updated on February 17, 2023._
 
 ## Summary
 
-_Unique Reporting Events_ are defined as an single report **or** a group of reports against a single user, during a specific time period.
-After a unique report is resolved if a subsequent report is made, related to a different event requiring additional moderator action, this is treated as a new unique event
+Local users are vmst.io members.
+Remote users are members of federated instances.
 
 | | |
 |---|---|
@@ -23,8 +23,8 @@ After a unique report is resolved if a subsequent report is made, related to a d
 | Local Users vs Remote Users | 29 |
 | Remote Users vs Local Users | 10 |
 
-Local users are vmst.io members.
-Remote users are members of federated instances.
+_Unique Reporting Events_ are defined as an single report or a group of reports against a single user, during a specific time period, up to the point an action is taken.
+If a subsequent report is made, this is treated as a new Unique Reporting Event.
 
 ## Account Actions
 
@@ -33,7 +33,7 @@ For a full definition of the various Moderator actions, please review our [Moder
 ### Suspensions
 
 Local accounts that are suspended lose all access to their account.
-Their account profile and posts also becomes inaccessible to any other user.
+Their account profile and posts also become inaccessible to any other user.
 
 Remote suspended accounts lose their ability to interact with any members of vmst.io.
 Any relationships between all vmst.io members and the remote user are broken.
