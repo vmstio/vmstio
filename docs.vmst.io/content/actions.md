@@ -6,15 +6,15 @@ tags:
   - moderation
 ---
 
-We have decided to periodically regularly publish a high level summary of moderator actions on vmst.io.
-These statistics are currently cumulative starting when the instance opened on October 6, 2022.
+We have decided to periodically publish a high level summary of moderator actions on vmst.io.
+These statistics are cumulative starting when the instance opened on October 6, 2022.
 
 _These numbers were last updated on February 17, 2023._
 
 ## Summary
 
-_Unique Reporting Events_ are defined as an single report **or** a group of multiple reports against a single user, during a specific time period.
-After a unique report is resolved and then a subsequent report is made, related to a different event requiring additional moderator action, this is treated as a separate and unique event
+_Unique Reporting Events_ are defined as an single report **or** a group of reports against a single user, during a specific time period.
+After a unique report is resolved if a subsequent report is made, related to a different event requiring additional moderator action, this is treated as a new unique event
 
 | | |
 |---|---|
@@ -24,11 +24,11 @@ After a unique report is resolved and then a subsequent report is made, related 
 | Remote Users vs Local Users | 10 |
 
 Local users are vmst.io members.
-Remove users are members of other federated instances.
+Remote users are members of federated instances.
 
 ## Account Actions
 
-For a full definition of the various Moderator actions, please review or [Moderator Policy](/moderation).
+For a full definition of the various Moderator actions, please review our [Moderator Policy](/moderation).
 
 ### Suspensions
 
@@ -46,7 +46,7 @@ Any relationships between all vmst.io members and the remote user are broken.
 
 ### Limitations
 
-Limited accounts lose the ability to interact with other users who they do not already have a relationship, or who are not directly connected through another interaction. Their content is no longer visible on the Local or Federated timelines.
+Limited accounts lose the ability to interact with other users who they do not already have a relationship, or are connected through direct interaction. Their content is no longer visible on the Local or Federated timelines.
 
 | | |
 |---|---|
@@ -78,7 +78,7 @@ Only local accounts may appeal moderator decisions against them.
 
 ## No Actions
 
-After careful review we may determine that no action is required on a report, and so the report is marked as Resolved.
+After careful review we may determine that no action is required on a report.
 
 | | |
 |---|---|
@@ -89,7 +89,7 @@ After careful review we may determine that no action is required on a report, an
 
 ## Content Actions
 
-Action that is taken directly on content, but not on the reported user account.
+On some reports action is taken directly on the reported content, but not on the reported user account.
 
 | | |
 |---|---|
