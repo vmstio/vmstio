@@ -48,7 +48,7 @@ Any relationships between all vmst.io members and the remote user are broken.
 
 ### Limitations
 
-Limited accounts lose the ability to interact with other users who they do not already have a relationship, or are connected through direct interaction. Their content is no longer visible on the Local or Federated timelines.
+Limited accounts lose the ability to interact with other users when they do not already have a relationship, or are connected through direct interaction. Their content is no longer visible on the Local or Federated timelines.
 
 | | |
 |---|---|
@@ -97,3 +97,6 @@ On some reports action is taken directly on the reported content, but not on the
 |---|---|
 | Content Limited | 4 |
 | Content Removed | 1 |
+
+Limiting to Removing content are the only options available.
+Other than marking images as sensitive our Moderators cannot directly edit member posts.
