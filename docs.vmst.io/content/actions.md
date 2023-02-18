@@ -13,6 +13,9 @@ _These numbers were last updated on February 17, 2023._
 
 ## Summary
 
+_Unique Reporting Events_ are defined as an single report **or** a group of multiple reports against a single user, during a specific time period.
+After a unique report is resolved, and then a subsequent report is made related to a different event, requiring additional moderator action, this is treated as a separate and unique event
+
 | | |
 |---|---|
 | **Unique Reporting Events** | **45** |
@@ -20,16 +23,20 @@ _These numbers were last updated on February 17, 2023._
 | Local Users vs Remote Users | 29 |
 | Remote Users vs Local Users | 10 |
 
-_Unique Reporting Events_ are defined as an single report **or** a group of multiple reports against a single user, during a specific time period.
-So for example, if a user's post generates two different user reports (regardless of their source) this is treated as a single event because there is one, unified action, that is taken by our moderator team.
-
-After a unique report is resolved, and then a subsequent report is made related to a different event, requiring additional moderator action, this is treated as a separate and unique event.
+Local users are vmst.io members.
+Remove users are members of other federated instances.
 
 ## Account Actions
 
-For a definition of the various Moderator actions, please review or [Moderator Policy](/moderation).
+For a full definition of the various Moderator actions, please review or [Moderator Policy](/moderation).
 
 ### Suspensions
+
+Local accounts that are suspended lose all access to their account.
+Their account profile and posts also becomes inaccessible to any other user.
+
+Remote suspended accounts lose their ability to interact with any members of vmst.io.
+Any relationships between all vmst.io members and the remote user are broken.
 
 | | |
 |---|---|
@@ -39,6 +46,8 @@ For a definition of the various Moderator actions, please review or [Moderator P
 
 ### Limitations
 
+Limited accounts lose the ability to interact with other users who they do not already have a relationship, or who are not directly connected through another interaction. Their content is no longer visible on the Local or Federated timelines.
+
 | | |
 |---|---|
 | **Accounts Limited** | **6** |
@@ -47,6 +56,8 @@ For a definition of the various Moderator actions, please review or [Moderator P
 
 ### Freezing
 
+Frozen accounts cannot post but their previous content is still accessible.
+
 | | |
 |---|---|
 | **Accounts Frozen** | **1** |
@@ -54,6 +65,8 @@ For a definition of the various Moderator actions, please review or [Moderator P
 Only local accounts can be frozen.
 
 ### Appeals
+
+Account limitations or suspensions can be appealed to a Director and/or Administrator.
 
 | | |
 |---|---|
@@ -65,6 +78,8 @@ Only local accounts may appeal moderator decisions against them.
 
 ## No Actions
 
+After careful review we may determine that no action is required on a report, and so the report is marked as Resolved.
+
 | | |
 |---|---|
 | **Reports Closed w/o Action** | **17** |
@@ -73,6 +88,8 @@ Only local accounts may appeal moderator decisions against them.
 | Remote Users vs Local Users | 6 |
 
 ## Content Action
+
+Action that is taken directly on content, but not on the reported user account.
 
 | | |
 |---|---|
