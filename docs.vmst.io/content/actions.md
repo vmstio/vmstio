@@ -11,16 +11,6 @@ These statistics are cumulative starting from when the instance opened on Octobe
 
 _These numbers were last updated on February 17, 2023._
 
-- [Definitions](#definitions)
-- [Summary](#summary)
-- [Account Actions](#account-actions)
-  - [Suspensions](#suspensions)
-  - [Limitations](#limitations)
-  - [Freezing](#freezing)
-  - [Appeals](#appeals)
-- [Content Actions](#content-actions)
-- [No Actions](#no-actions)
-
 ## Definitions
 
 - **Local users** are vmst.io members.
@@ -45,7 +35,7 @@ _These numbers were last updated on February 17, 2023._
   **Note:** While multiple reports are grouped in this page into reporting events, the moderation team takes multiple reports against a user very seriously.
   Report count against a user or post reflect the urgency of needed action.
 
-When taking action, moderators may take
+When reviewing reports, moderators may take
 
 * [Actions against an account as a whole](#account-actions)
 * [Actions against specific content or posts](#content-actions)
