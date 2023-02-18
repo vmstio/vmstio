@@ -13,6 +13,8 @@ _These numbers were last updated on February 17, 2023._
 
 ## Summary
 
+| | |
+|---|---|
 | **Unique Reporting Events** | **45** |
 | Local Users vs Local Users | 6 |
 | Local Users vs Remote Users | 29 |
@@ -29,24 +31,32 @@ For a definition of the various Moderator actions, please review or [Moderator P
 
 ### Suspensions
 
+| | |
+|---|---|
 | **Accounts Suspended** | **16** |
 | Local Accounts | 5 |
 | Remote Accounts | 11 |
 
 ### Limitations
 
+| | |
+|---|---|
 | **Accounts Limited** | **6** |
 | Local Accounts | 3 |
 | Remote Accounts | 3 |
 
 ### Freezing
 
+| | |
+|---|---|
 | **Accounts Frozen** | **1** |
 
 Only local accounts can be frozen.
 
 ### Appeals
 
+| | |
+|---|---|
 | **Appeals Attempted** | **2** |
 | Appeals Accepted | 2 |
 | Appeals Rejected | 0 |
@@ -55,6 +65,8 @@ Only local accounts may appeal moderator decisions against them.
 
 ## No Actions
 
+| | |
+|---|---|
 | **Reports Closed w/o Action** | **17** |
 | Local Users vs Local Users | 1 |
 | Local Users vs Remote Users | 10 |
@@ -62,5 +74,7 @@ Only local accounts may appeal moderator decisions against them.
 
 ## Content Action
 
+| | |
+|---|---|
 | Content Limited | 4 |
 | Content Removed | 1 |
