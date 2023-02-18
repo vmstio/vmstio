@@ -7,14 +7,14 @@ tags:
 ---
 
 We have decided to periodically regularly publish a high level summary of moderator actions on vmst.io.
-These statistics are currently cumulative since the instance came online, on October 6, 2022.
+These statistics are currently cumulative starting when the instance opened on October 6, 2022.
 
 _These numbers were last updated on February 17, 2023._
 
 ## Summary
 
 _Unique Reporting Events_ are defined as an single report **or** a group of multiple reports against a single user, during a specific time period.
-After a unique report is resolved, and then a subsequent report is made related to a different event, requiring additional moderator action, this is treated as a separate and unique event
+After a unique report is resolved and then a subsequent report is made, related to a different event requiring additional moderator action, this is treated as a separate and unique event
 
 | | |
 |---|---|
@@ -87,7 +87,7 @@ After careful review we may determine that no action is required on a report, an
 | Local Users vs Remote Users | 10 |
 | Remote Users vs Local Users | 6 |
 
-## Content Action
+## Content Actions
 
 Action that is taken directly on content, but not on the reported user account.
 
