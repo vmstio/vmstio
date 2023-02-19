@@ -54,7 +54,7 @@ Remote users are members of federated instances.
 | Local Users reporting Remote Users | 29 |
 | Remote Users reporting Local Users | 10 |
 
-As of the date of this report, we have not removed content or suspended users at the request of any government or law enforcement agency.
+As of the date of this report, we have not removed content or taken action against users at the request of any government or law enforcement agency.
 
 ## Account Actions
 
