@@ -6,39 +6,68 @@ tags:
   - moderation
 ---
 
-We have decided to periodically publish a high level summary of moderator actions on vmst.io.
-These statistics are cumulative starting when the instance opened on October 6, 2022.
+We periodically publish a high level summary of moderator actions on vmst.io.
+These statistics are cumulative starting from when the instance opened on October 6, 2022.
 
 Future updates are planned quarterly.
 
 _These numbers were last updated on February 17, 2023._
 
-## Summary
+## Definitions
 
+- **Local users** are vmst.io members.
+- **Remote users** are members of federated instances other than vmst.io.
+- **Unique Reporting Events** are a single report **or** group of reports against a single user or post, during a specific time period.
+
+  We distinguish a new unique reporting event as:
+  - A new report after resolving a previous reporting event
+    
+    For example, three reports on the same user are the same reporting event.
+    Moderators take action, resolving the three reports.
+  
+    Another user then reports the same user.
+    This new report is a separate unique reporting event.
+  
+  - Reports require additional or different moderator action
+  
+    For example, two different reports against the same user.
+    One report resolves with no action while the other report resolves with limiting the reported user.
+    These are two separate unique reporting events.
+  
+  **Note:** While multiple reports are grouped in this page into reporting events, the moderation team takes multiple reports against a user very seriously.
+  Report count against a user or post reflect the urgency of needed action.
+
+When reviewing reports, moderators may take
+
+* [Actions against an account as a whole](#account-actions)
+* [Actions against specific content or posts](#content-actions)
+* [No actions against either the account or content](#no-actions)
+
+## Summary
 Local users are vmst.io members.
 Remote users are members of federated instances.
 
 | | |
 |---|---|
 | **Unique Reporting Events** | **45** |
-| Local Users vs Local Users | 6 |
-| Local Users vs Remote Users | 29 |
-| Remote Users vs Local Users | 10 |
+| Local Users reporting Local Users | 6 |
+| Local Users reporting Remote Users | 29 |
+| Remote Users reporting Local Users | 10 |
 
-_Unique Reporting Events_ are defined as an single report or a group of reports against a single user, during a specific time period, up to the point an action is taken.
-If a subsequent report is made, this is treated as a new Unique Reporting Event.
+As of the date of this report, we have not removed content or suspended users at the request of any government or law enforcement agency.
 
 ## Account Actions
 
-For a full definition of the various Moderator actions, please review our [Moderator Policy](/moderation).
+For a full explanation of the various Moderator actions, please see the [Moderator Policy](/moderation) page.
 
 ### Suspensions
 
 Local accounts that are suspended lose all access to their account.
-Their account profile and posts also become inaccessible to any other user.
+Their account profile and posts also becomes inaccessible to any other user on vmst.io.
+Suspended users' posts may remain visible on remote servers.
 
 Remote suspended accounts lose their ability to interact with any members of vmst.io.
-Any relationships between all vmst.io members and the remote user are broken.
+Any relationships between any vmst.io member and the remote user are broken.
 
 | | |
 |---|---|
@@ -48,7 +77,10 @@ Any relationships between all vmst.io members and the remote user are broken.
 
 ### Limitations
 
-Limited accounts lose the ability to interact with other users when they do not already have a relationship, or are connected through direct interaction. Their content is no longer visible on the Local or Federated timelines.
+Limited accounts lose the ability to interact with other users who they do not already have a relationship with.
+A relationship includes existing followers or their interaction with a user post (liking, boosting, or replying). 
+
+The content from a limited user does not appear on the Local or Federated timelines.
 
 | | |
 |---|---|
@@ -58,7 +90,7 @@ Limited accounts lose the ability to interact with other users when they do not 
 
 ### Freezing
 
-Frozen accounts cannot post but their previous content is still accessible.
+Frozen accounts cannot post but their previous content is still accessible to all users on all timelines.
 
 | | |
 |---|---|
@@ -68,7 +100,8 @@ Only local accounts can be frozen.
 
 ### Appeals
 
-Account limitations or suspensions can be appealed to a Director and/or Administrator.
+Account limitations or suspensions can be appealed.
+Appeals are reviewed by vmst.io [Directors or Administrator](/staff).
 
 | | |
 |---|---|
@@ -77,6 +110,15 @@ Account limitations or suspensions can be appealed to a Director and/or Administ
 | Appeals Rejected | 0 |
 
 Only local accounts may appeal moderator decisions against them.
+
+## Content Actions
+
+On some reports action is taken directly on the reported content, but not on the reported user account.
+
+| | |
+|---|---|
+| Content Limited | 4 |
+| Content Removed | 1 |
 
 ## No Actions
 
