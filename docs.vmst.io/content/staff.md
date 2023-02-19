@@ -17,6 +17,8 @@ All of the staff members of vmst·io are volunteers.
 📧 [vmstan@vmst.io](mailto:vmstan@vmst.io)
 
 * Building and maintaining online communities since 1999.
+  * Co-founder of Federation Studios
+  * Managing Editor at Neowin.net
 * Systems administrator since age 13.
 * Former Birdsite addict.
 
