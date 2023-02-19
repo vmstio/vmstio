@@ -9,6 +9,8 @@ tags:
 We periodically publish a high level summary of moderator actions on vmst.io.
 These statistics are cumulative starting from when the instance opened on October 6, 2022.
 
+Future updates are planned quarterly.
+
 _These numbers were last updated on February 17, 2023._
 
 ## Definitions
@@ -41,8 +43,9 @@ When reviewing reports, moderators may take
 * [Actions against specific content or posts](#content-actions)
 * [No actions against either the account or content](#no-actions)
 
-
 ## Summary
+Local users are vmst.io members.
+Remote users are members of federated instances.
 
 | | |
 |---|---|
@@ -127,3 +130,15 @@ After careful review we may determine that no action is required on a report.
 | Local Users vs Local Users | 1 |
 | Local Users vs Remote Users | 10 |
 | Remote Users vs Local Users | 6 |
+
+## Content Actions
+
+On some reports action is taken directly on the reported content, but not on the reported user account.
+
+| | |
+|---|---|
+| Content Limited | 4 |
+| Content Removed | 1 |
+
+Limiting to Removing content are the only options available.
+Other than marking images as sensitive our Moderators cannot directly edit member posts.
