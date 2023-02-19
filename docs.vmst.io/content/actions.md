@@ -1,5 +1,5 @@
 ---
-title: Moderation Actions
+title: Actions
 description: High level summary of moderator actions
 tags:
   - docs
