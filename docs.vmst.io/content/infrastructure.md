@@ -153,7 +153,7 @@ Under normal circumstances there are at least two virtual machines ([Kirk](https
 #### Puma
 
 What users perceive as "Mastodon" is a [Ruby on Rails](https://rubyonrails.org) application (with [Puma](https://puma.io) running as the web/presentation layer) providing both ActivityPub/Federation and the web user experience.
-We use the Ruby versions and modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
+We use Ruby 3.0.x and the other modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
 Based on recommendations by the developer of Puma, and others in the Mastodon administration community, we have Puma configured in `.env.production` and `mastodon-web.service`, as follows:
 
@@ -215,7 +215,9 @@ There are multiple queues which are distributed across two dedicated worker node
 
 An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
 
-There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)) with 2 vCPU and 4 GB of memory each.
+There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)).
+Scotty has 2 vCPU and 4 GB of memory.
+Decker has 4 vCPU and 8 GB of memory.
 
 #### Tuning
 
@@ -286,7 +288,7 @@ Each service file has a maximum thread and database pool limit of 25, with the e
 - Scotty which has an additional Ingress queue service limited to 15.
 - Mastodon does not want the scheduler service running more than once, so it only exists on Decker, limited to 15.
 
-The Ingress queue tends to be more demanding on CPU usage and because Decker is also responsible for backups, there is a small difference in the amount of processing done between the two in terms of Sidekiq, but not in overall utilization.
+The Ingress queue tends to be more demanding on CPU usage and because Decker is also responsible for backups, there is a small difference in the amount of processing done between the two in terms of Sidekiq.
 
 With the exception of scheduled tasks, the loss of one Sidekiq host or the other should not have any major impact on the ability of the instance to function.
 
@@ -373,6 +375,12 @@ connect = path-to-redis-database.ondigitalocean.com:25061
 
 We've found that the `delay = yes` component is essential to this configuration but is not well documented or in the default configuration files.
 Without this setting, anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database, leaving Mastodon services in a failed state and without the ability to communicate to Redis until the Stunnel service is restarted.
+
+#### Stunnel Alternatives
+
+There has been discussion within the Mastodon project of replacing the Ruby libraries used to connect to Redis, as the existing code is end of life.
+These alternatives include native support for TLS connections, which will negate the need for this component.
+We hope to be able to test and integrate these alternatives in the coming months.
 
 ### Elastic Search
 
