@@ -1,6 +1,7 @@
 ---
 title: Infrastructure
 description: Where the bits go, to and fro
+lastmod: 2023-02-21
 tags:
  - servers
  - docs
@@ -22,11 +23,11 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 ## Layout
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-tall.png)
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-tall-feb21.png)
 
 ## Providers
 
-| **Vendor** | **Service** |
+| Vendor | Service |
 |---|---|
 | Digital Ocean | Managed Databases, Load Balancer Services, CDN/Object Storage, Virtual Machines (Droplets) |
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
@@ -46,7 +47,7 @@ Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the
 
 The following reflect the required software components to have a functional deployment of Mastodon:
 
-- HTTP Proxy (typically, [Nginx](https://nginx.org/))
+- [Nginx](https://nginx.org/)
 - [Mastodon](https://github.com/mastodon/mastodon) (obviously)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Redis](https://redis.io/)
@@ -96,7 +97,7 @@ Our goal is to run the latest released version of the Mastodon experience within
 
 In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository.
 
-We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack.
+We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack unless it's required to properly interact with our systems.
 We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
 
 ## Core Elements
