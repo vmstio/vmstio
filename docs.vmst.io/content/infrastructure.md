@@ -587,7 +587,7 @@ There is a [staging version](https://staging-docs.vmst.io) of the documentation,
 
 If you would like to edit or contribute to the documentation on this site, you may fork the site and submit pull requests to our staging branch.
 
-Please review our [contribution guide](https://github.com/vmstan/vmstio/docs.vmst.io/README.md) contribution guide for more information.
+Please review our [contribution guide](https://github.com/vmstan/vmstio/docs.vmst.io/README.md) for more information.
 
 ## Monitoring
 
