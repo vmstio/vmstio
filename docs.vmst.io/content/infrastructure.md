@@ -29,7 +29,8 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 | Vendor | Service |
 |---|---|
-| Digital Ocean | Managed Databases, Load Balancer Services, CDN/Object Storage, Virtual Machines (Droplets) |
+| Digital Ocean | Managed Databases, Load Balancer Services, Object Storage, Virtual Machines (Droplets) |
+| Netlify | Static Site |
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
 | Mailgun | SMTP Relay |
@@ -577,14 +578,16 @@ Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.
 
 ## Documentation
 
-Our documentation website [docs.vmst.io](https://docs.vmst.io) runs directly from the free tier of Digital Ocean's app platform.
-It is a [Hugo](https://gohugo.io) static website using [a custom version](https://github.com/vmstan/hugo-PaperModXRand) of the the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme.
+Our documentation website [docs.vmst.io](https://docs.vmst.io) runs on the [Netlify](https://www.netlify.com) app platform.
+It is a [Hugo](https://gohugo.io) static website using [a custom version](https://github.com/vmstan/hugo-PaperModXRand) of the the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme called "Rand".
 It's automatically generated anytime there is a push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
-It uses an integrated CDN provided by Digital Ocean.
+It uses an integrated CDN provided by Netlify.
 
-There is a staging version of the documentation, which also generates automatically from pushes to the `staging` branch on GitHub.
+There is a [staging version](https://staging-docs.vmst.io) of the documentation, which also generates automatically from pushes to the `staging` branch on GitHub.
 
-If you would like to edit or contribute to the documentation on this site, you may [fork the site](https://github.com/vmstan/vmstio/tree/staging) and submit pull requests to our staging branch.
+If you would like to edit or contribute to the documentation on this site, you may fork the site and submit pull requests to our staging branch.
+
+Please review our [contribution guide](https://github.com/vmstan/vmstio/docs.vmst.io/README.md) contribution guide for more information.
 
 ## Monitoring
 
