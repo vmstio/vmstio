@@ -1,6 +1,7 @@
 ---
 title: Infrastructure
 description: Where the bits go, to and fro
+lastmod: 2023-02-21
 tags:
  - servers
  - docs
@@ -22,13 +23,14 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 ## Layout
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-tall.png)
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-tall-feb21.png)
 
 ## Providers
 
-| **Vendor** | **Service** |
+| Vendor | Service |
 |---|---|
-| Digital Ocean | Managed Databases, Load Balancer Services, CDN/Object Storage, Virtual Machines (Droplets) |
+| Digital Ocean | Managed Databases, Load Balancer Services, Object Storage, Virtual Machines (Droplets) |
+| Netlify | Static Site |
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
 | Mailgun | SMTP Relay |
@@ -46,7 +48,7 @@ Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the
 
 The following reflect the required software components to have a functional deployment of Mastodon:
 
-- HTTP Proxy (typically, [Nginx](https://nginx.org/))
+- [Nginx](https://nginx.org/)
 - [Mastodon](https://github.com/mastodon/mastodon) (obviously)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Redis](https://redis.io/)
@@ -96,7 +98,7 @@ Our goal is to run the latest released version of the Mastodon experience within
 
 In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository.
 
-We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack.
+We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack unless it's required to properly interact with our systems.
 We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
 
 ## Core Elements
@@ -152,7 +154,7 @@ Under normal circumstances there are at least two virtual machines ([Kirk](https
 #### Puma
 
 What users perceive as "Mastodon" is a [Ruby on Rails](https://rubyonrails.org) application (with [Puma](https://puma.io) running as the web/presentation layer) providing both ActivityPub/Federation and the web user experience.
-We use the Ruby versions and modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
+We use Ruby 3.0.x and the other modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
 Based on recommendations by the developer of Puma, and others in the Mastodon administration community, we have Puma configured in `.env.production` and `mastodon-web.service`, as follows:
 
@@ -214,7 +216,9 @@ There are multiple queues which are distributed across two dedicated worker node
 
 An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
 
-There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)) with 2 vCPU and 4 GB of memory each.
+There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)).
+Scotty has 2 vCPU and 4 GB of memory.
+Decker has 4 vCPU and 8 GB of memory.
 
 #### Tuning
 
@@ -285,7 +289,7 @@ Each service file has a maximum thread and database pool limit of 25, with the e
 - Scotty which has an additional Ingress queue service limited to 15.
 - Mastodon does not want the scheduler service running more than once, so it only exists on Decker, limited to 15.
 
-The Ingress queue tends to be more demanding on CPU usage and because Decker is also responsible for backups, there is a small difference in the amount of processing done between the two in terms of Sidekiq, but not in overall utilization.
+The Ingress queue tends to be more demanding on CPU usage and because Decker is also responsible for backups, there is a small difference in the amount of processing done between the two in terms of Sidekiq.
 
 With the exception of scheduled tasks, the loss of one Sidekiq host or the other should not have any major impact on the ability of the instance to function.
 
@@ -372,6 +376,12 @@ connect = path-to-redis-database.ondigitalocean.com:25061
 
 We've found that the `delay = yes` component is essential to this configuration but is not well documented or in the default configuration files.
 Without this setting, anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database, leaving Mastodon services in a failed state and without the ability to communicate to Redis until the Stunnel service is restarted.
+
+#### Stunnel Alternatives
+
+There has been discussion within the Mastodon project of replacing the Ruby libraries used to connect to Redis, as the existing code is end of life.
+These alternatives include native support for TLS connections, which will negate the need for this component.
+We hope to be able to test and integrate these alternatives in the coming months.
 
 ### Elastic Search
 
@@ -568,14 +578,16 @@ Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.
 
 ## Documentation
 
-Our documentation website [docs.vmst.io](https://docs.vmst.io) runs directly from the free tier of Digital Ocean's app platform.
-It is a [Hugo](https://gohugo.io) static website using [a custom version](https://github.com/vmstan/hugo-PaperModXRand) of the the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme.
+Our documentation website [docs.vmst.io](https://docs.vmst.io) runs on the [Netlify](https://www.netlify.com) app platform.
+It is a [Hugo](https://gohugo.io) static website using [a custom version](https://github.com/vmstan/hugo-PaperModXRand) of the the [PaperModX](https://github.com/reorx/hugo-PaperModX) theme called "Rand".
 It's automatically generated anytime there is a push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
-It uses an integrated CDN provided by Digital Ocean.
+It uses an integrated CDN provided by Netlify.
 
-There is a staging version of the documentation, which also generates automatically from pushes to the `staging` branch on GitHub.
+There is a [staging version](https://staging-docs.vmst.io) of the documentation, which also generates automatically from pushes to the `staging` branch on GitHub.
 
-If you would like to edit or contribute to the documentation on this site, you may [fork the site](https://github.com/vmstan/vmstio/tree/staging) and submit pull requests to our staging branch.
+If you would like to edit or contribute to the documentation on this site, you may fork the site and submit pull requests to our staging branch.
+
+Please review our [contribution guide](https://github.com/vmstan/vmstio/docs.vmst.io/README.md) for more information.
 
 ## Monitoring
 
