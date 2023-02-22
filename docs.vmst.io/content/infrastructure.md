@@ -105,7 +105,7 @@ We do not intend to modify or customize Mastodon code in any other way that chan
 
 ### Virtual Machines
 
-We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the base operating system for our self-managed systems.
+We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian](https://www.debian.org) as the base operating system for our self-managed systems.
 
 We use the snapshot functionality to keep updated customized base images for each tier.
 Should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
@@ -123,8 +123,8 @@ Our single load balancer object ([Pike](https://memory-alpha.fandom.com/wiki/Chr
 ### Reverse Proxies
 
 We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets.
-Nginx is installed using the [stable branch repository](https://nginx.org/en/download.html) for Debian.
-Currently this is version 1.22.
+Nginx is installed using the [mainline branch repository](https://nginx.org/en/download.html) for Debian.
+Currently this is version 1.23.
 
 What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/):
 
