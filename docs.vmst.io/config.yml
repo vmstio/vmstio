@@ -53,22 +53,6 @@ menu:
       url: '/archives'
       weight: 7
 
-frontmatter:
-  date:
-  - date
-  - publishDate
-  - lastmod
-  expiryDate:
-  - expiryDate
-  lastmod:
-  - :git
-  - lastmod
-  - date
-  - publishDate
-  publishDate:
-  - publishDate
-  - date
-
 privacy:
   vimeo:
     disabled: false
