@@ -1,7 +1,7 @@
 ---
 title: Infrastructure
 description: Where the bits go, to and fro
-lastmod: 2023-02-21
+lastmod: .Lastmod
 tags:
  - servers
  - docs
