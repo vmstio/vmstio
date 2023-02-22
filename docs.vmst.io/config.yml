@@ -3,7 +3,7 @@ relativeURLs: true
 baseURL: ''
 title: docs·vmst·io
 author: vmst·io
-copyright: Copyright © 2022 vmst·io Team
+copyright: Copyright © 2022-2023 vmst·io Team
 languageCode: en
 paginate: 5
 enableInlineShortcodes: true
