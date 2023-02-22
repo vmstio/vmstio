@@ -8,6 +8,7 @@ languageCode: en
 paginate: 5
 enableInlineShortcodes: true
 enableRobotsTXT: true
+enableGitInfo: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
