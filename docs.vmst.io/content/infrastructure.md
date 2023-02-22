@@ -583,7 +583,7 @@ It is a [Hugo](https://gohugo.io) static website using [a custom version](https:
 It's automatically generated anytime there is a push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
 It uses an integrated CDN provided by Netlify.
 
-There are a staging versions of the documentation which are generated automatically from Pull Requests made to the `main` branch on GitHub.
+There are preview versions of the documentation which are generated automatically from Pull Requests made to the `main` branch on GitHub.
 
 If you would like to edit or contribute to the documentation on this site, you may fork the site and submit Pull Requests.
 
