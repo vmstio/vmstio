@@ -1,7 +1,7 @@
 ---
 title: Infrastructure
 description: Where the bits go, to and fro
-lastmod: 2023-02-21
+lastmod: 2000-01-01
 tags:
  - servers
  - docs
@@ -105,7 +105,7 @@ We do not intend to modify or customize Mastodon code in any other way that chan
 
 ### Virtual Machines
 
-We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian](https://www.debian.org) as the base operating system for our self-managed systems.
+We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the base operating system for our self-managed systems.
 
 We use the snapshot functionality to keep updated customized base images for each tier.
 Should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
@@ -123,8 +123,8 @@ Our single load balancer object ([Pike](https://memory-alpha.fandom.com/wiki/Chr
 ### Reverse Proxies
 
 We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets.
-Nginx is installed using the [mainline branch repository](https://nginx.org/en/download.html) for Debian.
-Currently this is version 1.23.
+Nginx is installed using the [stable branch repository](https://nginx.org/en/download.html) for Debian.
+Currently this is version 1.22.
 
 What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/):
 
@@ -355,15 +355,36 @@ We use the Digital Ocean managed database service, this delivers a highly availa
 
 There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 
-#### Stunnel
+#### HAProxy
 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capability.
-[Stunnel](https://www.stunnel.org) is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
+
+Previously, [Stunnel](https://www.stunnel.org) was used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
 This process is used on our Mastodon Web and Sidekiq nodes.
 
 ![Stunnel Workflow](https://cdn.vmst.io/docs/stunnel-workflow.png)
 
-Example of `/etc/stunnel/redis.conf` configuration file:
+We have since moved to [HAProxy](https://www.haproxy.org) for this purpose, and it has provided more stability and eliminated some timeout errors that were seen under the previous Stunnel configuration.
+We currently use HAProxy 2.6.
+
+Example of `/etc/haproxy/haproxy.cfg` configuration file:
+
+```text
+defaults
+	log	global
+  timeout connect 5s
+  timeout client  1m
+  timeout server  1m
+
+frontend redis
+  bind 127.0.0.1:6379
+  default_backend upstream_redis
+
+backend upstream_redis
+  server upstream_redis path-to-redis-database.ondigitalocean.com:25061 ssl verify none check inter 1s
+```
+
+For reference, here is our previous example of a Stunnel configuration file:
 
 ```text
 pid = /run/stunnel-redis.pid
@@ -377,7 +398,7 @@ connect = path-to-redis-database.ondigitalocean.com:25061
 We've found that the `delay = yes` component is essential to this configuration but is not well documented or in the default configuration files.
 Without this setting, anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database, leaving Mastodon services in a failed state and without the ability to communicate to Redis until the Stunnel service is restarted.
 
-#### Stunnel Alternatives
+#### Alternatives
 
 There has been discussion within the Mastodon project of replacing the Ruby libraries used to connect to Redis, as the existing code is end of life.
 These alternatives include native support for TLS connections, which will negate the need for this component.
@@ -583,9 +604,9 @@ It is a [Hugo](https://gohugo.io) static website using [a custom version](https:
 It's automatically generated anytime there is a push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
 It uses an integrated CDN provided by Netlify.
 
-There are preview versions of the documentation which are generated automatically from Pull Requests made to the `main` branch on GitHub.
+There is a [staging version](https://staging-docs.vmst.io) of the documentation, which also generates automatically from pushes to the `staging` branch on GitHub.
 
-If you would like to edit or contribute to the documentation on this site, you may fork the site and submit Pull Requests.
+If you would like to edit or contribute to the documentation on this site, you may fork the site and submit pull requests to our staging branch.
 
 Please review our [contribution guide](https://github.com/vmstan/vmstio/docs.vmst.io/README.md) for more information.
 
