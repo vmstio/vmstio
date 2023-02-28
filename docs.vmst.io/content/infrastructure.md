@@ -355,15 +355,36 @@ We use the Digital Ocean managed database service, this delivers a highly availa
 
 There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 
-#### Stunnel
+#### HAProxy
 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capability.
-[Stunnel](https://www.stunnel.org) is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
+
+Previously, [Stunnel](https://www.stunnel.org) was used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
 This process is used on our Mastodon Web and Sidekiq nodes.
 
 ![Stunnel Workflow](https://cdn.vmst.io/docs/stunnel-workflow.png)
 
-Example of `/etc/stunnel/redis.conf` configuration file:
+We have since moved to [HAProxy](https://www.haproxy.org) for this purpose, and it has provided more stability and eliminated some timeout errors that were seen under the previous Stunnel configuration.
+We currently use HAProxy 2.6.
+
+Example of `/etc/haproxy/haproxy.cfg` configuration file:
+
+```text
+defaults
+	log	global
+  timeout connect 5s
+  timeout client  1m
+  timeout server  1m
+
+frontend redis
+  bind 127.0.0.1:6379
+  default_backend upstream_redis
+
+backend upstream_redis
+  server upstream_redis path-to-redis-database.ondigitalocean.com:25061 ssl verify none check inter 1s
+```
+
+For reference, here is our previous example of a Stunnel configuration file:
 
 ```text
 pid = /run/stunnel-redis.pid
@@ -377,7 +398,7 @@ connect = path-to-redis-database.ondigitalocean.com:25061
 We've found that the `delay = yes` component is essential to this configuration but is not well documented or in the default configuration files.
 Without this setting, anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database, leaving Mastodon services in a failed state and without the ability to communicate to Redis until the Stunnel service is restarted.
 
-#### Stunnel Alternatives
+#### Alternatives
 
 There has been discussion within the Mastodon project of replacing the Ruby libraries used to connect to Redis, as the existing code is end of life.
 These alternatives include native support for TLS connections, which will negate the need for this component.
