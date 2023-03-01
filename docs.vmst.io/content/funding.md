@@ -22,16 +22,20 @@ Ko-fi is the preferred option as they have the lowest overhead for us to accept 
 
 ## Contribution Tiers
 
-| **Tier**   | **Cost** | **Benefits**                            | **#** |
-|------------|----------|-----------------------------------------|----|
-| **Red**    | $2       | Invite codes                            | 21 |
-| **Blue**   | $4       | Invite codes, shout-out                 | 30 |
-| **Purple** | $8       | Invite codes, shout-out, warm fuzzies   | 20 |
-| **Tartan** | $24      | All of the above PLUS immense gratitude | 3  |
+| **Tier**   | **Cost** | **Benefits**                                 | **#** |
+|------------|----------|----------------------------------------------|----|
+| **Red**    | $2       | Invite codes                                 | 21 |
+| **Blue**   | $4       | Invite codes, shout-out                      | 30 |
+| **Purple** | $8       | Invite codes, shout-out, [Listed](/purple)   | 20 |
+| **Tartan** | $24      | All of the above PLUS immense gratitude      | 3  |
 
 ## Contribution Benefits
 
-All members who sign up for monthly or yearly donations gain access to send invites to their friends and family. Those who sign up for Blue or Purple tiers will be included in a monthly shoutout post by <a rel="me" href="https://vmst.io/@vmstan">@vmstan</a>.
+Everyone who helps fund our operations gets their first contribution posted by our [@funding](https://vmst.io/@funding) bot.
+
+* All members who sign up for monthly or yearly donations gain access to send invites to their friends and family.
+* Those who sign up for Blue or Purple tiers will be included in a monthly shoutout post by <a rel="me" href="https://vmst.io/@vmstan">@vmstan</a>.
+* Purple and above are listed on a [dedicated page here](/purple).
 
 Members who provide financial support are still subject to the same [rules of the road](/rules) that all members must follow.
 
