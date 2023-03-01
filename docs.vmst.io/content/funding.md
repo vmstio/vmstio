@@ -53,14 +53,14 @@ For a line item breakdown of all income and expenses to date, please see the [Le
 
 | **Source**      | **Monthly** | **Yearly** | **One Time** |
 |-----------------|-------------|------------|----------|
-| Ko-Fi           | $231        | -          | $353     |
-| Patreon         | $144        | -          | -        |
+| Ko-Fi           | $239        | -          | $535     |
+| Patreon         | $140        | -          | -        |
 | Open Collective | $9          | $60        | $168     |
 | Other           | $24         | -          | $72      |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
-Last Updated: Feb 17, 2023.
+Last Updated: March 1, 2023.
 
 ### Expenses
 
