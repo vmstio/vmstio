@@ -66,7 +66,7 @@ Last Updated: March 2, 2023.
 
 | **Vendor**    | **Monthly** | **Yearly** |
 |---------------|-------------|------------|
-| Digital Ocean | $452        | $0         |
+| Digital Ocean | $424        | $0         |
 | DNSimple      | $6          | $153       |
 | Netlify       | $15         | $0         |
 | Backblaze     | $30         | $0         |
