@@ -24,10 +24,10 @@ Ko-fi is the preferred option as they have the lowest overhead for us to accept 
 
 | **Tier**   | **Cost** | **Benefits**                                 | **#** |
 |------------|----------|----------------------------------------------|----|
-| **Red**    | $2       | Invite codes                                 | 21 |
-| **Blue**   | $4       | Invite codes, shout-out                      | 30 |
-| **Purple** | $8       | Invite codes, shout-out, [Listed](/purple)   | 20 |
-| **Tartan** | $24      | All of the above PLUS immense gratitude      | 3  |
+| **Red**    | $2       | Invite codes                                 | 19 |
+| **Blue**   | $4       | Invite codes, shout-out                      | 28 |
+| **Purple** | $8       | Invite codes, shout-out, [Listed](/purple)   | 23 |
+| **Tartan** | $24      | All of the above PLUS immense gratitude      | 2  |
 
 ## Contribution Benefits
 

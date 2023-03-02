@@ -31,6 +31,8 @@ The following people are contributing to vmst.io on a monthly or yearly basis at
 * Marcos Huerta
 * Mark Buckley
 * Nick Kuhn
+* Nick Sanders
 * Pete Hall
 * Renee Mathew
 * Rich Holmes
+* Sean Massey
