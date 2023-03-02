@@ -60,18 +60,18 @@ For a line item breakdown of all income and expenses to date, please see the [Le
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
-Last Updated: March 1, 2023.
+Last Updated: March 2, 2023.
 
 ### Expenses
 
 | **Vendor**    | **Monthly** | **Yearly** |
 |---------------|-------------|------------|
-| Digital Ocean | $404        | $0         |
+| Digital Ocean | $452        | $0         |
 | DNSimple      | $6          | $153       |
-| Mailgun       | $2          | $0         |
-| Backblaze     | $2          | $0         |
+| Netlify       | $15         | $0         |
+| Backblaze     | $30         | $0         |
 
-Last Updated: Feb 8, 2023.
+Last Updated: March 2, 2023.
 
 ## Processing Fees
 
