@@ -22,12 +22,12 @@ Ko-fi is the preferred option as they have the lowest overhead for us to accept 
 
 ## Contribution Tiers
 
-| **Tier**   | **Cost** | **Benefits**                                 | **#** |
-|------------|----------|----------------------------------------------|----|
-| **Red**    | $2       | Invite codes                                 | 21 |
-| **Blue**   | $4       | Invite codes, shout-out                      | 30 |
-| **Purple** | $8       | Invite codes, shout-out, [Listed](/purple)   | 20 |
-| **Tartan** | $24      | All of the above PLUS immense gratitude      | 3  |
+| **Tier**   | **Monthly** | **Benefits**                                 | **#** |
+|------------|-------------|----------------------------------------------|----|
+| **Red**    | $2          | Invite codes                                 | 19 |
+| **Blue**   | $4          | Invite codes, shout-out                      | 28 |
+| **Purple** | $8          | Invite codes, shout-out, [Listed](/purple)   | 23 |
+| **Tartan** | $24         | All of the above PLUS immense gratitude      | 2  |
 
 ## Contribution Benefits
 
@@ -60,18 +60,18 @@ For a line item breakdown of all income and expenses to date, please see the [Le
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
-Last Updated: March 1, 2023.
+Last Updated: March 2, 2023.
 
 ### Expenses
 
 | **Vendor**    | **Monthly** | **Yearly** |
 |---------------|-------------|------------|
-| Digital Ocean | $404        | $0         |
+| Digital Ocean | $424        | $0         |
 | DNSimple      | $6          | $153       |
-| Mailgun       | $2          | $0         |
-| Backblaze     | $2          | $0         |
+| Netlify       | $15         | $0         |
+| Backblaze     | $30         | $0         |
 
-Last Updated: Feb 8, 2023.
+Last Updated: March 2, 2023.
 
 ## Processing Fees
 

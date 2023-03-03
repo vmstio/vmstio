@@ -26,10 +26,13 @@ The following people are contributing to vmst.io on a monthly or yearly basis at
 * Eric Lee
 * Erik Bussink
 * George Bleck
+* Jim Millard
 * LinuxTown
 * Marcos Huerta
 * Mark Buckley
 * Nick Kuhn
+* Nick Sanders
 * Pete Hall
 * Renee Mathew
 * Rich Holmes
+* Sean Massey
