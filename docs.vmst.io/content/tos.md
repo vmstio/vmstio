@@ -4,9 +4,9 @@ tags:
   - docs
 ---
 
-## Mastodon Functionality
+## System Functionality
 
-## Basic account information
+### Basic account information
 
 If you register on this server, you may be asked to enter a username, an e-mail address and a password.
 You may also enter additional profile information such as a display name and biography, and upload a profile picture and header image.
@@ -14,7 +14,7 @@ The username, display name, biography, profile picture and header image are alwa
 You can only interact with other people's content and post your own content when you are logged in.
 You may follow other people to view their combined posts in your own personalized home timeline.
 
-## Posts, following and other public information
+### Posts, following and other public information
 
 The list of people you follow is listed publicly, the same is true for your followers.
 When you submit a message, the date and time is stored as well as the application you submitted the message from.
@@ -25,7 +25,7 @@ Your posts are delivered to your followers, in some cases it means they are deli
 When you delete posts, this is likewise delivered to your followers.
 The action of boosting or liking another post is always public.
 
-## Direct and followers-only posts
+### Direct and followers-only posts
 
 All posts are stored and processed on the server.
 Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them.
