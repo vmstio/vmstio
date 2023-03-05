@@ -4,6 +4,10 @@ tags:
   - docs
 ---
 
+These terms describe how vmst.io collects, protects and uses the personally identifiable information you may provide through the vmst.io website or its API.
+The policy also describes the choices available to you regarding our use of your personal information and how you can access and update this information.
+This policy does not apply to the practices of companies that vmst.io does not own or control, or to individuals that vmst.io does not employ or manage.
+
 ## System Functionality
 
 ### Basic account information
@@ -57,8 +61,18 @@ You should enable two-factor authentication to further secure access to your acc
 
 ### What is our data retention policy?
 
-You can request and download an archive of your content, including your posts, media attachments, profile picture, and header image.
-You may irreversibly delete your account at any time.
+We do not mass delete user uploaded data on any regular basis.
+However you may irreversibly [delete your account](https://docs.joinmastodon.org/user/moving/#delete) and your data at anytime.
+You may also [schedule regular deletions](https://vmst.io/statuses_cleanup) of previous posts.
+
+In addition to regular backups we make of our infrastructure, you can backup your data and [export it](https://docs.joinmastodon.org/user/moving/#export) at any time.
+
+Such exports will include archive of your content, including:
+
+* Your posts
+* Media attachments
+* Profile picture
+* Header image
 
 ### Do we use cookies?
 
@@ -80,6 +94,12 @@ Your public and followers-only posts are delivered to the servers where your fol
 When you authorize an application to use your account, depending on the scope of permissions you approve, it may access your public profile information, your following list, your followers, your lists, all your posts, and your favorites.
 
 Applications can never access your e-mail address or password.
+
+## Moving Away
+
+You may close your Mastodon account or move it to another instance at any time.
+You may also [redirect users from your profile](https://docs.joinmastodon.org/user/moving/#migration) here to your identity on your new instance.
+You are in control of your identity and your social graph on Mastodon (and other federated instances), but the administrators here control your ability to use this instance and to interact with its users.
 
 ## Usage by Children
 
