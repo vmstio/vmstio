@@ -93,7 +93,9 @@ If you are under the age of 16, per the requirements of the GDPR ([General Data 
 Our site, products and services are all directed to people who are at least 13 years old. 
 If you are under the age of 13, per the requirements of COPPA ([Children's Online Privacy Protection Act](https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act)) do not use this site.
 
-Legal requirements may be different if this server is in another jurisdiction than your own.
+## Legal Jurisdictions
+
+Our servers and media stores are located in Canada and the United States. Specific legal requirements may be different if this is in another jurisdiction than your own.
 
 ## Changes to our Privacy Policy
 
