@@ -83,10 +83,14 @@ Applications can never access your e-mail address or password.
 
 ## Usage by Children
 
-EU or the EEA users: Our site, products and services are all directed to people who are at least 16 years old.
+###  EU or the EEA users
+
+Our site, products and services are all directed to people who are at least 16 years old.
 If you are under the age of 16, per the requirements of the GDPR ([General Data Protection Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation)) do not use this site.
 
-USA users: Our site, products and services are all directed to people who are at least 13 years old. 
+### USA users
+
+Our site, products and services are all directed to people who are at least 13 years old. 
 If you are under the age of 13, per the requirements of COPPA ([Children's Online Privacy Protection Act](https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act)) do not use this site.
 
 Legal requirements may be different if this server is in another jurisdiction than your own.
