@@ -14,20 +14,6 @@ When you apply for an account on vmst·io, we ask you to provide a reason why yo
 Tell us a bit about yourself, what brings you here, and what your interests are.
 It doesn't have to be formal, just enough to make us excited to welcome you to our community.
 
-## Moving Away
-
-You may close your account or move it to another instance at any time.
-You may also [redirect users from your profile](https://docs.joinmastodon.org/user/moving/#migration) here to your identity on your new instance.
-You are in control of your identity and your social graph* on Mastodon (and other federated instances), but the administrators here control your ability to use this instance and to interact with its users.
-
-* Your social graph is who you follow and who follows you.
-
-## Backing up your data
-
-In addition to regular backups we make of our infrastructure, you can backup your data and [export it](https://docs.joinmastodon.org/user/moving/#export) at any time.
-You can also [delete your account](https://docs.joinmastodon.org/user/moving/#delete) and your data at anytime.
-You can even [schedule regular deletions](https://vmst.io/statuses_cleanup) of previous posts, if that's your thing.
-
 ## Data Security
 
 Unless it's required of us to investigate a reported instance of abuse of our policies, under standard operation we have no ability to regularly access your direct messages with other members of our platform.
@@ -47,4 +33,4 @@ You should use Signal, [Matrix](/matrix), or another E2E messaging app for the t
 
 ## Privacy Policy
 
-Please review our full [Privacy Policy](https://vmst.io/terms) for more information.
+Please review our full [Privacy Policy](/tos) for more information.
