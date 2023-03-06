@@ -40,6 +40,20 @@ You may toggle an option to approve and reject new followers manually in the set
 
 Please keep in mind that it is technically possible for the operators of the server and any receiving server to view such messages, and that recipients may screenshot, copy or otherwise re-share them.
 
+### Encrypted messaging via Matrix
+
+In unencrypted and encrypted rooms, users connecting to the matrix.vmst.io homeserver (directly or over federation) will be able to see messages and files according to the access permissions configuration of the relevant room.
+This data is stored in the format it was received on our servers, and can be viewed by administrators under the conditions outlined below.
+
+In encrypted rooms, the data is stored in our databases but the encryption keys are stored only on your devices or by yourself.
+Users can optionally backup an encrypted copy of their keys on the Service to aid recovery if they lose all their keys and devices.
+This key backup is encrypted by a recovery key that only the user has access to.
+Administrators are unable to read your message content in our database.
+If you lose access to your encryption keys, you lose access to your messages forever.
+
+We use TLS to transfer all data.
+End-to-end encrypted messaging data is stored encrypted using AES-256, using message keys generated using the Olm and Megolm cryptographic ratchets.
+
 ## IPs and Other Metadata
 
 When you log in, we record the IP address you log in from, as well as the User Agent of your browser or application.All the logged in sessions are available for your review and revocation in the settings.
