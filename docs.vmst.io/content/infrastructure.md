@@ -578,7 +578,7 @@ Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.
 - For the backup of MySQL we use `mysqldump`.
 - The [Backblaze native](https://www.backblaze.com/b2/docs/quick_command_line.html) `b2-cli` utility is then used to make a copy of those backups a Backblaze B2 bucket.
 - This is done using some custom scripts that process each task and then fire off notifications to our backend Slack.
-- Database backups are currently made every 4 hours.
+- Database backups are currently made every 12 hours.
 - Database backups are retained for 14 days.
 - All backups are encrypted both in transit and at rest.
 
@@ -588,7 +588,7 @@ Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.
 
 - The CDN/media data is sync'd directly to Backblaze B2 via the `rclone` [utility](https://rclone.org).
 - This is done using some custom scripts that process each task and then fire off notifications to our backend Slack.
-- CDN backups currently run every 4 hours.
+- CDN backups currently run every 12 hours.
 - Only the latest copy of CDN data is retained.
 - All backups are encrypted both in transit and at rest.
 
