@@ -1,7 +1,6 @@
 ---
 title: Infrastructure
 description: Where the bits go, to and fro
-lastmod: 2000-01-01
 tags:
  - servers
  - docs
@@ -33,6 +32,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 | Netlify | Static Site |
 | DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
 | Backblaze | Database & Media Backups on B2 |
+| Elastic | Advanced search indexing |
 | Mailgun | SMTP Relay |
 | GitHub | Configuration Repository |
 | Slack | Team Communications |
@@ -105,7 +105,7 @@ We do not intend to modify or customize Mastodon code in any other way that chan
 
 ### Virtual Machines
 
-We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the base operating system for our self-managed systems.
+We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian](https://www.debian.org) as the base operating system for our self-managed systems.
 
 We use the snapshot functionality to keep updated customized base images for each tier.
 Should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
@@ -409,12 +409,11 @@ We hope to be able to test and integrate these alternatives in the coming months
 Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, bookmarked, favorited or boosted.
 
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
-We use a dedicated Droplets running [Open Search](https://opensearch.org) 2.5. Open Search is a fork of Elastic Search 7, which was started in 2021.
-While it lacks some of the more advanced features found in newer versions of Elastic Search, it is supported by Mastodon.
+We use a managed instance of Elastic Search 7.17 running on Elastic Cloud.
 
-There are two virtual machines ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh) and Text) with 1 vCPU and 2GB of memory each. They form a single instance to query, from behind our load balancers.
-Together they provide _khantext_.
-Get it?
+There are two data nodes and a witness, with 1GB of memory each. They form a single instance to query.
+
+![Elastic Search Configuration](https://cdn.vmst.io/docs/elastic-cloud.png)
 
 ### Translation API
 
@@ -638,7 +637,7 @@ These alerts are sent to our internal Slack and to the email of our server admin
 
 ### Prometheus & Grafana
 
-We have a self-hosted instance of [Prometheus](https://prometheus.io) which collects metrics from Mastodon via its integrated StatsD system.
+We have a cloud-hosted instance of [Prometheus](https://prometheus.io) which collects metrics from Mastodon via its integrated StatsD system.
 [Loki](https://grafana.com/oss/loki/) is additionally used to collect logging from various components such as Nginx.
 [Grafana](https://grafana.com/grafana/) is then used to visualize the metrics on dashboards, or to search logs.
 
