@@ -218,8 +218,7 @@ There are multiple queues which are distributed across two dedicated worker node
 An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
 
 There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)).
-Scotty has 2 vCPU and 4 GB of memory.
-Decker has 4 vCPU and 8 GB of memory.
+Both systems have 2 vCPU and 4 GB of memory.
 
 #### Tuning
 
