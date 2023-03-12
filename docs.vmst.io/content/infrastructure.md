@@ -711,7 +711,7 @@ They include:
 
 ### Certificates
 
-We use [Sectigo](https://sectigo.com/) as our primary certificate authority, with the exception of [docs.vmst.io](https://docs.vmst.io) which uses a certificate issued by Cloudflare.
+We use [Sectigo](https://sectigo.com/) as our primary certificate authority.
 
 Sectigo was utilized after testing [Let's Encrypt](https://letsencrypt.org/), but the automated validation system presented some challenges for us that were solved by using a legacy commercial CA.
 
