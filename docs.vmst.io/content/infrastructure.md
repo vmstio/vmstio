@@ -22,7 +22,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 ## Layout
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-tall-feb21.png)
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-march1222.png)
 
 ## Providers
 
