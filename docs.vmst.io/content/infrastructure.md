@@ -359,12 +359,11 @@ There is one active Redis database instance (it doesn't have a fun name) with 1 
 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capability.
 
-[HAProxy](https://www.haproxy.org) is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
+To accommodate this, we use [HAProxy](https://www.haproxy.org) to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
 
 ![HAProxy Workflow](https://cdn.vmst.io/docs/haproxy.png)
 
-This process is used on our Mastodon Web and Sidekiq nodes.
-For this purpose, and it has provided more stability and eliminated some timeout errors that were seen under the previous Stunnel configuration.
+For this purpose it has provided more stability and eliminated some timeout errors that were seen when using Stunnel in this configuration.
 We currently use HAProxy 2.6.
 
 Example of `/etc/haproxy/haproxy.cfg` configuration file:
