@@ -28,11 +28,13 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 | Vendor | Service |
 |---|---|
-| Digital Ocean | Managed Databases, Load Balancer Services, Object Storage, Virtual Machines (Droplets) |
-| Netlify | Static Site |
-| DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
+| Digital Ocean | Managed Databases, Virtual Machines, Object Storage & CDN |
+| Netlify | Static Site Generator |
+| DNSimple | Registrar, Nameservers |
+| Sectigo | SSL Certificate |
 | Backblaze | Database & Media Backups on B2 |
-| Elastic | Advanced search indexing |
+| Elastic | Full Text Search |
+| Grafana | Logging & Metrics Analysis |
 | Mailgun | SMTP Relay |
 | GitHub | Configuration Repository |
 | Slack | Team Communications |
@@ -359,30 +361,32 @@ There is one active Redis database instance (it doesn't have a fun name) with 1 
 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capability.
 
-Previously, [Stunnel](https://www.stunnel.org) was used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
+[HAProxy](https://www.haproxy.org) is used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
+
+![HAProxy Workflow](https://cdn.vmst.io/docs/haproxy.png)
+
 This process is used on our Mastodon Web and Sidekiq nodes.
-
-![Stunnel Workflow](https://cdn.vmst.io/docs/stunnel-workflow.png)
-
-We have since moved to [HAProxy](https://www.haproxy.org) for this purpose, and it has provided more stability and eliminated some timeout errors that were seen under the previous Stunnel configuration.
+For this purpose, and it has provided more stability and eliminated some timeout errors that were seen under the previous Stunnel configuration.
 We currently use HAProxy 2.6.
 
 Example of `/etc/haproxy/haproxy.cfg` configuration file:
 
 ```text
 defaults
-	log	global
-  timeout connect 5s
-  timeout client  1m
-  timeout server  1m
+log	global
+timeout connect 5s
+timeout client  1m
+timeout server  1m
 
 frontend redis
-  bind 127.0.0.1:6379
-  default_backend upstream_redis
+bind 127.0.0.1:6379
+default_backend upstream_redis
 
 backend upstream_redis
-  server upstream_redis path-to-redis-database.ondigitalocean.com:25061 ssl verify none check inter 1s
+server upstream_redis path-to-redis-database.ondigitalocean.com:25061 ssl verify none check inter 1s
 ```
+
+#### Stunnel
 
 For reference, here is our previous example of a Stunnel configuration file:
 
@@ -396,6 +400,7 @@ connect = path-to-redis-database.ondigitalocean.com:25061
 ```
 
 We've found that the `delay = yes` component is essential to this configuration but is not well documented or in the default configuration files.
+
 Without this setting, anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database, leaving Mastodon services in a failed state and without the ability to communicate to Redis until the Stunnel service is restarted.
 
 #### Alternatives
@@ -422,6 +427,18 @@ We use a managed instance of Elastic Search 7.17 running on Elastic Cloud.
 There are two data nodes and a witness, with 1GB of memory each. They form a single instance to query.
 
 ![Elastic Search Configuration](https://cdn.vmst.io/docs/elastic-cloud.png)
+
+Example of `.env.production` configuration settings relevant to Elastic Cloud:
+
+```text
+ES_ENABLED=true
+ES_HOST=https://elasticprovidedenpointaddress.cloud.es.io
+ES_PORT=443
+ES_USER=elastic
+ES_PASS=StretchArmstrong
+```
+
+When pointing at an Elastic Search endpoint using TLS it is necessary that `ES_HOST` include the full `https://` address.
 
 ### Translation API
 
