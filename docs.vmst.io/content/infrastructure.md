@@ -646,7 +646,7 @@ In addition to providing a page for members to check when there might be issues,
 
 For more information on this topic please see our [Monitoring](/monitoring) page.
 
-There is one virtual machine ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 2 GB of memory.
+There is one virtual machine ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 1 GB of memory.
 
 ### Digital Ocean
 
