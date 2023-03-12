@@ -116,7 +116,7 @@ Should there be a failure of a node or a need to scale horizontally and add addi
 
 ### Load Balancing
 
-We use Digital Ocean managed load balancer objects, based on [HAProxy](https://www.haproxy.org), to distribute user traffic across our frontend reverse proxies.
+We use Digital Ocean managed load balancer objects to distribute user traffic across our frontend reverse proxies.
 
 ![Digital Ocean Load Balancer](https://cdn.vmst.io/docs/do-loadbalancer.png)
 
@@ -125,8 +125,8 @@ Our single load balancer object ([Pike](https://memory-alpha.fandom.com/wiki/Chr
 ### Reverse Proxies
 
 We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets.
-Nginx is installed using the [stable branch repository](https://nginx.org/en/download.html) for Debian.
-Currently this is version 1.22.
+Nginx is installed using the [mainline branch repository](https://nginx.org/en/download.html) for Debian.
+Currently this is version 1.23.
 
 What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/):
 
