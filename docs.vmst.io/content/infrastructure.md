@@ -404,9 +404,17 @@ There has been discussion within the Mastodon project of replacing the Ruby libr
 These alternatives include native support for TLS connections, which will negate the need for this component.
 We hope to be able to test and integrate these alternatives in the coming months.
 
-### Elastic Search
+### Full Text Search
 
-Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, bookmarked, favorited or boosted.
+Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on:
+
+- User profiles known to our instance
+- Trending hashtags
+- **Your** posts
+- Replies to **your** posts
+- Any other post that **you** have directly interacted with (bookmarked, favorited or boosted)
+
+![John Mastodon Example Search](https://cdn.vmst.io/docs/john-mastodon.jpg)
 
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
 We use a managed instance of Elastic Search 7.17 running on Elastic Cloud.
