@@ -1,7 +1,6 @@
 ---
 title: Infrastructure
 description: Where the bits go, to and fro
-lastmod: 2000-01-01
 tags:
  - servers
  - docs
@@ -23,16 +22,19 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 ## Layout
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-tall-feb21.png)
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-march1222.png)
 
 ## Providers
 
 | Vendor | Service |
 |---|---|
-| Digital Ocean | Managed Databases, Load Balancer Services, Object Storage, Virtual Machines (Droplets) |
-| Netlify | Static Site |
-| DNSimple | Registrar, Nameservers & SSL Certificate (via Sectigo) |
+| Digital Ocean | Managed Databases, Virtual Machines, Object Storage & CDN |
+| Netlify | Static Site Generator |
+| DNSimple | Registrar, Nameservers |
+| Sectigo | SSL Certificate |
 | Backblaze | Database & Media Backups on B2 |
+| Elastic | Full Text Search |
+| Grafana | Logging & Metrics Analysis |
 | Mailgun | SMTP Relay |
 | GitHub | Configuration Repository |
 | Slack | Team Communications |
@@ -105,7 +107,7 @@ We do not intend to modify or customize Mastodon code in any other way that chan
 
 ### Virtual Machines
 
-We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian 11](https://www.debian.org) as the base operating system for our self-managed systems.
+We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian](https://www.debian.org) as the base operating system for our self-managed systems.
 
 We use the snapshot functionality to keep updated customized base images for each tier.
 Should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
@@ -114,7 +116,7 @@ Should there be a failure of a node or a need to scale horizontally and add addi
 
 ### Load Balancing
 
-We use Digital Ocean managed load balancer objects, based on [HAProxy](https://www.haproxy.org), to distribute user traffic across our frontend reverse proxies.
+We use Digital Ocean managed load balancer objects to distribute user traffic across our frontend reverse proxies.
 
 ![Digital Ocean Load Balancer](https://cdn.vmst.io/docs/do-loadbalancer.png)
 
@@ -123,8 +125,8 @@ Our single load balancer object ([Pike](https://memory-alpha.fandom.com/wiki/Chr
 ### Reverse Proxies
 
 We use [Nginx](https://www.nginx.com) as our reverse proxy software, running on dedicated Droplets.
-Nginx is installed using the [stable branch repository](https://nginx.org/en/download.html) for Debian.
-Currently this is version 1.22.
+Nginx is installed using the [mainline branch repository](https://nginx.org/en/download.html) for Debian.
+Currently this is version 1.23.
 
 What is a reverse proxy? As [defined by Cloudflare](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/):
 
@@ -178,8 +180,7 @@ According to [the Mastodon documentation](https://docs.joinmastodon.org/admin/co
 #### Streaming
 
 The Streaming API is a separate [node.js](https://nodejs.org/en/) application which provides a background WebSockets connection between your browser session and the Mastodon server to provide real-time "streaming" updates as new posts are loaded to your timeline, to send notifications, etc.
-
-We currently use the node.js versions that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/), which at this time is node.js 16.x LTS, but due to its pending end of life, will be upgraded to node.js 18.x LTS as soon as it's confirmed to be supported.
+We currently use node.js version 18.x LTS.
 
 As explained more in-depth in another section, the connection to the Digital Ocean-managed Redis database must be done via TLS.
 For the Streaming API, there are additional configuration options that must be set to allow node.js to connect when it expects a non-encrypted connection by default.
@@ -217,8 +218,7 @@ There are multiple queues which are distributed across two dedicated worker node
 An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
 
 There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)).
-Scotty has 2 vCPU and 4 GB of memory.
-Decker has 4 vCPU and 8 GB of memory.
+Both systems have 2 vCPU and 4 GB of memory.
 
 #### Tuning
 
@@ -359,30 +359,31 @@ There is one active Redis database instance (it doesn't have a fun name) with 1 
 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capability.
 
-Previously, [Stunnel](https://www.stunnel.org) was used as a proxy to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
-This process is used on our Mastodon Web and Sidekiq nodes.
+To accommodate this, we use [HAProxy](https://www.haproxy.org) to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
 
-![Stunnel Workflow](https://cdn.vmst.io/docs/stunnel-workflow.png)
+![HAProxy Workflow](https://cdn.vmst.io/docs/haproxy.png)
 
-We have since moved to [HAProxy](https://www.haproxy.org) for this purpose, and it has provided more stability and eliminated some timeout errors that were seen under the previous Stunnel configuration.
+For this purpose it has provided more stability and eliminated some timeout errors that were seen when using Stunnel in this configuration.
 We currently use HAProxy 2.6.
 
 Example of `/etc/haproxy/haproxy.cfg` configuration file:
 
 ```text
 defaults
-	log	global
-  timeout connect 5s
-  timeout client  1m
-  timeout server  1m
+log	global
+timeout connect 5s
+timeout client  1m
+timeout server  1m
 
 frontend redis
-  bind 127.0.0.1:6379
-  default_backend upstream_redis
+bind 127.0.0.1:6379
+default_backend upstream_redis
 
 backend upstream_redis
-  server upstream_redis path-to-redis-database.ondigitalocean.com:25061 ssl verify none check inter 1s
+server upstream_redis path-to-redis-database.ondigitalocean.com:25061 ssl verify none check inter 1s
 ```
+
+#### Stunnel
 
 For reference, here is our previous example of a Stunnel configuration file:
 
@@ -396,6 +397,7 @@ connect = path-to-redis-database.ondigitalocean.com:25061
 ```
 
 We've found that the `delay = yes` component is essential to this configuration but is not well documented or in the default configuration files.
+
 Without this setting, anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database, leaving Mastodon services in a failed state and without the ability to communicate to Redis until the Stunnel service is restarted.
 
 #### Alternatives
@@ -404,17 +406,36 @@ There has been discussion within the Mastodon project of replacing the Ruby libr
 These alternatives include native support for TLS connections, which will negate the need for this component.
 We hope to be able to test and integrate these alternatives in the coming months.
 
-### Elastic Search
+### Full Text Search
 
-Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on your posts and any other post that you have directly interacted with, bookmarked, favorited or boosted.
+Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on:
+
+- User profiles known to our instance
+- Trending hashtags
+- **Your** posts
+- Replies to **your** posts
+- Any other post that **you** have directly interacted with (bookmarked, favorited or boosted)
+
+![John Mastodon Example Search](https://cdn.vmst.io/docs/john-mastodon.jpg)
 
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
-We use a dedicated Droplets running [Open Search](https://opensearch.org) 2.5. Open Search is a fork of Elastic Search 7, which was started in 2021.
-While it lacks some of the more advanced features found in newer versions of Elastic Search, it is supported by Mastodon.
+We use a managed instance of Elastic Search 7.17 running on Elastic Cloud.
 
-There are two virtual machines ([Khan](https://memory-alpha.fandom.com/wiki/Khan_Noonien_Singh) and Text) with 1 vCPU and 2GB of memory each. They form a single instance to query, from behind our load balancers.
-Together they provide _khantext_.
-Get it?
+There are two data nodes and a witness, with 1GB of memory each. They form a single instance to query.
+
+![Elastic Search Configuration](https://cdn.vmst.io/docs/elastic-cloud.png)
+
+Example of `.env.production` configuration settings relevant to Elastic Cloud:
+
+```text
+ES_ENABLED=true
+ES_HOST=https://elasticprovidedenpointaddress.cloud.es.io
+ES_PORT=443
+ES_USER=elastic
+ES_PASS=StretchArmstrong
+```
+
+When pointing at an Elastic Search endpoint using TLS it is necessary that `ES_HOST` include the full `https://` address.
 
 ### Translation API
 
@@ -539,7 +560,7 @@ As Elk is very popular among our most active users, and we are also listed on th
 We use a basic bash script, as outlined below, to automatically update our deployment shortly after release.
 
 ```bash
-cd /path/to/elk
+cd /root/elk || exit
 git fetch
 git checkout $(git tag -l | grep -v 'rc[0-9]*$' | sort -V | tail -n 1)
 pnpm i
@@ -604,8 +625,6 @@ It is a [Hugo](https://gohugo.io) static website using [a custom version](https:
 It's automatically generated anytime there is a push event to the [underlying Git repository](https://github.com/vmstan/vmstio).
 It uses an integrated CDN provided by Netlify.
 
-There is a [staging version](https://staging-docs.vmst.io) of the documentation, which also generates automatically from pushes to the `staging` branch on GitHub.
-
 If you would like to edit or contribute to the documentation on this site, you may fork the site and submit pull requests to our staging branch.
 
 Please review our [contribution guide](https://github.com/vmstan/vmstio/docs.vmst.io/README.md) for more information.
@@ -624,7 +643,7 @@ In addition to providing a page for members to check when there might be issues,
 
 For more information on this topic please see our [Monitoring](/monitoring) page.
 
-There is one virtual machine ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 2 GB of memory.
+There is one virtual machine ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 1 GB of memory.
 
 ### Digital Ocean
 
@@ -638,7 +657,7 @@ These alerts are sent to our internal Slack and to the email of our server admin
 
 ### Prometheus & Grafana
 
-We have a self-hosted instance of [Prometheus](https://prometheus.io) which collects metrics from Mastodon via its integrated StatsD system.
+We have a cloud-hosted instance of [Prometheus](https://prometheus.io) which collects metrics from Mastodon via its integrated StatsD system.
 [Loki](https://grafana.com/oss/loki/) is additionally used to collect logging from various components such as Nginx.
 [Grafana](https://grafana.com/grafana/) is then used to visualize the metrics on dashboards, or to search logs.
 
@@ -689,7 +708,7 @@ They include:
 
 ### Certificates
 
-We use [Sectigo](https://sectigo.com/) as our primary certificate authority, with the exception of [docs.vmst.io](https://docs.vmst.io) which uses a certificate issued by Cloudflare.
+We use [Sectigo](https://sectigo.com/) as our primary certificate authority.
 
 Sectigo was utilized after testing [Let's Encrypt](https://letsencrypt.org/), but the automated validation system presented some challenges for us that were solved by using a legacy commercial CA.
 
