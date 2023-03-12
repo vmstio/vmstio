@@ -561,7 +561,7 @@ As Elk is very popular among our most active users, and we are also listed on th
 We use a basic bash script, as outlined below, to automatically update our deployment shortly after release.
 
 ```bash
-cd /path/to/elk
+cd /root/elk || exit
 git fetch
 git checkout $(git tag -l | grep -v 'rc[0-9]*$' | sort -V | tail -n 1)
 pnpm i
