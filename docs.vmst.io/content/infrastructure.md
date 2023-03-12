@@ -180,8 +180,7 @@ According to [the Mastodon documentation](https://docs.joinmastodon.org/admin/co
 #### Streaming
 
 The Streaming API is a separate [node.js](https://nodejs.org/en/) application which provides a background WebSockets connection between your browser session and the Mastodon server to provide real-time "streaming" updates as new posts are loaded to your timeline, to send notifications, etc.
-
-We currently use the node.js versions that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/), which at this time is node.js 16.x LTS, but due to its pending end of life, will be upgraded to node.js 18.x LTS as soon as it's confirmed to be supported.
+We currently use node.js version 18.x LTS.
 
 As explained more in-depth in another section, the connection to the Digital Ocean-managed Redis database must be done via TLS.
 For the Streaming API, there are additional configuration options that must be set to allow node.js to connect when it expects a non-encrypted connection by default.
