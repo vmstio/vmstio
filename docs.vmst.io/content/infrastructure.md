@@ -22,7 +22,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 ## Layout
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-march1222.png)
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-march16.png)
 
 ## Providers
 
@@ -419,7 +419,7 @@ Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/)
 ![John Mastodon Example Search](https://cdn.vmst.io/docs/john-mastodon.jpg)
 
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
-We use a managed instance of Elastic Search 7.17 running on Elastic Cloud.
+We use a managed instance of Elastic Search 8.6 running on Elastic Cloud.
 
 There are two data nodes and a witness, with 1GB of memory each. They form a single instance to query.
 
