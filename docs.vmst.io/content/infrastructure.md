@@ -153,7 +153,7 @@ Aside from the various external dependencies, Mastodon is three main application
 
 The Mastodon Web tier consists of the Mastodon Web UI/API and the separate Streaming API service.
 
-Under normal circumstances there are at least two virtual machines ([Kirk](https://memory-alpha.fandom.com/wiki/James_T._Kirk) and [Spock](https://memory-alpha.fandom.com/wiki/Spock)) running these components, with 2 vCPU and 4 GB of memory each.
+Under normal circumstances there are at least two virtual machines ([Kirk](https://memory-alpha.fandom.com/wiki/James_T._Kirk) and [Spock](https://memory-alpha.fandom.com/wiki/Spock)) running these components, with 2 vCPU and 2 GB of memory each.
 
 #### Puma
 
@@ -389,6 +389,16 @@ sed -i 's/"redis": "\^4\.0\.6 <4\.1\.0",/"redis": "\^4\.6\.5",/' ./package.json
 
 Compared to running with hiredis through HAProxy or Stunnel, we have not seen any negative impact in performance by using redis-rb.
 
+#### Environment Example
+
+Our connection to Redis is configured as a `REDIS_URL` variable using a connection string.
+
+```text
+REDIS_URL=rediss://default:password@redis.db.ondigitalocean.com:25061
+```
+
+Note that the second `s` in `rediss` is not a typo and is used for TLS connections only.
+
 ### Full Text Search
 
 Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on:
@@ -459,7 +469,7 @@ When possible we will run these in a highly available way, behind our security s
 Our Flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and PostgreSQL.
 In addition we have the following specific to our Flings:
 
-- One virtual machine ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 4 GB of memory.
+- One virtual machine ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 2 GB of memory.
 - MySQL running on one managed instance ([McCoy](https://memory-alpha.fandom.com/wiki/Leonard_McCoy)) with 1 vCPU and 1 GB of memory.
 
 ### WriteFreely
