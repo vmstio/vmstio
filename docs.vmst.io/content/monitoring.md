@@ -12,21 +12,23 @@ tags:
 
 ## status.vmst.io
 
-This is our external monitoring powered by Uptime Kuma.
-It monitors the status of:
+This is our external monitoring powered by [Nixstatus](https://nixstats.com).
+It monitors the status of our external endpoints:
 
 - Mastodon (vmst.io)
 - Streaming API (streaming.vmst.io)
 - Media Storage (cdn.vmst.io)
 - This Site (docs.vmst.io)
-- Redis Cache
-- PostgreSQL Database
-- Advanced Search
+- Matrix (matrix.vmst.io)
+- Elk (elk.vmst.io)
+- WriteFreely (write.vmst.io)
+- Semaphore (semaphore.vmst.io)
 
-Uptime is calculated for the last 24 hours.
+Uptime is calculated for the last 30 days.
 
 Check the [status page](https://status.vmst.io/) for known outages or maintenance reports.
 
 ## Community Monitoring
 
 - [FediDB Entry](https://fedidb.org/network/instance?domain=vmst.io)
+- [Instances.social](https://instances.social/vmst.io)

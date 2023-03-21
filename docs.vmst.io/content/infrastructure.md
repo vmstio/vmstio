@@ -633,17 +633,12 @@ Please review our [contribution guide](https://github.com/vmstan/vmstio/docs.vms
 
 We monitor the health and availability of our infrastructure in a few different ways.
 
-### Uptime Kuma
+### Nixstatus
 
 This powers our [status.vmst.io](https://status.vmst.io) page.
-It runs on a dedicated VM for this purpose, with its own Nginx frontend.
 In addition to providing a page for members to check when there might be issues, it actively alerts our team in our internal [Slack](https://slack.com) to any issues.
 
-![Kuma Alerts](https://cdn.vmst.io/docs/kuma-alert.png)
-
 For more information on this topic please see our [Monitoring](/monitoring) page.
-
-There is one virtual machine ([Kyle](https://memory-alpha.fandom.com/wiki/Kyle)) with 1 vCPU and 1 GB of memory.
 
 ### Digital Ocean
 
@@ -655,10 +650,9 @@ These alerts are sent to our internal Slack.
 We also have active monitoring of the worldwide accessibility of our web frontends.
 These alerts are sent to our internal Slack and to the email of our server administrators.
 
-### Prometheus & Grafana
+### Loki & Grafana
 
-We have a cloud-hosted instance of [Prometheus](https://prometheus.io) which collects metrics from Mastodon via its integrated StatsD system.
-[Loki](https://grafana.com/oss/loki/) is additionally used to collect logging from various components such as Nginx.
+We have a cloud-hosted instance of [Loki](https://grafana.com/oss/loki/) used to collect logging from various components such as Nginx.
 [Grafana](https://grafana.com/grafana/) is then used to visualize the metrics on dashboards, or to search logs.
 
 ![Grafana Screenshot](https://cdn.vmst.io/docs/grafana-screenshot.png)
