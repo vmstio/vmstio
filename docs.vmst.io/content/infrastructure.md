@@ -11,7 +11,7 @@ tags:
 The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance, and ancillary services, that make up [vmst.io](https://vmst.io).
 It should explain how the various services interact, and how _the magic happens_ when our users open the Mastodon app on their phone or enter our address in their web browser.
 
-Unfortunately though it's not really magic, but a series of databases and micro-services from various open source vendors, running in _The Cloud_.
+Unfortunately though it's not really magic, but a series of databases and services from various open source vendors, running in _The Cloud_.
 
 ## Architecture Goals
 
@@ -22,7 +22,7 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 
 ## Layout
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-march16.png)
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-march21.png)
 
 ## Providers
 
@@ -30,9 +30,11 @@ Unfortunately though it's not really magic, but a series of databases and micro-
 |---|---|
 | Digital Ocean | Managed Databases, Virtual Machines, Object Storage & CDN |
 | Netlify | Static Site Generator |
-| DNSimple | Registrar, Nameservers |
+| DNSimple | Registrar & Nameservers |
 | Sectigo | SSL Certificate |
-| Backblaze | Database & Media Backups on B2 |
+| Nixstatus | External Status Monitoring |
+| Backblaze | Database & Media Backups |
+| DeepL | Translation Services |
 | Elastic | Full Text Search |
 | Grafana | Logging & Metrics Analysis |
 | Mailgun | SMTP Relay |
@@ -50,10 +52,10 @@ Our primary data centers are TOR1 and NYC3, with Toronto holding the bulk of the
 
 The following reflect the required software components to have a functional deployment of Mastodon:
 
-- [Nginx](https://nginx.org/)
 - [Mastodon](https://github.com/mastodon/mastodon) (obviously)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Redis](https://redis.io/)
+- [Nginx](https://nginx.org/)
 
 Depending on the sizing of the instance, this could all be deployed on one Linux machine.
 
@@ -92,13 +94,13 @@ Not only has this proven more efficient, it's provided more flexibility.
 We do not currently leverage Kubernetes for any part of the [vmst.io](https://vmst.io) configuration.
 We may explore this again in the future.
 
-Docker containers are still used to deploy some of our "Flings" as documented below.
+Docker containers are still used to deploy our "Flings" as documented below.
 
 ## Code Purity
 
 Our goal is to run the latest released version of the Mastodon experience within 48 hours of being published.
 
-In order to help facilitate this, we run **unmodified** versions of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository.
+In order to help facilitate this, we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository with limited modification necessary to run on our infrastructure.
 
 We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack unless it's required to properly interact with our systems.
 We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
@@ -156,7 +158,7 @@ Under normal circumstances there are at least two virtual machines ([Kirk](https
 #### Puma
 
 What users perceive as "Mastodon" is a [Ruby on Rails](https://rubyonrails.org) application (with [Puma](https://puma.io) running as the web/presentation layer) providing both ActivityPub/Federation and the web user experience.
-We use Ruby 3.0.x and the other modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
+We use Ruby 3.0.5 and the other modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
 Based on recommendations by the developer of Puma, and others in the Mastodon administration community, we have Puma configured in `.env.production` and `mastodon-web.service`, as follows:
 
@@ -272,24 +274,17 @@ It also has the maximum of open database connections of 25 set in `DB_POOL` with
 
 We have our Sidekiq queues configured as such:
 
-| Queue     | Scotty | Decker |
-|-----------|------|-----|
-| Push      | 25   | 25  |
-| Pull      | 25   | 25  |
-| Default   | 25   | 25  |
-| Ingress   | 40   | 25  |
-| Scheduler | -    | 15  |
-| Mailer    | 5    | 5   |
-| Total     | **120** | **120** |
+| Queue | Scotty | Decker | Uhura |
+|-------|--------|--------|-------|
+| Push/Default/Ingress | 25 | 25 | - |
+| Pull/Default/Ingress | 25 | 25 | - |
+| Ingress/Default/Mailer | 25 | 25 | - |
+| Scheduler/Mailer | - | - | 10 |
+| Total | **75** | **75** | **10** |
 
-Each Droplet has six service files for Sidekiq.
+Each Droplet has multiple service files for Sidekiq.
 
-Each service file has a maximum thread and database pool limit of 25, with the exceptions of:
-
-- Scotty which has an additional Ingress queue service limited to 15.
-- Mastodon does not want the scheduler service running more than once, so it only exists on Decker, limited to 15.
-
-The Ingress queue tends to be more demanding on CPU usage and because Decker is also responsible for backups, there is a small difference in the amount of processing done between the two in terms of Sidekiq.
+Each service file has a maximum thread and database pool limit of 25, with the exception of the schduler.
 
 With the exception of scheduled tasks, the loss of one Sidekiq host or the other should not have any major impact on the ability of the instance to function.
 
@@ -355,56 +350,44 @@ We use the Digital Ocean managed database service, this delivers a highly availa
 
 There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 
-#### HAProxy
+#### Code Modifications
 
-Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase includes a Redis library which does not have a native TLS capability.
+Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase uses a Redis driver ([hiredis](https://github.com/redis/hiredis-rb)) which does not have a native TLS capability.
 
-To accommodate this, we use [HAProxy](https://www.haproxy.org) to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
+To accommodate this, we have in the past used [HAProxy](https://www.haproxy.org) or [Stunnel](https://www.stunnel.org) to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
 
 ![HAProxy Workflow](https://cdn.vmst.io/docs/haproxy.png)
 
-For this purpose it has provided more stability and eliminated some timeout errors that were seen when using Stunnel in this configuration.
-We currently use HAProxy 2.6.
+There has been discussion within the Mastodon project of replacing hiredis with the native [redis-rb](https://github.com/redis/redis-rb) driver, as the existing code has not been updated in over 4 years.
+Using the native redis-rb driver also provides support for TLS connections.
 
-Example of `/etc/haproxy/haproxy.cfg` configuration file:
+We have chosen to remove the hiredis driver from our installation and use redis-rb instead.
+We currently use redis-rb 4.8. We additional upgrade the version of the node.js component used for the connection to Redis by the streaming API.
+Both components are slated for inclusion in an upcoming version of Mastodon.
 
-```text
-defaults
-log	global
-timeout connect 5s
-timeout client  1m
-timeout server  1m
+This is done by patching a stock Mastodon installation with the following commands, downloading updated bundles and node components, and recompiling:
 
-frontend redis
-bind 127.0.0.1:6379
-default_backend upstream_redis
+```bash
+# Remove Redis driver lines
+sed -i '/gem '\''hiredis'\'', '\''~> 0.6'\''/d' ./Gemfile
+sed -i '/hiredis/d' ./Gemfile.lock
+sed -i '/hiredis/d' ./lib/mastodon/redis_config.rb
+sed -i '/hiredis/d' ./lib/tasks/mastodon.rake
 
-backend upstream_redis
-server upstream_redis path-to-redis-database.ondigitalocean.com:25061 ssl verify none check inter 1s
+# Remove Redis reference inline
+sed -i 's/, driver: :hiredis//g' ./app/lib/redis_configuration.rb
+sed -i 's/, require: \['\''redis'\'', '\''redis\/connection\/hiredis'\''\]//' ./Gemfile
+
+# upgrade to Redis 4.8 GEM
+sed -i "s/gem 'redis', '~> 4\.5'/gem 'redis', '~> 4.8.1'/g" ./Gemfile
+sed -i 's/redis (~> 4\.5)/redis (~> 4.8.1)/g' ./Gemfile.lock
+
+# upgrade Redis for JS
+sed -i 's/"redis": "\^4\.0\.6 <4\.1\.0",/"redis": "\^4\.6\.5",/' ./package.json
+
 ```
 
-#### Stunnel
-
-For reference, here is our previous example of a Stunnel configuration file:
-
-```text
-pid = /run/stunnel-redis.pid
-delay = yes
-[redis-client]
-client = yes
-accept = 127.0.0.1:6379
-connect = path-to-redis-database.ondigitalocean.com:25061
-```
-
-We've found that the `delay = yes` component is essential to this configuration but is not well documented or in the default configuration files.
-
-Without this setting, anytime there is a change in Redis services backend location (such as after a update, resize, or an HA event) the Stunnel client does not automatically reconnect to the database, leaving Mastodon services in a failed state and without the ability to communicate to Redis until the Stunnel service is restarted.
-
-#### Alternatives
-
-There has been discussion within the Mastodon project of replacing the Ruby libraries used to connect to Redis, as the existing code is end of life.
-These alternatives include native support for TLS connections, which will negate the need for this component.
-We hope to be able to test and integrate these alternatives in the coming months.
+Compared to running with hiredis through HAProxy or Stunnel, we have not seen any negative impact in performance by using redis-rb.
 
 ### Full Text Search
 
