@@ -317,7 +317,8 @@ Here are some ways Postgres is used in Mastodon:
 We use the Digital Ocean managed PostgresSQL database service, this delivers a highly available database backend.
 Updates and maintenance are performed by Digital Ocean, independent of our administration efforts.
 
-There is one active PostgreSQL database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure. We use PostgreSQL 15.x.
+There is one active PostgreSQL database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+We use PostgreSQL 15.x.
 
 Digital Ocean instance "T-Shirt" sizes for databases are done by vCPU, memory, disk size, and connections to the database.
 The connection count limits are based on sizing best practices for PostgreSQL, with a few held in reserve for their use to manage the service.
@@ -389,7 +390,8 @@ Here are some ways Redis is used in Mastodon:
 
 We use the Digital Ocean managed Redis database service, this delivers a highly available database backend.
 
-There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure. We use Redis 7.x.
+There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+We use Redis 7.x.
 
 #### Code Modifications
 
@@ -511,6 +513,7 @@ Our Flings leverage much of the existing core service infrastructure like the Ng
 In addition we have the following specific to our Flings:
 
 - One virtual machine ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 2 GB of memory.
+- One virtual machine ([Daystrom](https://memory-alpha.fandom.com/wiki/Richard_Daystrom)), with 1 vCPU and 1 GB of memory. This machine runs Rocky Linux 9, differing from the rest of the fleet.
 - MySQL running on one managed instance ([McCoy](https://memory-alpha.fandom.com/wiki/Leonard_McCoy)) with 1 vCPU and 1 GB of memory.
 
 ### WriteFreely
@@ -554,6 +557,8 @@ There is an [open request](https://github.com/writefreely/writefreely/discussion
 
 Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse).
 Although it is behind our load balancer and multiple reverse proxies, it is currently **not** in a true high availability configuration as it only exists on one Fling backend node.
+
+
 
 Our implementation is configured to authenticate against [vmst.io](https://vmst.io), so your Mastodon username and password is a single sign-on to this service.
 
