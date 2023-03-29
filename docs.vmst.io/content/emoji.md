@@ -20,3 +20,4 @@ Please note that you can see emoji render on statuses of other Mastodon users th
 ## Profile Field Emoji
 
 If you find one you'd like to include in your display name field, just copy and paste the short code into the field in your profile page.
+ 
