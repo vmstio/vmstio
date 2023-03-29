@@ -8,17 +8,17 @@ tags:
 
 ## Introduction
 
-The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance, and ancillary services, that make up [vmst.io](https://vmst.io).
-It should explain how the various services interact, and how _the magic happens_ when our users open the Mastodon app on their phone or enter our address in their web browser.
+The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance and ancillary services that make up [vmst.io](https://vmst.io).
+It should explain how the various services interact and how "the magic" happens when our users open the Mastodon app on their phone or enter our address into their web browser.
 
-Unfortunately though it's not really magic, but a series of databases and services from various open source vendors, running in _The Cloud_.
+Unfortunately, it's not really magic, but rather a series of databases and services from various open-source vendors running in "The Cloud."
 
 ## Architecture Goals
 
 - Be highly available for all critical components.
 - Be scalable both vertically and horizontally.
-- Be a highly performant experience for our users.
-- Be a stable endpoint on the [ActivityPub](https://activitypub.rocks) network.
+- Provide a highly performant experience for our users.
+- Maintain a stable endpoint on the [ActivityPub](https://activitypub.rocks) network.
 
 ## Layout
 
@@ -40,6 +40,12 @@ Unfortunately though it's not really magic, but a series of databases and servic
 | Mailgun | SMTP Relay |
 | GitHub | Configuration Repository |
 | Slack | Team Communications |
+
+## Software Versions
+
+|   |   |
+|---|---|
+|   |   |
 
 ## Core Services
 
