@@ -207,23 +207,17 @@ The Digital Ocean databases use self-signed/private certificates, but the variab
 
 ### Sidekiq
 
-Sidekiq is an essential part of the Mastodon environment and delivered as part of the Mastodon codebase.
+[Sidekiq](https://sidekiq.org) is a popular background job processing library for Ruby applications, and it is used in Mastodon for various purposes:
 
-Everything that happens when you interact with Mastodon—and the wider Fediverse—through our instance has to pass through Sidekiq.
-It communicates with Redis, PostgreSQL, Elastic Search, and other instances on a regular basis.
+- Federated content delivery: In a federated network like Mastodon, user content is distributed across multiple instances (servers). When a user posts a new status update, it needs to be delivered to followers on other instances. Sidekiq helps with processing and delivering these updates asynchronously.
+- Push notifications: Mastodon uses Sidekiq to manage push notifications for mentions, direct messages, and other interactions. These notifications are processed in the background to keep the user experience smooth and responsive.
+- Media processing: When a user uploads an image or video, Mastodon performs various tasks like resizing, optimizing, and creating thumbnails. Sidekiq handles these media processing tasks asynchronously to ensure that the main application thread remains responsive.
+- Periodic tasks: Mastodon uses Sidekiq to schedule and execute periodic tasks, such as cleaning up old data, updating statistics, or refreshing user feeds. These tasks run in the background to maintain the overall performance and stability of the platform.
+- Import and export of user data: Mastodon allows users to import and export their data (like following lists, block lists, and account backups). Sidekiq is used to process these tasks in the background.
 
-In our environment, Sidekiq processes over one million tasks per day.
+By using Sidekiq, Mastodon can handle multiple tasks concurrently and efficiently, improving the performance and responsiveness of the platform. This is crucial for providing a good user experience, especially considering the federated and decentralized nature of Mastodon.
 
-There are multiple queues which are distributed across two dedicated worker nodes.
-
-- Default
-- Ingress
-- Push
-- Pull
-- Mailers
-- Scheduler
-
-An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
+In the vmst.io environment, Sidekiq processes over one million tasks per day.
 
 There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)).
 Both systems have 2 vCPU and 4 GB of memory.
@@ -276,6 +270,17 @@ It also has the maximum of open database connections of 25 set in `DB_POOL` with
 
 #### Thread Count
 
+There are multiple queues which are distributed across two dedicated worker nodes.
+
+- Default
+- Ingress
+- Push
+- Pull
+- Mailers
+- Scheduler
+
+An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
+
 We have our Sidekiq queues configured as such:
 
 | Queue | Scotty | Decker | Uhura |
@@ -288,7 +293,7 @@ We have our Sidekiq queues configured as such:
 
 Each Droplet has multiple service files for Sidekiq.
 
-Each service file has a maximum thread and database pool limit of 25, with the exception of the schduler.
+Each service file has a maximum thread and database pool limit of 25, with the exception of the scheduler.
 
 With the exception of scheduled tasks, the loss of one Sidekiq host or the other should not have any major impact on the ability of the instance to function.
 
