@@ -322,6 +322,7 @@ We use PostgreSQL 15.x.
 
 Digital Ocean instance "T-Shirt" sizes for databases are done by vCPU, memory, disk size, and connections to the database.
 The connection count limits are based on sizing best practices for PostgreSQL, with a few held in reserve for their use to manage the service.
+
 Digital Ocean has an integrated "Connection Pool" feature of their platform which, in practice, puts the [pgBouncer](https://www.pgbouncer.org) utility in front of the database.
 This acts as a reverse proxy / load balancer for the database, to make sure that connections to the database by Mastodon cannot stay open and consume resources longer than needed.
 
