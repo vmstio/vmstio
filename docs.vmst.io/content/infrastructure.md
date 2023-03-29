@@ -344,6 +344,16 @@ You will need to remove the line with the prepared statement configuration or se
 
 #### Object Storage
 
+Object storage is a scalable and cost-effective storage solution that is used in Mastodon to store and manage large volumes of unstructured data, such as media files (images, videos, and audio) and static assets.
+In Mastodon, object storage plays a crucial role in efficiently handling and serving user-uploaded media content.
+
+Here's how object storage is used in Mastodon:
+
+- Media uploads: When users upload media files, such as images or videos, to Mastodon, these files are stored in object storage. These storage systems provide high availability, durability, and scalability, ensuring that the uploaded media is securely stored and accessible when needed.
+- Media processing: After the media files are uploaded, Mastodon performs various processing tasks, such as resizing images, creating thumbnails, and transcoding videos. The processed files are then stored back into the object storage for serving to users.
+- Content delivery: Mastodon serves the media content stored in object storage directly to users. Object storage systems typically support content delivery through URLs, which can be used by Mastodon to embed media files in toots or serve them through media previews. This ensures that the media content is efficiently served to users without overloading the Mastodon application server.
+- Cache and CDN integration: Object storage systems often support integration with content delivery networks (CDNs) to improve the performance of media delivery. Mastodon can leverage this integration to cache and distribute media content to users from a CDN, reducing the load on the object storage system and improving the user experience.
+
 We use the Digital Ocean Spaces service, which is an S3-compatible object storage provider and includes a content delivery network (CDN) to distribute attached media to multiple points, reducing access latency for users and federated instances.
 
 Example of `.env.production` configuration settings relevant to Digital Ocean Spaces:
@@ -366,7 +376,18 @@ By default, the items in the Space are accessible through a non-CDN accessible e
 
 ### Redis
 
-We use the Digital Ocean managed database service, this delivers a highly available database backend.
+[Redis](https://redis.io) is an open-source, in-memory data structure store that is used as a database, cache, and message broker. In Mastodon, Redis is used for various purposes to improve the performance, scalability, and reliability of the platform.
+
+Here are some ways Redis is used in Mastodon:
+
+- Caching: Mastodon uses Redis to cache frequently accessed data and computed results. This helps reduce the load on the main PostgreSQL database and improve the overall performance of the platform. For example, Mastodon may cache user profiles, timelines, or hashtag search results in Redis.
+- Background job management: Mastodon uses Sidekiq for background job processing. Sidekiq, in turn, relies on Redis as its backend to store job data, manage job queues, and handle job execution state. Redis provides fast and efficient storage for this purpose, ensuring that background jobs are processed quickly and reliably.
+- Rate limiting: Mastodon uses Redis to implement rate limiting for API requests and certain user actions. By storing counters and timestamps in Redis, Mastodon can efficiently track and enforce rate limits without impacting the performance of the main database.
+- Pub/Sub messaging: Redis provides a Publish/Subscribe (Pub/Sub) messaging system that Mastodon uses for inter-process communication between various components of the platform. This can be used for tasks like distributing notifications, updating timelines, or coordinating background tasks.
+- Real-time updates: Mastodon uses Redis to facilitate real-time updates for features like live streaming of new toots in the public timeline or notifications for user mentions and interactions. Redis enables fast and efficient communication between Mastodon processes to keep user interfaces up to date with the latest data.
+- Session management: Mastodon may use Redis to store user session data, such as authentication tokens or user preferences, providing fast and efficient access to this data.
+
+We use the Digital Ocean managed Redis database service, this delivers a highly available database backend.
 
 There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 
