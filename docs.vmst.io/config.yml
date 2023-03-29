@@ -95,7 +95,7 @@ params:
         Why choose [vmst.io](https://vmst.io) as your Mastodon instance?
         - We are party to the [joinmastodon.org Server Covenant](https://joinmastodon.org/covenant), and active contributors to the Mastodon project and wider community.
         - We respect your fundamental right to privacy. We have an [A+ rating from Mozilla Observatory](https://observatory.mozilla.org/analyze/vmst.io), and have [no ads, third party cookies or trackers](https://themarkup.org/blacklight?url=vmst.io).
-        - We're [highly available](/infrastructure), and take ownership of issues when we're not. We publish [our realtime system status](https://status.vmst.io), and have a better than 99.9% observed availability from [Instances.social](https://instances.social/vmst.io).
+        - We're [highly available](/infrastructure), and take ownership of issues when we're not. We publish [our realtime system status](https://status.vmst.io), and have a better than 99.9% observed availability.
         - We are well moderated, with multiple volunteer [staffers around the world](/staff) monitoring for user reports, with clear [rules against hate speech and harassment](/rules).
         - Your Mastodon account here also gets you a blog on [write.vmst.io](https://write.vmst.io) and an [vmst.io account on Matrix](/matrix), all integrated through a single sign-on.
         - We host our own instances of alternative feature-rich web clients like [Elk](https://elk.vmst.io) or accessibility focused ones like [Semaphore](https://semaphore.vmst.io).
