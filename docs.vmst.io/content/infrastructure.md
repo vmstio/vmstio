@@ -41,12 +41,6 @@ Unfortunately, it's not really magic, but rather a series of databases and servi
 | GitHub | Configuration Repository |
 | Slack | Team Communications |
 
-## Software Versions
-
-|   |   |
-|---|---|
-|   |   |
-
 ## Core Services
 
 Our core service is the Mastodon platform located at [vmst.io](https://vmst.io).
@@ -190,6 +184,12 @@ According to [the Mastodon documentation](https://docs.joinmastodon.org/admin/co
 The Streaming API is a separate [node.js](https://nodejs.org/en/) application which provides a background WebSockets connection between your browser session and the Mastodon server to provide real-time "streaming" updates as new posts are loaded to your timeline, to send notifications, etc.
 We currently use node.js version 18.x LTS.
 
+This requires a special modification to the command used to pre-compile Mastodon after any upgrade:
+
+```bash
+NODE_OPTIONS=--openssl-legacy-provider RAILS_ENV=production bundle exec rails assets:precompile
+```
+
 As explained more in-depth in another section, the connection to the Digital Ocean-managed Redis database must be done via TLS.
 For the Streaming API, there are additional configuration options that must be set to allow node.js to connect when it expects a non-encrypted connection by default.
 
@@ -317,7 +317,7 @@ Here are some ways Postgres is used in Mastodon:
 We use the Digital Ocean managed PostgresSQL database service, this delivers a highly available database backend.
 Updates and maintenance are performed by Digital Ocean, independent of our administration efforts.
 
-There is one active PostgreSQL database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+There is one active PostgreSQL database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure. We use PostgreSQL 15.x.
 
 Digital Ocean instance "T-Shirt" sizes for databases are done by vCPU, memory, disk size, and connections to the database.
 The connection count limits are based on sizing best practices for PostgreSQL, with a few held in reserve for their use to manage the service.
@@ -389,7 +389,7 @@ Here are some ways Redis is used in Mastodon:
 
 We use the Digital Ocean managed Redis database service, this delivers a highly available database backend.
 
-There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure. We use Redis 7.x.
 
 #### Code Modifications
 
