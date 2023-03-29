@@ -303,7 +303,18 @@ The persistent data in the Mastodon environment are represented by user posts—
 
 #### PostgreSQL
 
-We use the Digital Ocean managed SQL database service, this delivers a highly available database backend.
+[PostgreSQL](https://www.postgresql.org), often referred to as Postgres, is an open-source relational database management system.
+In Mastodon, it is used as the primary database to store and manage various types of data required for the functioning of the platform
+Postgres plays a crucial role in Mastodon's architecture, providing persistence, data integrity, and efficient querying capabilities.
+
+Here are some ways Postgres is used in Mastodon:
+
+- User data storage: Postgres stores user account information, such as usernames, email addresses, profile details, and encrypted passwords. This data is essential for user authentication, authorization, and managing user profiles.
+- Content storage: Mastodon stores user-generated content, such as statuses (toots), replies, favorites, and media attachments, in Postgres. It also keeps track of relationships between these entities, such as which user authored a particular toot or which toots are part of a conversation thread.
+- Metadata storage: Mastodon stores metadata related to the platform's functioning, including instance information, blocked instances, and domain-level configurations, in Postgres. This information is used for managing the federated nature of the network.
+- Social graph management: Postgres is used to store and manage the social graph, which consists of relationships between users, such as followers and followings, mute and block lists, and group memberships.
+
+We use the Digital Ocean managed PostgresSQL database service, this delivers a highly available database backend.
 Updates and maintenance are performed by Digital Ocean, independent of our administration efforts.
 
 There is one active PostgreSQL database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
