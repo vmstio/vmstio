@@ -8,21 +8,21 @@ tags:
 
 ## Introduction
 
-The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance, and ancillary services, that make up [vmst.io](https://vmst.io).
-It should explain how the various services interact, and how _the magic happens_ when our users open the Mastodon app on their phone or enter our address in their web browser.
+The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance and ancillary services that make up [vmst.io](https://vmst.io).
+It should explain how the various services interact and how "the magic" happens when our users open the Mastodon app on their phone or enter our address into their web browser.
 
-Unfortunately though it's not really magic, but a series of databases and services from various open source vendors, running in _The Cloud_.
+Unfortunately, it's not really magic, but rather a series of databases and services from various open-source vendors running in "The Cloud."
 
 ## Architecture Goals
 
 - Be highly available for all critical components.
 - Be scalable both vertically and horizontally.
-- Be a highly performant experience for our users.
-- Be a stable endpoint on the [ActivityPub](https://activitypub.rocks) network.
+- Provide a highly performant experience for our users.
+- Maintain a stable endpoint on the [ActivityPub](https://activitypub.rocks) network.
 
 ## Layout
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-march21.png)
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-march22.png)
 
 ## Providers
 
@@ -184,6 +184,12 @@ According to [the Mastodon documentation](https://docs.joinmastodon.org/admin/co
 The Streaming API is a separate [node.js](https://nodejs.org/en/) application which provides a background WebSockets connection between your browser session and the Mastodon server to provide real-time "streaming" updates as new posts are loaded to your timeline, to send notifications, etc.
 We currently use node.js version 18.x LTS.
 
+This requires a special modification to the command used to pre-compile Mastodon after any upgrade:
+
+```bash
+NODE_OPTIONS=--openssl-legacy-provider RAILS_ENV=production bundle exec rails assets:precompile
+```
+
 As explained more in-depth in another section, the connection to the Digital Ocean-managed Redis database must be done via TLS.
 For the Streaming API, there are additional configuration options that must be set to allow node.js to connect when it expects a non-encrypted connection by default.
 
@@ -201,59 +207,51 @@ The Digital Ocean databases use self-signed/private certificates, but the variab
 
 ### Sidekiq
 
-Sidekiq is an essential part of the Mastodon environment and delivered as part of the Mastodon codebase.
+[Sidekiq](https://sidekiq.org) is a popular background job processing library for Ruby applications, and it is used in Mastodon for various purposes:
 
-Everything that happens when you interact with Mastodon—and the wider Fediverse—through our instance has to pass through Sidekiq.
-It communicates with Redis, PostgreSQL, Elastic Search, and other instances on a regular basis.
+- Federated content delivery: In a federated network like Mastodon, user content is distributed across multiple instances (servers). When a user posts a new status update, it needs to be delivered to followers on other instances. Sidekiq helps with processing and delivering these updates asynchronously.
+- Push notifications: Mastodon uses Sidekiq to manage push notifications for mentions, direct messages, and other interactions. These notifications are processed in the background to keep the user experience smooth and responsive.
+- Media processing: When a user uploads an image or video, Mastodon performs various tasks like resizing, optimizing, and creating thumbnails. Sidekiq handles these media processing tasks asynchronously to ensure that the main application thread remains responsive.
+- Periodic tasks: Mastodon uses Sidekiq to schedule and execute periodic tasks, such as cleaning up old data, updating statistics, or refreshing user feeds. These tasks run in the background to maintain the overall performance and stability of the platform.
+- Import and export of user data: Mastodon allows users to import and export their data (like following lists, block lists, and account backups). Sidekiq is used to process these tasks in the background.
 
-In our environment, Sidekiq processes over one million tasks per day.
+By using Sidekiq, Mastodon can handle multiple tasks concurrently and efficiently, improving the performance and responsiveness of the platform. This is crucial for providing a good user experience, especially considering the federated and decentralized nature of Mastodon.
 
-There are multiple queues which are distributed across two dedicated worker nodes.
-
-- Default
-- Ingress
-- Push
-- Pull
-- Mailers
-- Scheduler
-
-An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
+In the vmst.io environment, Sidekiq processes over one million tasks per day.
 
 There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)).
 Both systems have 2 vCPU and 4 GB of memory.
 
 #### Tuning
 
-Bootstrapping a Mastodon instance is about 30% community management, 20% general server management, and 50% of figuring out what you've done to anger Sidekiq.
+Bootstrapping a Mastodon instance involves 30% community management, 20% general server management, and 50% determining what has angered Sidekiq.
 
-The default install of Mastodon, when deployed from source, generates one Sidekiq service with 25 threads.
+By default, deploying Mastodon from its source generates a single Sidekiq service with 25 threads.
+Each active thread can potentially establish a connection to the PostgreSQL database or perform other tasks, such as sending email notifications, fetching remote images, or notifying other servers of user posts.
+This behavior is somewhat unpredictable.
 
-Each thread when active has _the potential_ to be an active connection to the PostgreSQL database, but it might also do something else entirely, like send an email notification or fetch a remote image, or tell another server that users have posted.
-It's somewhat unpredictable.
+Two values must be managed for Sidekiq:
 
-There are two values that must be managed for Sidekiq:
+- The threads assigned to the service, which can be configured in the `.service` file or the `docker-compose.yml` file, depending on the deployment type.
+- The `DB_POOL` variable, which sets the maximum number of open connections the service can have to the database (bearing in mind that not every thread will open a connection).
 
-- The threads assigned to the service (which can be done in the `.service` file or in the `docker-compose.yml` file depending on the deployment type.)
-- The `DB_POOL` variable sets the maximum amount of open connections that the service can have to the database (keeping in mind that not every thread is going to open a connection.)
+It is best practice for these values to be the same for each Sidekiq instance.
+By default, there is only one Sidekiq instance.
 
-It's best practice for these values to always be the same, for each instance of Sidekiq.
-Again, by default there is only one instance of Sidekiq.
+25 threads may suffice for an instance with a few hundred active users or a larger instance under light load.
+However, a single popular toot going viral can quickly cause queues to back up and timelines to stop updating until the backlog is processed.
 
-25 threads may be enough for a deployment of a few hundred active users in an instance, or a larger one under light load, but one user with a popular toot that goes viral could quickly cause the queues to back up and timelines to stop updating with content until the backlog is processed.
+Moreover, when one instance struggles, it can cause delays in other instances within the federation, leading to "red light" errors and other issues.
 
-Furthermore, when one instance struggles it causes other instances in the federation to be delayed as well, causing "red light" errors and other issues.
+One solution could be to add more threads to your service, but this may result in additional database connections.
+PostgreSQL has limits based on the deployment size, which can be addressed by using pgBouncer as part of the deployment.
 
-The solution to this could be to add additional threads to your service, but as explained this comes at a cost in additional database connections.
-PostgreSQL has limits based on the size of the deployment, and as explained more below this can be overcome by utilizing pgBouncer as part of the deployment.
+It might be tempting to increase the number of threads in your Sidekiq service file from 25 to 50, 100, etc.
+However, this is not the correct approach.
+Sidekiq does not utilize more than 25-30 threads generated by a single service; you will simply consume CPU cycles and waste potential database connections.
 
-The first thought would be to increase the number of threads in your Sidekiq service file from 25 to 50, 100, etc.
-
-This is incorrect.
-
-Sidekiq does not utilize more than the 25-30 threads generated by a single service, you'll simply burn CPU cycles and waste possible database connections that are doing nothing.
-
-The solution is to spawn more Sidekiq workers by creating additional Systemd services or Docker containers dedicated to Sidekiq.
-Each service should then by limited to the queue(s) that you want them to process in the order of their priority.
+The solution is to spawn more Sidekiq workers by creating additional `systemd` services or Docker containers dedicated to Sidekiq.
+Each service should be limited to the queue(s) you want them to process in the order of their priority.
 
 Example `mastodon-sidekiq-push-pull.service` configuration file:
 
@@ -272,6 +270,17 @@ It also has the maximum of open database connections of 25 set in `DB_POOL` with
 
 #### Thread Count
 
+There are multiple queues which are distributed across two dedicated worker nodes.
+
+- Default
+- Ingress
+- Push
+- Pull
+- Mailers
+- Scheduler
+
+An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
+
 We have our Sidekiq queues configured as such:
 
 | Queue | Scotty | Decker | Uhura |
@@ -284,7 +293,7 @@ We have our Sidekiq queues configured as such:
 
 Each Droplet has multiple service files for Sidekiq.
 
-Each service file has a maximum thread and database pool limit of 25, with the exception of the schduler.
+Each service file has a maximum thread and database pool limit of 25, with the exception of the scheduler.
 
 With the exception of scheduled tasks, the loss of one Sidekiq host or the other should not have any major impact on the ability of the instance to function.
 
@@ -294,13 +303,26 @@ The persistent data in the Mastodon environment are represented by user posts—
 
 #### PostgreSQL
 
-We use the Digital Ocean managed SQL database service, this delivers a highly available database backend.
+[PostgreSQL](https://www.postgresql.org), often referred to as Postgres, is an open-source relational database management system.
+In Mastodon, it is used as the primary database to store and manage various types of data required for the functioning of the platform
+Postgres plays a crucial role in Mastodon's architecture, providing persistence, data integrity, and efficient querying capabilities.
+
+Here are some ways Postgres is used in Mastodon:
+
+- User data storage: Postgres stores user account information, such as usernames, email addresses, profile details, and encrypted passwords. This data is essential for user authentication, authorization, and managing user profiles.
+- Content storage: Mastodon stores user-generated content, such as statuses (toots), replies, favorites, and media attachments, in Postgres. It also keeps track of relationships between these entities, such as which user authored a particular toot or which toots are part of a conversation thread.
+- Metadata storage: Mastodon stores metadata related to the platform's functioning, including instance information, blocked instances, and domain-level configurations, in Postgres. This information is used for managing the federated nature of the network.
+- Social graph management: Postgres is used to store and manage the social graph, which consists of relationships between users, such as followers and followings, mute and block lists, and group memberships.
+
+We use the Digital Ocean managed PostgresSQL database service, this delivers a highly available database backend.
 Updates and maintenance are performed by Digital Ocean, independent of our administration efforts.
 
 There is one active PostgreSQL database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+We use PostgreSQL 15.x.
 
 Digital Ocean instance "T-Shirt" sizes for databases are done by vCPU, memory, disk size, and connections to the database.
 The connection count limits are based on sizing best practices for PostgreSQL, with a few held in reserve for their use to manage the service.
+
 Digital Ocean has an integrated "Connection Pool" feature of their platform which, in practice, puts the [pgBouncer](https://www.pgbouncer.org) utility in front of the database.
 This acts as a reverse proxy / load balancer for the database, to make sure that connections to the database by Mastodon cannot stay open and consume resources longer than needed.
 
@@ -324,6 +346,16 @@ You will need to remove the line with the prepared statement configuration or se
 
 #### Object Storage
 
+Object storage is a scalable and cost-effective storage solution that is used in Mastodon to store and manage large volumes of unstructured data, such as media files (images, videos, and audio) and static assets.
+In Mastodon, object storage plays a crucial role in efficiently handling and serving user-uploaded media content.
+
+Here's how object storage is used in Mastodon:
+
+- Media uploads: When users upload media files, such as images or videos, to Mastodon, these files are stored in object storage. These storage systems provide high availability, durability, and scalability, ensuring that the uploaded media is securely stored and accessible when needed.
+- Media processing: After the media files are uploaded, Mastodon performs various processing tasks, such as resizing images, creating thumbnails, and transcoding videos. The processed files are then stored back into the object storage for serving to users.
+- Content delivery: Mastodon serves the media content stored in object storage directly to users. Object storage systems typically support content delivery through URLs, which can be used by Mastodon to embed media files in toots or serve them through media previews. This ensures that the media content is efficiently served to users without overloading the Mastodon application server.
+- Cache and CDN integration: Object storage systems often support integration with content delivery networks (CDNs) to improve the performance of media delivery. Mastodon can leverage this integration to cache and distribute media content to users from a CDN, reducing the load on the object storage system and improving the user experience.
+
 We use the Digital Ocean Spaces service, which is an S3-compatible object storage provider and includes a content delivery network (CDN) to distribute attached media to multiple points, reducing access latency for users and federated instances.
 
 Example of `.env.production` configuration settings relevant to Digital Ocean Spaces:
@@ -346,9 +378,23 @@ By default, the items in the Space are accessible through a non-CDN accessible e
 
 ### Redis
 
-We use the Digital Ocean managed database service, this delivers a highly available database backend.
+[Redis](https://redis.io) is an open-source, in-memory data structure store that is used as a database, cache, and message broker. In Mastodon, Redis is used for various purposes to improve the performance, scalability, and reliability of the platform.
 
-There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+Here are some ways Redis is used in Mastodon:
+
+- Caching: Mastodon uses Redis to cache frequently accessed data and computed results. This helps reduce the load on the main PostgreSQL database and improve the overall performance of the platform. For example, Mastodon may cache user profiles, timelines, or hashtag search results in Redis.
+- Background job management: Mastodon uses Sidekiq for background job processing. Sidekiq, in turn, relies on Redis as its backend to store job data, manage job queues, and handle job execution state. Redis provides fast and efficient storage for this purpose, ensuring that background jobs are processed quickly and reliably.
+- Rate limiting: Mastodon uses Redis to implement rate limiting for API requests and certain user actions. By storing counters and timestamps in Redis, Mastodon can efficiently track and enforce rate limits without impacting the performance of the main database.
+- Pub/Sub messaging: Redis provides a Publish/Subscribe (Pub/Sub) messaging system that Mastodon uses for inter-process communication between various components of the platform. This can be used for tasks like distributing notifications, updating timelines, or coordinating background tasks.
+- Real-time updates: Mastodon uses Redis to facilitate real-time updates for features like live streaming of new toots in the public timeline or notifications for user mentions and interactions. Redis enables fast and efficient communication between Mastodon processes to keep user interfaces up to date with the latest data.
+- Session management: Mastodon may use Redis to store user session data, such as authentication tokens or user preferences, providing fast and efficient access to this data.
+
+We use the Digital Ocean managed Redis database service, this delivers a highly available database backend.
+
+There are two active Redis database instances, the first is our primary Redis instances with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+The second is dedicated to caching of user timelines and other data, named [Saavik](https://memory-alpha.fandom.com/wiki/Saavik).
+It's configured with 1 vCPU and 1 GB of memory.
+In both cases we use Redis 7.x.
 
 #### Code Modifications
 
@@ -470,6 +516,7 @@ Our Flings leverage much of the existing core service infrastructure like the Ng
 In addition we have the following specific to our Flings:
 
 - One virtual machine ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 2 GB of memory.
+- One virtual machine ([Daystrom](https://memory-alpha.fandom.com/wiki/Richard_Daystrom)), with 1 vCPU and 1 GB of memory. This machine runs Rocky Linux 9, differing from the rest of the fleet.
 - MySQL running on one managed instance ([McCoy](https://memory-alpha.fandom.com/wiki/Leonard_McCoy)) with 1 vCPU and 1 GB of memory.
 
 ### WriteFreely
@@ -513,6 +560,8 @@ There is an [open request](https://github.com/writefreely/writefreely/discussion
 
 Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse).
 Although it is behind our load balancer and multiple reverse proxies, it is currently **not** in a true high availability configuration as it only exists on one Fling backend node.
+
+
 
 Our implementation is configured to authenticate against [vmst.io](https://vmst.io), so your Mastodon username and password is a single sign-on to this service.
 
