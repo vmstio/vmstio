@@ -391,8 +391,10 @@ Here are some ways Redis is used in Mastodon:
 
 We use the Digital Ocean managed Redis database service, this delivers a highly available database backend.
 
-There is one active Redis database instance (it doesn't have a fun name) with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
-We use Redis 7.x.
+There are two active Redis database instances, the first is our primary Redis instances with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+The second is dedicated to caching of user timelines and other data, named [Saavik](https://memory-alpha.fandom.com/wiki/Saavik).
+It's configured with 1 vCPU and 1 GB of memory.
+In both cases we use Redis 7.x.
 
 #### Code Modifications
 
