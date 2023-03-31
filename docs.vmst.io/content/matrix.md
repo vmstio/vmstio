@@ -6,7 +6,7 @@ tags:
 ---
 
 [Matrix](https://matrix.org) is an open network for secure, decentralized communication.
-Matrix lets you chat in real time in 1:1 sessions or in groups, with end to end encryption.
+Matrix lets you do realtime messaging in 1:1 sessions or in groups, with end to end encryption.
 
 You can use a variety of different clients to login to Matrix. If you're familiar with Matrix you can grab your [client of choice](https://www.matrix.org/clients/). Element is a great client option for multiple desktop platforms, Android and iOS.
 
