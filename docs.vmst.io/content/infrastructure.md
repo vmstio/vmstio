@@ -561,8 +561,6 @@ There is an [open request](https://github.com/writefreely/writefreely/discussion
 Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse).
 Although it is behind our load balancer and multiple reverse proxies, it is currently **not** in a true high availability configuration as it only exists on one Fling backend node.
 
-
-
 Our implementation is configured to authenticate against [vmst.io](https://vmst.io), so your Mastodon username and password is a single sign-on to this service.
 
 Example of the Synapse `homeserver.yaml` relevant to authentication:
@@ -588,6 +586,13 @@ password_config:
 ```
 
 _Out came the sun and dried up all the..._ sorry.
+
+#### Element Web
+
+We run our own instance of Element Web from a Docker container.
+When visiting [matrix.vmst.io](https://element.vmst.io) or [element.vmst.io](https://element.vmst.io) users are automatically directed there, configured to use our Matrix homeserver.
+
+Once their account is established, users are encouraged to use a dedicated Matrix client from their desktop or mobile device.
 
 ### Elk
 
