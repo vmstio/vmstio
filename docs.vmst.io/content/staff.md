@@ -10,7 +10,7 @@ tags:
 
 All of the staff members of vmst·io are volunteers.
 
-## Administrator
+## Administrators
 
 ### Michael Stanclift [@vmstan](https://vmst.io/@vmstan)
 
@@ -22,19 +22,17 @@ All of the staff members of vmst·io are volunteers.
 * Systems administrator since age 13.
 * Former Birdsite addict.
 
-## Directors
-
-* Brian Knudtson [@bknudtson](https://vmst.io/@bknudtson) 🇺🇸
-* Jim Millard [@millardjk](https://vmst.io/@millardjk) 🇺🇸
+### Daryl White [@djwfyi](https://vmst.io/@djwfyi)
 
 ## Moderators
 
-* Daryl White [@djwfyi](https://vmst.io/@djwfyi) 🇺🇸
 * Erik Bussink [@ErikBussink](https://vmst.io/@ErikBussink) 🇨🇭
-* Sean Massey [@seanpmassey](https://vmst.io/@seanpmassey) 🇺🇸
 * Tina Krogull [@TinaKrogull](https://vmst.io/@TinaKrogull) 🇩🇪
+* Brian Knudtson [@bknudtson](https://vmst.io/@bknudtson) 🇺🇸
+* Jim Millard [@millardjk](https://vmst.io/@millardjk) 🇺🇸
+* Sean Massey [@seanpmassey](https://vmst.io/@seanpmassey) 🇺🇸
+* Ariel Sanchez-Mora [@arielsanchezmora](https://vmst.io/@arielsanchezmora) 🇺🇸
 
 ## Advisors
 
-* Ariel Sanchez-Mora [@arielsanchezmora](https://vmst.io/@arielsanchezmora) 🇺🇸
 * Dr. Scott Chaussée [@s_chaussee](https://vmst.io/@s_chaussee) 🇬🇧
