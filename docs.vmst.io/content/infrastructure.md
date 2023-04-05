@@ -22,7 +22,7 @@ Unfortunately, it's not really magic, but rather a series of databases and servi
 
 ## Layout
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-march22.png)
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-april52023.png)
 
 ## Providers
 
@@ -33,10 +33,10 @@ Unfortunately, it's not really magic, but rather a series of databases and servi
 | DNSimple | Registrar & Nameservers |
 | Sectigo | SSL Certificate |
 | Nixstatus | External Status Monitoring |
-| Backblaze | Database & Media Backups |
+| Backblaze | Media Backups |
+| Snapshooter | Database Backups |
 | DeepL | Translation Services |
 | Elastic | Full Text Search |
-| Grafana | Logging & Metrics Analysis |
 | Mailgun | SMTP Relay |
 | GitHub | Configuration Repository |
 | Slack | Team Communications |
@@ -109,7 +109,7 @@ We do not intend to modify or customize Mastodon code in any other way that chan
 
 ### Virtual Machines
 
-We use an all virtual machine architecture using Digital Ocean "Droplets" with [Debian](https://www.debian.org) as the base operating system for our self-managed systems.
+We use an all virtual machine architecture using Digital Ocean "Droplets" with [Rocky Linux](https://www.rockylinux.org) as the base operating system for our self-managed systems.
 
 We use the snapshot functionality to keep updated customized base images for each tier.
 Should there be a failure of a node or a need to scale horizontally and add additional Droplets to a tier, it can be done with limited effort.
@@ -153,12 +153,12 @@ Aside from the various external dependencies, Mastodon is three main application
 
 The Mastodon Web tier consists of the Mastodon Web UI/API and the separate Streaming API service.
 
-Under normal circumstances there are at least two virtual machines ([Kirk](https://memory-alpha.fandom.com/wiki/James_T._Kirk) and [Spock](https://memory-alpha.fandom.com/wiki/Spock)) running these components, with 2 vCPU and 2 GB of memory each.
+Under normal circumstances there are at least two virtual machines ([Kirk](https://memory-alpha.fandom.com/wiki/James_T._Kirk) and [Spock](https://memory-alpha.fandom.com/wiki/Spock)) running these components, with 2 vCPU and 4 GB of memory each.
 
 #### Puma
 
 What users perceive as "Mastodon" is a [Ruby on Rails](https://rubyonrails.org) application (with [Puma](https://puma.io) running as the web/presentation layer) providing both ActivityPub/Federation and the web user experience.
-We use Ruby 3.0.5 and the other modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
+We use Ruby 3.0.6 and the other modules that are dictated on the documentation for installing Mastodon from source on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/install/).
 
 Based on recommendations by the developer of Puma, and others in the Mastodon administration community, we have Puma configured in `.env.production` and `mastodon-web.service`, as follows:
 
@@ -219,8 +219,8 @@ By using Sidekiq, Mastodon can handle multiple tasks concurrently and efficientl
 
 In the vmst.io environment, Sidekiq processes over one million tasks per day.
 
-There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker)).
-Both systems have 2 vCPU and 4 GB of memory.
+There are three virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker) and [Kyle](https://memory-alpha.fandom.com/wiki/Kyle)).
+Both Scotty and Decker have 2 vCPU and 4 GB of memory, while Kyle has 1 vCPU and 2 GB of memory.
 
 #### Tuning
 
@@ -283,12 +283,12 @@ An explanation for the purpose of each queue can be found on [docs.joinmastodon.
 
 We have our Sidekiq queues configured as such:
 
-| Queue | Scotty | Decker | Uhura |
+| Queue | Scotty | Decker | Kyle |
 |-------|--------|--------|-------|
 | Push/Default/Ingress | 25 | 25 | - |
 | Pull/Default/Ingress | 25 | 25 | - |
 | Ingress/Default/Mailer | 25 | 25 | - |
-| Scheduler/Mailer | - | - | 10 |
+| Scheduler | - | - | 10 |
 | Total | **75** | **75** | **10** |
 
 Each Droplet has multiple service files for Sidekiq.
@@ -408,9 +408,6 @@ There has been discussion within the Mastodon project of replacing hiredis with 
 Using the native redis-rb driver also provides support for TLS connections.
 
 We have chosen to remove the hiredis driver from our installation and use redis-rb instead.
-We currently use redis-rb 4.8. We additional upgrade the version of the node.js component used for the connection to Redis by the streaming API.
-Both components are slated for inclusion in an upcoming version of Mastodon.
-
 This is done by patching a stock Mastodon installation with the following commands, downloading updated bundles and node components, and recompiling:
 
 ```bash
@@ -423,13 +420,6 @@ sed -i '/hiredis/d' ./lib/tasks/mastodon.rake
 # Remove Redis reference inline
 sed -i 's/, driver: :hiredis//g' ./app/lib/redis_configuration.rb
 sed -i 's/, require: \['\''redis'\'', '\''redis\/connection\/hiredis'\''\]//' ./Gemfile
-
-# upgrade to Redis 4.8 GEM
-sed -i "s/gem 'redis', '~> 4\.5'/gem 'redis', '~> 4.8.1'/g" ./Gemfile
-sed -i 's/redis (~> 4\.5)/redis (~> 4.8.1)/g' ./Gemfile.lock
-
-# upgrade Redis for JS
-sed -i 's/"redis": "\^4\.0\.6 <4\.1\.0",/"redis": "\^4\.6\.5",/' ./package.json
 
 ```
 
@@ -510,13 +500,14 @@ Outside of our core service we run a number of "Flings" such as:
 - [semaphore.vmst.io](https://semaphore.vmst.io)
 - [write.vmst.io](https://write.vmst.io)
 - [matrix.vmst.io](https://matrix.vmst.io)
+- [element.vmst.io](https://element.vmst.io)
 
 When possible we will run these in a highly available way, behind our security systems and load balancers, but may only be on single backend nodes.
 Our Flings leverage much of the existing core service infrastructure like the Nginx reverse proxies and PostgreSQL.
 In addition we have the following specific to our Flings:
 
-- One virtual machine ([Uhura](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 2 vCPU and 2 GB of memory.
-- One virtual machine ([Daystrom](https://memory-alpha.fandom.com/wiki/Richard_Daystrom)), with 1 vCPU and 1 GB of memory. This machine runs Rocky Linux 9, differing from the rest of the fleet.
+- One virtual machine ([Nyota](https://memory-alpha.fandom.com/wiki/Nyota_Uhura)) with 1 vCPU and 2 GB of memory.
+- One virtual machine ([Daystrom](https://memory-alpha.fandom.com/wiki/Richard_Daystrom)), with 1 vCPU and 1 GB of memory.
 - MySQL running on one managed instance ([McCoy](https://memory-alpha.fandom.com/wiki/Leonard_McCoy)) with 1 vCPU and 1 GB of memory.
 
 ### WriteFreely
@@ -641,12 +632,8 @@ We utilize [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) as ou
 
 Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.io) are stored in backend databases (PostgreSQL and MySQL) with Redis used as a key value store and timeline cache for [vmst.io](https://vmst.io).
 
-- For the backup of PostgreSQL we use `pg_dump`.
-- For the backup of Redis we use `redis-cli`.
-- For the backup of MySQL we use `mysqldump`.
-- The [Backblaze native](https://www.backblaze.com/b2/docs/quick_command_line.html) `b2-cli` utility is then used to make a copy of those backups a Backblaze B2 bucket.
-- This is done using some custom scripts that process each task and then fire off notifications to our backend Slack.
-- Database backups are currently made every 12 hours.
+- For the backup of PostgreSQL and MySQL we use Snapshooter, which is a Digital Ocean property.
+- Database backups are currently made every day.
 - Database backups are retained for 14 days.
 - All backups are encrypted both in transit and at rest.
 
@@ -655,8 +642,8 @@ Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.
 ### Media/CDN Store Backups
 
 - The CDN/media data is sync'd directly to Backblaze B2 via the `rclone` [utility](https://rclone.org).
-- This is done using some custom scripts that process each task and then fire off notifications to our backend Slack.
-- CDN backups currently run every 12 hours.
+- This is done using some custom scripts that process each task and then fire off notifications to our backend Matrix channels.
+- CDN backups currently run every day.
 - Only the latest copy of CDN data is retained.
 - All backups are encrypted both in transit and at rest.
 
@@ -696,15 +683,6 @@ These alerts are sent to our internal Slack.
 
 We also have active monitoring of the worldwide accessibility of our web frontends.
 These alerts are sent to our internal Slack and to the email of our server administrators.
-
-### Loki & Grafana
-
-We have a cloud-hosted instance of [Loki](https://grafana.com/oss/loki/) used to collect logging from various components such as Nginx.
-[Grafana](https://grafana.com/grafana/) is then used to visualize the metrics on dashboards, or to search logs.
-
-![Grafana Screenshot](https://cdn.vmst.io/docs/grafana-screenshot.png)
-
-These dashboards are only used by our team, and are currently not publicly accessible.
 
 ## Networking
 
