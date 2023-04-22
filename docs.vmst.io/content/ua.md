@@ -5,4 +5,8 @@ tags:
   - docs
 ---
 
-We block access to applications that do not properly identify themselves with a [User Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) string in the header of the request.
+vmst.io blocks access to applications that do not properly identify themselves with a User Agent string in the header of the request.
+This policy helps maintain security and prevent unauthorized access to the platform.
+
+Additionally, we required signed HTTP requests between servers using the ActivityPub protocol.
+This is defined in the `AUTHORIZED_FETCH` variable in Mastodon.
