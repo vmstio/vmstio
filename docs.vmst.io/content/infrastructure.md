@@ -11,7 +11,7 @@ tags:
 The purpose of this document is to provide an overview of the infrastructure used to operate the Mastodon instance and ancillary services that make up [vmst.io](https://vmst.io).
 It should explain how the various services interact and how "the magic" happens when our users open the Mastodon app on their phone or enter our address into their web browser.
 
-Unfortunately, it's not really magic, but rather a series of databases and services from various open-source vendors running in "The Cloud."
+Unfortunately, it's not really magic, but rather a series of databases and services from various open-source vendors running in a number of different public cloud providers.
 
 ## Architecture Goals
 
@@ -22,7 +22,7 @@ Unfortunately, it's not really magic, but rather a series of databases and servi
 
 ## Layout
 
-![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-april52023.png)
+![Server Layout](https://cdn.vmst.io/docs/vmstio-simple-april22.png)
 
 ## Providers
 
@@ -36,7 +36,7 @@ Unfortunately, it's not really magic, but rather a series of databases and servi
 | Backblaze | Media Backups |
 | Snapshooter | Database Backups |
 | DeepL | Translation Services |
-| Elastic | Full Text Search |
+| AWS | Full Text Search |
 | Mailgun | SMTP Relay |
 | GitHub | Configuration Repository |
 | Slack | Team Communications |
@@ -88,13 +88,6 @@ What also became apparent over time is that the Docker containers for Mastodon b
 
 We have since moved all of the Mastodon components to locally compiled code running with Linux Systemd services.
 Not only has this proven more efficient, it's provided more flexibility.
-
-### Kubernetes
-
-We do not currently leverage Kubernetes for any part of the [vmst.io](https://vmst.io) configuration.
-We may explore this again in the future.
-
-Docker containers are still used to deploy our "Flings" as documented below.
 
 ## Code Purity
 
@@ -219,8 +212,7 @@ By using Sidekiq, Mastodon can handle multiple tasks concurrently and efficientl
 
 In the vmst.io environment, Sidekiq processes over one million tasks per day.
 
-There are three virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker) and [Kyle](https://memory-alpha.fandom.com/wiki/Kyle)).
-Both Scotty and Decker have 2 vCPU and 4 GB of memory, while Kyle has 1 vCPU and 2 GB of memory.
+There are two virtual machines ([Scotty](https://memory-alpha.fandom.com/wiki/Montgomery_Scott) and [Decker](https://memory-alpha.fandom.com/wiki/Will_Decker), both have 2 vCPU and 4 GB of memory.
 
 #### Tuning
 
@@ -283,13 +275,14 @@ An explanation for the purpose of each queue can be found on [docs.joinmastodon.
 
 We have our Sidekiq queues configured as such:
 
-| Queue | Scotty | Decker | Kyle |
-|-------|--------|--------|-------|
-| Push/Default/Ingress | 25 | 25 | - |
-| Pull/Default/Ingress | 25 | 25 | - |
-| Ingress/Default/Mailer | 25 | 25 | - |
-| Scheduler | - | - | 10 |
-| Total | **75** | **75** | **10** |
+| Queue | Scotty | Decker |
+|-------|--------|--------|
+| Push/Default | 8 | 8 |
+| Pull/Default | 8 | 8 |
+| Ingress/Default | 8 | 8 |
+| Default/Mailers | 8 | - |
+| Scheduler/Mailers | - | 8 |
+| Total | **32** | **32** |
 
 Each Droplet has multiple service files for Sidekiq.
 
@@ -402,8 +395,6 @@ Digital Ocean requires encrypted/TLS connections to their managed Redis instance
 
 To accommodate this, we have in the past used [HAProxy](https://www.haproxy.org) or [Stunnel](https://www.stunnel.org) to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
 
-![HAProxy Workflow](https://cdn.vmst.io/docs/haproxy.png)
-
 There has been discussion within the Mastodon project of replacing hiredis with the native [redis-rb](https://github.com/redis/redis-rb) driver, as the existing code has not been updated in over 4 years.
 Using the native redis-rb driver also provides support for TLS connections.
 
@@ -448,11 +439,10 @@ Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/)
 ![John Mastodon Example Search](https://cdn.vmst.io/docs/john-mastodon.jpg)
 
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
-We use a managed instance of Elastic Search 8.6 running on Elastic Cloud.
+We use a managed instance of OpenSearch 2.x running on Amazon Web Services.
+[OpenSearch](https://opensearch.org) is a fork of the Elastic Search 7.x code.
 
 There are two data nodes and a witness, with 1GB of memory each. They form a single instance to query.
-
-![Elastic Search Configuration](https://cdn.vmst.io/docs/elastic-cloud.png)
 
 Example of `.env.production` configuration settings relevant to Elastic Cloud:
 
@@ -547,6 +537,8 @@ We additionally set `disable_password_auth = true` to **only** allow authenticat
 At the moment this prohibits our users from using some types of clients that do not also support OAuth, such as the [writeas-cli](https://github.com/writeas/writeas-cli).
 There is an [open request](https://github.com/writefreely/writefreely/discussions/634) with WriteFreely to allow this with out configuration type.
 
+WriteFreely runs across both of the Nyota and Daystrom servers.
+
 ### Matrix
 
 Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse).
@@ -578,6 +570,8 @@ password_config:
 
 _Out came the sun and dried up all the..._ sorry.
 
+Matrix runs on our Daystrom server.
+
 #### Element Web
 
 We run our own instance of Element Web from a Docker container.
@@ -585,35 +579,18 @@ When visiting [matrix.vmst.io](https://element.vmst.io) or [element.vmst.io](htt
 
 Once their account is established, users are encouraged to use a dedicated Matrix client from their desktop or mobile device.
 
+Element Web runs on a the [Netlify](https://www.netlify.com) managed platform.
+
 ### Elk
 
 Elk is an [open source project](https://github.com/elk-zone/elk) to build an alternative web frontend for Mastodon.
 It’s in very active development, but is considered “alpha” by their team.
 
-Elk is a node.js application, and we use node.js 19.x as installed on our Fling backend servers.
-Our Elk install runs a local complication of the code.
-
 As Elk is very popular among our most active users, and we are also listed on the official project page as an alternative host to their own instance, we seek to run the latest released version Elk components from their upstream projects.
 
-We use a basic bash script, as outlined below, to automatically update our deployment shortly after release.
-
-```bash
-cd /root/elk || exit
-git fetch
-git checkout $(git tag -l | grep -v 'rc[0-9]*$' | sort -V | tail -n 1)
-pnpm i
-pnpm build
-systemctl restart elk-web.service
-```
-
-The `elk-web.service` is based off the Mastodon Streaming API service template, with the paths changed to the Elk executable:
-
-```text
-WorkingDirectory=/path/to/elk
-ExecStart=node .output/server/index.mjs
-```
-
 For more information please refer to our original [Elk](/post/2023/01/elk/) announcement.
+
+Elk runs on a the [Netlify](https://www.netlify.com) managed platform.
 
 ### Other Sources
 
@@ -633,7 +610,7 @@ We utilize [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) as ou
 Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.io) are stored in backend databases (PostgreSQL and MySQL) with Redis used as a key value store and timeline cache for [vmst.io](https://vmst.io).
 
 - For the backup of PostgreSQL and MySQL we use Snapshooter, which is a Digital Ocean property.
-- Database backups are currently made every day.
+- Database backups are currently made twice per day.
 - Database backups are retained for 14 days.
 - All backups are encrypted both in transit and at rest.
 
@@ -641,9 +618,9 @@ Posts made to [vmst.io](https://vmst.io) and [write.vmst.io](https://write.vmst.
 
 ### Media/CDN Store Backups
 
-- The CDN/media data is sync'd directly to Backblaze B2 via the `rclone` [utility](https://rclone.org).
+- The CDN/media data is sync'd directly to a Linode object store via the `rclone` [utility](https://rclone.org).
 - This is done using some custom scripts that process each task and then fire off notifications to our backend Matrix channels.
-- CDN backups currently run every day.
+- CDN backups currently run twice per day.
 - Only the latest copy of CDN data is retained.
 - All backups are encrypted both in transit and at rest.
 
