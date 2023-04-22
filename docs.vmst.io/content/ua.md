@@ -9,4 +9,4 @@ vmst.io blocks access to applications that do not properly identify themselves w
 This policy helps maintain security and prevent unauthorized access to the platform.
 
 Additionally, we required signed HTTP requests between servers using the ActivityPub protocol.
-This is defined in the `AUTHORIZED_FETCH` variable in Mastodon.
+This is also known as "secure mode" and defined with the `AUTHORIZED_FETCH` variable in Mastodon.
