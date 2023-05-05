@@ -5,12 +5,12 @@ description: 'Where do e-mails come from, Dad?'
 
 # Mailer
 
-All e-mail notifications associated with the vmst·io Mastodon instance should come from either: `mastodon@sender.vmst.io` or previously `mastodon@mailer.vmst.io`
+All e-mail notifications associated with the vmst·io Mastodon instance should come from either: `mastodon@ses.vmst.io`.
 
-* We use **[Mailgun](https://mailgun.com)** as our backend service provider for `SMTP`.
+* We use **[Amazon Simple Email Service](https://aws.amazon.com/ses/)** as our backend service provider for `SMTP`.
 * We leverage industry technologies like `SPF` to help verify we are the only ones sending you emails.
 * We also use **[EasyDMARC](https://easydmarc.com)** to handle things like `DMARC` and `BIMI` for the domain.
-* We use **[Proton](https://proton.me)** for the root `@vmst.io` domain.
+* We use **[Fastmail](https://fastmail.com)** for the root `@vmst.io` domain.
 
 ## Phishing and Privacy
 
