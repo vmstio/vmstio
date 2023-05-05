@@ -18,6 +18,7 @@ It monitors the status of our external endpoints:
 - Elk (elk.vmst.io)
 - WriteFreely (write.vmst.io)
 - Semaphore (semaphore.vmst.io)
+- Element (element.vmst.io)
 
 Uptime is calculated for the last 30 days.
 
