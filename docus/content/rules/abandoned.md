@@ -2,7 +2,9 @@
 title: Abandoned Accounts
 ---
 
-In order to keep the number of local spam accounts on vmst.io as low as possible, we have an review process for account creation on vmst.io that includes a number of manual and automated processes:
+# Abandoned Accounts
+
+In order to keep the number of junk accounts on vmst.io as low as possible, we have an review process for account creation that includes a number of manual and automated processes:
 
 - User e-mail verification
 - User hCaptcha verification
@@ -10,9 +12,9 @@ In order to keep the number of local spam accounts on vmst.io as low as possible
 - Manual moderator account approval
 
 Accounts that are created, but then do not complete e-mail/hCaptcha confirmation within three days are automatically deleted.
-Additionally, Accounts that complete moderator approval but are then abandoned, are subject to deletion after 30 days.
+Additionally, accounts that complete moderator approval but are then abandoned, are subject to deletion after 30 days.
 
-Approved accounts which have any pattern of usage during this period, as defined below, will generally not be automatically deleted:
+Approved accounts which have any pattern of usage during this period, as defined below, will generally not be considered abanonded:
 
 - Setting profile data such as an avatar or biography information
 - Performing any customization of account settings
