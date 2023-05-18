@@ -1,18 +1,8 @@
 ---
-title: You
-description: Who are you? Who who, who who?
+title: Data Security
 ---
 
-# You
-
-## Why do you want to be _here_?
-
-When you apply for an account on vmst·io, we ask you to provide a reason why you want to join.
-**We take this seriously.**
-Tell us a bit about yourself, what brings you here, and what your interests are.
-It doesn't have to be formal, just enough to make us excited to welcome you to our community.
-
-## Data Security
+# Data Security
 
 Unless it's required of us to investigate a reported instance of abuse of our policies, under standard operation we have no ability to regularly access your direct messages with other members of our platform.
 While this data is accessible with a request to our hosting providers database systems, we expect that to not be necessary except under extreme circumstances.
