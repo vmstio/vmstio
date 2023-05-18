@@ -7,7 +7,7 @@ title: Abandoned Accounts
 In order to keep the number of junk accounts on vmst•io as low as possible, we utilize a review process for account creation that includes both manual and automated processes:
 
 |       **Method**      | **Automatic** | **Manual** |
-|:---------------------:|:-------------:|:----------:|
+|-----------------------|---------------|------------|
 | Email verification    |       ✔       |            |
 | hCaptcha verification |       ✔       |            |
 | IP blocklist check    |       ✔       |            |
@@ -17,7 +17,7 @@ Requests for accounts that do not complete e-mail and [hCaptcha](https://www.hca
 
 **Unused moderator-approved accounts are subject to deletion after 30 days.**
 
-# Preserve an Account
+## Preserve an Account
 
 Complete any of the following actions at least once for a moderator-approved account to confirm the account is not abandoned:
 
