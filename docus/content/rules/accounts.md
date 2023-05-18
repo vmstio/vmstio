@@ -1,5 +1,5 @@
 ---
-title: Abandoned Accounts
+title: New Accounts and Approvals
 ---
 
 # Abandoned Accounts
@@ -15,7 +15,10 @@ In order to keep the number of junk accounts on vmst•io as low as possible, we
 
 Requests for accounts that do not complete e-mail and [hCaptcha](https://www.hcaptcha.com/) verification within three days are automatically deleted.
 
+::alert{type="danger"}
 **Unused moderator-approved accounts are subject to deletion after 30 days.**
+::
+
 
 ## Preserve an Account
 
