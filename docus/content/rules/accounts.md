@@ -2,7 +2,7 @@
 title: New Accounts and Approvals
 ---
 
-# Abandoned Accounts
+# New Accounts and Approvals
 
 In order to keep the number of junk accounts on vmst•io as low as possible, we utilize a review process for account creation that includes both manual and automated processes:
 
@@ -18,7 +18,6 @@ Requests for accounts that do not complete e-mail and [hCaptcha](https://www.hca
 ::alert{type="danger"}
 **Unused moderator-approved accounts are subject to deletion after 30 days.**
 ::
-
 
 ## Preserve an Account
 
