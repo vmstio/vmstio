@@ -13,10 +13,9 @@ It monitors the status of our external endpoints:
 - Mastodon (vmst.io)
 - Streaming API (streaming.vmst.io)
 - Media Storage (cdn.vmst.io)
-- This Site (docs.vmst.io)
+- Documentation (docs.vmst.io)
 - Matrix (matrix.vmst.io)
 - Elk (elk.vmst.io)
-- WriteFreely (write.vmst.io)
 - Semaphore (semaphore.vmst.io)
 - Element (element.vmst.io)
 
