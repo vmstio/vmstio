@@ -16,7 +16,6 @@ It monitors the status of our external endpoints:
 - Documentation (docs.vmst.io)
 - Matrix (matrix.vmst.io)
 - Elk (elk.vmst.io)
-- Semaphore (semaphore.vmst.io)
 - Element (element.vmst.io)
 
 Uptime is calculated for the last 30 days.
