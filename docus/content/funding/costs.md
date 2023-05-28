@@ -4,34 +4,29 @@ title: Costs
 
 # Cost Overview
 
-For a line item breakdown of all income and expenses to date, please see the [Ledger](/funding/ledger).
-
 ## Income
 
 | **Source**      | **Monthly** | **Yearly** | **One Time** |
 |-----------------|-------------|------------|----------|
-| Ko-Fi           | $237        | -          | $535     |
-| Patreon         | $136        | -          | -        |
+| Ko-Fi           | $245        | -          | $595     |
+| Patreon         | $132        | -          | -        |
 | Open Collective | $9          | $60        | $168     |
 | Other           | $24         | -          | $72      |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
-Last Updated: April 5, 2023.
+Last Updated: May 28, 2023.
 
 ## Expenses
 
 | **Vendor**    | **Monthly** |
 |---------------|-------------|
-| Digital Ocean | $333        |
-| elastic.com   | $60         |
-| Backblaze     | $20         |
+| Digital Ocean | $287        |
+| AWS           | $22         |
+| n8n           | $20         |
 | Netlify       | $20         |
-| Nixstats      | $10         |
-| DNSimple      | $6          |
-| Mailgun       | $2          |
 
-Last Updated: April 5, 2023.
+Last Updated: May 28, 2023.
 
 ## Processing Fees
 

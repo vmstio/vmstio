@@ -13,10 +13,10 @@ It monitors the status of our external endpoints:
 - Mastodon (vmst.io)
 - Streaming API (streaming.vmst.io)
 - Media Storage (cdn.vmst.io)
-- Documentation (docs.vmst.io)
-- Matrix (matrix.vmst.io)
 - Elk (elk.vmst.io)
+- Matrix (matrix.vmst.io)
 - Element (element.vmst.io)
+- Documentation (docs.vmst.io)
 
 Uptime is calculated for the last 30 days.
 
