@@ -4,8 +4,6 @@ title: Costs
 
 # Cost Overview
 
-For a line item breakdown of all income and expenses to date, please see the [Ledger](/funding/ledger).
-
 ## Income
 
 | **Source**      | **Monthly** | **Yearly** | **One Time** |
