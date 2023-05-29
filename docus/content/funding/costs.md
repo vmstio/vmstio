@@ -11,6 +11,7 @@ Those annual subscriptions are represented here in the monthly total. (Subscript
 
 Any other funding that comes through one-time tips or shop purchases are also represented below.
 
+|               |                |
 |---------------|----------------|
 | Subscriptions | $398 per month |
 | Tips & Merch  | $835 total     |
