@@ -16,7 +16,7 @@ Any other funding that comes through one-time tips or shop purchases are also re
 | Subscriptions | $398 per month |
 | Tips & Merch  | $835 total     |
 
-Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
+Numbers reflect raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
 Last Updated: May 29, 2023.
 
