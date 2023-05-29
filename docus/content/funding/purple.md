@@ -7,7 +7,7 @@ description: How can I help?
 
 The following people are contributing to vmst.io on a monthly or yearly basis at the [Purple Subscribers](/funding) level, or higher:
 
-| Name                         |
+| Name or Handle               |
 |------------------------------|
 | Ariel Sanchez Mora           |
 | bflipp                       |
