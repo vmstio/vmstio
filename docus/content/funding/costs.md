@@ -32,7 +32,8 @@ At the moment all of our staff are volunteers, and our only expenses are monthly
 | Netlify       | $20         |
 
 Money is set aside to cover any tax expenses, or unforeseen costs.
-Additional funds have also been used to make donations to other projects such as Mastodon, Elk and Matrix.
+Additional funds have also been used to make donations to open source software projects that we use, such as Mastodon, Elk and Matrix.
+
 We also periodically test different service offerings to decide if their long term use would be a good fit, but later discontinue their use.
 
 Last Updated: May 28, 2023.
