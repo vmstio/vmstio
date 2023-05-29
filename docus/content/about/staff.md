@@ -1,6 +1,5 @@
 ---
 title: Staff
-description: Who's running this place?
 ---
 
 # Staff
