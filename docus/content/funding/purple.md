@@ -10,29 +10,28 @@ The following people are contributing to vmst.io on a monthly or yearly basis at
 | Name                         |
 |------------------------------|
 | Ariel Sanchez Mora           |
-| Nick Kuhn                    |
-| Renee Mathew                 |
-| NightShadeTearsOfPoison      |
-| Post Apocalyptic In Missouri |
-| Daniel Morgan                |
-| Brian J Best                 |
-| djwfyi                       |
-| Jim Millard                  |
-| Sean Massey                  |
-| Brian Knudtson               |
-| sirmarcos                    |
-| golfshrek#1847               |
-| Douglas Arcidino             |
-| linuxfiend                   |
 | bflipp                       |
-| Rich Holmes                  |
-| Mark Buckley                 |
-| LinuxTown                    |
-| Renee Mathew                 |
-| Dharszolin                   |
-| Pete Hall                    |
+| Brian J Best                 |
+| Brian Knudtson               |
+| Daniel Morgan                |
 | Deren Smith                  |
+| Dharszolin                   |
+| djwfyi                       |
+| Douglas Arcidino             |
 | Eric Lee                     |
 | Erik Bussink                 |
+| golfshrek#1847               |
+| Jim Millard                  |
+| linuxfiend                   |
+| LinuxTown                    |
+| Mark Buckley                 |
+| Nick Kuhn                    |
+| NightShadeTearsOfPoison      |
+| Pete Hall                    |
+| Post Apocalyptic In Missouri |
+| Renee Mathew                 |
+| Rich Holmes                  |
+| Sean Massey                  |
+| sirmarcos                    |
 
 Last Updated May 29, 2023
