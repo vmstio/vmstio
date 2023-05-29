@@ -1,6 +1,5 @@
 ---
 title: Staff
-description: Who's running this place?
 ---
 
 # Staff
@@ -15,7 +14,6 @@ All of the staff members of vmst·io are volunteers.
 
 * Building and maintaining online communities since 1999.
 * Systems administrator since age 13.
-* Former Birdsite addict.
 
 ### Daryl White [@djwfyi](https://vmst.io/@djwfyi)
 

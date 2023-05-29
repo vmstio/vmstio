@@ -1,6 +1,5 @@
 ---
 title: Issues
-description: Where can I report a problem?
 ---
 
 # Issues

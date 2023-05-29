@@ -1,6 +1,5 @@
 ---
 title: Custom Emoji
-description: How do I add the verification image to my username?
 ---
 
 # Custom Emoji
