@@ -7,27 +7,32 @@ description: How can I help?
 
 The following people are contributing to vmst.io on a monthly or yearly basis at the [Purple Subscribers](/funding) level, or higher:
 
-* Ariel Sanchez
-* Brett Flippin
-* Brian Best
-* Brian Knudtson
-* Daaku
-* Dan Morgan
-* Daryl White
-* Dennis Regan
-* Denzil Burriss
-* Deren Smith
-* Douglas Arcidino
-* Eric Lee
-* Erik Bussink
-* George Bleck
-* Jim Millard
-* LinuxTown
-* Marcos Huerta
-* Mark Buckley
-* Nick Kuhn
-* Nick Sanders
-* Pete Hall
-* Renee Mathew
-* Rich Holmes
-* Sean Massey
+| Name                         |
+|------------------------------|
+| Ariel Sanchez Mora           |
+| Nick Kuhn                    |
+| Renee Mathew                 |
+| NightShadeTearsOfPoison      |
+| Post Apocalyptic In Missouri |
+| Daniel Morgan                |
+| Brian J Best                 |
+| djwfyi                       |
+| Jim Millard                  |
+| Sean Massey                  |
+| Brian Knudtson               |
+| sirmarcos                    |
+| golfshrek#1847               |
+| Douglas Arcidino             |
+| linuxfiend                   |
+| bflipp                       |
+| Rich Holmes                  |
+| Mark Buckley                 |
+| LinuxTown                    |
+| Renee Mathew                 |
+| Dharszolin                   |
+| Pete Hall                    |
+| Deren Smith                  |
+| Eric Lee                     |
+| Erik Bussink                 |
+
+Last Updated May 29, 2023
