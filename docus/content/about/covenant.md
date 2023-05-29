@@ -1,6 +1,5 @@
 ---
 title: Server Covenant
-description: Who are you? Who who, who who?
 ---
 
 # Server Covenant
