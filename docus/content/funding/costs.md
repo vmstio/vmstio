@@ -6,18 +6,22 @@ title: Costs
 
 ## Income
 
-| **Source**      | **Monthly** | **Yearly** | **One Time** |
-|-----------------|-------------|------------|----------|
-| Ko-Fi           | $245        | -          | $595     |
-| Patreon         | $132        | -          | -        |
-| Open Collective | $9          | $60        | $168     |
-| Other           | $24         | -          | $72      |
+The majority of our income comes from monthly subscriptions through Ko-Fi and Patreon, while a small number of members elect to subscribe annually through Open Collective.
+Those annual subscriptions are represented here in the monthly total. (Subscription/12)
+
+Any other funding that comes through one-time tips or shop purchases are also represented below.
+
+|---------------|----------------|
+| Subscriptions | $398 per month |
+| Tips & Merch  | $835 total     |
 
 Numbers reflects raw donation numbers in USD, not reflective of Patreon or Stripe fees and/or exchange rates.
 
-Last Updated: May 28, 2023.
+Last Updated: May 29, 2023.
 
 ## Expenses
+
+At the moment all of our staff are volunteers, and our only expenses are monthly bills to our various server providers.
 
 | **Vendor**    | **Monthly** |
 |---------------|-------------|
@@ -25,6 +29,10 @@ Last Updated: May 28, 2023.
 | AWS           | $22         |
 | n8n           | $20         |
 | Netlify       | $20         |
+
+Money is set aside to cover any tax expenses, or unforeseen costs.
+Additional funds have also been used to make donations to other projects such as Mastodon, Elk and Matrix.
+We also periodically test different service offerings to decide if their long term use would be a good fit, but later discontinue their use.
 
 Last Updated: May 28, 2023.
 
