@@ -2,6 +2,8 @@
 title: Relays
 ---
 
+# Relays
+
 vmst.io does not currently run a Fediverse relay, but we participate in the following systems:
 
 - relay.infosec.exchange
