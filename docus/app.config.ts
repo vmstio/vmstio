@@ -1,8 +1,8 @@
 export default defineAppConfig({
   docus: {
     title: 'docs.vmst.io',
-    description: 'The best place to start your documentation.',
-    image: 'https://user-images.githubusercontent.com/904724/185365452-87b7ca7b-6030-4813-a2db-5e65c785bf88.png',
+    description: 'Documentation for vmst.io',
+    image: 'https://raw.githubusercontent.com/vmstan/vmstio/main/images/vmstio-1280x640@3x.png',
     socials: {
       mastodon: {
         label: 'Mastodon',
