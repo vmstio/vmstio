@@ -1,8 +1,8 @@
 ---
-title: Mailer
+title: E-mail
 ---
 
-# Mailer
+# E-mail
 
 All e-mail notifications associated with the vmst·io Mastodon instance should come from either: `mastodon@ses.vmst.io`.
 

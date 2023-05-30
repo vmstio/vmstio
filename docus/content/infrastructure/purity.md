@@ -14,12 +14,12 @@ As of May 2023, we're deploying the latest and greatest code on a regular basis 
 In this example, vmst.io is running the base version of 4.1.2 plus all of the merged code changes to main since then, up until commit [5811ccc61](https://github.com/mastodon/mastodon/commit/5811ccc6117ed3a506c0b4e36acda5cd42315a7d).
 ::
 
-In order to help facilitate this, we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository with limited modification necessary to run on our infrastructure.
+In order to help facilitate this, we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository with only limited modification necessary to run on our infrastructure.
 
 We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack unless it's required to properly interact with our systems.
 We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
 
-## Code Modifications
+## TLS
 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase uses a Redis driver ([hiredis](https://github.com/redis/hiredis-rb)) which does not have a native TLS capability.
 To accommodate this, we have in the past used [HAProxy](https://www.haproxy.org) or [Stunnel](https://www.stunnel.org) to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
