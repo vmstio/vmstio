@@ -27,3 +27,42 @@ Your Matrix handle will be as **@username:vmst.io** for sharing with other users
 ::
 
 After you've logged in, you can also join `#general:vmst.io` and chat with other vmst.io users.
+
+## Synapse
+
+Our Matrix deployment is based on [Synapse](https://matrix.org/docs/projects/server/synapse) server, running in a Docker container from the project's official [Docker Hub image](https://hub.docker.com/r/matrixdotorg/synapse).
+
+Our implementation is configured to authenticate against [vmst.io](https://vmst.io), so your Mastodon username and password is a single sign-on to this service.
+
+Example of the Synapse `homeserver.yaml` relevant to authentication:
+
+```text
+oidc_providers:
+- idp_id: my_mastodon
+  idp_name: "Mastodon"
+  discover: false
+  issuer: "https://vmst.io/@whodoyouthink"
+  client_id: "theitsybitsyspiderwentupthewaterspout"  
+  client_secret: "downcametherainandwashedthespiderout"
+  authorization_endpoint: "https://vmst.io/oauth/authorize"
+  token_endpoint: "https://vmst.io/oauth/token"
+  userinfo_endpoint: "https://vmst.io/api/v1/accounts/verify_credentials"
+  scopes: ["read"]
+  user_mapping_provider:
+    config:
+      subject_claim: "id"
+
+password_config:
+    enabled: false
+```
+
+_Out came the sun and dried up all the..._ sorry.
+
+## Element Web
+
+We run our own instance of Element Web from a Docker container.
+When visiting [matrix.vmst.io](https://element.vmst.io) or [element.vmst.io](https://element.vmst.io) users are automatically directed there, configured to use our Matrix homeserver.
+
+Once their account is established, users are encouraged to use a dedicated Matrix client from their desktop or mobile device.
+
+Element Web runs on a the [Netlify](https://www.netlify.com) managed platform.
