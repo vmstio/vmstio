@@ -1,13 +1,14 @@
 ---
 title: Monitoring
-description: Who watches the watchers?
 ---
 
 # Monitoring
 
-## status.vmst.io
+We monitor the health and availability of our infrastructure in a few different ways.
 
-This is our external monitoring powered by [Nixstatus](https://nixstats.com).
+## BetterUptime
+
+This powers our [status.vmst.io](https://status.vmst.io) page.
 It monitors the status of our external endpoints:
 
 - Mastodon (vmst.io)
@@ -18,9 +19,15 @@ It monitors the status of our external endpoints:
 - Element (element.vmst.io)
 - Documentation (docs.vmst.io)
 
-Uptime is calculated for the last 30 days.
+Uptime is calculated for the last 30/90 days.
 
-Check the [status page](https://status.vmst.io/) for known outages or maintenance reports.
+In addition to providing a page for members to check when there might be issues, it actively alerts our team to any issues.
+
+## Digital Ocean
+
+We use integrated metrics monitoring available through Digital Ocean to monitor and alert on CPU, memory, disk and other performance metrics of the host virtual machine and managed database systems.
+
+![Digital Ocean Alerts](https://cdn.vmst.io/docs/do-alert.png)
 
 ## Community Monitoring
 

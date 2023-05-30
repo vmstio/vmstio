@@ -24,3 +24,7 @@ You can use Elk right in your browser.
 ::alert{type="info"}
 You don't have to be a vmst.io member to use our Elk instance.
 ::
+
+## Infrastructure
+
+Elk runs on the [Netlify](https://www.netlify.com) managed platform.
