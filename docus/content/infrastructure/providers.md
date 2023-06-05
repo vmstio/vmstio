@@ -4,9 +4,9 @@ title: Providers
 
 # Providers
 
-This list represents the cloud provider dependencies that vmst.io has a direct relationship.
+This list represents the cloud provider dependencies to which vmst.io has a direct relationship.
 If any of these providers have issues, it may create issues for vmst.io services.
-Some of these services are paid for, and others are free to use.
+Some of these services are paid for while others are free to use.
 
 | Vendor | Service |
 |---|---|
