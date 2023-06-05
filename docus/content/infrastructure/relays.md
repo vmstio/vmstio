@@ -13,7 +13,7 @@ vmst.io does not currently run a Fediverse relay, but we participate in the foll
 Relays allow all content from participating instances to be directly federated to everyone else, without waiting for a direct user connection to be established.
 This helps with content discovery and more to complete conversation threads and hashtags for our users.
 
-Federation and content discovery still happens without relays, but they create an express-lane between instances who participate.
+Federation and content discovery still happen without relays, but relays create an express lane between instances who participate.
 
 ## Relayed Instances
 
