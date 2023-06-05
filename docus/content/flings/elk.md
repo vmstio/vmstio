@@ -27,4 +27,4 @@ You don't have to be a vmst.io member to use our Elk instance.
 
 ## Infrastructure
 
-Elk runs on the [Netlify](https://www.netlify.com) managed platform.
+Elk runs on our main Kubernetes cluster.

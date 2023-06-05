@@ -65,4 +65,4 @@ When visiting [matrix.vmst.io](https://element.vmst.io) or [element.vmst.io](htt
 
 Once their account is established, users are encouraged to use a dedicated Matrix client from their desktop or mobile device.
 
-Element Web runs on a the [Netlify](https://www.netlify.com) managed platform.
+Element Web runs on our main Kubernetes cluster.
