@@ -18,7 +18,7 @@ Federation and content discovery still happen without relays, but relays create 
 ## Relayed Instances
 
 Through participation in relays, these instances (and many more) are accessible in the Federated timeline for vmst.io users.
-_This list is subject to change at anytime due to circumstances outside of vmst.io administrators control._
+_This list is representative, incomplete, and subject to change at any time due to circumstances outside of vmst.io administrator control._
 
 - mastodon.social
 - mastodon.online
