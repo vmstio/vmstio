@@ -9,6 +9,9 @@ vmst.io does not currently run a Fediverse relay, but we participate in the foll
 - relay.infosec.exchange
 - relay.universeodon.com
 - relay.publicsquare.global
+- relay.toot.io
+- relay.intahnet.co.uk
+- rel.re
 
 Relays allow all content from participating instances to be directly federated to everyone else, without waiting for a direct user connection to be established.
 This helps with content discovery and more to complete conversation threads and hashtags for our users.
@@ -22,15 +25,20 @@ _This list is representative, incomplete, and subject to change at any time due 
 
 - mastodon.social
 - mastodon.online
+- mastodon.world
 - mstdn.social
 - masto.ai
+- toot.io
 - infosec.exchange
 - me.dm
 - flipboard.social
 - toot.community
 - moth.social
+- ohai.social
 - mastodonapp.uk
+- dmv.community
 - techhub.social
+- fedified.com
 - cupoftea.social
 - phpc.social
 - wx.social
