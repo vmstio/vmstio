@@ -37,6 +37,7 @@ _This list is representative, incomplete, and subject to change at any time due 
 - mastodonapp.uk
 - dmv.community
 - techhub.social
+- fedified.com
 - cupoftea.social
 - phpc.social
 - wx.social
