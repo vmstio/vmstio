@@ -33,6 +33,7 @@ _This list is representative, incomplete, and subject to change at any time due 
 - flipboard.social
 - toot.community
 - moth.social
+- ohai.social
 - mastodonapp.uk
 - dmv.community
 - techhub.social
