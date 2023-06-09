@@ -34,6 +34,7 @@ _This list is representative, incomplete, and subject to change at any time due 
 - toot.community
 - moth.social
 - mastodonapp.uk
+- dmv.community
 - techhub.social
 - cupoftea.social
 - phpc.social
