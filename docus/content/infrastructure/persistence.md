@@ -85,12 +85,7 @@ By default, the items in the Space are accessible through a non-CDN accessible e
 
 [Redis](https://redis.io) is an open-source, in-memory data structure store that is used as a database, cache, and message broker. In Mastodon, Redis is used for various purposes to improve the performance, scalability, and reliability of the platform.
 
-We use the Digital Ocean managed Redis database service, this delivers a highly available database backend.
-
-There are two active Redis database instances, the first is our primary Redis instances with 1 vCPU and 2GB of memory, with a standby instance ready to take over automatically in the event of system failure.
-The second is dedicated to caching of user timelines and other data, named [Saavik](https://memory-alpha.fandom.com/wiki/Saavik).
-It's configured with 1 vCPU and 1 GB of memory.
-In both cases we use Redis 7.x.
+We use the Digital Ocean managed Redis database service, this delivers a highly available database backend. Our primary Redis instances has 1 vCPU and 2GB of memory running Redis 7.x.
 
 Our connection to Redis is configured as a `REDIS_URL` variable using a connection string.
 
