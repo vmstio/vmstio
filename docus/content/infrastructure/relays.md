@@ -38,12 +38,11 @@ _This list is representative, incomplete, and subject to change at any time due 
 - moth.social
 - ohai.social
 - mastodonapp.uk
-- dmv.community
+- calckey.world
 - techhub.social
 - fedified.com
 - cupoftea.social
 - phpc.social
-- wx.social
 
 These instances represent some of the biggest and most vibrant in the Fediverse.
 vmst.io members get the best of being on a highly available and powerful backend, with careful moderation, and still don't have to miss out on being part of the wider community.
