@@ -6,7 +6,7 @@ Operational data for [vmst.io](https://vmst.io)
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=6c1d754bacec&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
 ## Description
-[vmst.io](https://vmst.io) is an English speaking instance for folks interested in interacting with respectful technologists, who are passionate about what we do. Geeks and nerds of every type and stripe.
+vmst·io is Mastodon for respectful technologists. Geeks and nerds of every type and stripe. Highly available, well federated, and community minded.
 
 ## Rules
 - No harassment, dogpiling or doxxing of other users.
