@@ -16,6 +16,7 @@ It monitors the status of our external endpoints:
 - Media Storage (cdn.vmst.io)
 - Elastic Search (elastic.vmst.io)
 - Elk (elk.vmst.io)
+- Semaphore (semaphore.vmst.io)
 - Matrix (matrix.vmst.io)
 - Element (element.vmst.io)
 - Documentation (docs.vmst.io)
