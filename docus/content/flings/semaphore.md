@@ -1,4 +1,4 @@
-----
+---
 title: Semaphore
 description: Alternative web frontend
 ---
