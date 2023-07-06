@@ -56,7 +56,8 @@ End-to-end encrypted messaging data is stored encrypted using AES-256, using mes
 
 ## IPs and Other Metadata
 
-When you log in, we record the IP address you log in from, as well as the User Agent of your browser or application.All the logged in sessions are available for your review and revocation in the settings.
+When you log in, we record the IP address you log in from, as well as the User Agent of your browser or application.
+All the logged in sessions are available for your review and revocation in the settings.
 
 Any of the information we collect from you may be used in the following ways:
 

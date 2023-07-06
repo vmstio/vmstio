@@ -4,7 +4,18 @@ title: Relays
 
 # Relays
 
-vmst.io does not currently run a Fediverse relay, but we participate in the following systems:
+Relays allow all content from participating instances to be directly federated to everyone else, without waiting for a direct user connection to be established.
+This helps with content discovery and more to complete conversation threads and hashtags for our users.
+
+Federation and content discovery still happen without relays, but relays create an express lane between instances who participate.
+
+## Our Relay
+
+vmst.io operates it's own relay at [relay.vmst.io](https://relay.vmst.io) which is currently open to anyone, but servers may be moderated at our discretion.
+
+## Relays Participation
+
+vmst.io participate in the following relay systems:
 
 - [relay.infosec.exchange](https://relay.infosec.exchange)
 - [relay.universeodon.com](https://relay.universeodon.com)
@@ -14,11 +25,6 @@ vmst.io does not currently run a Fediverse relay, but we participate in the foll
 - [rel.re](https://rel.re)
 - [mastodon-relay.thedoodleproject.net](https://mastodon-relay.thedoodleproject.net)
 - [bigrelay.social](https://bigrelay.social)
-
-Relays allow all content from participating instances to be directly federated to everyone else, without waiting for a direct user connection to be established.
-This helps with content discovery and more to complete conversation threads and hashtags for our users.
-
-Federation and content discovery still happen without relays, but relays create an express lane between instances who participate.
 
 ## Relayed Instances
 
