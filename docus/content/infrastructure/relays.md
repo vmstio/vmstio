@@ -35,20 +35,9 @@ _This list is representative, incomplete, and subject to change at any time due 
 - mastodon.online
 - mastodon.world
 - mstdn.social
-- masto.ai
-- toot.io
 - infosec.exchange
+- universeodon.com
 - me.dm
-- flipboard.social
-- toot.community
-- moth.social
-- ohai.social
-- mastodonapp.uk
-- calckey.world
-- techhub.social
-- fedified.com
-- cupoftea.social
-- phpc.social
 
 These instances represent some of the biggest and most vibrant in the Fediverse.
 vmst.io members get the best of being on a highly available and powerful backend, with careful moderation, and still don't have to miss out on being part of the wider community.
