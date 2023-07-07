@@ -10,10 +10,9 @@ Some of these services are paid for while others are free to use.
 
 | Vendor | Service |
 |---|---|
-| Digital Ocean | Postgres, Redis, Kubernetes, Object Storage, Static Site, CDN, Load Balancer, Private Container Registry and Nameservers |
-| AWS | Elastic/OpenSearch & Email Service |
+| Digital Ocean | Managed Postgres, Managed Redis, Managed Kubernetes, Object Storage, Static Site Generator, Content Delivery Network (CDN), Load Balancer, Private Container Registry and Nameservers |
+| AWS | Simple Email Service |
 | BetterUptime | Status Monitoring |
-| DeepL | Translation API |
 | DNSimple | Domain Registrar |
 | Let's Encrypt | SSL Certificates |
 | GitHub | Configuration/Settings, Public Container Registry |

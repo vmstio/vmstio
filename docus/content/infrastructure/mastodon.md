@@ -27,17 +27,10 @@ WEB_CONCURRENCY=3
 MAX_THREADS=9
 ```
 
-This follows a ratio of `vCPU * 1.5` for concurrency.
-The number of threads is then `concurrency * 3`.
+Puma mainly provides the API interface for client applications, and the HTML skeleton of the WebUI.
+Static files such as interface images, cascading style-sheets (CSS) and JavaScript which make up the Mastodon WebUI are served from a CDN at [assets.vmst.io](https://assets.vmst.io/oops.gif) to provide folks around the world a much faster copy when loading the site.
 
-Additionally, in the default configuration where Nginx and Mastodon Puma would run on the same node, there are static files (CSS and image) that make up the user interface that are served directly by Nginx.
-Because we separate Nginx into its own tier on different machines, there is a setting to tell the Mastodon web server to serve these files instead.
-
-```text
-RAILS_SERVE_STATIC_FILES=true
-```
-
-According to [the Mastodon documentation](https://docs.joinmastodon.org/admin/config/#rails_serve_static_files) this does increase load on the Mastodon server, but in our experience it's not been a measurable difference.
+Previously they were served directly from our core servers, which being in Canada might be slower to load for those folks on the other side of the world.
 
 ### Streaming
 

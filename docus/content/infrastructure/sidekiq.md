@@ -65,3 +65,7 @@ As configured this service fill will only process the push and the pull queues s
 It also has the maximum of open database connections of 25 set in `DB_POOL` with 25 threads set in the `-c` option.
 
 An explanation for the purpose of each queue can be found on [docs.joinmastodon.org](https://docs.joinmastodon.org/admin/scaling/#sidekiq-queues).
+
+## Queue Design
+
+![Queue Design](/sidekiq-queues.png)

@@ -8,7 +8,7 @@ The local IP space used between systems on our virtual private cloud (VPC) netwo
 
 Where possible, any communication between internal nodes is encrypted even though the communication takes place on the VPC network.
 
-There are a few cases where traffic leaves our VPC but still communicates within the Digital Ocean network, such as when data is moved between Droplets in Toronto and the Object Storage in NYC.
+There are a few cases where traffic leaves our VPC but still communicates within the Digital Ocean network, such as when data is moved between Droplets in Toronto and the Object Storage in NYC, or during replication between NYC and SFO data centers.
 
 ## Public IPs
 
