@@ -18,7 +18,7 @@ Posts made to [vmst.io](https://vmst.io) and messages sent via Matrix are stored
 
 - The CDN/media data is sync'd directly to another Digital Ocean object store via the `rclone` [utility](https://rclone.org).
 - This is done using some custom scripts that process each task and then fire off notifications to our backend Matrix channels.
-- CDN backups currently run every days.
+- CDN backups currently run every day.
 - Only the latest copy of CDN data is retained.
 
 ## Configuration Backups
