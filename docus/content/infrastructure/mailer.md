@@ -4,7 +4,7 @@ title: E-mail
 
 # E-mail
 
-All e-mail notifications associated with the vmst·io Mastodon instance should come from either: `mastodon@ses.vmst.io`.
+All e-mail notifications associated with the vmst·io Mastodon instance should come from: `mastodon@ses.vmst.io`.
 
 We use [Amazon Simple Email Service](https://aws.amazon.com/ses/) as our managed SMTP service, used for sending new user sign-up verifications, and other account notifications.
 

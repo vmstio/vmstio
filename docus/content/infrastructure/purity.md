@@ -11,13 +11,20 @@ As of May 2023, we're deploying the latest and greatest code on a regular basis 
 ![About Version](/about.png)
 
 ::alert{type="info"}
-In this example, vmst.io is running the base version of 4.1.2 plus all of the merged code changes to main since then, up until commit [5811ccc61](https://github.com/mastodon/mastodon/commit/5811ccc6117ed3a506c0b4e36acda5cd42315a7d).
+In this example, vmst.io is running the base version of 4.1.4 plus all of the merged code changes to `main` since then, up until commit [0051128](https://github.com/mastodon/mastodon/commit/0051128387ee97212f51bf2c7baa78b6757f4c81).
 ::
 
-In order to help facilitate this, we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository with only limited modification necessary to run on our infrastructure.
+In order to help facilitate this, we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
 
-We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)) or perform any other local modifications to the Mastodon stack unless it's required to properly interact with our systems.
-We do not intend to modify or customize Mastodon code in any other way that changes the default user experience.
+- Embed the Digital Ocean internal security certificates
+- Customize the Mastodon logo, if needed, for events like Pride Month
+- Removal of the Hiredis driver (see below)
+- Updating our Docker containers to Debian 12 (Bookworm)
+- Updating to ImageMagick 7 and ffmpeg 6
+- Raising the post character count limit from 500 to 512
+- Adding the [Bird UI](/flings/birdui) theme
+
+We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)).
 
 ## TLS
 

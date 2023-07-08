@@ -6,7 +6,7 @@ title: Search
 
 Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do full text searching on:
 
-- User profiles known to our instance
+- User profiles known to our instance, including their bio information
 - Trending hashtags
 - **Your** posts
 - Replies to **your** posts

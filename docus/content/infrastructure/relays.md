@@ -26,10 +26,10 @@ vmst.io participate in the following relay systems:
 - [mastodon-relay.thedoodleproject.net](https://mastodon-relay.thedoodleproject.net)
 - [bigrelay.social](https://bigrelay.social)
 
-## Relayed Instances
+## Major Relayed Instances
 
 Through participation in relays, these instances (and many more) are accessible in the Federated timeline for vmst.io users.
-_This list is representative, incomplete, and subject to change at any time due to circumstances outside of vmst.io administrator control._
+_This list is representative and subject to change at any time due to circumstances outside of vmst.io administrator control._
 
 - mastodon.social
 - mastodon.online

@@ -22,7 +22,7 @@ Here are some ways Postgres is used in Mastodon:
 We use the Digital Ocean managed PostgresSQL database service, this delivers a highly available database backend.
 Updates and maintenance are performed by Digital Ocean, independent of our administration efforts.
 
-There is one active PostgreSQL database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 2 vCPU and 4GB of memory, with a standby instance ready to take over automatically in the event of system failure.
+There is one active PostgreSQL database instance ([Majel](https://memory-alpha.fandom.com/wiki/Majel_Barrett_Roddenberry)) with 4 vCPU and 8GB of memory, with a standby instance ready to take over automatically in the event of system failure.
 We use PostgreSQL 15.x.
 
 Digital Ocean instance "T-Shirt" sizes for databases are done by vCPU, memory, disk size, and connections to the database.
@@ -76,6 +76,7 @@ S3_ENDPOINT=https://nyc3.digitaloceanspaces.com
 AWS_ACCESS_KEY_ID=NOTINAMILLI0NYEARS
 AWS_SECRET_ACCESS_KEY=hahahahahahahahahahahahaha
 S3_ALIAS_HOST=cdn.vmst.io
+CDN_HOST=https://assets.vmst.io
 ```
 
 Our Spaces is in the Digital Ocean NYC3 data center, which is separate from the rest of the workloads which exist in the TOR1 (Toronto) data center.
