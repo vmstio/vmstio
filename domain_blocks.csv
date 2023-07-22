@@ -1,770 +1,422 @@
 #domain,#severity,#reject_media,#reject_reports,#public_comment,#obfuscate
-076.moe,silence,false,false,Tier 1,false
-076.ne.jp,suspend,true,true,Tier 0,false
-101010.pl,suspend,true,true,Tier 0,false
-10minutepleroma.com,suspend,true,true,Tier 0,false
-13bells.com,suspend,true,true,Tier 0,false
-1611.social,suspend,true,true,Tier 0,false
-1745.info,silence,false,false,Tier 1,false
-4aem.com,suspend,true,true,Tier 0,false
-5dollah.click,suspend,true,true,Tier 0,false
-80percent.social,suspend,true,true,Tier 0,false
-8777.ch,suspend,true,true,Tier 0,false
-a.sc,suspend,true,true,Tier 0,false
-activitypub-proxy.cf,suspend,true,true,Tier 0,false
-activitypub-troll.cf,suspend,true,true,Tier 0,false
-adachi.party,silence,false,false,Tier 1,false
-addy.gg,suspend,true,true,Tier 0,false
-aethy.com,suspend,true,true,Tier 0,false
-agates.io,silence,false,false,Tier 1,false
-ai.wiki,suspend,true,true,Tier 0,false
-alteregocreations.com,suspend,true,true,Tier 0,false
-ams3-03.smarterliving.nl,suspend,true,true,BirdSiteLIVE/Bot,false
-ancreport.com,suspend,true,true,Tier 0,false
-ancreport.xyz,suspend,true,true,Tier 0,false
-anemoneya.me,suspend,true,true,Tier 0,false
-angrytoday.com,suspend,true,true,Tier 0,false
-anime.website,suspend,true,true,Tier 0,false
-animesexual.community,silence,false,false,Tier 1,false
-annihilation.social,suspend,true,true,Tier 0,false
-anon-kenkai.com,suspend,true,true,Tier 0,false
-arachnid.town,suspend,true,true,Tier 0,false
-archivefedifor.fun,silence,false,false,Tier 1,false
-asbestos.cafe,suspend,true,true,Tier 0,false
-asimon.org,silence,false,false,Tier 1,false
-asphodel.rip,silence,false,false,Tier 1,false
-aspiechattr.me,silence,false,false,Tier 1,false
-asteroidm.space,silence,false,false,Tier 1,false
-awootism.club,silence,false,false,Tier 1,false
-b.booots.tech,suspend,true,true,BirdSiteLIVE/Bot,false
-babay.icu,silence,false,false,Tier 1,false
-badly.co,suspend,true,true,Tier 0,false
-bae.st,suspend,true,true,Tier 0,false
-bajax.us,suspend,true,true,Tier 0,false
-banepo.st,suspend,true,true,Tier 0,false
-baraag.net,suspend,true,true,Tier 0,false
-bassam.social,suspend,true,true,Tier 0,false
-bearbirdsite.sicem.social,suspend,true,true,BirdSiteLIVE/Bot,false
-beefyboys.club,suspend,true,true,Tier 0,false
-beefyboys.win,suspend,true,true,Tier 0,false
-beepboop.ga,suspend,true,true,Tier 0,false
-berserker.town,suspend,true,true,Tier 0,false
-beta.mstdn.cf,suspend,true,true,BirdSiteLIVE/Bot,false
-bgzashtita.es,suspend,true,true,Tier 0,false
-bibly.com,suspend,true,true,Tier 0,false
-biendeo.com,silence,false,false,Tier 1,false
-bigguys.club,silence,false,false,Tier 1,false
-bikeshed.party,suspend,true,true,Tier 0,false
-birb.byte.wtf,suspend,true,true,BirdSiteLIVE/Bot,false
-birb.redra1n.net,suspend,true,true,BirdSiteLIVE/Bot,false
-birb.stream,suspend,true,true,BirdSiteLIVE/Bot,false
-birbber.hotfemboy.pics,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.chauvet.pro,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.docmeth02.host,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.evilcyberhacker.net,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.geiger.ee,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.gensokyo.info,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.granford.uk,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.hock.one,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.im-in.space,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.istheguy.com,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.karatek.net,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.kuendig.io,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.lummerland.ddnss.de,suspend,true,true,BirdSiteLIVE/Bot,false
+angrytoday.com,suspend,true,true,"",true
+mastodon.bgzashtita.es,suspend,true,true,"",true
+pl.slash.cl,suspend,true,true,"",true
 bird.makeup,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.makeup.hwarf.com,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.neolyum.de,suspend,true,true,BirdSiteLIVE/Bot,false
 bird.r669.live,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.seafoam.space,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.shitposted.today,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.tracto.pl,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.waffles.fun,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.xtra.nu,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.zerojay.com,suspend,true,true,BirdSiteLIVE/Bot,false
-bird.zvo.io,suspend,true,true,BirdSiteLIVE/Bot,false
-birdbots.leptonics.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdlive.grupotd.nat.cu,suspend,true,true,BirdSiteLIVE/Bot,false
-birdmakeup.opiumpost.org,suspend,true,true,BirdMakeup/Bot,false
-birds.garden,suspend,true,true,Tier 0,false
-birdsite.am-institute.swiss,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.archybold.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.axeleroy.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.b93.dece.space,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.blahaj.social,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.blazelight.dev,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.cbruegg.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.centennial.root.sx,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.cloutier.co,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.csachweh.de,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.darkesttimeline.social,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.datboi.network,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.davinkevin.fr,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.dfu.co,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.falkensweb.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.felixmueller.cloud,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.frog.fashion,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.gabeappleton.me,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.gnyo.org,suspend,true,true,BirdSiteLIVE/Bot,false
+firefaithfellowship.com,suspend,true,true,"",false
+privex.social,suspend,true,true,"",false
+furcel.club,suspend,true,true,"",false
+btrfly.social,suspend,true,true,"",false
+rio.social,suspend,true,true,"",false
+elonsucks.org,silence,false,false,"",false
+normie.cafe,suspend,true,true,"",true
+pl.tkammer.de,suspend,true,true,"",true
+buildthatwallandmakeamericagreatagain.trumpislovetrumpis.life,suspend,false,false,"",true
+dickkickextremist.xyz,suspend,true,true,"",true
+smuganimeavatar.xyz,suspend,true,true,"",false
+social.handholding.io,suspend,true,true,"",false
+shelter.moe,suspend,true,true,"",false
+cdrom.tokyo,suspend,true,true,"",false
+shpposter.club,suspend,true,true,"",false
+shotatube.xyz,suspend,true,true,"",false
+asimon.org,suspend,true,true,"",false
+iamterminally.online,suspend,true,true,"",false
+101010.pl,suspend,false,false,"",false
+13bells.com,suspend,false,false,"",false
+1611.social,suspend,false,false,"",false
+5dollah.click,suspend,false,false,"",false
+stereophonic.space,suspend,false,false,"",false
+tastingtraffic.net,suspend,false,false,"",false
+truthsocial.co.in,suspend,false,false,"",false
+whinge.house,suspend,false,false,"",false
+wxw.moe,suspend,false,false,"",false
+cawfee.club,suspend,false,false,"",false
+pech.tech,suspend,true,true,"",true
+neighborli.xyz,suspend,true,true,"",true
+endtimebelievers.com,suspend,false,false,"",false
+mastodon.ml,suspend,true,true,"",false
+suya.place,suspend,true,true,"",false
+asteroidm.space,suspend,true,true,"",false
+burger.rodeo,suspend,true,true,"",false
+petrolkorps.cc,suspend,true,true,"",false
+tpo.world,suspend,true,true,"",false
+activism.openworlds.info,silence,false,false,"",false
+cybre.club,suspend,true,true,"",false
+pleroma.nobodyhasthe.biz,suspend,true,true,"",true
+fans.sonichu.com,suspend,true,true,"",true
+postnstuffds.lol,suspend,true,true,"",true
+soc.mahodou.moe,suspend,true,true,"",true
+posting.lolicon.rocks,suspend,true,true,"",true
+bussy.monster,suspend,false,false,"",true
+worm.pink,suspend,false,false,"",true
+baraag.net,suspend,false,false,"",true
+nitecrew.rip,suspend,true,true,"",false
+pmth.us,suspend,true,true,"",false
+esmailelbob.xyz,suspend,true,true,"",false
+kcl.academy,suspend,true,true,"",false
+waifuism.life,suspend,false,false,"",false
+workers.dev,suspend,false,false,"",false
+clew.lol,suspend,false,false,"",false
+minidisc.tokyo,suspend,false,false,"",false
+noagendatube.com,suspend,false,false,"",false
+bae.st,suspend,false,false,"",false
+banepo.st,suspend,false,false,"",false
+bassam.social,suspend,false,false,"",false
+asphodel.rip,suspend,true,true,"",false
+gitmo.life,suspend,true,true,"",false
+spearman.xyz,suspend,true,true,"",false
+aethy.com,suspend,false,false,"",false
+ai.wiki,suspend,false,false,"",false
+ancreport.com,suspend,false,false,"",false
+brighteon.social,suspend,false,false,"",false
+birb.byte.wtf,suspend,true,true,BirdSiteLIVE/Bot,false
+birb.stream,suspend,true,true,BirdSiteLIVE/Bot,false
+fifo-f.eu,suspend,true,true,"",true
+birbber.hotfemboy.pics,suspend,true,true,BirdSiteLIVE/Bot,true
+mastobate.social,suspend,true,true,"",true
+dogsex.org,suspend,true,true,"",true
+pleroma.cucked.me,suspend,true,true,"",true
+bird.chauvet.pro,suspend,true,true,BirdSiteLIVE/Bot,false
+bird.gensokyo.info,suspend,true,true,BirdSiteLIVE/Bot,false
+bungle.online,suspend,false,false,"",false
+cachapa.xyz,suspend,false,false,"",false
+arasaka.vip,suspend,true,true,"",false
+bird.istheguy.com,suspend,true,true,BirdSiteLIVE/Bot,false
+animalliberation.social,suspend,true,true,"",false
+diamondelizaa.com,suspend,true,true,"",false
+1745.info,suspend,true,true,"",false
+pleroma.karjalazet.se,suspend,true,true,"",true
+fuwa.pink,suspend,true,true,"",true
+boymoder.biz,suspend,false,false,"",true
+breastmilk.club,suspend,false,false,"",true
+himk.am,suspend,true,true,"",false
+impeccable.social,suspend,true,true,"",false
+xn--p1abe3d.xn--80asehdb,suspend,false,false,"",false
+catgirl.life,suspend,false,false,"",false
+berserker.town,suspend,false,false,"",false
+thepostearthdestination.com,suspend,false,false,"",false
+apathy.tv,suspend,true,true,"",false
+bar.arumoon.ru,suspend,true,true,"",false
+dline.xyz,suspend,true,true,"",false
+mastodon.com.pl,suspend,true,true,"",false
+pleroma.soykaf.com,suspend,true,true,"",false
+neet.church,suspend,true,true,"",false
+social.teci.world,suspend,true,true,"",true
+annihilation.social,suspend,false,false,"",false
+anon-kenkai.com,suspend,false,false,"",false
+arachnid.town,suspend,false,false,"",false
+badly.co,suspend,false,false,"",false
+jollyville.net,suspend,true,true,"",false
+csdisaster.club,suspend,true,true,"",false
+librosphere.fr,suspend,true,true,"",false
+clubcyberia.co,suspend,false,false,"",false
+rapemeat.solutions,suspend,true,true,"",true
+crucible.world,suspend,false,false,"",false
+cryptodon.lol,suspend,false,false,"",false
+geofront.rocks,suspend,false,false,"",false
+merovingian.club,suspend,false,false,"",false
+nixnet.social,suspend,false,false,"",false
+outerkosm.us,suspend,false,false,"",false
+ursal.zone,suspend,false,false,"",false
+uwu.social,suspend,false,false,"",false
+awoo.fyi,suspend,true,true,"",false
+devs.live,suspend,true,true,"",false
+feline.rodeo,suspend,true,true,"",false
+crlf.ninja,suspend,true,true,"",false
+cum.camp,suspend,false,false,"",true
+cum.salon,suspend,false,false,"",true
+shitposter.club,suspend,false,false,"",true
+skinnyver.se,suspend,false,false,"",true
+whitewomen.dog,suspend,false,false,"",true
+exploding-heads.com,suspend,true,true,"",false
+gravure.club,suspend,true,true,"",false
+hermit.cafe,suspend,true,true,"",false
+pouque.net,suspend,true,true,"",false
+cryptotooter.com,suspend,false,false,"",false
+eveningzoo.club,suspend,false,false,"",false
+genderheretics.xyz,suspend,false,false,"",false
+kys.moe,suspend,false,false,"",false
+miruku.cafe,suspend,false,false,"",false
+narrativerry.xyz,suspend,false,false,"",false
+noagendasocial.com,suspend,false,false,"",false
+seal.cafe,suspend,false,false,"",false
+shortstackran.ch,suspend,false,false,"",false
+varishangout.net,suspend,false,false,"",false
+whinge.town,suspend,false,false,"",false
+xmrposter.club,suspend,false,false,"",false
+cybercriminal.eu,suspend,false,false,"",false
+darknight-coffee.org,suspend,false,false,"",false
+hornyjail.pro,suspend,false,false,"",true
+pedo.school,suspend,false,false,"",true
+skinheads.social,suspend,false,false,"",true
+decept.org,suspend,false,false,"",false
+epsilon.social,suspend,false,false,"",false
+freesoftwareextremist.com,suspend,false,false,"",false
+freespeech.group,suspend,false,false,"",false
+hallsofamenti.io,suspend,false,false,"",false
+ligma.pro,suspend,false,false,"",false
+lizards.live,suspend,false,false,"",false
+mrhands.horse,suspend,false,false,"",false
+rcsocial.net,suspend,false,false,"",false
+skippers-bin.com,suspend,false,false,"",false
+yggdrasil.social,suspend,false,false,"",false
+rebased.social,suspend,true,true,"",false
+shouldibuyahorse.com,suspend,true,true,"",false
+birdity.club,suspend,true,true,"",false
+deadreckoning.cc,suspend,true,true,"",false
+debilosempire.org,suspend,true,true,"",false
+digitalmarketer.social,suspend,true,true,"",false
+dsocialize.net,suspend,true,true,"",false
+loli.pizza,suspend,true,true,"",true
+paws.moe,suspend,true,true,"",true
+initiate.space,suspend,true,true,"",false
+onlyfeds.cc,suspend,true,true,"",false
+fluffytail.org,suspend,true,true,"",false
+decayable.ink,suspend,false,false,"",false
+mirr0r.city,suspend,false,false,"",false
+satoshishop.de,suspend,false,false,"",false
+shadowsocial.org,suspend,false,false,"",false
+sad.cab,suspend,true,true,"",false
+celebrity.social,suspend,true,true,"",false
+crowleyclub.com,suspend,true,true,"",false
+fapsi.be,suspend,true,true,"",false
+ikbenpiraat.nl,suspend,true,true,"",false
+shocktohp.xyz,suspend,true,true,"",false
+social.hendrixgames.com,suspend,true,true,"",false
+spook.social,suspend,true,true,"",false
+goreslut.xyz,suspend,true,true,"",true
+loli.best,suspend,true,true,"",true
+lolison.top,suspend,false,false,"",true
+detroitriotcity.com,suspend,false,false,"",true
+fediverse-lite.com,suspend,true,true,"",false
+freewahaextremist.wtf,suspend,true,true,"",false
+freezepeach.online,suspend,true,true,"",false
+ngrok.io,suspend,true,true,"",false
+declin.eu,suspend,false,false,"",false
+dev-wiki.de,suspend,false,false,"",false
+justbros.xyz,suspend,false,false,"",false
+pkteerium.xyz,suspend,false,false,"",false
+daishouri.moe,suspend,true,true,"",false
+haskovec.social,suspend,true,true,"",false
+headcannon.xyz,suspend,true,true,"",false
+kafka.icu,suspend,true,true,"",false
+stars.eroaward.com,suspend,true,true,"",false
+sweetappleacr.es,suspend,true,true,"",false
+gigaohm.bio,suspend,true,true,"",false
+dembased.xyz,suspend,false,false,"",false
+feral.cafe,suspend,false,false,"",false
+iddqd.social,suspend,false,false,"",false
+marsey.moe,suspend,false,false,"",false
+mastodon.la,suspend,false,false,"",false
+shigusegubu.club,suspend,false,false,"",false
+djsumdog.com,suspend,false,false,"",true
+poweredbycocaine.com,suspend,false,false,"",true
+headpat.cafe,suspend,true,true,"",false
+mu.zaitcev.nu,suspend,true,true,"",false
+nuked.social,suspend,true,true,"",false
+reisen.church,suspend,true,true,"",false
+freeatlantis.com,suspend,false,false,"",false
+plagu.ee,suspend,false,false,"",false
+kazv.moe,suspend,true,true,"",false
+psyopshop.com,suspend,true,true,"",false
+idolheaven.org,suspend,true,true,"",false
+khajiit.tech,suspend,true,true,"",false
+leadslinger.org,suspend,true,true,"",false
+queer.hacktivis.me,suspend,true,true,"",false
+dobbs.town,suspend,false,false,"",false
+jir.moe,suspend,true,true,"",false
+sheep.network,suspend,false,false,"",false
+mastod.no,suspend,true,true,"",false
+moe.onl,suspend,true,true,"",false
+mycub.space,suspend,true,true,"",false
+notbird.site,suspend,true,true,"",false
+tiuxo.com,suspend,true,true,"",false
+tokhmi.xyz,suspend,true,true,"",false
+jvpiter.net,suspend,true,true,"",false
+miniwa.moe,suspend,true,true,"",false
+federated.fun,suspend,false,false,"",false
+freethinkers.lgbt,suspend,false,false,"",false
+frennet.xyz,suspend,false,false,"",false
+liberdon.com,suspend,false,false,"",false
+librenet.co.za,suspend,false,false,"",false
+noagendasocial.nl,suspend,false,false,"",false
+mastodong.lol,suspend,false,false,"",true
+fightthis.net,suspend,false,false,"",false
+shrimpposter.club,suspend,false,false,"",false
+kibitz.cloud,silence,true,true,"",false
+pisskey.io,suspend,false,false,"",true
+youjo.love,suspend,false,false,"",true
+redspinning.top,suspend,true,true,"",false
+rigcz.club,suspend,true,true,"",false
+slippy.xyz,suspend,true,true,"",false
+lain.com,suspend,true,true,"",false
+fluf.club,suspend,false,false,"",false
+freespeechextremist.com,suspend,false,false,"",false
+leafposter.club,suspend,false,false,"",false
+freak.university,suspend,false,false,"",true
+thewizardingworld.com,suspend,true,true,"",false
+unbound.social,suspend,true,true,"",false
+socialgoblins.club,suspend,true,true,"",false
+toot.pt,suspend,true,true,"",false
+ryona.agency,suspend,false,false,"",false
+milkers.online,suspend,true,true,"",true
+udongein.xyz,silence,true,true,"",true
+nalocal519.social,suspend,false,false,"",false
+nnia.space,suspend,false,false,"",false
+froth.zone,suspend,false,false,"",true
+milker.cafe,suspend,false,false,"",true
+hedgehoghunter.club,suspend,false,false,"",false
+mostr.pub,suspend,false,false,"",false
+theres.life,suspend,false,false,"",false
+monads.online,silence,true,true,"",false
+ghetti.monster,suspend,false,false,"",true
+rodent.life,suspend,true,true,"",false
+gearlandia.haus,suspend,false,false,"",false
+gleasonator.com,suspend,false,false,"",false
+hitchhiker.social,suspend,false,false,"",false
+kompost.cz,suspend,false,false,"",false
+pone.social,suspend,false,false,"",false
+seikora.one,silence,true,true,"",false
+waifuappreciation.club,suspend,true,true,"",false
+hidamari.apartments,suspend,false,false,"",false
+morale.ch,suspend,false,false,"",false
+mugicha.club,suspend,false,false,"",false
+nightshift.social,suspend,false,false,"",false
+poa.st,suspend,false,false,"",false
+poast.org,suspend,false,false,"",false
+misskey-forkbomb.cf,suspend,false,false,Malicious,false
+strelizia.net,suspend,false,false,"",false
+thechimp.zone,suspend,false,false,"",false
+rayci.st,suspend,true,true,"",false
+yuriposter.club,suspend,true,true,"",false
+rebased.io,suspend,true,true,"",false
+nicecrew.digital,suspend,false,false,"",false
+theapex.social,suspend,false,false,"",false
+z0ne.social,suspend,true,true,"",false
+remnant.social,suspend,true,true,"",false
+pawoo.net,suspend,false,false,"",true
+lolison.network,suspend,false,false,"",true
+kurosawa.moe,suspend,false,false,"",false
+longyap.name.my,suspend,false,false,"",false
+mapsupport.de,suspend,false,false,"",false
+mastodon.cf,suspend,false,false,"",false
+neenster.org,suspend,false,false,"",false
+niscii.xyz,suspend,false,false,"",false
+otakufarms.com,suspend,false,false,"",false
+poast.tv,suspend,false,false,"",false
+r18.social,suspend,false,false,"",false
+scots.network,suspend,false,false,"",false
+logografos.com,suspend,false,false,"",false
+loveforlandlords.com,suspend,false,false,"",false
+novoa.nagoya,suspend,false,false,"",false
+pieville.net,suspend,false,false,"",false
+rakket.app,suspend,false,false,"",false
+rebelbase.site,suspend,false,false,"",false
+sharivegas.com,suspend,false,false,"",false
+spinster.xyz,suspend,false,false,"",false
+seo.chat,silence,true,true,"",false
+shitpost.cloud,suspend,false,false,"",true
+shrine.moe,suspend,true,true,"",false
+sneed.vip,suspend,true,true,"",false
+mitra.social,suspend,false,false,"",false
+needs.vodka,suspend,false,false,"",false
+shota.house,suspend,false,false,"",false
+wolfgirl.bar,suspend,false,false,"",false
+skinheads.eu,suspend,false,false,"",true
+skinheads.io,suspend,false,false,"",true
+skinheads.uk,suspend,false,false,"",true
+somewhy.net,suspend,true,true,"",false
+stormcloak.info,suspend,true,true,"",false
+piazza.today,suspend,false,false,"",false
+poster.place,suspend,false,false,"",false
+republic.red,suspend,false,false,"",false
+rot.gives,suspend,false,false,"",false
+sneak.berlin,suspend,false,false,"",false
+thebag.social,suspend,false,false,"",false
 birdsite.gred.al,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsite.gxvwb.dev,suspend,true,true,BirdSiteLIVE/Bot,false
+the9thcircle.club,suspend,true,true,"",false
+were.social,suspend,true,true,"",false
+bird.zerojay.com,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsite.axeleroy.com,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsite.csachweh.de,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsite.hexix.de,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsite.hwarf.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.ingwie.me,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.intra.kaijauch.de,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.james.moody.name,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.jemverse.xyz,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.jupiterslanding.social,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.jvpiter.net,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.k-fortytwo.de,suspend,true,true,BirdSiteLIVE/Bot,false
+bird.zvo.io,suspend,true,true,BirdSiteLIVE/Bot,false
+veenus.art,suspend,true,true,"",false
+birdbots.leptonics.com,suspend,true,true,BirdSiteLIVE/Bot,false
+birdlive.grupotd.nat.cu,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsite.am-institute.swiss,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsite.blazelight.dev,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsitelive.codingneko.com,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsite.kaijauch.de,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsite.kohl.dev,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.koyu.space,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.lakedrops.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.link,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.lipsia.casa,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.live,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.lluni.de,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.marschik.me,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.mastodon.land,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.mastodon.me.uk,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.miisu.net,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.monster,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.nickurak.ca,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsite.noitl.space,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.nytpu.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.oliviaappleton.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.otmns.net,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsite.outadoc.fr,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.personally.tech,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.platypush.tech,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.rap.social,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.retiolus.net,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.schafscheiss.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.seejy.ninja,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.skye.cx,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.slashdev.space,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.spectreos.de,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.stop.pe,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.tableflip.zone,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.tcjc.uk,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.tedandrachel.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.thorlaksson.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.toot.si,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.vish.link,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsite.vrparty.social,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsite.weiranzhang.com,suspend,true,true,BirdSiteLIVE/Bot,false
+waskuisland.com,suspend,true,true,"",false
+birdsite.jupiterslanding.social,suspend,true,true,BirdSiteLIVE/Bot,false
+wreck.rocks,suspend,true,true,"",false
+birdsite.k-fortytwo.de,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsite.lakedrops.com,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsite.miisu.net,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsite.rap.social,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsite.seejy.ninja,suspend,true,true,BirdSiteLIVE/Bot,false
+birdsitelive.chatty.monster,suspend,true,true,BirdSiteLIVE/Bot,true
+birdsite.vish.link,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsite.wilde.cloud,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsitelive.angrydome.au,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.baguette-it.social,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.bubbletea.dev,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.chatty.monster,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.codingneko.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.falschgold.net,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.ffvo.dev,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.janngobble.synology.me,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.kevinyank.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.laski.app,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.leonardwong.tech,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.loca.lt,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsitelive.mastodon.vm.statshelix.com,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.moistgarbage.info,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.nullreference.io,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsitelive.obey.social,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.opiumpost.org,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.peanutlasko.com,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsitelive.samedwards.ca,suspend,true,true,BirdSiteLIVE/Bot,false
 birdsitelive.sboulema.nl,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.self-hosted.site,suspend,true,true,BirdSiteLIVE/Bot,false
-birdsitelive.treffler.cloud,suspend,true,true,BirdSiteLIVE/Bot,false
-bitcoinhackers.org,silence,false,false,Tier 1,false
-bitcoinlizard.net,suspend,true,true,Tier 0,false
-bitcointv.com,suspend,true,true,Tier 0,false
-blacksun.social,silence,false,false,Tier 1,false
-blazingopen.space,silence,false,false,Tier 1,false
-blob.cat,suspend,true,true,Tier 0,false
-blockedur.mom,suspend,true,true,Tier 0,false
-blue.worldkey.io,suspend,true,true,BirdSiteLIVE/Bot,false
 bmu.beerinacan.com,suspend,true,true,BirdSiteLIVE/Bot,false
-boks.moe,suspend,true,true,Tier 0,false
 bot.gallion.sh,suspend,true,true,BirdSiteLIVE/Bot,false
-botsin.space,silence,false,false,Tier 1,false
-boymoder.biz,suspend,true,true,Tier 0,false
-boyter.org,silence,false,false,Tier 1,false
-bozgor.org,suspend,true,true,Tier 0,false
-brainsoap.net,suspend,true,true,Tier 0,false
-brapbarn.farm,silence,false,false,Tier 1,false
-breastmilk.club,suspend,true,true,Tier 0,false
-bridge.booots.tech,suspend,true,true,BirdSiteLIVE/Bot,false
 bridge.yopp.me,suspend,true,true,BirdSiteLIVE/Bot,false
-bridgebot.b-wells.us,suspend,true,true,BirdSiteLIVE/Bot,false
-brighteon.social,suspend,true,true,Tier 0,false
-brotka.st,silence,false,false,Tier 1,false
-bsite.spiderden.net,suspend,true,true,BirdSiteLIVE/Bot,false
 bsl.18m250.org,suspend,true,true,BirdSiteLIVE/Bot,false
-bsl.adamstas.com,suspend,true,true,BirdSiteLIVE/Bot,false
-bsl.allofti.me,suspend,true,true,BirdSiteLIVE/Bot,false
-bsl.beerinacan.com,suspend,true,true,BirdSiteLIVE/Bot,false
-bsl.compostintraining.club,suspend,true,true,BirdSiteLIVE/Bot,false
 bsl.fedi.grh.am,suspend,true,true,BirdSiteLIVE/Bot,false
 bsl.gronk.cc,suspend,true,true,BirdSiteLIVE/Bot,false
-bsl.m-n.live,suspend,true,true,BirdSiteLIVE/Bot,false
-bsl.pride-rock-labs.com,suspend,true,true,BirdSiteLIVE/Bot,false
 bsl.shrdr.de,suspend,true,true,BirdSiteLIVE/Bot,false
-bsl.sid500.com,suspend,true,true,BirdSiteLIVE/Bot,false
-bsl.tuxz.one,suspend,true,true,BirdSiteLIVE/Bot,false
-bsl.zogan.de,suspend,true,true,BirdSiteLIVE/Bot,false
-bubbletea.dev,silence,false,false,Tier 1,false
-bungle.online,suspend,true,true,Tier 0,false
-bussy.monster,silence,false,false,Tier 1,false
-bylines.social,silence,false,false,Tier 1,false
-cachapa.moe,suspend,true,true,Tier 0,false
-cachapa.xyz,suspend,true,true,Tier 0,false
-cafkafk.com,silence,false,false,Tier 1,false
-calobar.club,suspend,true,true,Tier 0,false
-campduffel.social,suspend,true,true,Tier 0,false
-carnivore.social,suspend,true,true,Tier 0,false
-catgirl.life,suspend,true,true,Tier 0,false
-cawfee.club,suspend,true,true,Tier 0,false
-cdrom.tokyo,silence,false,false,Tier 1,false
-chamba.social,silence,false,false,Tier 1,false
-childpawn.shop,suspend,true,true,Tier 0,false
-chudbuds.lol,suspend,true,true,Tier 0,false
-chudbuds.org,silence,false,false,Tier 1,false
-chungus.cc,silence,false,false,Tier 1,false
-ckpg.space,suspend,true,true,Tier 0,false
-clew.lol,suspend,true,true,Tier 0,false
-clubcyberia.co,suspend,true,true,Tier 0,false
-cobblestone.rocks,silence,false,false,Tier 1,false
-collapsitarian.io,suspend,true,true,Tier 0,false
-comfyboy.club,suspend,true,true,Tier 0,false
-comfysnug.space,silence,false,false,Tier 1,false
-contrapointsfan.club,suspend,true,true,Tier 0,false
-coolsite.win,suspend,true,true,Tier 0,false
-cp2.jaxbeach.social,suspend,true,true,BirdSiteLIVE/Bot,false
-crlf.ninja,silence,false,false,Tier 1,false
-crucible.world,suspend,true,true,Tier 0,false
-cryptodon.lol,suspend,true,true,Tier 0,false
-cryptotalks.social,silence,false,false,Tier 1,false
-cryptotooter.com,suspend,true,true,Tier 0,false
-csdisaster.club,silence,false,false,Tier 1,false
-cuicui.senpaga.net,suspend,true,true,BirdSiteLIVE/Bot,false
-cum.camp,suspend,true,true,Tier 0,false
-cum.salon,suspend,true,true,Tier 0,false
-cybercriminal.eu,suspend,true,true,Tier 0,false
-cyberretards.xyz,suspend,true,true,Tier 0,false
-cyberstorm.one,suspend,true,true,Tier 0,false
-d-fens.systems,suspend,true,true,Tier 0,false
-danksquad.org,suspend,true,true,Tier 0,false
-danksquad.xyz,silence,false,false,Tier 1,false
-dark-alexandr.net,silence,false,false,Tier 1,false
-darknight-coffee.org,suspend,true,true,Tier 0,false
-darlow.co.uk,silence,false,false,Tier 1,false
-daspr.io,suspend,true,true,Tier 0,false
-decayable.ink,suspend,true,true,Tier 0,false
-decept.org,suspend,true,true,Tier 0,false
-declin.eu,suspend,true,true,Tier 0,false
-dembased.xyz,suspend,true,true,Tier 0,false
-desupost.soy,suspend,true,true,Tier 0,false
-detroitriotcity.com,suspend,true,true,Tier 0,false
-dev-wiki.de,suspend,true,true,Tier 0,false
-dickkickextremist.xyz,suspend,true,true,Tier 0,false
-dingdash.com,suspend,true,true,Tier 0,false
-dirtyhobby.xyz,silence,false,false,Tier 1,false
-disqordia.space,suspend,true,true,Tier 0,false
-dissident.business,suspend,true,true,Tier 0,false
-dixies.land,suspend,true,true,Tier 0,false
-djsumdog.com,suspend,true,true,Tier 0,false
-dmgd.monster,silence,false,false,Tier 1,false
-dobbs.town,suspend,true,true,Tier 0,false
-doctors4covidethics.org,silence,false,false,Tier 1,false
-dogsex.org,silence,false,false,Tier 1,false
-drow.be,suspend,true,true,Tier 0,false
-dtzbts.xyz,suspend,true,true,Tier 0,false
-duckdns.org,silence,false,false,Tier 1,false
-eatthebugs.social,suspend,true,true,Tier 0,false
-echelon.pl,silence,false,false,Tier 1,false
-eeeeeeeee.eu,silence,false,false,Tier 1,false
-eientei.org,suspend,true,true,Tier 0,false
-eightpoint.app,silence,false,false,Tier 1,false
-elekk.xyz,silence,false,false,Tier 1,false
-elementality.org,suspend,true,true,Tier 0,false
-emacs.ch,silence,false,false,Tier 1,false
-endtimebelievers.com,suspend,true,true,Tier 0,false
-enes.lv,silence,false,false,Tier 1,false
-epenguin.com,suspend,true,true,Tier 0,false
-epsilon.social,suspend,true,true,Tier 0,false
-equel.social,silence,false,false,Tier 1,false
-esmailelbob.xyz,silence,false,false,Tier 1,false
-eveningzoo.club,suspend,true,true,Tier 0,false
-exploding-heads.com,silence,false,false,Tier 1,false
-expression.social,silence,false,false,Tier 1,false
-fbxl.net,suspend,true,true,Tier 0,false
-federated.fun,suspend,true,true,Tier 0,false
-fedi.site,silence,false,false,Tier 1,false
-fediverse-lite.com,silence,false,false,Tier 1,false
-fedposters.club,suspend,true,true,Tier 0,false
-feral.cafe,suspend,true,true,Tier 0,false
-fightthis.net,suspend,true,true,Tier 0,false
-firedragonstudios.com,suspend,true,true,Tier 0,false
-firefaithfellowship.com,suspend,true,true,Tier 0,false
-fluf.club,suspend,true,true,Tier 0,false
-foxfam.club,suspend,true,true,Tier 0,false
-fr13nd5.com,suspend,true,true,Tier 0,false
-freak.university,suspend,true,true,Tier 0,false
-freeatlantis.com,suspend,true,true,Tier 0,false
-freecumextremist.com,suspend,true,true,Tier 0,false
-freedomstrike.net,suspend,true,true,Tier 0,false
-freedomstrike.org,suspend,true,true,Tier 0,false
-freesoftwareextremist.com,suspend,true,true,Tier 0,false
-freespeech.club,silence,false,false,Tier 1,false
-freespeech.group,suspend,true,true,Tier 0,false
-freespeechextremist.com,suspend,true,true,Tier 0,false
-freetalklive.com,suspend,true,true,Tier 0,false
-freethinkers.lgbt,suspend,true,true,Tier 0,false
-freewahaextremist.wtf,silence,false,false,Tier 1,false
-freezepeach.online,silence,false,false,Tier 1,false
-freezepeach.xyz,suspend,true,true,Tier 0,false
-frennet.xyz,suspend,true,true,Tier 0,false
-froth.zone,suspend,true,true,Tier 0,false
-fulltermprivacy.com,suspend,true,true,Tier 0,false
-fuwa.pink,silence,false,false,Tier 1,false
-gab.ai,suspend,true,true,Tier 0,false
-gab.com,silence,false,false,Tier 1,false
-gab.io,silence,false,false,Tier 1,false
-gabe.rocks,suspend,true,true,Tier 0,false
-gabfed.com,silence,false,false,Tier 1,false
-gameliberty.club,suspend,true,true,Tier 0,false
-gamers.exposed,suspend,true,true,Tier 0,false
-gangstalking.services,suspend,true,true,Tier 0,false
-gasthe.lgbt,silence,false,false,Tier 1,false
-gateway.occm.cc,suspend,true,true,BirdSiteLIVE/Bot,false
-gearlandia.haus,suspend,true,true,Tier 0,false
-genderheretics.xyz,suspend,true,true,Tier 0,false
-gensokyo.club,suspend,true,true,Tier 0,false
-gentoo.live,suspend,true,true,Tier 0,false
-geofront.rocks,suspend,true,true,Tier 0,false
-ghetti.monster,suspend,true,true,Tier 0,false
-gigaohm.bio,silence,false,false,Tier 1,false
-gitmo.life,silence,false,false,Tier 1,false
-gizode.com,silence,false,false,Tier 1,false
-gleasonator.com,suspend,true,true,Tier 0,false
-glee.li,suspend,true,true,Tier 0,false
-glindr.org,suspend,true,true,Tier 0,false
-glowers.club,suspend,true,true,Tier 0,false
-gnuhacker.org,silence,false,false,Tier 1,false
-goreslut.xyz,silence,false,false,Tier 1,false
-gorf.pub,suspend,true,true,Tier 0,false
-gorf.space,silence,false,false,Tier 1,false
-goyim.app,suspend,true,true,Tier 0,false
-goyslop.cafe,suspend,true,true,Tier 0,false
-gravure.club,silence,false,false,Tier 1,false
-guizzyordi.info,suspend,true,true,Tier 0,false
-haeder.net,suspend,true,true,Tier 0,false
-hallsofamenti.io,suspend,true,true,Tier 0,false
-handholding.io,suspend,true,true,Tier 0,false
-handicapped.tk,suspend,true,true,Tier 0,false
-headpat.cafe,silence,false,false,Tier 1,false
-hedgehoghunter.club,suspend,true,true,Tier 0,false
-helladoge.com,suspend,true,true,Tier 0,false
-hellthread.church,silence,false,false,Tier 1,false
-hendrixgames.com,suspend,true,true,Tier 0,false
-hentai.baby,suspend,true,true,Tier 0,false
-hermit.cafe,silence,false,false,Tier 1,false
-hermitmountain.top,suspend,true,true,Tier 0,false
-hidamari.apartments,suspend,true,true,Tier 0,false
-himk.am,silence,false,false,Tier 1,false
-hirad.it,silence,false,false,Tier 1,false
-hitchhiker.social,suspend,true,true,Tier 0,false
-homd.xyz,suspend,true,true,Tier 0,false
-honkwerx.tech,suspend,true,true,Tier 0,false
-hornyjail.pro,suspend,true,true,Tier 0,false
-hunk.city,suspend,true,true,Tier 0,false
-husk.site,suspend,true,true,Tier 0,false
-iamterminally.online,silence,false,false,Tier 1,false
-iddqd.social,suspend,true,true,Tier 0,false
-idolheaven.org,silence,false,false,Tier 1,false
-ignorelist.com,suspend,true,true,Tier 0,false
-imirhil.fr,suspend,true,true,Tier 0,false
-impeccable.social,silence,false,false,Tier 1,false
-inferencium.net,suspend,true,true,Tier 0,false
-instinctd.com,suspend,true,true,BirdSiteLIVE/Bot,false
-intkos.link,suspend,true,true,Tier 0,false
-inumbra.xyz,suspend,true,true,Tier 0,false
-ironbug.org,suspend,true,true,Tier 0,false
-jir.moe,silence,false,false,Tier 1,false
-jorts.horse,silence,false,false,Tier 1,false
-journa.host,silence,false,false,Tier 1,false
-justbros.xyz,suspend,true,true,Tier 0,false
-justicewarrior.social,suspend,true,true,Tier 0,false
-jvpiter.net,silence,false,false,Tier 1,false
-kabuki.club,suspend,true,true,Tier 0,false
-kawa-kun.com,suspend,true,true,Tier 0,false
-kawen.space,suspend,true,true,Tier 0,false
-kenhbit.com,suspend,true,true,Tier 0,false
-khajiit.tech,silence,false,false,Tier 1,false
-kibitz.cloud,silence,false,false,Tier 1,false
-kitsunemimi.club,suspend,true,true,Tier 0,false
-kiwifarms.cc,suspend,true,true,Tier 0,false
-kiwifarms.is,suspend,true,true,Tier 0,false
-kiwifarms.net,suspend,true,true,Tier 0,false
-kolektiva.social,silence,false,false,Tier 1,false
-kompost.cz,suspend,true,true,Tier 0,false
-kotobank.ch,silence,false,false,Tier 1,false
-kurosawa.moe,suspend,true,true,Tier 0,false
-kyaruc.moe,suspend,true,true,Tier 0,false
-kys.moe,suspend,true,true,Tier 0,false
-lain.com,silence,false,false,Tier 1,false
-lain.gay,suspend,true,true,Tier 0,false
-lain.la,suspend,true,true,Tier 0,false
-lain.sh,suspend,true,true,Tier 0,false
-lainchan.gay,silence,false,false,Tier 1,false
-leadslinger.org,silence,false,false,Tier 1,false
-leafposter.club,suspend,true,true,Tier 0,false
-leftychan.net,suspend,true,true,Tier 0,false
 leonardwong.dev,suspend,true,true,BirdSiteLIVE/Bot,false
-letsalllovela.in,suspend,true,true,Tier 0,false
-lewdieheaven.com,suspend,true,true,Tier 0,false
-lgbtfree.zone,silence,false,false,Tier 1,false
-liberal.city,silence,false,false,Tier 1,false
-liberdon.com,suspend,true,true,Tier 0,false
-librem.one,suspend,true,true,Tier 0,false
-librenet.co.za,suspend,true,true,Tier 0,false
-librosphere.fr,silence,false,false,Tier 1,false
-libtar.de,silence,false,false,Tier 1,false
-ligma.pro,suspend,true,true,Tier 0,false
-lizards.live,suspend,true,true,Tier 0,false
-logografos.com,suspend,true,true,Tier 0,false
-loli.best,silence,false,false,Tier 1,false
-lolicon.rocks,suspend,true,true,Tier 0,false
-lolison.network,suspend,true,true,Tier 0,false
-lolison.top,suspend,true,true,Tier 0,false
-lolitube.moe,silence,false,false,Tier 1,false
-longyap.name.my,suspend,true,true,Tier 0,false
-loveforlandlords.com,suspend,true,true,Tier 0,false
-lovingexpressions.net,suspend,true,true,Tier 0,false
-lucasvl.nl,suspend,true,true,Tier 0,false
-mahodou.moe,suspend,true,true,Tier 0,false
-makemysarcophagus.com,suspend,true,true,Tier 0,false
-maladaptive.art,suspend,true,true,Tier 0,false
-mapsupport.de,suspend,true,true,Tier 0,false
-marsey.club,suspend,true,true,Tier 0,false
-marsey.moe,suspend,true,true,Tier 0,false
-masochi.st,suspend,true,true,Tier 0,false
-mast.socialspill.com,suspend,true,true,BirdSiteLIVE/Bot,false
-mastertibbles.co.uk,suspend,true,true,Tier 0,false
-masthead.social,suspend,true,true,Tier 0,false
-mastinator.com,suspend,true,true,Tier 0,false
-mastodon.cf,suspend,true,true,Tier 0,false
-mastodon.cloud,silence,false,false,Tier 1,false
-mastodon.la,suspend,true,true,Tier 0,false
-mastodon.ml,silence,false,false,Tier 1,false
-mastodon.se,suspend,true,true,Tier 0,false
-mastodon.socialspill.com,suspend,true,true,BirdSiteLIVE/Bot,false
-mastodon.top,silence,false,false,Tier 1,false
-mastodong.lol,suspend,true,true,Tier 0,false
-meatbag.app,silence,false,false,Tier 1,false
-mediastodon.com,silence,false,false,Tier 1,false
-meld.de,suspend,true,true,Tier 0,false
-meme.moe,suspend,true,true,Tier 0,false
-merovingian.club,suspend,true,true,Tier 0,false
-midwaytrades.com,suspend,true,true,Tier 0,false
-miku-enthusiast.club,suspend,true,true,Tier 0,false
-milker.cafe,suspend,true,true,Tier 0,false
-milkers.online,silence,false,false,Tier 1,false
-minidisc.tokyo,suspend,true,true,Tier 0,false
-miniwa.moe,silence,false,false,Tier 1,false
-mirr0r.city,suspend,true,true,Tier 0,false
-miruku.cafe,suspend,true,true,Tier 0,false
-misskey-forkbomb.cf,suspend,true,true,Tier 0,false
-misskey.io,silence,false,false,Tier 1,false
-mitra.social,suspend,true,true,Tier 0,false
-moa.st,suspend,true,true,Tier 0,false
-monads.online,silence,false,false,Tier 1,false
-mooo.com,silence,false,false,Tier 1,false
-morale.ch,suspend,true,true,Tier 0,false
-mostr.pub,suspend,true,true,Tier 0,false
-mouse.services,suspend,true,true,Tier 0,false
-mrhands.horse,suspend,true,true,Tier 0,false
-mstdn.io,silence,false,false,Tier 1,false
-mstdn.jp,suspend,true,true,Tier 0,false
-mu.zaitcev.nu,silence,false,false,Tier 1,false
-mugicha.club,suspend,true,true,Tier 0,false
-murky.club,silence,false,false,Tier 1,false
-nalocal519.social,suspend,true,true,Tier 0,false
-narrativerry.xyz,suspend,true,true,Tier 0,false
-natehiggers.online,suspend,true,true,Tier 0,false
-nationaljustice.social,silence,false,false,Tier 1,false
-nazi.social,suspend,true,true,Tier 0,false
-neckbeard.xyz,suspend,true,true,Tier 0,false
-needs.vodka,suspend,true,true,Tier 0,false
-neenster.org,suspend,true,true,Tier 0,false
-neet.church,silence,false,false,Tier 1,false
-nekocave.xyz,suspend,true,true,Tier 0,false
-netz.org,silence,false,false,Tier 1,false
-netzsphaere.xyz,silence,false,false,Tier 1,false
-news.twtr.plus,suspend,true,true,BirdSiteLIVE/Bot,false
-newsie.social,silence,false,false,Tier 1,false
-nicecrew.digital,suspend,true,true,Tier 0,false
-nightshift.social,suspend,true,true,Tier 0,false
-niscii.xyz,suspend,true,true,Tier 0,false
-nixnet.social,suspend,true,true,Tier 0,false
-nnia.space,suspend,true,true,Tier 0,false
-noagendasocial.com,suspend,true,true,Tier 0,false
-noagendasocial.nl,suspend,true,true,Tier 0,false
-noagendatube.com,suspend,true,true,Tier 0,false
-nobodyhasthe.biz,suspend,true,true,Tier 0,false
-noc.social,silence,false,false,Tier 1,false
-normie.cafe,suspend,true,true,Tier 0,false
-novoa.nagoya,suspend,true,true,Tier 0,false
-nuked.social,silence,false,false,Tier 1,false
-nukem.biz,suspend,true,true,Tier 0,false
-nya.gay,suspend,true,true,Tier 0,false
-obo.sh,suspend,true,true,Tier 0,false
-onionfarms.org,suspend,true,true,Tier 0,false
 optiplex.wallaby-bass.ts.net,suspend,true,true,BirdSiteLIVE/Bot,false
-ortodogs.info,silence,false,false,Tier 1,false
-otakufarms.com,suspend,true,true,Tier 0,false
-oti.st,suspend,true,true,Tier 0,false
-outerheaven.club,silence,false,false,Tier 1,false
-outerkosm.us,suspend,true,true,Tier 0,false
-outpoa.st,suspend,true,true,Tier 0,false
-pawlicker.com,suspend,true,true,Tier 0,false
-pawoo.net,suspend,true,true,Tier 0,false
-paws.moe,silence,false,false,Tier 1,false
-paypig.org,suspend,true,true,Tier 0,false
-pech.tech,silence,false,false,Tier 1,false
-pedo.school,suspend,true,true,Tier 0,false
-pengi-san.moe,suspend,true,true,Tier 0,false
-phreedom.tk,silence,false,false,Tier 1,false
-piazza.today,suspend,true,true,Tier 0,false
-pibvt.net,suspend,true,true,Tier 0,false
-pieville.net,suspend,true,true,Tier 0,false
-pirateradio.social,silence,false,false,Tier 1,false
-pisskey.io,suspend,true,true,Tier 0,false
-pizzaf.art,suspend,true,true,Tier 0,false
-pkteerium.xyz,suspend,true,true,Tier 0,false
-plagu.ee,suspend,true,true,Tier 0,false
-platypush.tech,silence,false,false,Tier 1,false
-pmth.us,suspend,true,true,Tier 0,false
-poa.st,suspend,true,true,Tier 0,false
-poast.org,suspend,true,true,Tier 0,false
-poast.tv,suspend,true,true,Tier 0,false
-polaris-1.work,suspend,true,true,Tier 0,false
 polaris.bonespr.it,suspend,true,true,BirdSiteLIVE/Bot,false
-politbird.twexodus.top,suspend,true,true,BirdSiteLIVE/Bot,false
-pone.social,suspend,true,true,Tier 0,false
-pooper.social,suspend,true,true,Tier 0,false
-poridge.club,suspend,true,true,Tier 0,false
-porntoot.com,silence,false,false,Tier 1,false
-posix.gay,suspend,true,true,Tier 0,false
-poster.place,suspend,true,true,Tier 0,false
-pouque.net,silence,false,false,Tier 1,false
-poweredbycocaine.com,suspend,true,true,Tier 0,false
-press.coop,suspend,true,true,Tier 0,false
-preteengirls.biz,suspend,true,true,Tier 0,false
-privex.social,suspend,true,true,Tier 0,false
-probablyfreespeech.com,silence,false,false,Tier 1,false
-projectftm.com,silence,false,false,Tier 1,false
-prospeech.space,suspend,true,true,Tier 0,false
-pseudo-whiskey.bar,suspend,true,true,Tier 0,false
-psion.co,suspend,true,true,Tier 0,false
-pso.li,silence,false,false,Tier 1,false
-pube.tk,suspend,true,true,Tier 0,false
-qoto.org,silence,false,false,Tier 1,false
-quanta.wiki,suspend,true,true,Tier 0,false
-quey.la,silence,false,false,Tier 1,false
-quodverum.com,suspend,true,true,Tier 0,false
-r18.social,suspend,true,true,Tier 0,false
-rage.lol,suspend,true,true,Tier 0,false
-rageparty.club,silence,false,false,Tier 1,false
-rakket.app,suspend,true,true,Tier 0,false
-rapefeminists.network,suspend,true,true,Tier 0,false
-rapemeat.solutions,suspend,true,true,Tier 0,false
-raspberrypi.social,silence,false,false,Tier 1,false
-rayci.st,silence,false,false,Tier 1,false
-rcsocial.net,suspend,true,true,Tier 0,false
-rdrama.cc,suspend,true,true,Tier 0,false
-rebased.io,silence,false,false,Tier 1,false
-rebased.network,silence,false,false,Tier 1,false
-rebelbase.site,suspend,true,true,Tier 0,false
-redpill-insight.com,silence,false,false,Tier 1,false
-refusal.biz,suspend,true,true,Tier 0,false
-refusal.llc,suspend,true,true,Tier 0,false
-refuse2.work,silence,false,false,Tier 1,false
-reisen.church,silence,false,false,Tier 1,false
-relay.scottsmall.org,suspend,true,true,BirdSiteLIVE/Bot,false
-remnant.social,silence,false,false,Tier 1,false
-repl.co,suspend,true,true,Tier 0,false
-republic.red,suspend,true,true,Tier 0,false
-respublicae.eu,silence,false,false,Tier 1,false
-retardedniggers.forsale,suspend,true,true,Tier 0,false
-rodent.life,silence,false,false,Tier 1,false
-rojogato.com,suspend,true,true,Tier 0,false
-rot.gives,suspend,true,true,Tier 0,false
-roysbeer.place,suspend,true,true,Tier 0,false
-ruinouspowe.rs,suspend,true,true,Tier 0,false
-ryona.agency,suspend,true,true,Tier 0,false
-salastil.com,silence,false,false,Tier 1,false
-satoshishop.de,suspend,true,true,Tier 0,false
-saynoto.lgbt,suspend,true,true,Tier 0,false
-scarlet.house,silence,false,false,Tier 1,false
-schwartzwelt.xyz,suspend,true,true,Tier 0,false
-scots.network,suspend,true,true,Tier 0,false
-seal.cafe,suspend,true,true,Tier 0,false
-sealion.club,silence,false,false,Tier 1,false
-seikora.one,silence,false,false,Tier 1,false
-seo.chat,silence,false,false,Tier 1,false
-servernerds.net,silence,false,false,Tier 1,false
-shadowsocial.org,suspend,true,true,Tier 0,false
-sharivegas.com,suspend,true,true,Tier 0,false
-sheep.network,suspend,true,true,Tier 0,false
-shigusegubu.club,suspend,true,true,Tier 0,false
-shitpost.cloud,suspend,true,true,Tier 0,false
-shitpost.racing,silence,false,false,Tier 1,false
-shitposter.club,suspend,true,true,Tier 0,false
-shortstackran.ch,suspend,true,true,Tier 0,false
-shota.house,suspend,true,true,Tier 0,false
-shota.social,suspend,true,true,Tier 0,false
-shotatube.xyz,suspend,true,true,Tier 0,false
-shpposter.club,silence,false,false,Tier 1,false
-shrimpcam.pw,suspend,true,true,Tier 0,false
-shrimpposter.club,suspend,true,true,Tier 0,false
-shrine.moe,silence,false,false,Tier 1,false
-silliness.observer,suspend,true,true,Tier 0,false
-singing.dog,silence,false,false,Tier 1,false
-skinheads.eu,suspend,true,true,Tier 0,false
-skinheads.io,suspend,true,true,Tier 0,false
-skinheads.social,suspend,true,true,Tier 0,false
-skinheads.uk,suspend,true,true,Tier 0,false
-skinnyver.se,suspend,true,true,Tier 0,false
-skippers-bin.com,suspend,true,true,Tier 0,false
-skyshanty.xyz,suspend,true,true,Tier 0,false
-slash.cl,suspend,true,true,Tier 0,false
-sleepy.cafe,suspend,true,true,Tier 0,false
-smittenkittens.xyz,silence,false,false,Tier 1,false
-smuglo.li,suspend,true,true,Tier 0,false
-sneak.berlin,suspend,true,true,Tier 0,false
-sneed.social,suspend,true,true,Tier 0,false
-sneed.vip,silence,false,false,Tier 1,false
-socialgoblins.club,silence,false,false,Tier 1,false
-socialloods.nl,suspend,true,true,BirdSiteLIVE/Bot,false
-solagg.com,silence,false,false,Tier 1,false
-sonichu.com,suspend,true,true,Tier 0,false
+press.coop,suspend,false,false,BirdSiteLIVE/Bot,false
+femboys.love,silence,false,false,"",true
+qoto.org,silence,false,false,"",false
+beefyboys.win,suspend,false,false,"",true
+kolektiva.social,silence,false,false,"",false
+calobar.club,suspend,false,false,"",false
+campduffel.social,suspend,false,false,"",false
+carnivore.social,suspend,false,false,"",false
+beepboop.ga,suspend,false,false,"",false
+bibly.com,suspend,false,false,"",false
+bikeshed.party,suspend,false,false,"",false
+birds.garden,suspend,false,false,"",false
+activitypub-troll.cf,suspend,false,false,Malicious,false
+activitypub-proxy.cf,suspend,false,false,Malicious,false
+bitcointv.com,suspend,false,false,"",false
+blob.cat,suspend,false,false,"",false
+troll.cafe,suspend,false,false,"",false
+unperson.us,suspend,false,false,"",false
+botsin.space,silence,false,false,"",false
+witches.live,silence,false,false,"",false
+respublicae.eu,silence,false,false,"",false
 sovran.social,suspend,true,true,BirdSiteLIVE/Bot,false
-soykaf.com,suspend,true,true,Tier 0,false
-spearman.xyz,silence,false,false,Tier 1,false
-sperg.city,silence,false,false,Tier 1,false
-spinster.xyz,suspend,true,true,Tier 0,false
-spook.social,silence,false,false,Tier 1,false
-springbo.cc,suspend,true,true,Tier 0,false
-squid.kids,suspend,true,true,Tier 0,false
-starnix.network,suspend,true,true,Tier 0,false
-stereophonic.space,suspend,true,true,Tier 0,false
-stormcloak.info,silence,false,false,Tier 1,false
-strelizia.net,suspend,true,true,Tier 0,false
-suya.place,silence,false,false,Tier 1,false
-syspxl.xyz,suspend,true,true,Tier 0,false
+birdsite.personally.tech,suspend,true,true,BirdSiteLIVE/Bot,false
 t.beergeek.social,suspend,true,true,BirdSiteLIVE/Bot,false
-t.l3r.me,suspend,true,true,BirdSiteLIVE/Bot,false
-t2m.davinkevin.fr,suspend,true,true,BirdSiteLIVE/Bot,false
-takesama.com,suspend,true,true,Tier 0,false
-talk-here.com,silence,false,false,Tier 1,false
-tastingtraffic.net,suspend,true,true,Tier 0,false
-taullo.social,silence,false,false,Tier 1,false
-teci.world,suspend,true,true,Tier 0,false
-terrible.place,suspend,true,true,Tier 0,false
-test.misskey.cf,suspend,true,true,BirdSiteLIVE/Bot,false
-the9thcircle.club,silence,false,false,Tier 1,false
-theapex.social,suspend,true,true,Tier 0,false
-thebag.social,suspend,true,true,Tier 0,false
-thechimp.zone,suspend,true,true,Tier 0,false
-thepostearthdestination.com,suspend,true,true,Tier 0,false
-theres.life,suspend,true,true,Tier 0,false
-thisisjoes.site,silence,false,false,Tier 1,false
-tinybirdsite.com,suspend,true,true,BirdSiteLIVE/Bot,false
-tkammer.de,suspend,true,true,Tier 0,false
-tnd.lol,silence,false,false,Tier 1,false
-toad.social,silence,false,false,Tier 1,false
-toot.pt,silence,false,false,Tier 1,false
-touha.me,suspend,true,true,Tier 0,false
-troll.cafe,suspend,true,true,Tier 0,false
-trumpislovetrumpis.life,suspend,true,true,Tier 0,false
-truthsocial.co.in,suspend,true,true,Tier 0,false
-truthsocial.com,silence,false,false,Tier 1,false
-truthsocialpro.org,silence,false,false,Tier 1,false
-tweetbridge.kogasa.de,suspend,true,true,BirdSiteLIVE/Bot,false
-tweetbridge.mollys.social,suspend,true,true,BirdSiteLIVE/Bot,false
-tweetrans.ff15.eu,suspend,true,true,BirdSiteLIVE/Bot,false
-tweets.icu,suspend,true,true,BirdSiteLIVE/Bot,false
-tweets.puddle.town,suspend,true,true,BirdSiteLIVE/Bot,false
 twit.cryolog.in,suspend,true,true,BirdSiteLIVE/Bot,false
-twitbridge.click,suspend,true,true,BirdSiteLIVE/Bot,false
-twitiverse.com,silence,false,false,Tier 1,false
 twitter.829.hu,suspend,true,true,BirdSiteLIVE/Bot,false
-twitter.cryobyte.net,suspend,true,true,BirdSiteLIVE/Bot,false
-twitter.dev.holtwick.de,suspend,true,true,BirdSiteLIVE/Bot,false
-twitter.doesnotexist.club,suspend,true,true,BirdSiteLIVE/Bot,false
 twitter.felixmueller.social,suspend,true,true,BirdSiteLIVE/Bot,false
-twitter.grants.cafe,suspend,true,true,BirdSiteLIVE/Bot,false
 twitter.kfem.cat,suspend,true,true,BirdSiteLIVE/Bot,false
-twitter.moxr.de,suspend,true,true,BirdSiteLIVE/Bot,false
-twitter.piriklub.eu,suspend,true,true,BirdSiteLIVE/Bot,false
 twitter.savvas.cloud,suspend,true,true,BirdSiteLIVE/Bot,false
 twitter.toots.ro,suspend,true,true,BirdSiteLIVE/Bot,false
 twitter.tresor.eyhoff.de,suspend,true,true,BirdSiteLIVE/Bot,false
 twitter.ukd.social,suspend,true,true,BirdSiteLIVE/Bot,false
-twitterbridge.mastodon.maki0419.com,suspend,true,true,BirdSiteLIVE/Bot,false
-twitterfeed.furrypaws.cc,suspend,true,true,BirdSiteLIVE/Bot,false
 twittergateway.10247.berlin,suspend,true,true,BirdSiteLIVE/Bot,false
-twt.pufferzone.racing,suspend,true,true,BirdSiteLIVE/Bot,false
-twtr.3q3.de,suspend,true,true,BirdSiteLIVE/Bot,false
-twtr.astra.lol,suspend,true,true,BirdSiteLIVE/Bot,false
 twtr.ingeechat.party,suspend,true,true,BirdSiteLIVE/Bot,false
-twtr.plus,suspend,true,true,BirdSiteLIVE/Bot,false
 twtrbridge.de,suspend,true,true,BirdSiteLIVE/Bot,false
-tyil.nl,suspend,true,true,Tier 0,false
-ua-fediland.de,suspend,true,true,Tier 0,false
-udongein.xyz,silence,false,false,Tier 1,false
-ungoverned.social,silence,false,false,Tier 1,false
-unperson.us,suspend,true,true,Tier 0,false
-unsafe.space,suspend,true,true,Tier 0,false
-urchan.org,suspend,true,true,Tier 0,false
-ursal.zone,suspend,true,true,Tier 0,false
-urspringer.de,suspend,true,true,Tier 0,false
-uwu.social,suspend,true,true,Tier 0,false
-varishangout.net,suspend,true,true,Tier 0,false
-veenus.art,silence,false,false,Tier 1,false
-vfpmedia.com,suspend,true,true,Tier 0,false
-violence.church,silence,false,false,Tier 1,false
-vladtepesblog.com,suspend,true,true,Tier 0,false
-vrij.social,suspend,true,true,Tier 0,false
-vtweet.live,suspend,true,true,BirdSiteLIVE/Bot,false
-wagesofsinisdeath.com,silence,false,false,Tier 1,false
-waifuism.life,suspend,true,true,Tier 0,false
-wake.st,silence,false,false,Tier 1,false
-waskuisland.com,silence,false,false,Tier 1,false
-weeaboo.space,suspend,true,true,Tier 0,false
-were.social,silence,false,false,Tier 1,false
-whinge.house,suspend,true,true,Tier 0,false
-whinge.town,suspend,true,true,Tier 0,false
-white.fly.dev,suspend,true,true,BirdSiteLIVE/Bot,false
-whitewomen.dog,suspend,true,true,Tier 0,false
-wideboys.org,suspend,true,true,Tier 0,false
-willtrade.org,silence,false,false,Tier 1,false
-witches.live,silence,false,false,Tier 1,false
-wolfgirl.bar,suspend,true,true,Tier 0,false
-woof.foxxo.gay,suspend,true,true,BirdSiteLIVE/Bot,false
-workers.dev,suspend,true,true,Tier 0,false
-worm.pink,suspend,true,true,Tier 0,false
-wreck.rocks,silence,false,false,Tier 1,false
-writehere.is,suspend,true,true,Tier 0,false
-wxw.moe,silence,false,false,Tier 1,false
-xenofem.me,suspend,true,true,Tier 0,false
-xhais.love,suspend,true,true,Tier 0,false
-xmrposter.club,suspend,true,true,Tier 0,false
-xn--p1abe3d.xn--80asehdb,suspend,true,true,Tier 0,false
-yggdrasil.social,suspend,true,true,Tier 0,false
-youjo.love,suspend,true,true,Tier 0,false
-yukioke.com,suspend,true,true,Tier 0,false
-zwezo.o-k-i.net,suspend,true,true,BirdSiteLIVE/Bot,false
-zztails.gay,suspend,true,true,Tier 0,false
+t2m.davinkevin.fr,suspend,true,true,BirdSiteLIVE/Bot,false
+bird.makeup.hwarf.com,suspend,true,true,BirdSiteLIVE/Bot,false
+misskey.io,suspend,false,false,"",false
+ebin.club,suspend,false,false,"",false
