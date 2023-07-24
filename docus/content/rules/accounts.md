@@ -1,10 +1,10 @@
 ---
-title: New Accounts and Approvals
+title: Account Approvals
 ---
 
-# New Accounts and Approvals
+# Account Approvals
 
-In order to keep the number of junk accounts on vmst•io as low as possible, we utilize a review process for account creation that includes both manual and automated processes:
+In order to keep the number of junk accounts on vmst.io as low as possible, we utilize a review process for account creation that includes both manual and automated processes:
 
 |       **Method**      | **Automatic** | **Manual** |
 |-----------------------|---------------|------------|
@@ -19,7 +19,7 @@ New accounts that do not complete e-mail and [hCaptcha](https://www.hcaptcha.com
 
 ## Moderator Approval
 
-All new accounts are subject to moderator/administrator review and may be flagged for additional verification if required.
+All new accounts are subject to moderator review and may be flagged for additional verification if required.
 
 ## Preserve an Account
 
