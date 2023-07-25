@@ -6,7 +6,7 @@ title: Bot Accounts
 
 Bot accounts are not prohibited on vmst.io, so long as they provide some clear purpose or value to either the vmst.io community or wider Fediverse.
 
-We have a few of internal Bots:
+We have several internal Bots:
 
 - <a rel="me" href="https://vmst.io/@modbot">@modbot</a>
 - <a rel="me" href="https://vmst.io/@funding">@funding</a>
