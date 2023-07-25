@@ -1,9 +1,9 @@
 ---
-title: Brands & Bots
+title: Brand Accounts
 description: Are you just here to sell something?
 ---
 
-# Brands & Bots
+# Brand Accounts
 
 We encourage you to be yourself on vmst·io. We understand that not every account on social media is a person, even if there are technically people behind them.
 
