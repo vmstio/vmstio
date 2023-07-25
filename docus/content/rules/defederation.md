@@ -48,8 +48,9 @@ At this time vmst.io does not plan to defederate from Threads, although we may t
 
 ### Privacy Implications
 
-Mastodon instances do not broadcast private data like e-mail or IP address you use to other instances.
+Mastodon instances do not broadcast private data like e-mail or the IP address you use to other instances.
 The software is built on the reasonable assumption that third party servers cannot be trusted.
+
 vmst.io already caches and reprocess images and videos for you to view, so that the originating server cannot get your IP address, browser name, or time of access.
 Meta, or any other instance that we federate with, cannot get your private data or track you across the web simply by us being federated with them.
 
