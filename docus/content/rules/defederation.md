@@ -51,10 +51,13 @@ At this time vmst.io does not plan to defederate from Threads, although we may t
 Mastodon instances do not broadcast private data like e-mail or the IP address you use to other instances.
 The software is built on the reasonable assumption that third party servers cannot be trusted.
 
-vmst.io already caches and reprocess images and videos for you to view, so that the originating server cannot get your IP address, browser name, or time of access.
-Meta, or any other instance that we federate with, cannot get your private data or track you across the web simply by us being federated with them.
+vmst.io servers download, process and cache images and videos for you to view. Not only is this more efficent when multiple users want to view the same content from another instance, it helps to preserve your privacy by acting as a proxy to that resource. Unless you choose to click through to the source content the originating server cannot get your IP address, browser name, or time of access.
 
-If your Mastodon account is already publicly accessible, search engines and other systems can already index your posted content, if they choose to do so.
+Meta, or any other instance that we federate with, cannot fingerprint or use other private data or track you across the web simply by us being federated with them.
+
+Some folks are concerned that content posted on their instance will be federated to Meta when someone using Threads follows them, allowing Meta to index that content.
+While this is a valid concern, Mastodon provides controls for individual users to block any domain they choose, so if this is a concern you can defederate yourself from Threads at any time while remaining a member of vmst.io.
+However, if your Mastodon account page (ex: [https://vmst.io/@vmstan](https://vmst.io/@vmstan)) is already publicly accessible, search engines and other systems can already index your posted content.
 
 ### Advertising
 
