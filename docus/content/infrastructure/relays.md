@@ -9,19 +9,13 @@ This helps with content discovery and more to complete conversation threads and 
 
 Federation and content discovery still happen without relays, but relays create an express lane between instances who participate.
 
-## Our Relay
-
-vmst.io operates it's own relay at [relay.vmst.io](https://relay.vmst.io) which is currently open to anyone, but servers may be moderated at our discretion.
-
 ## Relays Participation
 
 vmst.io participate in the following relay systems:
 
-- [relay.infosec.exchange](https://relay.infosec.exchange)
 - [relay.universeodon.com](https://relay.universeodon.com)
+- [relay.infosec.exchange](https://relay.infosec.exchange)
 - [relay.publicsquare.global](https://relay.publicsquare.global)
-- [relay.toot.io](https://relay.toot.io)
-- [relay.intahnet.co.uk](https://relay.intahnet.co.uk)
 - [rel.re](https://rel.re)
 - [mastodon-relay.thedoodleproject.net](https://mastodon-relay.thedoodleproject.net)
 - [bigrelay.social](https://bigrelay.social)
