@@ -11,7 +11,7 @@ In order to keep the number of junk accounts on vmst.io as low as possible, we a
 
 ::list{type="success"}
 - Sign up for an account at [vmst.io/auth/sign_up](https://vmst.io/auth/sign_up)
-- Verify your provided email address is valid by clicking a link we'll send to you from [mastodon@ses.vmst.io](/infrastructure/mailer)
+- Verify your provided email address by clicking a link we'll send to you from [mastodon@ses.vmst.io](/infrastructure/mailer)
 - Complete a [hCaptcha](https://www.hcaptcha.com) verification
 ::
 
