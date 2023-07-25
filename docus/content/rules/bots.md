@@ -22,4 +22,4 @@ If you are the developer of a Mastodon client or another ActivityPub/Fediverse p
 
 While we are generally supportive of such things we like to know ahead of time should it cause disruptions in service to other members.
 
-Development accounts designed to scrape and or index user data via our API or other means, **are prohibited.**
+Development accounts designed to scrape and/or index user data via our API or other means, **are prohibited.**
