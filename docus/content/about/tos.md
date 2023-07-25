@@ -104,7 +104,7 @@ This does not include trusted third parties who assist us in operating our site,
 We may also release your information when we believe release is appropriate to comply with valid legal requests, enforce our site policies, or protect the rights, property, or safety of ourselves and others.
 
 Your public content may be downloaded by other servers in the network.
-Your public and followers-only posts are delivered to the servers where your followers reside, and direct messages are delivered to the servers of the recipients, in so far as those followers or recipients reside on a different server than this.
+Your public and followers-only posts are delivered to the servers where your followers reside, and private mentions are delivered to the servers of the recipients, in so far as those followers or recipients reside on a different server than this.
 
 When you authorize an application to use your account, depending on the scope of permissions you approve, it may access your public profile information, your following list, your followers, your lists, all your posts, and your favorites.
 

@@ -4,7 +4,7 @@ title: Data Security
 
 # Data Security
 
-Unless it's required of us to investigate a reported instance of abuse of our policies, under standard operation our moderators have no ability to access your direct messages with other members of our Mastodon platform. Due in part to the open and federated nature of Mastodon instances, the Mastodon administrators of other instances you interact with may have access to your data and messages delivered to their servers.
+Unless it's required of us to investigate a reported instance of abuse of our policies, under standard operation our moderators have no ability to access your private mentions with other members of our Mastodon platform. Due in part to the open and federated nature of Mastodon instances, the Mastodon administrators of other instances you interact with may have access to your data and messages delivered to their servers.
 
 While the connection to this site is encrypted, this is only the data in transit to you and to other servers in the federated network.
 **The messages and data stored in the instance is not encrypted.**
