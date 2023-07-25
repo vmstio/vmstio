@@ -44,4 +44,4 @@ Some posts will trend automatically if they're from known figures with a history
 Generally speaking, trends are only removed if they are deemed inappropriate for the context of our instance.
 
 Some publishers are specifically prohibited from trending.
-Those are available upon request.
+A list of prohibited publishers is available upon request.
