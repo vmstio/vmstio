@@ -125,7 +125,7 @@ If you’re unsure of what to do, ask for a second set of eyes. If no one else i
 
 ## Appeals
 
-Users can appeal actions of moderators. In such cases actions of moderators will be reviewed by an administrator, and after additional discussion or deliberation the appeal by be accepted or denied.
+Users can appeal actions of moderators. In such cases actions of moderators will be reviewed by an administrator, and after additional discussion or deliberation the appeal may be accepted or denied.
 
 ## Brand Accounts
 
