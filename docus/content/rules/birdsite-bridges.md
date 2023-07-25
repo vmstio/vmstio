@@ -24,6 +24,6 @@ We will continue to defederate from such sites in the future, as we discover add
 
 We have not typically defederated from instances and applications where the bridged content is curated, maintained and clearly identified as a Twitter bot.
 An example is content from [sportsbots.xyz](https://www.sportsbots.xyz).
-We may re-evaluate this in future.
+We may re-evaluate this in the future.
 
 Another exemption is crossposting from Twitter, where the content owner is in control of both the source and destination account, and where the Mastodon account is maintained.
