@@ -30,7 +30,7 @@ The Administrators are **the final authority** on any appeals, moderation issues
 
 ## Reports
 
-When a post is reported, all members of the staff will receive an email alert. There is also an alert message posted to the "vmst.io Moderation" room in Matrix. Both alerts include links to the report in the Mastodon UI.
+When a post is reported, all members of the staff receive an email alert. There is also an alert message posted to the "vmst.io Moderation" room in Matrix. Both alerts include links to the report in the Mastodon UI.
 
 Reports about members of the staff cannot be seen by that staff member in the Mastodon UI.
 
