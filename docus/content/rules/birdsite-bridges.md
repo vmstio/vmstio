@@ -19,3 +19,11 @@ There are a few issues here:
 
 As such, we have actively been defederating (suspending) Twitter bridge sites, usually powered by a software package called Birdsite Live.
 We will continue to defederate from such sites in the future, as we discover additional instances.
+
+## Exceptions
+
+We have not typically defederated from instances and applications where the bridged content is curated, maintained and clearly identified as a Twitter bot.
+An example is content from [sportsbots.xyz](https://www.sportsbots.xyz).
+We may re-evaluate this in the future.
+
+Another exception is crossposting from Twitter, where the content owner is in control of both the source and destination account, and where the Mastodon account is maintained.

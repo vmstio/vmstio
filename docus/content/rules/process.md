@@ -11,10 +11,9 @@ _This is our internal guidance for Moderators, but in the spirit of full disclos
 
 A full list of active staffers can be found at [https://docs.vmst.io/staff/](/staff)
 
-There are three levels of moderation staff with different abilities:
+There are two levels of moderation staff with different abilities:
 
 * Administrator
-* Director
 * Moderator
 
 All staff should be intimately familiar with the [Rules](/rules)
@@ -23,25 +22,19 @@ All staff should be intimately familiar with the [Rules](/rules)
 
 Moderators are able to take action on any reported or observed user account in violation of our rules.
 
-### Directors
+### Administrators
 
-Directors have the ability to de-federate entire instances for continued violation or bad actions against our members, or our infrastructure. They also act as senior moderators and community leaders.
+Administrators have the ability to de-federate entire instances for continued violation or bad actions against our members, or our infrastructure. They also act as senior moderators and community leaders.
 
-They can also perform additional actions on user accounts beyond those of a normal moderator.
-
-### Administrator
-
-The administrator would really like to focus on things other than daily moderation of user activities. With the exception of appeals, most moderation activities are undertaken by Moderators or Directors.
-
-The Administrator is **the final authority** on any appeals, moderation issues or rule interpretations.
+The Administrators are **the final authority** on any appeals, moderation issues or rule interpretations.
 
 ## Reports
 
-When a post is reported, all members of the staff will receive an email alert. There is also an alert message posted to the #moderation channel of the backend Slack. Both alerts include links to the report in the Mastodon UI.
+When a post is reported, all members of the staff receive an email alert. There is also an alert message posted to the "vmst.io Moderation" room in Matrix. Both alerts include links to the report in the Mastodon UI.
 
 Reports about members of the staff cannot be seen by that staff member in the Mastodon UI.
 
-For whatever action you take on a report, please post to the thread in Slack as an indicator that you’ve followed up. If you need to loop in another staffer for an assist do so via @mention within Slack.
+For whatever action you take on a report, please post to the thread in Matrix as an indicator that you’ve followed up. If you need to loop in another staffer for an assist do so via @mention within Matrix.
 
 All internal discussion of reports should be considered confidential.
 
@@ -132,19 +125,19 @@ If you’re unsure of what to do, ask for a second set of eyes. If no one else i
 
 ## Appeals
 
-Users can appeal actions of moderators or directors. In such cases actions of moderators will be reviewed by directors or the administrator, and moderation actions taken by directors will be reviewed by the administrator.
+Users can appeal actions of moderators. In such cases actions of moderators will be reviewed by an administrator, and after additional discussion or deliberation the appeal may be accepted or denied.
 
 ## Brand Accounts
 
-Moderators should also see our policy on Brand accounts. [https://docs.vmst.io/brands/](https://docs.vmst.io/brands/)
+Moderators should also see our policy on [Brand Accounts](/rules/brands/).
 
-While we try to vet these through the application process, they make it through from time to time. These types of violations should be handled by Directors or Administrators. In most cases they’ll be asked to migrate their account to a different instance.
+While we try to vet these through the application process, they make it through from time to time. These types of violations should be handled by Administrators. In most cases they’ll be asked to migrate their account to a different instance.
 
 ## Extremism
 
 We have a zero tolerance policy for violations of the bigotry or extremism policies. If you find users posting openly hateful content you are authorized to delete the offensive posts and suspend the user’s account.
 
-If the account has just signed up or their time on the instance has only been used for such content, reach out to a Director of Administrator for immediate deletion of the account profile.
+If the account has just signed up or their time on the instance has only been used for such content, reach out to an Administrator for immediate deletion of the account profile.
 
 ## Sexual Content
 
@@ -154,4 +147,4 @@ As a result explicit content may show up on the Federated timeline where it’s 
 Moderators may issue limitations to remote accounts who regularly post explicit content.
 Limiting the account will enable those who directly follow the account to continue accessing it, while preventing its visibility on the Federated timeline.
 
-If local accounts are deemed to be following such content in an attempt to “poison” the federated timeline, those accounts should be suspended after consultation with a Director or Administrator.
+If local accounts are deemed to be following such content in an attempt to “poison” the federated timeline, those accounts should be suspended after consultation with an Administrator.
