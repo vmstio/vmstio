@@ -26,4 +26,4 @@ We have not typically defederated from instances and applications where the brid
 An example is content from [sportsbots.xyz](https://www.sportsbots.xyz).
 We may re-evaluate this in the future.
 
-Another exemption is crossposting from Twitter, where the content owner is in control of both the source and destination account, and where the Mastodon account is maintained.
+Another exception is crossposting from Twitter, where the content owner is in control of both the source and destination account, and where the Mastodon account is maintained.
