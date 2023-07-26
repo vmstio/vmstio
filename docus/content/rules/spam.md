@@ -16,7 +16,7 @@ This could also apply to content which is posted with affiliate links with the i
 Examples of allowed content:
 - Users who create and sell their artwork or other personal services generally do not fall under this rule so long as they are not considered excessive.
 - Authors who write books and link to pages where the book is for sale would not violate this rule, so long as it's not excessive.
-Crowdfunding links to content that is relevant to our users are fine.
+- Crowdfunding links to content that is relevant to our users are fine.
 - Additionally, users asking for donations for charities or themselves as forms of mutual-aid are not considered in violation of this rule.
 
 vmst.io itself cannot evaluate every request for donations so we ask users use their own best judgement when evaluating whether or not to contribute to causes advocated by individual users.
