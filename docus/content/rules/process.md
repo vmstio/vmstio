@@ -43,7 +43,7 @@ All internal discussion of reports should be considered confidential.
 The exact source of a report should never be revealed to a user, unless there are extenuating legal circumstances, and then only at the discretion of an administrator.
 
 Communication of disciplinary actions against user accounts should be done outside of the public view, such as through Mastodon's built-in warning/appeals system, email, private mention or other secure means.
-All private communication regarding actions should be documented in via appropriate internal channels.
+All private communication regarding actions should be documented in appropriate internal channels.
 
 Users who push back in public against moderation decisions made against their account should be directed to an administrator for a public response, if it is warranted.
 
