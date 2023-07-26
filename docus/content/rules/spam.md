@@ -40,4 +40,4 @@ Due to the federated nature of Mastodon, and current limitations in searching, h
 However, their overuse can be disruptive and degrade their value.
 
 Users who misuse or overuse hashtags may be asked by instance staff to stop, or have limitations placed on their account which would prevent their non-followers from discovering their content.
-Continued misuse may result in account temporary or permanent account suspension.
+Continued misuse may result in temporary or permanent account suspension.
