@@ -10,13 +10,6 @@ We encourage you to be yourself on vmst·io. We understand that not every accoun
 Centralized platforms require all different types of accounts to be in the same place.
 Decentralized platforms like Mastodon offer an opportunity for each instance to set policies on the types of accounts that they allow.
 
-## Personal Accounts
-
-You identify as you, with your name and face. You speak in your voice, you participate in the community and the wider fediverse as you.
-These is the primary accounts we want on vmst.io.
-
-You can post about life, work, hobbies, ups and downs, memes, whatever you'd like (within the [rules](/rules).)
-
 ## Corporate Accounts
 
 Corporate brand accounts are currently not permitted on vmst·io
