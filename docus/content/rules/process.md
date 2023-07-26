@@ -36,7 +36,16 @@ Reports about members of the staff cannot be seen by that staff member in the Ma
 
 For whatever action you take on a report, please post to the thread in Matrix as an indicator that you’ve followed up. If you need to loop in another staffer for an assist do so via @mention within Matrix.
 
+## Confidentiality
+
 All internal discussion of reports should be considered confidential.
+
+The exact source of a report should never be revealed to a user, unless there are extenuating legal circumstances, and then only at the discretion of an administrator.
+
+Communication of disciplinary actions against user accounts should be done in outside public view, via the built in warning/appeals system, email, private mention or other secure means.
+All private communication regarding actions should be documented in via appropriate internal channels.
+
+Users who push back in public against moderation decisions made against their account should be directed to an administrator for a public response, if it is warranted.
 
 ## Report Types
 
