@@ -8,7 +8,7 @@ No advertising, spam or excessive promotion.
 
 ## Advertising
 
-The prohibition against advertising generally applies to posts where the user is being financially compensated for their content AKA sponsored posting.
+The prohibition against advertising generally applies to posts where the user is being financially compensated for their content, also known as "sponsored posting".
 There is a lot of nuance here, in that posting a link to a video or blog entry of a product review where the product was given to the reviewer in exchange for their work as a reviewer may not be considered a violation of this policy, but a post directly to vmst.io itself promoting a product may be considered in breach.
 
 This could also apply to content which is posted with affiliate links with the intention to generate revenue from vmst.io users or to violate their privacy and track their activities across websites.
