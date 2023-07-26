@@ -8,12 +8,13 @@ No sexually explicit or graphically violent media.
 
 ## Sexual Content
 
-From the [Hachyderm Community Guidelines](https://community.hachyderm.io/docs/nsfw-policy/):
+Inspired by the [Hachyderm Community Guidelines](https://community.hachyderm.io/docs/nsfw-policy/), our views on this topic are as such:
 
-> Sex is everywhere, and we have a pragmatic and mature relationship with sex and sexual content at Hachyderm. We want Hachyderm to be a home for science, technology, and collaboration while also embracing the beauty and depth of all walks of sexual life.
-> Modern society functions with deep-rooted and historical sexual norms that are exploitative, unfair, harmful towards marginalized people, where the danger for these individuals is often overlooked. Product marketing, sales tactics, and even corporate policies are often structured and allow for harmful culture to thrive, often in the name of hetero-normative traditions and expectations.
-> Many parts of the industry operate with a bias towards keeping traditional and hetero-normative sexual culture protected while demonizing sex work, kink culture, queer culture, polyamory, ethical non-monogamy, furry, lesbian, gay, bisexual, pansexual, transgender, or any other sexual area of what we refer to as “The Alphabet”.
-> We understand that sex work is real work, and we view sex workers equally as professional as the rest of users. We deeply believe in validating, legitimizing, and confirming many sexually marginalized cultures on our platform. We understand that silencing sexual content is typically used as a weapon to target gender minorities and sexual minorities.
+- We want vmst.io to be a home for science, technology, and collaboration while also embracing the beauty and depth of all walks of life.
+- Modern society functions with deep-rooted and historical sexual norms that are exploitative, unfair, harmful towards marginalized people, where the danger for these individuals is often overlooked.
+- Product marketing, sales tactics, and even corporate policies are often structured and allow for harmful culture to thrive, often in the name of hetero-normative traditions and expectations.
+- Many parts of the industry operate with a bias towards keeping traditional and hetero-normative sexual culture protected while demonizing sex work, kink culture, queer culture, polyamory, ethical non-monogamy, furry, lesbian, gay, bisexual, pansexual, transgender, or any other sexual area of what we refer to as “The Alphabet”.
+- We deeply believe in validating, legitimizing, and confirming many sexually marginalized cultures on our platform. We understand that silencing sexual content is typically used as a weapon to target gender minorities and sexual minorities.
 
 We ask that users refrain from posting sexually explicit or pornographic content using their vmst.io accounts.
 While the definition of what is considered pornographic might differ from region to region, this is generally understood to be content that would be considered pornographic for users in the United States and Canada where our instance is based.
