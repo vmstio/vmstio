@@ -77,7 +77,7 @@ These are based on the default options for the Mastodon UI, and are set by the u
 Keep in mind that third-party clients may have fewer options based on their usage of the API.
 
 Moderators can determine if a report is classified incorrectly and then reclassify it, but failure to properly classify a report is not grounds to dismiss the report.
-We should always error on the side of trusting the user making the report that there is a problem to address.
+We should always err on the side of trusting the user making the report that there is a problem to address.
 
 ### "I don't like it"
 
