@@ -183,10 +183,12 @@ Some of the options accessible under Custom have the ability to disable the user
 
 ### Action Summary
 
-| **Target** | Dismiss | Warn | Freeze | Limit | Suspend |
-|------------|---------|------|--------|-------|---------|
-| **Local**  |    🟢    |   🟢  |    🟢   |   🔴   |    🟢    |
-| **Remote** |    🟢    |   🔴  |    🔴   |   🟢   |    🟢    |
+Please refer to the following chart as a quick reference for appropriate actions to take against a user account based on the type of user.
+
+| **User**   | Warn | Freeze | Limit | Suspend |
+|------------|------|--------|-------|---------|
+| **Local**  |   🟢  |    🟢   |   🔴   |    🟢    |
+| **Remote** |   🔴  |    🔴   |   🟢   |    🟢    |
 
 ### Warning Presets
 
