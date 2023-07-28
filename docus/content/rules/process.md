@@ -176,7 +176,7 @@ There are a few options available for any reported content.
 
 The most common types of moderation events are expected to be Mark as Resolved or Send a Warning to the member.
 
-Limiting or suspending users should be done only when there are either escalating or egregious violations of site policy.
+Freezing or suspending local users should be done when there are either escalating or egregious violations of site policy.
 
 All default user moderation decisions (aside from Mark as Resolved) will notify the affected user by email.
 Some of the options accessible under Custom have the ability to disable the user notification settings, but sending email notices is still considered standard practice.
