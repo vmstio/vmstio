@@ -1,9 +1,9 @@
 ---
-title: Moderation Actions
+title: Actions Report
 description: High level summary of moderator actions
 ---
 
-# Moderation Actions
+# Actions Report
 
 We periodically publish a high level summary of moderator actions on vmst.io.
 These statistics are cumulative starting from when the instance opened on October 6, 2022.

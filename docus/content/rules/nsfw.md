@@ -13,11 +13,11 @@ Inspired by the [Hachyderm Community Guidelines](https://community.hachyderm.io/
 - We want vmst.io to be a home for science, technology, and collaboration while also embracing the beauty and depth of all walks of life.
 - Modern society functions with deep-rooted and historical sexual norms that are exploitative, unfair, harmful towards marginalized people, where the danger for these individuals is often overlooked.
 - Product marketing, sales tactics, and even corporate policies are often structured and allow for harmful culture to thrive, often in the name of hetero-normative traditions and expectations.
-- Many parts of the industry operate with a bias towards keeping traditional and hetero-normative sexual culture protected while demonizing sex work, kink culture, queer culture, polyamory, ethical non-monogamy, furry, lesbian, gay, bisexual, pansexual, transgender, or any other sexual area of what we refer to as “The Alphabet”.
-- We deeply believe in validating, legitimizing, and confirming many sexually marginalized cultures on our platform. We understand that silencing sexual content is typically used as a weapon to target gender minorities and sexual minorities.
+- We deeply believe in validating, legitimizing, and confirming many sexually marginalized cultures on our platform.
+- We understand that completely silencing sexual content is typically used as a weapon to target gender minorities and sexual minorities.
 
-We ask that users refrain from posting sexually explicit or pornographic content using their vmst.io accounts.
-While the definition of what is considered pornographic might differ from region to region, this is generally understood to be content that would be considered pornographic for users in the United States and Canada where our instance is based.
+We require that users refrain from posting sexually explicit content using their vmst.io accounts.
+While the definition of what is considered explicit might differ from region to region, this is generally understood to be content that would be considered explicit for users in the United States and Canada where our instance is based.
 
 Absolutely under no circumstance is 18+ content allowed without a content warning.
 Sexual content which violates consent is expressly prohibited.
