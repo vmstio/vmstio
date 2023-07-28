@@ -90,9 +90,9 @@ Clear and obvious SPAM, should be actioned by suspending the offending account.
 
 Examples of clear and obvious might be new accounts, or accounts from other instances that:
 
-* Posting links to external sites for pornography, cryptocurrency, gambling, or illegal content.
-* Accounts posting in excess, particularly if they appear automated.
-* Excessive misuse of mentions or hashtags.
+* Post links to external sites for pornography, cryptocurrency, gambling, or illegal content.
+* Post in excess, particularly if they appear automated.
+* Use excessive mentions or hashtags.
 
 Please refer to our rules on [Advertising & Excessive Promotion](/rules/spam) for items which might run afoul of this rule but are less clear and obvious.
 
