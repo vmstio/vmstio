@@ -15,7 +15,7 @@ If you feel you have been treated unfairly by our staff, you may file an appeal 
 
 ## Staff
 
-A full list of active staffers can be found at [https://docs.vmst.io/staff/](/staff)
+A full list of active staffers can be found at [here](/about/staff)
 
 There are two levels of moderation staff with different abilities:
 
