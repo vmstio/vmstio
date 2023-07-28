@@ -8,7 +8,7 @@ This is the vmst.io Moderation Process.
 In the spirit of full disclosure we have decided to make it open to public viewing.
 The purpose is to guide our staff in their decisions to take action on a member.
 
-There may be times where moderators and administrators deviate from this document as new, specifically when new issues arise that have not been covered by existing processes.
+There may be times where moderators and administrators deviate from this document as needed, specifically when new issues arise that have not been covered by existing processes.
 Ultimately our staff may take action on any account they deem necessary to protect the health and safety of the instance and other users.
 
 If you feel you have been treated unfairly by our staff, you may file an appeal or contact an administrator.
