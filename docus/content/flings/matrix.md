@@ -18,7 +18,7 @@ To make things even easier, we run our own Element client at [element.vmst.io](h
 
 The first time you login you'll need to establish your Matrix account, your vmst.io username may automatically populate, but needs to stay the same as your Mastodon username for consistency. Your "homeserver" will be **matrix.vmst.io** and when you login you'll use your Mastodon credentials, so there's no second set of passwords to manage.
 
-![matrix.vmst.io](https://cdn.vmst.io/docs/matrix-login.png)
+![matrix.vmst.io](/matrix-login.png)
 
 You can now talk to anyone else on the Matrix platform, not just other vmst.io users who have activated their accounts!
 

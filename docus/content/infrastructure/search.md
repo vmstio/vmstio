@@ -12,7 +12,7 @@ Mastodon integrates with [Elastic Search](https://www.elastic.co/elasticsearch/)
 - Replies to **your** posts
 - Any other post that **you** have directly interacted with (bookmarked, favorited or boosted)
 
-![John Mastodon Example Search](https://cdn.vmst.io/docs/john-mastodon.jpg)
+![John Mastodon Example Search](/john-mastodon.jpg)
 
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
 We use a Elastic Search 7.x running on our Kubernetes cluster.
