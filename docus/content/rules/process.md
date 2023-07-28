@@ -57,7 +57,7 @@ Communication of disciplinary actions against user accounts should be done outsi
 All private communication regarding actions should be documented in appropriate internal channels.
 
 Our staff will use discretion in moderating our users, and we expect the same from our members who have been subject to moderator actions.
-Users who push back or question in public against moderation decisions made against their account should be directed to an administrator for a public response, if it is warranted.
+Users who push back, or question in public, moderation decisions made against an account should be directed to an administrator for a public response, if it is warranted.
 
 Should the situation escalate towards harassment of staff, the member will be asked to leave vmst.io.
 
