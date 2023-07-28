@@ -1,9 +1,8 @@
 ---
-title: Process
-description: Our internal guidance
+title: Due Process
 ---
 
-# Process
+# Due Process
 
 This is vmst.io Moderation Process.
 In the spirit of full disclosure we have decided to make it open to public viewing.
