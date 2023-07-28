@@ -4,7 +4,7 @@ title: Due Process
 
 # Due Process
 
-This is vmst.io Moderation Process.
+This is the vmst.io Moderation Process.
 In the spirit of full disclosure we have decided to make it open to public viewing.
 The purpose is to guide our staff in their decisions to take action on a member.
 
