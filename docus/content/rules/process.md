@@ -166,7 +166,7 @@ If you see reports that may rise to this level, please raise the issue in Matrix
 
 There are a few options available for any reported content.
 
-* Mark as resolved
+* Mark as resolved (Dismiss)
 * Delete posts
 * Limit user
 * Suspend user
@@ -181,12 +181,19 @@ Freezing or suspending local users should be done when there are either escalati
 All default user moderation decisions (aside from Mark as Resolved) will notify the affected user by email.
 Some of the options accessible under Custom have the ability to disable the user notification settings, but sending email notices is still considered standard practice.
 
+### Action Summary
+
+| **Target** | Dismiss | Warn | Freeze | Limit | Suspend |
+|------------|---------|------|--------|-------|---------|
+| **Local**  |    🟢    |   🟢  |    🟢   |   🔴   |    🟢    |
+| **Remote** |    🟢    |   🔴  |    🔴   |   🟢   |    🟢    |
+
 ### Warning Presets
 
 All major rule catagories have warning presets available for Moderators to leverage when actioning on an account.
 Moderators are expected to use these presets and only send a custom message to a user through the admin portal if discussed with an administrator.
 
-### Mark as Resolved
+### Mark as Resolved (Dismiss)
 
 Marking as resolved generally means you’re dismissing the report, because it’s determined to be not worthy of moderator action.
 
