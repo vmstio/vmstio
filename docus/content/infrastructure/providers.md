@@ -19,8 +19,7 @@ Some of these services are paid for while others are free to use.
 | Docker Hub | Public Container Registry |
 | hCaptcha | Bot Detection |
 | Apivoid | IP Information |
-| DeepL | Translation API |
-| LibreTranslate | Translation API |
+| Grafana Labs | Log Storage |
 
 Other vendors or open-source projects that we consume or utilize but do not have an ongoing external API or system connection to are not included in this list.
 For example, rclone is used to backup our platform, but it is integrated into a custom container image that is built and deployed.
