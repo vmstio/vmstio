@@ -7,6 +7,8 @@ title: Actions Report
 We periodically publish a high level summary of moderator actions on vmst.io.
 These statistics are cumulative starting from when the instance opened on October 6, 2022.
 
+As of the date of this report, we have not removed content or taken action against users at the request of any government or law enforcement agency.
+
 _These numbers were last updated on August 4, 2023._
 
 ## Summary
@@ -24,8 +26,6 @@ Remote users are members of federated instances.
 
 ### Reports per Month
 ![Bar Chart](/reports-per-month.png)
-
-As of the date of this report, we have not removed content or taken action against users at the request of any government or law enforcement agency.
 
 ## Account Actions
 
