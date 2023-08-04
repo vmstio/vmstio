@@ -30,3 +30,14 @@ Remote users are members of federated instances.
 ## Account Actions
 
 For a full explanation of the various Moderator actions, please see the [Moderator Policy](/rules/process) page.
+
+| | |
+|---|---|
+| **Reports Actioned** | **44** |
+| Accounts Suspended | 19 |
+| Accounts Frozen | 6 |
+| Accounts Limited | 11 |
+| Content Actioned | 5 |
+| Other | 3 |
+
+These numbers do not reflect moderator activities which have actioned accounts outside of user reports, such as acting on mass suspension of accounts due to spam activity.
