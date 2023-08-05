@@ -12,17 +12,18 @@ As of the date of this report, we have not removed content or taken action again
 _These numbers were last updated on August 4, 2023._
 
 ## Summary
-Local users are vmst.io members.
 Remote users are members of federated instances.
 
 | | |
 |---|---|
 | **Total Reports** | **103** |
-| Local User as Source | 72 |
-| Remote User as Source | 31 |
-| Local Users as Target | 53 |
-| Remote Users as Target | 50 |
-| Reports Forwarded to Target Instance | 35 |
+| vmst.io user vs vmst.io user | 22 |
+| vmst.io user vs Remote user | 50 |
+| Remote user vs vmst.io user | 31 |
+
+| | |
+|---|---|
+| **Reports Forwarded to Remote Instances** | 35 |
 
 ### Reports per Month
 ![Bar Chart](/reports-per-month.png)
