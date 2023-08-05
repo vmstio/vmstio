@@ -17,13 +17,15 @@ Remote users are members of federated instances.
 | | |
 |---|---|
 | **Total Reports** | **103** |
-| vmst.io user vs vmst.io user | 22 |
-| vmst.io user vs Remote user | 50 |
-| Remote user vs vmst.io user | 31 |
+| vmst.io vs vmst.io | 22 |
+| vmst.io vs Remote | 50 |
+| Remote vs vmst.io | 31 |
+
+Reports made by vmst.io users can be forwarded to remote instances for additional action by their moderation staff.
 
 | | |
 |---|---|
-| **Reports Forwarded to Remote Instances** | 35 |
+| **Forwarded to Remote Instances** | 35 |
 
 ### Reports per Month
 ![Bar Chart](/reports-per-month.png)
