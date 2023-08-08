@@ -11,7 +11,7 @@ As of May 2023, we're deploying the latest and greatest code on a regular basis 
 ![About Version](/about.png)
 
 ::alert{type="info"}
-In this example, vmst.io is running the base version of 4.1.4 plus all of the merged code changes to `main` since then, up until commit [0051128](https://github.com/mastodon/mastodon/commit/0051128387ee97212f51bf2c7baa78b6757f4c81).
+In this example, vmst.io is running the pre-released (4.2.0) version of Mastodon as it exists in the `main` branch on GitHub, at commit [dab54cc](https://github.com/mastodon/mastodon/commit/dab54ccbba3721382241725bb1c1159d24b5aab2), plus minimal local changes specific to vmst.io as noted below.
 ::
 
 In order to help facilitate this, we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
