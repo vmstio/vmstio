@@ -20,16 +20,15 @@ Posting the list as a CSV file allows other instance administrators to easily im
 
 We believe community maintained blocklists serve an important purpose to help jumpstart the protection of users.
 
-The foundation of our defederation list is the [Oliphant Blocklist](https://codeberg.org/oliphant/blocklists) at [Tier 0](https://codeberg.org/oliphant/blocklists/src/branch/main/blocklists/mastodon/_unified_tier0_blocklist.csv).
-We also incorporate the [Tier 1](https://codeberg.org/oliphant/blocklists/src/branch/main/blocklists/mastodon/_unified_tier1_blocklist.csv) list after careful review and application of our local allowlist.
-
-Consensus based lists should have a high number of members to prevent the decisions of one or two administrators from imposing their will on the rest of the Fediverse.
-Due to what we perceive as a high number of false positives in the Tier 2 list, with its low consensus threshold, we do not import at that tier.
+The foundation of our defederation list is the [Oliphant Blocklist](https://codeberg.org/oliphant/blocklists) at [Tier 2](https://codeberg.org/oliphant/blocklists/src/branch/main/blocklists/mastodon/_unified_tier2_blocklist.csv). We also use data from [The Bad Space](https://thebad.space) as well as [Vyr's Soapbox List](https://github.com/VyrCossont/Soapblock/blob/main/soapbox.csv)
 
 As part of our import process we perform an activity check on the domain.
 If the domain is not currently an ActivityPub endpoint, it is ignored.
 We run this import process on a regular basis.
 If a previously failed domain in the blocklist come back online, they are incorporated back into our defederation list.
+
+We also do not proactively defederate any instance which is a member of the Join Mastodon Server Covenant, because we believe in allowing portability between member instances.
+Exceptions are made on a case by case basis.
 
 ## Reporting
 
@@ -51,7 +50,7 @@ At this time vmst.io does not plan to defederate from Threads, although we may t
 Mastodon instances do not broadcast private data like e-mail or the IP address you use to other instances.
 The software is built on the reasonable assumption that third party servers cannot be trusted.
 
-vmst.io servers download, process and cache images and videos for you to view. Not only is this more efficent when multiple users want to view the same content from another instance, it helps to preserve your privacy by acting as a proxy to that resource. Unless you choose to click through to the source content the originating server cannot get your IP address, browser name, or time of access.
+vmst.io servers download, process and cache images and videos for you to view. Not only is this more efficient when multiple users want to view the same content from another instance, it helps to preserve your privacy by acting as a proxy to that resource. Unless you choose to click through to the source content the originating server cannot get your IP address, browser name, or time of access.
 
 Meta, or any other instance that we federate with, cannot fingerprint or use other private data or track you across the web simply by us being federated with them.
 
