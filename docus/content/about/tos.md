@@ -40,7 +40,7 @@ Definitions of various terms used throughout this document:
 
 - By default, your social graph is listed publicly, but this may be disabled in your account settings.
 - You may follow other people to view their combined posts in your own personalized home timeline.
-- By default, anyone may follow posts made by your account. You may toggle an option to approve and reject new followers manually in your account settings settings.
+- By default, anyone may follow posts made by your account. You may toggle an option to approve and reject new followers manually in your account settings.
 - You can only interact with other people's content and post your own content when you are logged in.
 
 ### Post visibility and delivery
