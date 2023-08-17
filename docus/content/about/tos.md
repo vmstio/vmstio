@@ -117,6 +117,10 @@ In order to make sure we are not holding on to user accounts for remote users wh
 
 If you are a member of a remote instance and would like your user data removed from our database or media stores, please contact one of our administrators.
 
+#### System backups
+
+Your data may remain in backups of our infrastructure for up to 7 days beyond any request to delete it from production.
+
 #### Backup and exporting data
 
 In addition to regular backups we make of our infrastructure, you can backup your data and [export it](https://docs.joinmastodon.org/user/moving/#export) at any time.
