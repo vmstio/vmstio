@@ -6,30 +6,29 @@ title: Terms of Service
 
 These terms describe how vmst.io collects, protects and uses the personally identifiable information you may provide through the vmst.io website or its API.
 The policy also describes the choices available to you regarding our use of your personal information and how you can access and update this information.
+
 This policy does not apply to the practices of companies that vmst.io does not own or control, or to individuals that vmst.io does not employ or manage.
 
 ## System Functionality
 
 ### Basic account information
 
-If you register on this server, you may be asked to enter a username, an e-mail address and a password.
-You may also enter additional profile information such as a display name and biography, and upload a profile picture and header image.
-The username, display name, biography, profile picture and header image are always listed publicly.
-You can only interact with other people's content and post your own content when you are logged in.
-You may follow other people to view their combined posts in your own personalized home timeline.
+- If you register on this server, you will be asked to enter a username, an e-mail address and a password.
+- You may also enter additional profile information such as a display name and biography, and upload a profile picture and/or header image.
+- Your username, display name, biography, profile picture and header image are always listed publicly.
+- You can only interact with other people's content and post your own content when you are logged in.
+- You may follow other people to view their combined posts in your own personalized home timeline.
 
 ### Posts, following and other public information
 
-The list of people you follow is listed publicly, the same is true for your followers.
-When you submit a message, the date and time is stored as well as the application you submitted the message from.
-Messages may contain media attachments, such as pictures and videos.
-Public and unlisted posts are available publicly.
-When you feature a post on your profile, that is also publicly available information.
-Your posts are delivered to your followers, in some cases it means they are delivered to different servers and copies are stored there.
-When you delete posts, this is likewise delivered to your followers.
-The action of boosting or liking another post is always public.
+- By default, your social graph (who you follow and who follows you) is listed publicly, but may be disabled in your account settings.
+- When you submit a message, the date and time is stored as well as the application you submitted the message from. Messages may optionally contain media attachments, such as pictures and videos.
+- Both public and unlisted posts are available publicly. The action of boosting or liking another post is always public.
+- When you pin/feature a post on your profile, that is also publicly available information.
+- Your posts are delivered to your local followers, as well as other federated instances and copies are stored there. Due to circumstances outside out control we cannot guarantee that all federated instances will receive or process the your post.
+- When you delete posts, they are removed from the local database and a deletion request is sent to federated instances that may contain that data. Due to circumstances outside out control we cannot guarantee that all federated instances will receive or process the deletion.
 
-### Direct and followers-only posts
+### Private mentions and followers-only posts
 
 All posts are stored and processed on the server.
 Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them.
