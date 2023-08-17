@@ -9,6 +9,12 @@ The policy also describes the choices available to you regarding our use of your
 
 This policy does not apply to the practices of companies that vmst.io does not own or control, or to individuals that vmst.io does not employ or manage.
 
+## Changelog
+
+- [August 17, 2023](https://github.com/vmstan/vmstio/pull/71))
+- [July 25, 2023](https://github.com/vmstan/vmstio/commit/37cf880f12a23c2799bf9a8a735a90176e43b0c2#diff-ae85e39155eb0b9c9e8d944a2c038561b24c3c3b65d26c27d0c1aaa317f5ed5b)
+- [July 5, 2023](https://github.com/vmstan/vmstio/commit/65d8330996010ddb283fe2026ed03979ef68cbc9#diff-ae85e39155eb0b9c9e8d944a2c038561b24c3c3b65d26c27d0c1aaa317f5ed5b)
+
 ## Definitions
 
 Definitions of various terms used throughout this document:
