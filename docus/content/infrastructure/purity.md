@@ -4,15 +4,15 @@ title: Code Purity
 
 # Code Purity
 
-Our goal is to run the latest Mastodon experience within 48 hours of new code updates being published to the project's GitHub.
+In order to facilitate our goal of providing the most advanced Mastodon experience, we are always "running off `main`" meaning the latest commits to the Mastodon codebase found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
 
 ## +io
 
-In order to facilitate running off `main` we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
+Such instance specific customizations include:
 
-- Embed the Digital Ocean internal security certificates
-- Customize the Mastodon logo, if needed, for events like Pride Month
-- Removal of the Hiredis driver (see below)
+- Embedding the Digital Ocean internal security certificates
+- Customizing the Mastodon logo, if needed, for events like Pride Month
+- Removing the Hiredis driver (see below)
 - Updating our Docker containers to Debian 12 (Bookworm)
 - Updating to ImageMagick 7 and ffmpeg 6
 - Raising the post character count limit from 500 to 512
