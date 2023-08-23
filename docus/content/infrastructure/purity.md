@@ -4,9 +4,7 @@ title: Code Purity
 
 # Code Purity
 
-Our goal is to run the latest released version of the Mastodon experience within 48 hours of being published.
-Previously this meant only deploying the finalized, tagged, releases.
-As of May 2023, we're deploying the latest and greatest code on a regular basis through an automation pipeline.
+Our goal is to run the latest Mastodon experience within 48 hours of being published to the project's GitHub.
 
 ## Container Availability
 
@@ -47,8 +45,6 @@ In order to facilitate running off `main` we run the stock version of the Mastod
 - Raising the post character count limit from 500 to 512
 - Adding the [Bird UI](/flings/birdui) theme
 - Displaying the commit level that our custom build is running.
-
-We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)).
 
 ## TLS
 
