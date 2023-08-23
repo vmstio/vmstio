@@ -37,7 +37,7 @@ In the image example, vmst.io is running `4.2.0-dev.0` version of Mastodon as it
 
 ## +io
 
-In order to help facilitate this, we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
+In order to facilitate running off `main` we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
 
 - Embed the Digital Ocean internal security certificates
 - Customize the Mastodon logo, if needed, for events like Pride Month
