@@ -4,7 +4,20 @@ title: Code Purity
 
 # Code Purity
 
-Our goal is to run the latest Mastodon experience within 48 hours of being published to the project's GitHub.
+Our goal is to run the latest Mastodon experience within 48 hours of new code updates being published to the project's GitHub.
+
+## +io
+
+In order to facilitate running off `main` we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
+
+- Embed the Digital Ocean internal security certificates
+- Customize the Mastodon logo, if needed, for events like Pride Month
+- Removal of the Hiredis driver (see below)
+- Updating our Docker containers to Debian 12 (Bookworm)
+- Updating to ImageMagick 7 and ffmpeg 6
+- Raising the post character count limit from 500 to 512
+- Adding the [Bird UI](/flings/birdui) theme
+- Displaying the commit level that our custom build is running.
 
 ## Container Availability
 
@@ -32,19 +45,6 @@ Version information is visible in the lower left corner of the web interface on 
 ![About Version](/about.png)
 
 In the image example, vmst.io is running `4.2.0-dev.0` version of Mastodon as it exists in the `main` branch on GitHub, at commit [9a8190d](https://github.com/mastodon/mastodon/commit/9a8190da4a7a5bd74df36ae076573e014b254ef0), plus minimal local changes specific to vmst.io as noted by `+io`.
-
-## +io
-
-In order to facilitate running off `main` we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
-
-- Embed the Digital Ocean internal security certificates
-- Customize the Mastodon logo, if needed, for events like Pride Month
-- Removal of the Hiredis driver (see below)
-- Updating our Docker containers to Debian 12 (Bookworm)
-- Updating to ImageMagick 7 and ffmpeg 6
-- Raising the post character count limit from 500 to 512
-- Adding the [Bird UI](/flings/birdui) theme
-- Displaying the commit level that our custom build is running.
 
 ## TLS
 
