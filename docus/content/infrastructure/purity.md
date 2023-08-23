@@ -27,7 +27,7 @@ Starting with Mastodon 4.2, the project is standardizing use the use of `dev`, `
 
 Forks of local code modifications are indicated by the `+text` at the end of the version string.
 
-Once 4.2 has been released, instances which are running a non-standard version of Mastodon through any of the methods described above, will increment to the next major version,likely 4.3. (Ex: `4.3.0-nightly.2023-11-09`)
+Once 4.2 has been released, instances which are running a non-standard version of Mastodon through any of the methods described above, will increment to the next major version, likely 4.3. (Ex: `4.3.0-nightly.2023-11-09`)
 
 Version information is visible in the lower left corner of the web interface on desktop, or at the bottom of the [About](https://vmst.io/about) page on mobile.
 
