@@ -4,7 +4,7 @@ title: Code Purity
 
 # Code Purity
 
-In order to facilitate our goal of providing the most advanced Mastodon experience, we are always "running off `main`" meaning the latest commits to the Mastodon codebase found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
+In order to facilitate our goal of providing an better Mastodon experience for our members, we are always "running off `main`" meaning the latest commits to the Mastodon codebase found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
 
 ## +io
 
