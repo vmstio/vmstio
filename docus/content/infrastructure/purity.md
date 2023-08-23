@@ -8,11 +8,34 @@ Our goal is to run the latest released version of the Mastodon experience within
 Previously this meant only deploying the finalized, tagged, releases.
 As of May 2023, we're deploying the latest and greatest code on a regular basis through an automation pipeline.
 
+## Container Availability
+
+Our customized container image is available from both Docker and GitHub container registries.
+
+- [GitHub](https://github.com/users/vmstan/packages/container/package/mastodon)
+- [Docker](https://hub.docker.com/r/vmstan/mastodon)
+
+Be aware, there are currently hardcoded links to the vmst.io [Funding](/funding) page in the sidebar, should you implement this for yourself.
+
+## Version Information
+
+Starting with Mastodon 4.2, the project is standardizing use the use of `dev`, `nightly`, `beta` and `rc` sub-releases.
+
+- `dev` is used to identify instances running directly from the `main` branch on GitHub, either compiled from source directly or using their own container images. The `.0` can be incremented should there be a critical security issue fix and applied to the `main` branch.
+- `nightly` is used to identify instances running typically from the project compiled container images which are automatically published with the current status of `main` every night.
+- `beta` or `rc` will identify instances running from a soon to be finalized release of Mastodon, from a tagged pre-released on GitHub or from a project compiled container image.
+
+Forks of local code modifications are indicated by the `+text` at the end of the version string.
+
+Once 4.2 has been released, instances which are running a non-standard version of Mastodon through any of the methods described above, will increment to the next major version,likely 4.3. (Ex: `4.3.0-nightly.2023-11-09`)
+
+Version information is visible in the lower left corner of the web interface on desktop, or at the bottom of the [About](https://vmst.io/about) page on mobile.
+
 ![About Version](/about.png)
 
-::alert{type="info"}
-In this example, vmst.io is running the pre-released (4.2.0) version of Mastodon as it exists in the `main` branch on GitHub, at commit [dab54cc](https://github.com/mastodon/mastodon/commit/dab54ccbba3721382241725bb1c1159d24b5aab2), plus minimal local changes specific to vmst.io as noted below.
-::
+In the image example, vmst.io is running `4.2.0-dev.0` version of Mastodon as it exists in the `main` branch on GitHub, at commit [9a8190d](https://github.com/mastodon/mastodon/commit/9a8190da4a7a5bd74df36ae076573e014b254ef0), plus minimal local changes specific to vmst.io as noted by `+io`.
+
+## +io
 
 In order to help facilitate this, we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
 
@@ -23,6 +46,7 @@ In order to help facilitate this, we run the stock version of the Mastodon code 
 - Updating to ImageMagick 7 and ffmpeg 6
 - Raising the post character count limit from 500 to 512
 - Adding the [Bird UI](/flings/birdui) theme
+- Displaying the commit level that our custom build is running.
 
 We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)).
 
