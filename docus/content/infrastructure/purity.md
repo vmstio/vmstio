@@ -8,14 +8,13 @@ Our goal is to provide the best possible Mastodon experience for our members.
 One way to deliver on that is by delivering the most up-to-date Mastodon code.
 We are always "running off main" which means using the latest commits to the Mastodon codebase found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository, and then at the application build time, applying a limited modification set and pushing a Docker container for consumption by our Kubernetes cluster.
 
-## +io
-
 Such instance specific customizations for our containers include:
 
 - Embedding the Digital Ocean internal security certificates
 - Customizing the Mastodon logo, if needed, for events like Pride Month
 - Removing the Hiredis driver (see below)
 - Updating our Docker containers to Debian 12 (Bookworm)
+- Enabling [YJIT](https://shopify.engineering/ruby-yjit-is-production-ready) for Ruby 3.2
 - Updating to ImageMagick 7 and ffmpeg 6
 - Raising the post character count limit from 500 to 512
 - Adding the [Elephant](/flings/elephant) theme
