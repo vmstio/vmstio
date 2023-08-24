@@ -39,7 +39,7 @@ The Mastodon project carefully considers and debates the implementation of featu
 
 However, some Mastodon instances have side-stepped some of the privacy concerns and previously implemented an enhanced full text search which does not currently respect this `indexable` flag, while other Fediverse projects and forks have done so in their own ways.
 
-vmst.io cannot completely control how your posts are indexed by other federated platforms.
+vmst.io has limited controls over how other federated platforms index your posts.
 
 ## Search Modifiers
 
