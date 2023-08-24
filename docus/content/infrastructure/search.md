@@ -56,7 +56,7 @@ The following search modifiers are available as of Mastodon 4.2:
 - is:sensitive
 - is:reply
 - language:en
-- before:2023-08-08
+- before:2023-08-21
 - after:2023-08-08
 - during:2023-08-08
 
