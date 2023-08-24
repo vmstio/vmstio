@@ -45,6 +45,7 @@ vmst.io cannot completely control how your posts are indexed by other federated 
 
 The following search modifiers are available as of Mastodon 4.2:
 
+- from:username
 - has:image
 - has:video
 - has:audio
