@@ -48,7 +48,7 @@ Version information is visible in the lower left corner of the web interface on 
 
 In the image example, vmst.io is running `4.2.0-dev.0` version of Mastodon as it exists in the `main` branch on GitHub, at commit [9a8190d](https://github.com/mastodon/mastodon/commit/9a8190da4a7a5bd74df36ae076573e014b254ef0), plus minimal local changes specific to vmst.io as noted by `+io`.
 
-## TLS
+## Redis TLS Changes
 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase uses a Redis driver ([hiredis](https://github.com/redis/hiredis-rb)) which does not have a native TLS capability.
 To accommodate this, we have in the past used [HAProxy](https://www.haproxy.org) or [Stunnel](https://www.stunnel.org) to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
