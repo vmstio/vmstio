@@ -1,32 +1,59 @@
 ---
-title: Code Purity
+title: Source Code
 ---
 
-# Code Purity
+# Source Code
 
-Our goal is to run the latest released version of the Mastodon experience within 48 hours of being published.
-Previously this meant only deploying the finalized, tagged, releases.
-As of May 2023, we're deploying the latest and greatest code on a regular basis through an automation pipeline.
+Our goal is to provide the best possible Mastodon experience for our members.
+One way to deliver on that is by delivering the most up-to-date Mastodon code.
+We  "run off main", which means using the latest commits to the `main` branch of the Mastodon codebase found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository.
+We do modify the code at application build time by applying a limited set of changes to the standard code.
+We then push the modified code to a Docker container for consumption by our Kubernetes cluster.
+
+Such instance specific customizations for our containers include:
+
+- Embedding the Digital Ocean internal security certificates
+- Customizing the Mastodon logo, if needed, for events like Pride Month
+- Removing the Hiredis driver (see below)
+- Updating our Docker containers to Debian 12 (Bookworm)
+- Enabling [YJIT](https://shopify.engineering/ruby-yjit-is-production-ready) for Ruby 3.2
+- Updating to ImageMagick 7 and ffmpeg 6
+- Raising the post character count limit from 500 to 512
+- Adding the [Elephant](/flings/elephant) theme
+- Displaying the commit level that our custom build is running.
+
+## Container Availability
+
+Our customized container image is available from both Docker and GitHub container registries.
+
+- [GitHub](https://github.com/users/vmstan/packages/container/package/mastodon)
+- [Docker](https://hub.docker.com/r/vmstan/mastodon)
+
+Be aware, there are currently hardcoded links to the vmst.io [Funding](/funding) page in the sidebar, should you implement this for yourself.
+
+## Version Information
+
+The overwhelming majority of Mastodon instances are running the standard "tagged" releases from the Mastodon project, and look something like `v4.1.6`, but as explained before we do things a little different here.
+
+Starting with Mastodon 4.2, the project is standardizing the use of `dev`, `nightly`, `beta` and `rc` sub-releases.
+
+- `dev` is used to identify instances running directly from the `main` branch on GitHub, either compiled from source directly or using their own container images.
+- `nightly` is used to identify instances running typically from the project compiled container images which are automatically published with the current status of `main` every night.
+- `beta` or `rc` will identify instances running from a soon to be finalized release of Mastodon, from a tagged pre-release on GitHub or from a project compiled container image.
+
+Forks or other local code modifications are indicated by the `+text` at the end of the version string.
+One popular soft fork of Mastodon, called Glitch, is typically identified by `+glitch` at the end of the version.
+We use `+io` for our changes.
+
+Once 4.2 has been released, instances which are running a non-tagged release version of Mastodon through any of the methods described above, will increment to the next major version, likely 4.3. (Ex: `4.3.0-nightly.2023-11-09`)
+
+Version information is visible in the lower left corner of the web interface on desktop, or at the bottom of the [About](https://vmst.io/about) page on mobile.
 
 ![About Version](/about.png)
 
-::alert{type="info"}
-In this example, vmst.io is running the pre-released (4.2.0) version of Mastodon as it exists in the `main` branch on GitHub, at commit [dab54cc](https://github.com/mastodon/mastodon/commit/dab54ccbba3721382241725bb1c1159d24b5aab2), plus minimal local changes specific to vmst.io as noted below.
-::
+In the image example, vmst.io is running `4.2.0-dev.0` version of Mastodon as it exists in the `main` branch on GitHub, at commit [9a8190d](https://github.com/mastodon/mastodon/commit/9a8190da4a7a5bd74df36ae076573e014b254ef0), plus minimal local changes specific to vmst.io as noted by `+io`.
 
-In order to help facilitate this, we run the stock version of the Mastodon code found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository and then at the application build time, apply a limited modification set.
-
-- Embed the Digital Ocean internal security certificates
-- Customize the Mastodon logo, if needed, for events like Pride Month
-- Removal of the Hiredis driver (see below)
-- Updating our Docker containers to Debian 12 (Bookworm)
-- Updating to ImageMagick 7 and ffmpeg 6
-- Raising the post character count limit from 500 to 512
-- Adding the [Bird UI](/flings/birdui) theme
-
-We do not run any of the available Mastodon forks (such as [Glitch](https://glitch-soc.github.io/docs/) or [Hometown](https://github.com/hometown-fork/hometown)).
-
-## TLS
+## Redis TLS Changes
 
 Digital Ocean requires encrypted/TLS connections to their managed Redis instances, however the Mastodon codebase uses a Redis driver ([hiredis](https://github.com/redis/hiredis-rb)) which does not have a native TLS capability.
 To accommodate this, we have in the past used [HAProxy](https://www.haproxy.org) or [Stunnel](https://www.stunnel.org) to take the un-encrypted connection requests and encrypt those connections between the Mastodon components and Redis.
