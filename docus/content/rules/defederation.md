@@ -37,11 +37,11 @@ If you'd feel more comfortable, you can also reach out to one or more of our sta
 
 ## Threads
 
-Threads, the micro-blogging app from Meta, has announced their intent to implement ActivityPub and join their user base to the rest of the fediverse.
+Threads, the micro-blogging app from Meta, has announced their intent to implement ActivityPub and join their user base to the rest of the Fediverse.
 
 Some Mastodon instances have announced proactive defederation from the `threads.net` domain, and some have gone further and agreed to defederate from any instance that does not also defederate from Threads.
 
-While we are supportive of administrators choosing to disconnect themselves from whatever instances they choose, we would take exception with this second-order level of defederation and consider that harmful to the health of the entire fediverse.
+While we are supportive of administrators choosing to disconnect themselves from whatever instances they choose, we would take exception with this second-order level of defederation and consider that harmful to the health of the entire Fediverse.
 
 At this time vmst.io does not plan to defederate from Threads, although we may take action to restrict some Threads users or limit some Threads posts from appearing in federated timelines depending on their content, just as we would with any other instance.
 

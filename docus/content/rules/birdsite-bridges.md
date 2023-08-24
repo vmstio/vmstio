@@ -7,7 +7,7 @@ title: Birdsite Bridges
 Problem: Not all the people or organizations you follow may have migrated from Twitter to open social systems like Mastodon.
 
 One option to follow such accounts are so-called "ethical bridges" from Twitter.
-These are sites that connect to the Twitter API and create stub accounts for Twitter users, then mirror their content on the fediverse.
+These are sites that connect to the Twitter API and create stub accounts for Twitter users, then mirror their content on the Fediverse.
 
 There are a few issues here:
 
