@@ -1,8 +1,8 @@
 ---
-title: Code Purity
+title: Source Code
 ---
 
-# Code Purity
+# Source Code
 
 Our goal is to provide the best possible Mastodon experience for our members.
 One way to deliver on that is by delivering the most up-to-date Mastodon code. 
