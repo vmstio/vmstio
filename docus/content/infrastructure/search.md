@@ -20,7 +20,7 @@ If an administrator chooses to implement it, Mastodon can integrate with [Elasti
 ![John Mastodon Example Search](/john-mastodon.jpg)
 
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
-We use a Elastic Search 7.x running on our Kubernetes cluster.
+We use a multi-node Elastic Search 7.x implementation running on our Kubernetes cluster.
 
 ## Opt-In Indexing
 
