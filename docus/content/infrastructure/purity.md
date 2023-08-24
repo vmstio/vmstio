@@ -5,12 +5,12 @@ title: Source Code
 # Source Code
 
 Our goal is to provide the best possible Mastodon experience for our members.
-One way to deliver on that is by delivering the most up-to-date Mastodon code. 
-We are always "running off main" -- meaning using the latest commits to the Mastodon codebase found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository, and then at the application build time, applying a limited modification set.
+One way to deliver on that is by delivering the most up-to-date Mastodon code.
+We are always "running off main" which means using the latest commits to the Mastodon codebase found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository, and then at the application build time, applying a limited modification set and pushing a Docker container for consumption by our Kubernetes cluster.
 
 ## +io
 
-Such instance specific customizations include:
+Such instance specific customizations for our containers include:
 
 - Embedding the Digital Ocean internal security certificates
 - Customizing the Mastodon logo, if needed, for events like Pride Month
@@ -34,7 +34,7 @@ Be aware, there are currently hardcoded links to the vmst.io [Funding](/funding)
 
 The overwhelming majority of Mastodon instances are running the standard "tagged" releases from the Mastodon project, and look something like `v4.1.6`, but as explained before we do things a little different here.
 
-Starting with Mastodon 4.2, the project is standardizing use the use of `dev`, `nightly`, `beta` and `rc` sub-releases.
+Starting with Mastodon 4.2, the project is standardizing the use of `dev`, `nightly`, `beta` and `rc` sub-releases.
 
 - `dev` is used to identify instances running directly from the `main` branch on GitHub, either compiled from source directly or using their own container images.
 - `nightly` is used to identify instances running typically from the project compiled container images which are automatically published with the current status of `main` every night.
