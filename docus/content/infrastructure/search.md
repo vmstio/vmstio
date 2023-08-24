@@ -4,7 +4,7 @@ title: Search
 
 # Search
 
-Search in Mastodon, and the wider Fediverse, can be a confusing and contentious is a confusing topic.
+Search in Mastodon, and the wider Fediverse, can be a confusing and contentious topic.
 
 By default, Mastodon only performs searches against posts which contain hashtags, using data stored in the primary Postgres database.
 Anything that is posted with a hashtag, is searchable by that hashtag, to anyone in your instance or any other instance that federates with it.
