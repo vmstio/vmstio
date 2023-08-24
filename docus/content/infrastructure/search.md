@@ -7,9 +7,9 @@ title: Search
 Search in Mastodon, and the wider Fediverse, can be a confusing and contentious topic.
 
 By default, Mastodon only performs searches against posts which contain hashtags, using data stored in the primary Postgres database.
-Anything that is posted with a hashtag, is searchable by that hashtag, to anyone in your instance or any other instance that federates with it.
+Anything that is posted with a hashtag is also federated and discoverable by searching for that hashtag.
 
-For instances that choose to implement it, Mastodon further integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) or [OpenSearch](https://opensearch.org) to provide the ability to do additional searching on:
+If an administrator chooses to implement it, Mastodon can integrate with [Elastic Search](https://www.elastic.co/elasticsearch/) or [OpenSearch](https://opensearch.org) to provide the ability to do additional searching on:
 
 - User profiles known to our instance, including their bio information
 - Trending hashtags
