@@ -60,17 +60,3 @@ The following search modifiers are available as of Mastodon 4.2:
 - during:2023-08-08
 
 These can be combined, for example if you want to see all indexed posts which mention the full term "John Mastodon" but also include an image, after August 1, you can search for `'John Mastodon' has:image after:2023-08-01` to refine your results.
-
-## Example Configuration
-
-Example of `.env.production` configuration settings relevant to Elastic Cloud:
-
-```text
-ES_ENABLED=true
-ES_HOST=https://search.target
-ES_PORT=443
-ES_USER=elastic
-ES_PASS=StretchArmstrong
-```
-
-When pointing at an Elastic Search or OpenSearch endpoint using TLS it is necessary that `ES_HOST` include the full `https://` address.
