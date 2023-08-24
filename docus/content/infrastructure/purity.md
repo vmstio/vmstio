@@ -38,7 +38,7 @@ Starting with Mastodon 4.2, the project is standardizing use the use of `dev`, `
 
 - `dev` is used to identify instances running directly from the `main` branch on GitHub, either compiled from source directly or using their own container images.
 - `nightly` is used to identify instances running typically from the project compiled container images which are automatically published with the current status of `main` every night.
-- `beta` or `rc` will identify instances running from a soon to be finalized release of Mastodon, from a tagged pre-released on GitHub or from a project compiled container image.
+- `beta` or `rc` will identify instances running from a soon to be finalized release of Mastodon, from a tagged pre-release on GitHub or from a project compiled container image.
 
 Forks or other local code modifications are indicated by the `+text` at the end of the version string.
 One popular soft fork of Mastodon, called Glitch, is typically identified by `+glitch` at the end of the version.
