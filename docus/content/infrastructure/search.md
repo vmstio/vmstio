@@ -57,7 +57,7 @@ The following search modifiers are available as of Mastodon 4.2:
 - is:reply
 - language:en
 - before:2023-08-21
-- after:2023-08-08
+- after:2023-08-21
 - during:2023-08-08
 
 These can be combined, for example if you want to see all indexed posts which mention the full term "John Mastodon" but also include an image, after August 1, you can search for `'John Mastodon' has:image after:2023-08-01` to refine your results.
