@@ -32,9 +32,17 @@ This opt-in process can be done in Preferences > [Privacy & Reach](https://vmst.
 
 The decision to opt-in or out of this feature does not impact the ability of users to see your posts using a standard hashtag search, or other full text searching where they have previously interacted with your post, as outlined above.
 
-### Unauthorized Indexing
+## Opt-Out Discovery
 
-The `indexable` setting is federated to other Mastodon instances running version 4.2 beta 2 or higher, as well as other Fediverse software platforms that are programmed to recognize this setting.
+Users can also opt-out of their profile biographical information being returned in search results, by visiting the Preferences > [Privacy & Reach](https://vmst.io/settings/privacy) under "Feature profile and posts in discovery algorithms."
+
+![Discoverable](/discoverable.png)
+
+Changing this setting is not recommended.
+
+## Unauthorized Indexing
+
+The `discoverable` and `indexable` settings are federated to other Mastodon instances running version 4.2 beta 2 or higher, as well as other Fediverse software platforms that are programmed to recognize this setting.
 The Mastodon project carefully considers and debates the implementation of features like search with a goal of providing for user consent while avoiding misuse.
 
 However, some Mastodon instances have side-stepped some of the privacy concerns and previously implemented an enhanced full text search which does not currently respect this `indexable` flag, while other Fediverse projects and forks have done so in their own ways.
@@ -57,8 +65,7 @@ The following search modifiers are available as of Mastodon 4.2:
 - is:reply
 - language:en
 - before:2023-08-21
-- after:2023-08-21
-- during:2023-08-21
+- after:2023-08-08
 
 These can be combined, for example if you want to see all indexed posts which mention the full term "John Mastodon" but also include an image, after August 1, you can search for `'John Mastodon' has:image after:2023-08-01` to refine your results.
 
