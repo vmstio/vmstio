@@ -37,7 +37,7 @@ The decision to opt-in or out of this feature does not impact the ability of use
 The `indexable` setting is federated to other Mastodon instances running version 4.2 beta 2 or higher, as well as other Fediverse software platforms that are programmed to recognize this setting.
 After vigorous debate, the Mastodon project, works to be thoughtful in it's implementation of features like search to provide user consent and avoid misuse.
 
-However, some Mastodon instances have side-stepped some of the privacy concerns and implemented an enhanced full text search on their own already, while other projects and forks have done so in their own ways.
+However, some Mastodon instances have side-stepped some of the privacy concerns and previously implemented an enhanced full text search which does not currently respect this `indexable` flag, while other Fediverse projects and forks have done so in their own ways.
 
 vmst.io cannot completely control how your posts are indexed by other federated platforms.
 
