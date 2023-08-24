@@ -4,9 +4,12 @@ title: Search
 
 # Search
 
-Search in Mastodon, and the wider Fediverse, is a confusing topic.
+Search in Mastodon, and the wider Fediverse, can be a confusing and contentious is a confusing topic.
 
-By default, Mastodon only performs searches against posts which contain hashtags. Mastodon further integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) to provide the ability to do additional searching on:
+By default, Mastodon only performs searches against posts which contain hashtags, using data stored in the primary Postgres database.
+Anything that is posted with a hashtag, is searchable by that hashtag, to anyone in your instance or any other instance that federates with it.
+
+For instances that choose to implement it, Mastodon further integrates with [Elastic Search](https://www.elastic.co/elasticsearch/) or [OpenSearch](https://opensearch.org) to provide the ability to do additional searching on:
 
 - User profiles known to our instance, including their bio information
 - Trending hashtags
@@ -19,13 +22,17 @@ By default, Mastodon only performs searches against posts which contain hashtags
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
 We use a Elastic Search 7.x running on our Kubernetes cluster.
 
-Starting in Mastodon 4.2, full text search will also include posts for anyone who opts-in to letting their own instance, and other Mastodon instances, return any full text search results for their posts.
+## Opt-In Indexing
 
-This opt-in process can be done in Preferences > [Privacy & Reach](https://vmst.io/settings/privacy) under "Include posts in search results."
+Starting in Mastodon 4.2, full text search will also include posts for anyone who opts-in to letting their own instance, and other Mastodon instances, return any full text search results for their posts.
 
 ![Indexable](/indexable.png)
 
-## Unauthorized Indexing
+This opt-in process can be done in Preferences > [Privacy & Reach](https://vmst.io/settings/privacy) under "Include posts in search results."
+
+The decision to opt-in or out of this feature does not impact the ability of users to see your posts using a standard hashtag search, or other full text searching where they have previously interacted with your post, as outlined above.
+
+### Unauthorized Indexing
 
 The `indexable` setting is federated to other Mastodon instances running version 4.2 beta 2 or higher, as well as other Fediverse software platforms that are programmed to recognize this setting.
 After vigorous debate, the Mastodon project, works to be thoughtful in it's implementation of features like search to provide user consent and avoid misuse.
