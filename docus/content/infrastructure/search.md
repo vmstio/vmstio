@@ -11,9 +11,9 @@ Anything that is posted with a hashtag is also federated and discoverable by sea
 
 If an administrator chooses to implement it, Mastodon can integrate with [Elastic Search](https://www.elastic.co/elasticsearch/) or [OpenSearch](https://opensearch.org) to provide the ability to do additional searching on:
 
-- User profiles known to our instance, including their bio information
+- Users known to our instance (including their profile information)
 - Trending hashtags
-- Full text search of **your** posts
+- Full text search of **your** posts (including alt-text data)
 - Full text search of replies to **your** posts
 - Any other post that **you** have directly interacted with (bookmarked, marked as a favorite, or boosted)
 
