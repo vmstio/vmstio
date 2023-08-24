@@ -25,7 +25,7 @@ vmst.io itself cannot evaluate every request for donations so we ask users use t
 
 There is no hard and fast measure for what defines excessive.
 
-Generally the types of accounts we want on vmst.io are personal accounts where you identify as you, with your name and face. You speak in your voice, you participate in the community and the wider fediverse as you.
+Generally the types of accounts we want on vmst.io are personal accounts where you identify as you, with your name and face. You speak in your voice, you participate in the community and the wider Fediverse as you.
 
 You can post about life, work, hobbies, ups and downs, memes, whatever you'd like (within the [rules](/rules).)
 
