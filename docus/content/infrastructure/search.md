@@ -67,6 +67,9 @@ The following search modifiers are available as of Mastodon 4.2:
 - before:2023-08-21
 - after:2023-08-08
 
-These can be combined, for example if you want to see all indexed posts which mention the full term "John Mastodon" but also include an image, after August 1, you can search for `'John Mastodon' has:image after:2023-08-01` to refine your results.
+You can combine the search parameters.
 
-Currently adding multiple modifiers together as shown above will work, but using operators like `AND`, `NOT`, and `OR` are not functional.
+For example, to see all indexed posts which mention the phrase `John Mastodon` AND include an image posted after August 1, use the following search: `'John Mastodon' has:image after:2023-08-01`
+
+As this feature is further developed, more modifiers may become available.
+Also, adding multiple modifiers together as shown above will work, but using operators like `AND`, `NOT`, and `OR` are currently not supported.
