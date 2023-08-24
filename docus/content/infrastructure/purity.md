@@ -16,7 +16,7 @@ Such instance specific customizations include:
 - Updating our Docker containers to Debian 12 (Bookworm)
 - Updating to ImageMagick 7 and ffmpeg 6
 - Raising the post character count limit from 500 to 512
-- Adding the [Bird UI](/flings/birdui) theme
+- Adding the [Elephant](/flings/elephant) theme
 - Displaying the commit level that our custom build is running.
 
 ## Container Availability
