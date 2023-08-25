@@ -11,10 +11,10 @@ Anything that is posted with a hashtag is also federated and discoverable by sea
 
 If an administrator chooses to implement it, Mastodon can integrate with [Elastic Search](https://www.elastic.co/elasticsearch/) or [OpenSearch](https://opensearch.org) to provide the ability to do additional searching on:
 
-- Users known to our instance (including their profile information)
+- Users known to the instance (including their profile information)
 - Trending hashtags
-- Full text search of **your** posts (including alt-text data)
-- Full text search of replies to **your** posts
+- Full text search of **your own** posts (including alt-text data)
+- Full text search of replies to **your own** posts
 - Any other post that **you** have directly interacted with (bookmarked, marked as a favorite, or boosted)
 
 ![John Mastodon Example Search](/john-mastodon.jpg)
@@ -31,6 +31,12 @@ Starting in Mastodon 4.2, full text search will also include posts for anyone wh
 This opt-in process can be done in Preferences > [Privacy & Reach](https://vmst.io/settings/privacy) under "Include posts in search results."
 
 The decision to opt-in or out of this feature does not impact the ability of users to see your posts using a standard hashtag search, or other full text searching where they have previously interacted with your post, as outlined above.
+
+If you opt-in to full indexing and later decide you no longer want to participate, you're free to change this setting.
+
+Any changes to this setting take effect instantly for local members doing searches against your account, but may take time for the change to federate out to other instances.
+Like any other profile update, the changes are queued to immediately be sent to other servers but for any number of reasons may fail to be received by all instances.
+Mastodon does additional polling of remote user profiles to make sure the `indexable` flag and other profile data is up-to-date.
 
 ## Opt-Out Discovery
 
