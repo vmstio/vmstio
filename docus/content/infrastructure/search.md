@@ -6,13 +6,26 @@ title: Search
 
 Search in Mastodon, and the wider Fediverse, can be a confusing and contentious topic.
 
-By default, Mastodon only performs searches against posts which contain hashtags, using data stored in the primary Postgres database.
-Anything that is posted with a hashtag is also federated and discoverable by searching for that hashtag.
+There are two levels of search supported by Mastodon:
+
+- Basic Search
+- Full Text Search
+
+The availability of the more advanced full text searching depends on if your instance has implemented additional indexing infrastructure.
+
+## Basic Search
+
+By default, Mastodon only performs hashtag searches against posts, using data stored in the primary Postgres database.
+Including a hashtag in your post makes that post indexable by anyone else who performs a search for that hashtag.
+Anything that is posted with a hashtag is also federated and discoverable by searching for that hashtag on any other instance.
+
+Basic search also provides limited searching against user names for folks where the instance already has awareness of their account.
+
+## Full Text Search
 
 If an administrator chooses to implement it, Mastodon can integrate with [Elasticsearch](https://www.elastic.co/elasticsearch/) or [OpenSearch](https://opensearch.org) to provide the ability to do additional searching on:
 
-- Users known to the instance (including their profile information)
-- Trending hashtags
+- Users profile information (unless they opt-out)
 - Full text search of **your own** posts (including alt-text data)
 - Full text search of replies to **your own** posts
 - Any other post that **you** have directly interacted with (bookmarked, marked as a favorite, or boosted)
@@ -29,7 +42,7 @@ If you don't see this, full text searching is not enabled.
 
 ![](/no-es-search.png)
 
-## Opt-In Indexing
+### Opt-In Indexing
 
 Starting in Mastodon 4.2, full text search will also include posts for anyone who opts-in to letting their own instance, and other Mastodon instances, return any full text search results for their posts.
 
@@ -51,7 +64,7 @@ If you have opted your account into full indexing, but wish to not have an indiv
 
 Follower only and private mentions are also not discoverable to other users.
 
-## Opt-Out Profile Discovery
+### Opt-Out Profile Discovery
 
 Users can also opt-out of their profile biographical information being returned in search results, by visiting the Preferences > [Privacy & Reach](https://vmst.io/settings/privacy) under "Feature profile and posts in discovery algorithms."
 
@@ -59,7 +72,7 @@ Users can also opt-out of their profile biographical information being returned 
 
 Changing this setting is not recommended.
 
-## Unauthorized Indexing
+### Unauthorized Indexing
 
 The `discoverable` and `indexable` settings are federated to other Mastodon instances running version 4.2 beta 2 or higher, as well as other Fediverse software platforms that are programmed to recognize this setting.
 The Mastodon project carefully considers and debates the implementation of features like search with a goal of providing for user consent while avoiding misuse.
@@ -68,7 +81,7 @@ However, some Mastodon instances have side-stepped some of the privacy concerns 
 
 vmst.io has limited controls over how other federated platforms index your posts.
 
-## Search Modifiers
+### Search Modifiers
 
 The following search modifiers are available as of Mastodon 4.2:
 
