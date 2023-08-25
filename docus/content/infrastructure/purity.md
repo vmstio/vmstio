@@ -7,7 +7,8 @@ title: Source Code
 Our goal is to provide the best possible Mastodon experience for our members.
 One way to deliver on that is by delivering the most up-to-date Mastodon code.
 We  "run off main", which means using the latest commits to the `main` branch of the Mastodon codebase found on the project's official [GitHub](https://github.com/mastodon/mastodon) repository.
-We do modify the code at application build time by applying a limited set of changes to the standard code.
+
+We modify the code at application build time by applying a limited set of changes to the standard code.
 We then push the modified code to a Docker container for consumption by our Kubernetes cluster.
 
 Such instance specific customizations for our containers include:
