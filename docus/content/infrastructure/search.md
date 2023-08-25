@@ -29,6 +29,7 @@ If an administrator chooses to implement it, Mastodon can integrate with [Elasti
 - Full text search of **your own** posts (including alt-text data)
 - Full text search of replies to **your own** posts
 - Any other post that **you** have directly interacted with (bookmarked, marked as a favorite, or boosted)
+- Starting in Mastodon 4.2, **any post** from users who **opt-in** to full text search indexing.
 
 ![John Mastodon Example Search](/john-mastodon.jpg)
 
