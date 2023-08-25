@@ -22,8 +22,8 @@ Container specific build settings include:
 
 - Embedding the Digital Ocean internal security certificates for use by the the Streaming service to connect to their managed Postgres database
 - Using Docker 12 "Bookworm" with the latest package updates as our container base operating system
-- Using deb-multimedia for getting the latest versions of packages like to ImageMagick 7 and ffmpeg 6
-- Using node.js 18.x instead of 16.x via Node Source
+- Using deb-multimedia for getting the latest versions of packages like ImageMagick 7 and ffmpeg 6
+- Using node.js 18.x instead of 16.x, obtained via Node Source
 - Enabling [YJIT](https://shopify.engineering/ruby-yjit-is-production-ready) for better Ruby performance
 
 ## Container Availability
