@@ -22,9 +22,10 @@ If an administrator chooses to implement it, Mastodon can integrate with [Elasti
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
 We use a multi-node Elasticsearch 7.x implementation running on our Kubernetes cluster.
 
-_How do you know if full text searching is enabled on my instance?_
+_How will I know if full text searching is enabled on my instance?_
 
 When you start searching, the dropdown will say "Posts matching ..." your term.
+If you don't see this, full text searching is not enabled.
 
 ![](/no-es-search.png)
 
