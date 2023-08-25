@@ -20,10 +20,11 @@ Mastodon instance specific customizations include:
 
 Container specific build settings include:
 
-- Embedding the Digital Ocean internal security certificates
-- Updating our Docker containers to Debian 12 (Bookworm)
-- Enabling [YJIT](https://shopify.engineering/ruby-yjit-is-production-ready) for Ruby 3.2
-- Updating to ImageMagick 7 and ffmpeg 6
+- Embedding the Digital Ocean internal security certificates for use by the the Streaming service to connect to their managed Postgres database
+- Using Docker 12 "Bookworm" with the latest package updates as our container base operating system
+- Using deb-multimedia for getting the latest versions of packages like to ImageMagick 7 and ffmpeg 6
+- Using node.js 18.x instead of 16.x via Node Source
+- Enabling [YJIT](https://shopify.engineering/ruby-yjit-is-production-ready) for better Ruby performance
 
 ## Container Availability
 
