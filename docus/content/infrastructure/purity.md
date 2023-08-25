@@ -11,16 +11,19 @@ We  "run off main", which means using the latest commits to the `main` branch of
 We take a clean copy of the latest Mastodon code and then apply a limited set of modification with a custom script.
 We then build the modified code inside a Docker container, publish it to GitHub and Docker Hub, for consumption by our Kubernetes cluster.
 
-Such instance specific customizations for our containers include:
+Mastodon instance specific customizations include:
 
-- Embedding the Digital Ocean internal security certificates
 - Customizing the Mastodon logo, if needed, for events like Pride Month
 - Removing the Hiredis driver (see below)
+- Raising the post character count limit from 500 to 512
+- Adding the [Elephant](/flings/elephant) theme
+
+Container specific build settings include:
+
+- Embedding the Digital Ocean internal security certificates
 - Updating our Docker containers to Debian 12 (Bookworm)
 - Enabling [YJIT](https://shopify.engineering/ruby-yjit-is-production-ready) for Ruby 3.2
 - Updating to ImageMagick 7 and ffmpeg 6
-- Raising the post character count limit from 500 to 512
-- Adding the [Elephant](/flings/elephant) theme
 
 ## Container Availability
 
