@@ -38,7 +38,13 @@ Any changes to this setting take effect instantly for local members doing search
 Like any other profile update, the changes are queued to immediately be sent to other servers but for any number of reasons may fail to be received by all instances.
 Mastodon does additional polling of remote user profiles to make sure the `indexable` flag and other profile data is up-to-date.
 
-## Opt-Out Discovery
+### Per Post Out-Out
+
+If you have opted your account into full indexing, but wish to not have an individual post discoverable, you can opt that post out by setting the post visibility to "Unlisted" instead of public.
+
+Follower only and private mentions are also not discoverable to other users.
+
+## Opt-Out Profile Discovery
 
 Users can also opt-out of their profile biographical information being returned in search results, by visiting the Preferences > [Privacy & Reach](https://vmst.io/settings/privacy) under "Feature profile and posts in discovery algorithms."
 
