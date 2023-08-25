@@ -22,6 +22,12 @@ If an administrator chooses to implement it, Mastodon can integrate with [Elasti
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
 We use a multi-node Elasticsearch 7.x implementation running on our Kubernetes cluster.
 
+_How do you know if full text searching is enabled on my instance?_
+
+When you start searching, the dropdown will say "Posts matching ..." your term.
+
+![](/no-es-search.png)
+
 ## Opt-In Indexing
 
 Starting in Mastodon 4.2, full text search will also include posts for anyone who opts-in to letting their own instance, and other Mastodon instances, return any full text search results for their posts.
@@ -79,9 +85,17 @@ The following search modifiers are available as of Mastodon 4.2:
 - before:2023-08-21
 - after:2023-08-08
 
-You can combine the search parameters.
-
-For example, to see all indexed posts which mention the phrase `John Mastodon` AND include an image posted after August 1, use the following search: `'John Mastodon' has:image after:2023-08-01`
-
 As this feature is further developed, more modifiers may become available.
-Also, adding multiple modifiers together as shown above will work, but using operators like `AND`, `NOT`, and `OR` are currently not supported.
+
+### Operators
+
+You can combine the search parameters using operators.
+
+For example, to see all indexed posts which mention the phrase `John Mastodon` AND include an image posted before August 1, use the following search: `'John Mastodon' has:image before:2023-08-01`
+
+When adding multiple modifiers together as shown above, the `AND` operator is automatically included.
+
+To exclude data from a modifier or another search term, use `-` before the excluded term.
+Also note that `OR` type operators are not currently supported.
+
+For example to see all indexed posts for Star Trek that include images but exclude SNW to avoid spoilers, for example, use `'Star Trek' has:image -SNW`
