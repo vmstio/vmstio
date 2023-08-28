@@ -100,6 +100,10 @@ The following search modifiers are available as of Mastodon 4.2:
 - before:2023-08-21
 - after:2023-08-08
 
+You can also use `from:me` to quickly narrow down search to your own post history.
+You **do not** have to opt-in to full search for this to work!
+Your own data is always available to you regardless of other people's ability to search for it.
+
 As this feature is further developed, more modifiers may become available.
 
 ### Operators
@@ -114,3 +118,5 @@ To exclude data from a modifier or another search term, use `-` before the exclu
 Also note that `OR` type operators are not currently supported.
 
 For example to see all indexed posts for Star Trek that include images but exclude SNW to avoid spoilers, for example, use `'Star Trek' has:image -SNW`
+
+Or to see posts from [@vmstan] that mention VMware but exclude any replies, use `from:vmstan -is:reply VMware` 
