@@ -11,8 +11,7 @@ This is represented as `vMAJOR.MINOR.PATCH` such as with Mastodon `v4.1.6` as me
 
 Mastodon uses [GitHub](https://github.com/mastodon/mastodon) as its source code repository.
 Developers from all around the world work on modifying and improving the code.
-All of the Mastodon code in GitHub is stored referred to as the _main branch_.
-(This was previously called _master_ and may still be referred to that way.)
+All of the reviewed and approve Mastodon code in GitHub is stored in what is referred to as the _main branch_.
 
 Using `git`, anyone can _fork_ the main Mastodon code, make changes to their fork, and then submit those changes back to the project.
 The process of submitting those changes is called a _pull request_.
@@ -22,6 +21,8 @@ Once the project team has determined that all of the features they want to inclu
 For instance, when Mastodon 4.1.0 was released, there was a new branch called `stable-4-1` that was created.
 
 Work then begins on Mastodon 4.2.0, with pull requests being merged into `main` and as bugs are found and fixed that impact previous stable releases, those changes are also merged into the other supported stable branches, and then tagged for release as `v4.1.1`, `v3.5.7`, etc.
+
+In order to get new features, Mastodon administrators must upgrade to the next `vMAJOR.MINOR` release.
 
 ![Mastodon Branches](/mastodon-main.png)
 
