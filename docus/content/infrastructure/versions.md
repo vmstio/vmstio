@@ -32,6 +32,7 @@ Version information is visible in the lower left corner of the web interface on 
 
 ![About Version](/about.png)
 
-In the image example, vmst.io is running the `4.2.0-beta2` version of Mastodon, plus all of the commits to the `main` branch on GitHub at to [7164176](https://github.com/mastodon/mastodon/commit/71641766f2ca6555fe19b309e9bd9f2455575bcc) (represented by the first seven characters of the hash), plus minimal local changes specific to vmst.io as noted by `+io`.
+In the image example, vmst.io is running the `4.2.0-dev.0` version of Mastodon, which the `dev.0` indicates it was being built from the `main` branch on GitHub, at commit [ecd76fa](https://github.com/mastodon/mastodon/commit/ecd76fa413e31d4eb26e09fa4b65f8b13bbbb0b7) (represented by the first seven characters of the hash), plus minimal local changes specific to vmst.io as noted by `+io`.
 
-Once Mastodon 4.2 is officially released, and work starts on the next minor.major release, our version will increment to something like `v4.3.0-dev.0+git-githash+io` automatically.
+Once Mastodon 4.2 is officially released, and work starts on the next minor.major release, our version will increment to something like `v4.3.0-dev.0+io` automatically.
+Our [custom Mastodon build](/infrastructure/source) includes the commit ID as part of the about page display code but not in actual the version string.

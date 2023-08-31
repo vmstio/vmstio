@@ -16,6 +16,9 @@ Mastodon instance specific customizations include:
 - Customizing the Mastodon logo, if needed, for events like Pride Month
 - Removing the Hiredis driver (see below)
 - Raising the post character count limit from 500 to 512
+- Changing the icon used for "Unlisted" posts
+- Making images in the timeline views draggable
+- Adding the GitHub commit to the [version information](/infrastructure/versions)
 - Adding the [Elephant](/flings/elephant) theme
 
 Container specific build settings include:
