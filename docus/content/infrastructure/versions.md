@@ -16,6 +16,8 @@ Starting with Mastodon 4.2, the project is standardizing the use of `dev`, `nigh
 
 Additional "metadata" about the release can be added after the pre-release flag, such as a GitHub commit or PR. (Ex: `v4.2.0-beta2+pr-41231`)
 
+![Mastodon Branches](/mastodon-main.png)
+
 ## Forks & Metadata
 
 Forks or other local code modifications are indicated by additional `+text` at the end of the version string.
