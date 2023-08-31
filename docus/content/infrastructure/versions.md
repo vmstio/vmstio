@@ -37,6 +37,8 @@ Starting with Mastodon 4.2, the project is standardizing the use of `dev`, `nigh
 - `nightly` is used to identify instances running typically from the project compiled container images which are automatically published with the current status of `main` every night.
 - `betaX` or `rcX` will identify instances running from a soon to be finalized release of Mastodon, from a tagged pre-release on GitHub or from a project compiled container image.
 
+Instances which run on `dev.X` or `nightly` are typically running the latest code available when it went into production, and not waiting for an official release.
+
 Additional "metadata" about the release can be added after the pre-release flag, such as a GitHub commit or PR. (Ex: `v4.2.0-beta2+pr-41231`)
 
 ## Forks & Metadata
