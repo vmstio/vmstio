@@ -10,10 +10,11 @@ Some of these services are paid for while others are free to use.
 
 | Vendor | Service |
 |---|---|
-| Digital Ocean | Managed Postgres, Managed Redis, Managed Kubernetes, Object Storage, Static Site Generator, Content Delivery Network (CDN), Load Balancer, Private Container Registry and Nameservers |
+| Digital Ocean | Managed Postgres, Managed Redis, Managed Kubernetes, Object Storage, Content Delivery Network (CDN), Load Balancer, and Nameservers |
 | AWS | Simple Email Service |
 | BetterUptime | Status Monitoring |
 | DNSimple | Domain Registrar |
+| Netlify | Static Site Generator & CDN |
 | Let's Encrypt | SSL Certificates |
 | GitHub | Configuration/Settings, Public Container Registry |
 | Docker Hub | Public Container Registry |

@@ -19,7 +19,6 @@ It monitors the status of our external endpoints:
 - Matrix ([matrix.vmst.io](https://matrix.vmst.io/health))
 - Element ([element.vmst.io](https://element.vmst.io))
 - Documentation ([docs.vmst.io](https://docs.vmst.io))
-- Relay ([relay.vmst.io](https://relay.vmst.io))
 
 Uptime is calculated for the last 30/90 days.
 
