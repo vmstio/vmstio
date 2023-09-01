@@ -14,7 +14,7 @@ title: Sidekiq
 By using Sidekiq, Mastodon can handle multiple tasks concurrently and efficiently, improving the performance and responsiveness of the platform.
 This is crucial for providing a good user experience, especially considering the federated and decentralized nature of Mastodon.
 
-In the vmst.io environment, Sidekiq processes over one million tasks per day.
+In the vmst.io environment, Sidekiq processes nearly two million tasks per day.
 
 Sidekiq runs on the Digital Ocean managed [Kubernetes](https://kubernetes.io) platform which automatically scales the number of required resources.
 

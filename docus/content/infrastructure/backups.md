@@ -24,3 +24,21 @@ Posts made to [vmst.io](https://vmst.io) and messages sent via Matrix are stored
 ## Configuration Backups
 
 - All configuration files for core applications, documentation and Flings are stored on GitHub with changes committed there before being applied to servers.
+
+## Backup Image
+
+We have a customized container image available from both Docker and GitHub container registries used for backup purposes.
+This image is designed for backup, replication and maintenance of container based Mastodon implementations.
+It includes rclone, Postgres and Redis utilities.
+
+- The version tags for the image represent the version of rclone used.
+- The image is based on Debian 11.
+- Postgres utilities are based on version 15.
+- Redis utilities are based on version 7.
+
+There are `/root/backups` and `/root/scripts` directories suitable for mounting and processing relevant files.
+
+In order to use rclone you'll need to mount an existing `rclone.conf` file to `/root/.config/rclone/rclone.conf`
+
+- [GitHub](https://github.com/users/vmstan/packages/container/package/rclone)
+- [Docker](https://hub.docker.com/r/vmstan/rclone)
