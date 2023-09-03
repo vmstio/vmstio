@@ -6,7 +6,7 @@ title: Costs
 
 ## Income
 
-The majority of our income comes from monthly subscriptions through [Ko-Fi](https://ko-fi.com/vmstio) and [Patreon](https://www.patreon.com/vmstan), while a small number of members elect to subscribe annually through [Open Collective](https://opencollective.com/vmstio).
+The majority of our income comes from monthly subscriptions through [Ko-Fi](https://ko-fi.com/vmstio) and [Patreon](https://www.patreon.com/vmstan), while a small number of members elected to subscribe annually through [Open Collective](https://opencollective.com/vmstio).
 Annual subscriptions are represented [here](/funding/costs#expenses) in the monthly total.
 
 Any other funding that comes through one-time tips or shop purchases are also represented below.
