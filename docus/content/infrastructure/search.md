@@ -51,7 +51,9 @@ Starting in Mastodon 4.2, full text search will also include posts for anyone wh
 
 This opt-in process can be done in Preferences > [Privacy & Reach](https://vmst.io/settings/privacy) under "Include posts in search results."
 
-The decision to opt-in or out of this feature does not impact the ability of users to see your posts using a standard hashtag search, or other full text searching where they have previously interacted with your post, as outlined above.
+The decision to opt-in or out of this feature does not impact the ability of users to see your posts using a standard hashtag search, or other full text searching where they have previously interacted with your post, as outlined above. Your decision also does not impact your ability to perform full text searching for other people's content, or your own.
+
+Your own data is always available to you regardless of other people's ability to search for it.
 
 If you opt-in to full indexing and later decide you no longer want to participate, you're free to change this setting.
 
@@ -82,41 +84,36 @@ However, some Mastodon instances have side-stepped some of the privacy concerns 
 
 vmst.io has limited controls over how other federated platforms index your posts.
 
-### Search Modifiers
+## Search Modifiers
 
 The following search modifiers are available as of Mastodon 4.2:
 
-- from:username
-- has:image
-- has:video
-- has:audio
-- has:media
-- has:poll
-- has:link
-- has:embed
-- is:sensitive
-- is:reply
-- language:en
-- before:2023-08-21
-- after:2023-08-08
-
-You can also use `from:me` to quickly narrow down search to your own post history.
-You **do not** have to opt-in to full search for this to work!
-Your own data is always available to you regardless of other people's ability to search for it.
+| Operator        | Modifies search to                                                   |
+|-----------------|----------------------------------------------------------------------|
+| `from:me`       | Posts you've made                                                    |
+| `in:library`    | Posts you have previously interacted with (favorite/boost)           |
+| `from:username` | Posts from a specific user                                           |
+| `has:image`     | Posts that include an image                                          |
+| `has:video`     | Posts that include a video                                           |
+| `has:audio`     | Posts that include audio                                             |
+| `has:media`     | Posts that include any media                                         |
+| `has:poll`      | Posts that have a poll                                               |
+| `has:link`      | Posts that have a link                                               |
+| `has:embed`     | Posts that have embedded content                                     |
 
 As this feature is further developed, more modifiers may become available.
 
 ### Operators
 
-You can combine the search parameters using operators.
+- To exclude content using from a modifier, include a `-` operator as part of the search. For example, `-has:media` would exclude any post that includes media attachments.
+- When you include multiple search terms or modifiers together, there is a hidden `AND` between each component.
+- There is currently not an `OR` type operator.
+- To search for a specific multi-word phrase, put the term in single or double quotes like `'Search Term'` or `"Search Term"`
 
-For example, to see all indexed posts which mention the phrase `John Mastodon` AND include an image posted before August 1, use the following search: `'John Mastodon' has:image before:2023-08-01`
+#### Examples
 
-When adding multiple modifiers together as shown above, the `AND` operator is automatically included.
-
-To exclude data from a modifier or another search term, use `-` before the excluded term.
-Also note that `OR` type operators are not currently supported.
-
-For example to see all indexed posts for Star Trek that include images but exclude SNW to avoid spoilers, for example, use `'Star Trek' has:image -SNW`
-
-Or to see posts from [@vmstan] that mention VMware but exclude any replies, use `from:vmstan -is:reply VMware` 
+- Searching for `Star Wars` will return posts that contain both the word `Star` and `Wars` but not necessarily `Star Wars`.
+- Searching for `"Star Wars"` will only return posts that contain the combined phrase.
+- To see all indexed posts which mention the phrase `John Mastodon` AND include an image posted before August 1, use the following search: `'John Mastodon' has:image before:2023-08-01`
+- To see all indexed posts for Star Trek that include images but exclude SNW to avoid spoilers, for example, use `'Star Trek' has:image -SNW`
+- To see posts from [@vmstan] that mention VMware but exclude any replies, use `from:vmstan -is:reply VMware`
