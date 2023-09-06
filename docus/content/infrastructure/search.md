@@ -54,17 +54,16 @@ Starting in Mastodon 4.2, full text search will also include posts for anyone wh
 
 This opt-in process can be done in Preferences > [Privacy & Reach](https://vmst.io/settings/privacy) under "Include posts in search results."
 
-The decision to opt-in or out of this feature does not impact the ability of users to see your posts using a standard hashtag search, or other full text searching where they have previously interacted with your post, as outlined above. Your decision also does not impact your ability to perform full text searching for other people's content, or your own.
+- If you choose not to opt-in, users may still be able to search for your posts by viewing a hashtag if you've used one, or by doing full text searching **if they have previously interacted with your post**, as outlined above.
+- If you choose not to opt-in, this **does not** impact your ability to perform full text searching for other people's content, or your own.
+- If you choose not to opt-in, **your own post data is available to you via search** regardless of other people's ability to search for it.
+- If you opt-in to full indexing and later decide you no longer want to participate, **you're free to change this setting**.
+- Any changes to this setting take effect instantly for local members doing searches against your account, but may take time for the change to federate out to other instances.
 
-Your own data is always available to you regardless of other people's ability to search for it.
-
-If you opt-in to full indexing and later decide you no longer want to participate, you're free to change this setting.
-
-Any changes to this setting take effect instantly for local members doing searches against your account, but may take time for the change to federate out to other instances.
 Like any other profile update, the changes are queued to immediately be sent to other servers but for any number of reasons may fail to be received by all instances.
 Mastodon does additional polling of remote user profiles to make sure the `indexable` flag and other profile data is up-to-date.
 
-### Per Post Opt-Out
+#### Per Post Opt-Out
 
 If you have opted your account into full indexing, but wish to not have an individual post discoverable, you can opt that post out by setting the post visibility to "Unlisted" instead of public.
 
@@ -113,7 +112,7 @@ As this feature is further developed, more modifiers may become available.
 - There is currently not an `OR` type operator.
 - To search for a specific multi-word phrase, put the term in single or double quotes like `'Search Term'` or `"Search Term"`
 
-#### Examples
+### Examples
 
 - Searching for `Star Wars` will return posts that contain both the word `Star` and `Wars` but not necessarily `Star Wars`.
 - Searching for `"Star Wars"` will only return posts that contain the combined phrase.
