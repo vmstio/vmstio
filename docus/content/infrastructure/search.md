@@ -15,11 +15,14 @@ The availability of the more advanced full text searching depends on if your ins
 
 ## Basic Search
 
-By default, Mastodon only performs hashtag searches against posts, using data stored in the primary Postgres database.
-Including a hashtag in your post makes that post indexable by anyone else who performs a search for that hashtag.
-Anything that is posted with a hashtag is also federated and discoverable by searching for that hashtag on any other instance.
+By default, Mastodon has limited abilities to allow searching of hashtags and to display recent posts made with that tag, using data stored in the primary Postgres database.
+Including a hashtag in your post can that post discoverable by anyone else who might click on the hashtag in the interface.
 
-Basic search also provides limited searching against user names for folks where the instance already has awareness of their account.
+![Debian Search](/debian-search.png)
+
+Anything that is posted with a hashtag may be found by local users, or federated other instances and discoverable by searching for that hashtag.
+
+![Debian Tags](/debian-tags.png)
 
 ## Full Text Search
 
@@ -31,7 +34,7 @@ If an administrator chooses to implement it, Mastodon can integrate with [Elasti
 - Any other post that **you** have directly interacted with (bookmarked, marked as a favorite, or boosted)
 - Starting in Mastodon 4.2, **any post** from users who **opt-in** to full text search indexing.
 
-![John Mastodon Example Search](/john-mastodon.jpg)
+![John Mastodon Example Search](/john-mastodon.png)
 
 While this is considered an optional component for Mastodon deployments, it is utilized on [vmst.io](https://vmst.io).
 We use a multi-node Elasticsearch 7.x implementation running on our Kubernetes cluster.
