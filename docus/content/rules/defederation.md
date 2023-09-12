@@ -17,12 +17,12 @@ Posting the list as a CSV file allows other instance administrators to easily im
 
 ## Sensitive Marking
 
-Our defederated instance list includes domains where the name itself may contain offensive language or, or the resulting site contains harmful or illegal materials. As a result the domains are partially redacted when viewing on the [vmst.io/about](https://vmst.io/about) listing.
+Our defederated instance list includes domains where the name itself may contain offensive language, or the resulting site contains harmful or illegal materials. As a result the domains are partially redacted when viewing on the [vmst.io/about](https://vmst.io/about) listing.
 
 However, in order to import our list into your own, these domain names are listed on GitHub.
 
 ::alert{type="warning"}
-When you view this list or visit these sites at your own discretion and/or liability.
+When you view this list or visit these sites you do so at your own discretion and/or liability.
 ::
 
 ## Blocklist Imports
@@ -30,7 +30,7 @@ When you view this list or visit these sites at your own discretion and/or liabi
 We believe community maintained blocklists serve an important purpose to help jump start instances in providing protection to users form abusive or disruptive individuals.
 
 We choose use extremely high-consensus threshold lists for our suspension (blocked) list to prevent breaking connections from users unnecessarily.
-We have a lower threshold for importing limitation (muted) list as these changes can be undone without breaking user connections.
+We have a lower threshold for importing limitation (muted) lists as these changes can be undone without breaking user connections.
 
 Suspension Sources:
 
@@ -41,13 +41,16 @@ Suspension Sources:
 
 Limitation Sources:
 
-- [Oliphant Tier 0](https://codeberg.org/oliphant/blocklists/raw/branch/main/blocklists/mastodon/tier0-council.csv)
+- [Oliphant Tier 1](https://codeberg.org/oliphant/blocklists/raw/branch/main/blocklists/mastodon/_unified_tier1_blocklist.csv)
+
+_Limitations are processed after suspensions, so if a site appears in multiple sources the more restrictive tier is applied._
 
 Import Filtering:
 
 - As part of our import process we perform an activity check on the domain, if the domain is not currently an ActivityPub endpoint, it is ignored.
 - We run this import process on a regular basis, so if a previously failed domain in the blocklist come back online, they are incorporated back into our defederation list.
 - We do not import changes to the status of any instance which is a member of the Join Mastodon Server Covenant, because we believe in allowing portability between member instances, although they can be automatically limited.
+- We maintain an internal list of allowed instances that might be automatically limited by importing the raw source list, with rare exception this only applies to the limitation sources.
 - Exceptions to this process may made on a case by case basis.
 
 ![Import Diagram](/blocksync.png)
