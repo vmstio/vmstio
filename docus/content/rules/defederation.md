@@ -49,7 +49,7 @@ Import Filtering:
 
 - As part of our import process we perform an activity check on the domain, if the domain is not currently an ActivityPub endpoint, it is ignored.
 - We run this import process on a regular basis, so if a previously failed domain in the blocklist come back online, they are incorporated back into our defederation list.
-- We do not import changes to the status of any instance which is a member of the Join Mastodon Server Covenant, because we believe in allowing portability between member instances, although they can be automatically limited.
+- We do not import changes to the status of any instance that would suspend another member of the [joinmastodon.org](https://joinmastodon.org) [Server Covenant](/about/covenant), because we believe in allowing portability between member instances, although they can be automatically limited.
 - We maintain an internal list of allowed instances that might be automatically limited by importing the raw source list, with rare exception this only applies to the limitation sources.
 - Exceptions to this process may made on a case by case basis.
 
