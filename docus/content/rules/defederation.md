@@ -31,7 +31,7 @@ When you view this list or visit these sites you do so at your own discretion an
 
 We believe community maintained blocklists serve an important purpose to help jump start instances in providing protection to users from abusive or disruptive individuals.
 
-We choose use extremely high-consensus threshold lists for our suspension (blocked) list to prevent breaking connections from users unnecessarily.
+We choose to use extremely high-consensus threshold lists for our suspension (blocked) list to prevent breaking connections from users unnecessarily.
 We have a lower threshold for importing limitation (muted) lists as these changes can be undone without breaking user connections.
 
 ### Sources
