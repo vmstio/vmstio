@@ -13,22 +13,44 @@ We list all defederated instances at [vmst.io/about](https://vmst.io/about), but
 
 :button-link[Download Blocklist]{icon="mdi:file-download-outline" href="https://github.com/vmstan/vmstio/blob/main/domain_blocks.csv" blank}
 
-This list includes domains that may contain offensive language or illegal material, and as a result the domains are marked as sensitive.
 Posting the list as a CSV file allows other instance administrators to easily import our blocklist or compare it against their own.
+
+## Sensitive Marking
+
+Our defederated instance list includes domains where the name itself may contain offensive language or, or the resulting site contains harmful or illegal materials. As a result the domains are partially redacted when viewing on the [vmst.io/about](https://vmst.io/about) listing.
+
+However, in order to import our list into your own, these domain names are listed on GitHub.
+
+::alert{type="warning"}
+When you view this list or visit these sites at your own discretion and/or liability.
+::
 
 ## Blocklist Imports
 
-We believe community maintained blocklists serve an important purpose to help jumpstart the protection of users.
+We believe community maintained blocklists serve an important purpose to help jump start instances in providing protection to users form abusive or disruptive individuals.
 
-The foundation of our defederation list is the [Oliphant Blocklist](https://codeberg.org/oliphant/blocklists) at [Tier 2](https://codeberg.org/oliphant/blocklists/src/branch/main/blocklists/mastodon/_unified_tier2_blocklist.csv). We also use data from [The Bad Space](https://thebad.space) as well as [Vyr's Soapbox List](https://github.com/VyrCossont/Soapblock/blob/main/soapbox.csv)
+We choose use extremely high-consensus threshold lists for our suspension (blocked) list to prevent breaking connections from users unnecessarily.
+We have a lower threshold for importing limitation (muted) list as these changes can be undone without breaking user connections.
 
-As part of our import process we perform an activity check on the domain.
-If the domain is not currently an ActivityPub endpoint, it is ignored.
-We run this import process on a regular basis.
-If a previously failed domain in the blocklist come back online, they are incorporated back into our defederation list.
+Suspension Sources:
 
-We also do not proactively defederate any instance which is a member of the Join Mastodon Server Covenant, because we believe in allowing portability between member instances.
-Exceptions are made on a case by case basis.
+- [Oliphant Birdsites](https://codeberg.org/oliphant/blocklists/raw/branch/main/blocklists/mastodon/birdsite.csv)
+- [Oliphant 100%](https://codeberg.org/oliphant/blocklists/raw/branch/main/blocklists/mastodon/100.percent.csv)
+- [Seridy Tier 0](https://seirdy.one/pb/tier0.csv)
+- [Gardenfence Tier 0](https://raw.githubusercontent.com/gardenfence/blocklist/main/gardenfence-mastodon.csv)
+
+Limitation Sources:
+
+- [Oliphant Tier 0](https://codeberg.org/oliphant/blocklists/raw/branch/main/blocklists/mastodon/tier0-council.csv)
+
+Import Filtering:
+
+- As part of our import process we perform an activity check on the domain, if the domain is not currently an ActivityPub endpoint, it is ignored.
+- We run this import process on a regular basis, so if a previously failed domain in the blocklist come back online, they are incorporated back into our defederation list.
+- We do not import changes to the status of any instance which is a member of the Join Mastodon Server Covenant, because we believe in allowing portability between member instances, although they can be automatically limited.
+- Exceptions to this process may made on a case by case basis.
+
+![Import Diagram](/blocksync.png)
 
 ## Reporting
 

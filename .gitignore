@@ -4,3 +4,12 @@
 
 # Local Netlify folder
 .netlify
+
+# Config Settings
+devops/scripts/user-cleanup/accounts2delete.csv
+devops/scripts/birdsite/domains.txt
+devops/scripts/birdsite/domains_with_issues.txt
+devops/scripts/blocksync/sources/
+devops/scripts/blocksync/output/
+devops/scripts/ip-blocks/ranges.csv
+devops/scripts/builds/config/
