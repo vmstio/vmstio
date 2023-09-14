@@ -24,7 +24,7 @@ Work then begins on Mastodon 4.2.0, with pull requests being merged into `main` 
 
 In order to get new features, Mastodon administrators must upgrade to the next `vMAJOR.MINOR` release.
 
-![Mastodon Branches](/mastodon-main.png)
+![Mastodon Branches](/mastodon-branches.png)
 
 ## Pre-releases
 
