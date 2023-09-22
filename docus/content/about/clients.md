@@ -50,7 +50,7 @@ Clients
     #title
     Web
     #description
-    [Official Client](https://vmst.io), [Elephant](/flings/elephant), [Elk](https://elk.vmst.io/), [Semaphore](https://semaphore.vmst.io)
+    [Official Client](https://vmst.io), [Elephant](/flings/elephant), [Tangerine](/flings/tangerine), [Elk](https://elk.vmst.io/), [Semaphore](https://semaphore.vmst.io)
     ::
 
 ::
