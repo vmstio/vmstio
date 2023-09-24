@@ -18,16 +18,19 @@ Mastodon instance specific customizations include:
 - Raising the post character count limit from 500 to 512
 - Changing the icon used for "Unlisted" posts
 - Making images in the timeline views draggable
+- Adding an S3 retry option
+- Adding a link to Warning Presets in the admin interface
 - Adding the GitHub commit to the [version information](/infrastructure/versions)
 - Adding the [Elephant](/flings/elephant) theme
+- Adding the [Tangerine](/flings/tangerine) theme
 
 Container specific build settings include:
 
-- Embedding the Digital Ocean internal security certificates for use by the the Streaming service to connect to their managed Postgres database
 - Using Docker 12 "Bookworm" with the latest package updates as our container base operating system
-- Using deb-multimedia for getting the latest versions of packages like ImageMagick 7 and ffmpeg 6
-- Using node.js 18.x instead of 16.x, obtained via Node Source
 - Enabling [YJIT](https://shopify.engineering/ruby-yjit-is-production-ready) for better Ruby performance
+- Performance optimizations for Jemalloc.
+
+We intend to upstream these changes with the adoption of PR26850 to the Mastodon project, or a similar concept.
 
 ## Container Availability
 
@@ -36,7 +39,12 @@ Our customized container image is available from both Docker and GitHub containe
 - [GitHub](https://github.com/users/vmstan/packages/container/package/mastodon)
 - [Docker](https://hub.docker.com/r/vmstan/mastodon)
 
-Be aware, there are currently hardcoded links to the vmst.io [Funding](/funding) page in the sidebar, should you implement this for yourself.
+## Streaming Container
+
+Our default container is able to run the Mastodon Streaming API, but we also have a customized container image specific to this task which is stripped down and based on Alpine Line, available from both Docker and GitHub container registries.
+
+- [GitHub](https://github.com/users/vmstan/packages/container/package/mastodon-streaming)
+- [Docker](https://hub.docker.com/r/vmstan/mastodon-streaming)
 
 ## Redis TLS Changes
 
