@@ -16,7 +16,7 @@ Mastodon instance specific customizations include:
 - Customizing the Mastodon logo, if needed, for events like Pride Month ([SVG](https://cdn.vmst.io/docs/masto-pride.zip))
 - Removing the Hiredis driver ([vmstan/mastodon #2](https://github.com/vmstan/mastodon/pull/2))
 - Raising the post character count limit from 500 to 512 ([vmstan/mastodon #1](https://github.com/vmstan/mastodon/pull/1))
-- Changing the icon used for "Unlisted" posts ([mastodon/mastodon #26199](https://github.com/mastodon/mastodon/pull/26199))
+- Changing the icon used for "Unlisted" posts ([mastodon/mastodon #26678](https://github.com/mastodon/mastodon/pull/26678))
 - Making images in the timeline views draggable ([mastodon/mastodon #26656](https://github.com/mastodon/mastodon/pull/26656))
 - Adding an S3 retry option ([vmstan/mastodon #3](https://github.com/vmstan/mastodon/pull/3))
 - Adding a link to Warning Presets in the admin interface ([mastodon/mastodon #26199](https://github.com/mastodon/mastodon/pull/26199))
