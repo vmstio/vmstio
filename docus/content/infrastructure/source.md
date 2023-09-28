@@ -13,16 +13,15 @@ We then build the modified code inside a Docker container, publish it to GitHub 
 
 Mastodon instance specific customizations include:
 
-- Customizing the Mastodon logo, if needed, for events like Pride Month
-- Removing the Hiredis driver (see below)
-- Raising the post character count limit from 500 to 512
-- Changing the icon used for "Unlisted" posts
-- Making images in the timeline views draggable
-- Adding an S3 retry option
-- Adding a link to Warning Presets in the admin interface
+- Customizing the Mastodon logo, if needed, for events like Pride Month ([SVG](https://cdn.vmst.io/docs/masto-pride.zip))
+- Removing the Hiredis driver ([vmstan/mastodon #2](https://github.com/vmstan/mastodon/pull/2))
+- Raising the post character count limit from 500 to 512 ([vmstan/mastodon #1](https://github.com/vmstan/mastodon/pull/1))
+- Changing the icon used for "Unlisted" posts ([mastodon/mastodon #26199](https://github.com/mastodon/mastodon/pull/26199))
+- Making images in the timeline views draggable ([mastodon/mastodon #26656](https://github.com/mastodon/mastodon/pull/26656))
+- Adding an S3 retry option ([vmstan/mastodon #3](https://github.com/vmstan/mastodon/pull/3))
+- Adding a link to Warning Presets in the admin interface ([mastodon/mastodon #PR_26199](https://github.com/mastodon/mastodon/pull/PR_26199))
+- Adding the [Elephant](/flings/elephant) and [Tangerine](/flings/tangerine) themes ([vmstan/mastodon #6](https://github.com/vmstan/mastodon/pull/6))
 - Adding the GitHub commit to the [version information](/infrastructure/versions)
-- Adding the [Elephant](/flings/elephant) theme
-- Adding the [Tangerine](/flings/tangerine) theme
 
 Container specific build settings include:
 
@@ -30,7 +29,7 @@ Container specific build settings include:
 - Enabling [YJIT](https://shopify.engineering/ruby-yjit-is-production-ready) for better Ruby performance
 - Performance optimizations for Jemalloc.
 
-We intend to upstream these changes with the adoption of PR26850 to the Mastodon project, or a similar concept.
+We intend to upstream these changes with the adoption of PR [mastodon/mastodon #26850](https://github.com/mastodon/mastodon/pull/26850) to the Mastodon project, or a similar concept.
 
 ## Container Availability
 
@@ -41,7 +40,7 @@ Our customized container image is available from both Docker and GitHub containe
 
 ## Streaming Container
 
-Our default container is able to run the Mastodon Streaming API, but we also have a customized container image specific to this task which is stripped down and based on Alpine Line, available from both Docker and GitHub container registries.
+Our default container removes Node.js and is not able to run the Mastodon Streaming API, but we have a customized container image specific to this task which is stripped down and based on Debian, available from both Docker and GitHub container registries.
 
 - [GitHub](https://github.com/users/vmstan/packages/container/package/mastodon-streaming)
 - [Docker](https://hub.docker.com/r/vmstan/mastodon-streaming)
