@@ -19,7 +19,7 @@ Mastodon instance specific customizations include:
 - Changing the icon used for "Unlisted" posts ([mastodon #26199](https://github.com/mastodon/mastodon/pull/26199))
 - Making images in the timeline views draggable ([mastodon #26656](https://github.com/mastodon/mastodon/pull/26656))
 - Adding an S3 retry option ([vmstan #3](https://github.com/vmstan/mastodon/pull/3))
-- Adding a link to Warning Presets in the admin interface
+- Adding a link to Warning Presets in the admin interface ([mastodon #PR_26199](https://github.com/mastodon/mastodon/pull/PR_26199))
 - Adding the [Elephant](/flings/elephant) and [Tangerine](/flings/tangerine) themes ([vmstan #6](https://github.com/vmstan/mastodon/pull/6))
 - Adding the GitHub commit to the [version information](/infrastructure/versions)
 
