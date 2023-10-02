@@ -26,7 +26,7 @@ At the moment all of our staff are volunteers, and our only expenses are monthly
 
 | **Vendor**    | **Monthly** |
 |---------------|-------------|
-| Digital Ocean | $479        |
+| Digital Ocean | $616        |
 | Grafana Labs  | $29         |
 | AWS           | $1          |
 
@@ -36,7 +36,7 @@ Additional funds have also been used to make donations to open source software p
 We also periodically test different service offerings to decide if their long term use would be a good fit.
 After a period of review and testing, we may discontinue such offerings if they do not contribute to the community as shown by use.
 
-Last Updated: August 1, 2023.
+Last Updated: October 1, 2023.
 
 ## Processing Fees
 

@@ -22,10 +22,10 @@ All of the staff members of vmst·io are volunteers.
 * Erik Bussink [@ErikBussink](https://vmst.io/@ErikBussink) 🇨🇭
 * Tina Krogull [@TinaKrogull](https://vmst.io/@TinaKrogull) 🇩🇪
 * Brian Knudtson [@bknudtson](https://vmst.io/@bknudtson) 🇺🇸
-* Jim Millard [@millardjk](https://vmst.io/@millardjk) 🇺🇸
 * Sean Massey [@seanpmassey](https://vmst.io/@seanpmassey) 🇺🇸
-* Ariel Sanchez-Mora [@arielsanchezmora](https://vmst.io/@arielsanchezmora) 🇺🇸
 
-## Advisors
+## Advisors & Reservists
 
 * Dr. Scott Chaussée [@s_chaussee](https://vmst.io/@s_chaussee) 🇬🇧
+* Jim Millard [@millardjk](https://vmst.io/@millardjk) 🇺🇸
+* Ariel Sanchez-Mora [@arielsanchezmora](https://vmst.io/@arielsanchezmora) 🇺🇸
