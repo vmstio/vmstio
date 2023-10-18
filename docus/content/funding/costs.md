@@ -31,7 +31,7 @@ At the moment all of our staff are volunteers, and our only expenses are monthly
 | AWS           | $1          |
 
 Money is set aside to cover any tax expenses, or unforeseen costs.
-Additional funds have also been used to make donations to open source software projects that we use, such as Mastodon, Elk and Matrix.
+Additional funds have also been used to make donations to open source software projects that we use, such as Mastodon and Elk.
 
 We also periodically test different service offerings to decide if their long term use would be a good fit.
 After a period of review and testing, we may discontinue such offerings if they do not contribute to the community as shown by use.

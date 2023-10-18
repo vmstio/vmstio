@@ -15,7 +15,7 @@ Where possible, we will notify you if such processes are taken for data associat
 
 Additionally, our hosting providers may have access to your data as part of the general administration of the server infrastructure, subject to their own Terms of Service.
 
-You should use Signal, [Matrix](/flings/matrix), or another E2E messaging app for the things you really want to be private.
+You should use Signal, Matrix, or another E2E messaging app for the things you really want to be private.
 
 ## Privacy Policy
 

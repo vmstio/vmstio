@@ -62,7 +62,7 @@ Import Filtering:
 ## Reporting
 
 If during your use of the platform, you find another instance that you think needs to be restricted from interacting with ours **or** if you feel that another instance may have been blocked by our staff in error, please file an issue on our [GitHub](https://github.com/vmstan/mastodon/issues/new/choose).
-If you'd feel more comfortable, you can also reach out to one or more of our staff directly via private mention or Matrix.
+If you'd feel more comfortable, you can also reach out to one or more of our staff directly via private mention.
 
 ## Threads
 
