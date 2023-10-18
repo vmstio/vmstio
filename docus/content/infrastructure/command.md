@@ -9,7 +9,7 @@ title: Command and Control
 We use the open source [n8n](https://n8n.io/) platform to perform automation tasks and send notifications.
 n8n is similar to Zapier, IFTTT, or Power Automate, but can be self-hosted.
 
-n8n connects the various APIs from Mastodon, Matrix, Patreon, Ko-fi, Open Collective, and GitHub.
+n8n connects the various APIs from Mastodon, Slack, Patreon, Ko-fi, Open Collective, and GitHub.
 
 n8n runs on our main Kubernetes cluster.
 

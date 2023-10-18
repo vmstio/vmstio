@@ -8,16 +8,16 @@ We backup the persistent data storage of vmst.io multiple times per day/week and
 
 ## Database Backups
 
-Posts made to [vmst.io](https://vmst.io) and messages sent via Matrix are stored in backend Postgres databases with Redis used as a key value store and timeline cache for [vmst.io](https://vmst.io).
+Posts made to [vmst.io](https://vmst.io) and messages sent via Slack are stored in backend Postgres databases with Redis used as a key value store and timeline cache for [vmst.io](https://vmst.io).
 
-- For the backup of PostgreSQL we use `pg_dump` with some custom scripts that process each task and then fire off notifications to our backend Matrix channels.
+- For the backup of PostgreSQL we use `pg_dump` with some custom scripts that process each task and then fire off notifications to our backend Slack channels.
 - Database backups are currently made every day, and replicated across geographies.
 - In addition, Digital Ocean provides transaction level rollback functionality as part of their managed database service.
 
 ## Media/CDN Store Backups
 
 - The CDN/media data is sync'd directly to another Digital Ocean object store via the `rclone` [utility](https://rclone.org).
-- This is done using some custom scripts that process each task and then fire off notifications to our backend Matrix channels.
+- This is done using some custom scripts that process each task and then fire off notifications to our backend Slack channels.
 - CDN backups currently run every day.
 - Only the latest copy of CDN data is retained.
 

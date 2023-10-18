@@ -39,13 +39,13 @@ The Administrators are **the final authority** on any appeals, moderation issues
 
 ## Reports
 
-When a post is reported, all members of the staff receive an email alert and an alert message is posted to the "vmst.io Moderation" room in Matrix.
+When a post is reported, all members of the staff receive an email alert and an alert message is posted to the "vmst.io Moderation" room in Slack.
 Both alerts include links to the report in the Mastodon UI.
 
 Reports about members of the staff cannot be seen by that staff member in the Mastodon UI.
 
-For whatever action Moderators take on a report, in addition to the action being logged in the Mastodon system, they should post the action to the thread in Matrix as an indicator that they've followed up. 
-If you need to loop in another staffer for an assist do so via @mention within Matrix.
+For whatever action Moderators take on a report, in addition to the action being logged in the Mastodon system, they should post the action to the thread in Slack as an indicator that they've followed up.
+If you need to loop in another staffer for an assist do so via @mention within Slack.
 
 ### Confidentiality
 
@@ -160,7 +160,7 @@ If we have members who are continually getting reported by other instances, thos
 
 If what our members are doing are not in violation of our rules, but are deemed inappropriate for the community of another instance, then that’s their prerogative to take action to limit that user from interacting with their users, just as we can do the same.
 
-If you see reports that may rise to this level, please raise the issue in Matrix so we can discuss.
+If you see reports that may rise to this level, please raise the issue in Slack so we can discuss.
 
 ## Available Actions
 

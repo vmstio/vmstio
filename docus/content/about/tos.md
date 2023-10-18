@@ -11,6 +11,7 @@ This policy does not apply to the practices of companies that vmst.io does not o
 
 ## Changelog
 
+- [October 18, 2023](https://github.com/vmstan/vmstio/pull/81)
 - [August 17, 2023](https://github.com/vmstan/vmstio/pull/71)
 - [July 25, 2023](https://github.com/vmstan/vmstio/commit/37cf880f12a23c2799bf9a8a735a90176e43b0c2#diff-ae85e39155eb0b9c9e8d944a2c038561b24c3c3b65d26c27d0c1aaa317f5ed5b)
 - [July 5, 2023](https://github.com/vmstan/vmstio/commit/65d8330996010ddb283fe2026ed03979ef68cbc9#diff-ae85e39155eb0b9c9e8d944a2c038561b24c3c3b65d26c27d0c1aaa317f5ed5b)
@@ -19,10 +20,9 @@ This policy does not apply to the practices of companies that vmst.io does not o
 
 Definitions of various terms used throughout this document:
 
-|             |                                                                                                                                              |
+| Term        | Definition                                                                                                                                   |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Instance    | Mastodon or other ActivityPub-protocol compatible software installed under a single domain which is configured to accept and relay posts between other systems. |
-| Homeserver  | Matrix-protocol compatible software installed under a single domain which is configured to accept and relay messages between other systems. |                                                                                                                                        |
 | API         | Application programming interface, a way for two or more computer programs to communicate with each other. |
 | Federation  | Instance to instance communication, passing posts and other user data back and forth via an API. |
 | Database    | The system/location dedicated to storage of user data submitted through our website, via an API or from another client application. |
@@ -66,21 +66,6 @@ Definitions of various terms used throughout this document:
 
 Please keep in mind that it is technically possible for the operators of the instance and any receiving instance to view such messages, and that recipients may screenshot, copy or otherwise re-share them.
 
-### Messaging via Matrix
-
-Matrix messaging services are provided to vmst.io instance users, supplementing the core Mastodon service offering, providing the availability of end-to-end encrypted messaging.
-
-- In unencrypted rooms or chats, message data is transmitted between homeservers via TLS but stored in the format it was received by our homeserver database and may be visible to our administrators or to the administrators of federated homeservers.
-- In encrypted rooms or chats, the data is stored in our databases but the encryption keys are stored only on your devices. Messaging data sent via encryption is visible only to the users and client applications which have the keys necessary for decryption of the message.
-- Users may optionally backup an encrypted copy of their keys on the service to aid recovery if they lose all their keys and devices. This key backup is encrypted by a recovery key that only the user has access to. If you lose access to your encryption keys, you lose access to your messages forever.
-- Encrypted messaging data is stored encrypted using AES-256, using message keys generated using the Olm and Megolm cryptographic ratchets.
-- Users connecting to the Matrix homeserver (directly or over federation) will be able to see messages and files according to the access permissions configuration of the relevant room.
-- All vmst.io rules of conduct apply to chat rooms hosted by vmst.io, or accessible via the vmst.io homeserver.
-- Users who participate in rooms hosted outside of the vmst.io homeserver are also subject to rules and terms defined by those service offerings.
-
-Users who lose access to the vmst.io instance will also lose access to the Matrix homeserver.
-Misuse of the Matrix homeserver may result in the loss of feature access, or to all access to the vmst.io instance.
-
 ## IPs and Other Metadata
 
 When you log in, we record the IP address you log in from, as well as the User Agent of your browser or application.
@@ -88,7 +73,7 @@ All the logged in sessions are available for your review and revocation in the s
 
 Any of the information we collect from you may be used in the following ways:
 
-- To provide the core functionality of Mastodon or Matrix as defined above.
+- To provide the core functionality of Mastodon as defined above.
 - To aid moderation of the community, for example comparing your IP address with other known ones to determine ban evasion or other violations.
 - To troubleshoot issues with the service, either reported by you or observed by our administrators.
 - The email address you provide may be used to send you information, notifications about other people interacting with your content or sending you messages, respond to inquiries, and/or other requests or questions.

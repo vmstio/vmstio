@@ -16,8 +16,6 @@ It monitors the status of our external endpoints:
 - Media Storage ([cdn.vmst.io](https://cdn.vmst.io/vmstio.png))
 - Elk ([elk.vmst.io](https://elk.vmst.io))
 - Semaphore ([semaphore.vmst.io](https://semaphore.vmst.io))
-- Matrix ([matrix.vmst.io](https://matrix.vmst.io/health))
-- Element ([element.vmst.io](https://element.vmst.io))
 - Documentation ([docs.vmst.io](https://docs.vmst.io))
 
 Uptime is calculated for the last 30/90 days.
