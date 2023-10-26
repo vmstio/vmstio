@@ -20,4 +20,4 @@ To disable Elephant, simply select one of the default Mastodon themes from the s
 
 ## Screenshot
 
-![Elephant Screenshot](/birdui-screenshot.png)
+![Elephant Screenshot](/elephant-screenshot.png)
