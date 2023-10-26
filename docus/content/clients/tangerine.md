@@ -19,7 +19,7 @@ Tangerine will currently only work with the default single-column options.
 Unlike other theme options, it will automatically switch between dark and light mode based on your system settings.
 For folks who like the layout options of Tangerine, but prefer a more stock color scheme, there is a purple option.
 
-To disable Tangerine, simply select one of the default Mastodon themes from the same control panel option
+To disable Tangerine, select one of the default Mastodon themes from the same control panel option.
 
 ## Screenshot
 
