@@ -7,7 +7,7 @@ description: Alternative web frontend
 
 Tangerine is an alternative theme for the main Mastodon web interface.
 
-Unlike [Elk](/flings/elk), Tangerine is done all with CSS theming.
+Unlike [Elk](/clients/elk), Tangerine is done all with CSS theming.
 The code for Tangerine is maintained by [Niléane](https://vmst.io/@nileane@nileane.fr).
 It is [available on GitHub](https://github.com/nileane/TangerineUI-for-Mastodon).
 
