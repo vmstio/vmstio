@@ -15,7 +15,7 @@ You can compose a post (Toot, if you like), boost others' toots, like, bookmark,
 Why Phanpy, then?
 Phanpy provides some features not available through the standard Mastodon web app interface.
 
-- Boosts Carousel, which visually separate original posts and re-shared posts (boosted posts).
+- Boosts Carousel to visually separate original posts and re-shared posts (boosted posts).
 - Nested comments thread to effortlessly follow conversations with semi-collapsible replies.
 - Similar notifications are grouped and collapsed to reduce clutter.
 - Multi-hashtag timeline to combine up to 5 hashtags into a single view.
