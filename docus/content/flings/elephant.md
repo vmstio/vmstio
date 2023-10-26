@@ -13,6 +13,8 @@ It is [available on GitHub](https://github.com/ronilaukkarinen/mastodon-bird-ui)
 
 To enable Elephant on your vmst.io account, visit Preferences > [Appearance](https://vmst.io/settings/preferences/appearance) > Site Theme > Elephant.
 
+:button-link[Enable Elephant]{icon="fluent-emoji-high-contrast:elephant" href="https://vmst.io/settings/preferences/appearance" blank}
+
 This will work with the default single-column or Advanced multi-column layout options.
 There are also High Contrast and Light color theme options available.
 
