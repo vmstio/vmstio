@@ -13,7 +13,7 @@ It is [available on GitHub](https://github.com/nileane/TangerineUI-for-Mastodon)
 
 To enable Tangerine on your vmst.io account, visit Preferences > [Appearance](https://vmst.io/settings/preferences/appearance) > Site Theme > Tangerine.
 
-:button-link[Enable Elephant]{icon="fluent-emoji-high-contrast:tangerine" href="https://vmst.io/settings/preferences/appearance" blank}
+:button-link[Enable Tangerine]{icon="fluent-emoji-high-contrast:tangerine" href="https://vmst.io/settings/preferences/appearance" blank}
 
 Tangerine will currently only work with the default single-column options.
 Unlike other theme options, it will automatically switch between dark and light mode based on your system settings.
