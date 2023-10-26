@@ -17,7 +17,7 @@ Phanpy provides some features not available through the standard Mastodon web ap
 
 - Boosts Carousel to visually separate original posts and re-shared posts (boosted posts).
 - Nested comments thread to effortlessly follow conversations with semi-collapsible replies.
-- Similar notifications are grouped and collapsed to reduce clutter.
+- Grouped and collapsed notifications to reduce clutter by combining similar items.
 - Multi-hashtag timeline to combine up to 5 hashtags into a single view.
 
 You can use Phanpy right in your browser.
