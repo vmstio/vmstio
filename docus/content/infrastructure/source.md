@@ -20,7 +20,7 @@ Mastodon instance specific customizations include:
 - Making images in the timeline views draggable ([mastodon/mastodon #26656](https://github.com/mastodon/mastodon/pull/26656))
 - Adding an S3 retry option ([vmstan/mastodon #3](https://github.com/vmstan/mastodon/pull/3))
 - Adding a link to Warning Presets in the admin interface ([mastodon/mastodon #26199](https://github.com/mastodon/mastodon/pull/26199))
-- Adding the [Elephant](/flings/elephant) and [Tangerine](/flings/tangerine) themes ([vmstan/mastodon #6](https://github.com/vmstan/mastodon/pull/6))
+- Adding the [Elephant](/clients/elephant) and [Tangerine](/clients/tangerine) themes ([vmstan/mastodon #6](https://github.com/vmstan/mastodon/pull/6))
 - Adding the GitHub commit to the [version information](/infrastructure/versions)
 
 Container specific build settings include:
