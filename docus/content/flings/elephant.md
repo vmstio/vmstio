@@ -8,7 +8,7 @@ description: Alternative web frontend
 Elephant is an alternative theme for the main Mastodon web interface.
 
 Unlike [Elk](/flings/elk), Elephant is done all with CSS theming, and provides an interface similar to what you might find from legacy Birdsites.
-The code for Elephant is also known as Bird UI, and is maintained by [Roni Laukkarinen](https://vmst.io/@rolle@mementomori.social).
+The code for Elephant (also known as Bird UI) and is maintained by [Roni Laukkarinen](https://vmst.io/@rolle@mementomori.social).
 It is [available on GitHub](https://github.com/ronilaukkarinen/mastodon-bird-ui).
 
 To enable Elephant on your vmst.io account, visit Preferences > [Appearance](https://vmst.io/settings/preferences/appearance) > Site Theme > Elephant.
