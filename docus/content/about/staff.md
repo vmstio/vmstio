@@ -8,24 +8,18 @@ All of the staff members of vmst·io are volunteers.
 
 ## Administrators
 
-### Michael Stanclift [@vmstan](https://vmst.io/@vmstan)
+### Michael Stanclift <a rel="me" href="https://vmst.io/@vmstan">@vmstan</a> :icon{name="circle-flags:us"} 
 
-📧 [vmstan@vmst.io](mailto:vmstan@vmst.io)
+:icon{name="tabler:mail"} [mx@vmstan.com](mailto:mx@vmstan.com)
+:icon{name="tabler:brand-matrix"} [@vmstan:matrix.org]https://matrix.to/#/@vmstan:matrix.org)
 
-* Building and maintaining online communities since 1999.
-* Systems administrator since age 13.
+### Daryl White <a rel="me" href="https://vmst.io/@djwfyi">@djwfyi</a> :icon{name="circle-flags:us"}
 
-### Daryl White [@djwfyi](https://vmst.io/@djwfyi)
+:icon{name="tabler:brand-matrix"} [@djwfyi:matrix.org]https://matrix.to/#/@djwfyi:matrix.org)
 
 ## Moderators
 
-* Erik Bussink [@ErikBussink](https://vmst.io/@ErikBussink) 🇨🇭
-* Tina Krogull [@TinaKrogull](https://vmst.io/@TinaKrogull) 🇩🇪
-* Brian Knudtson [@bknudtson](https://vmst.io/@bknudtson) 🇺🇸
-* Sean Massey [@seanpmassey](https://vmst.io/@seanpmassey) 🇺🇸
-
-## Advisors & Reservists
-
-* Dr. Scott Chaussée [@s_chaussee](https://vmst.io/@s_chaussee) 🇬🇧
-* Jim Millard [@millardjk](https://vmst.io/@millardjk) 🇺🇸
-* Ariel Sanchez-Mora [@arielsanchezmora](https://vmst.io/@arielsanchezmora) 🇺🇸
+* Erik Bussink <a rel="me" href="https://vmst.io/@ErikBussink">@ErikBussink</a> :icon{name="circle-flags:ch"}
+* Jim Millard <a rel="me" href="https://vmst.io/@millardjk">@millardjk</a> :icon{name="circle-flags:us"} 
+* Brian Knudtson <a rel="me" href="https://vmst.io/@bknudtson">@bknudtson</a> :icon{name="circle-flags:us"} 
+* Sean Massey <a rel="me" href="https://vmst.io/@seanpmassey">@seanpmassey</a> :icon{name="circle-flags:us"} 
