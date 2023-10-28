@@ -10,12 +10,20 @@ All of the staff members of vmst·io are volunteers.
 
 ### Michael Stanclift <a rel="me" href="https://vmst.io/@vmstan">@vmstan</a> :icon{name="circle-flags:us"} 
 
+* Systems administration
+* Financial operations
+* Project coordination
+
 :icon{name="tabler:mail"} [mx@vmstan.com](mailto:mx@vmstan.com)
-:icon{name="tabler:brand-matrix"} [@vmstan:matrix.org]https://matrix.to/#/@vmstan:matrix.org)
+
+:icon{name="tabler:brand-matrix"} [@vmstan:matrix.org](https://matrix.to/#/@vmstan:matrix.org)
 
 ### Daryl White <a rel="me" href="https://vmst.io/@djwfyi">@djwfyi</a> :icon{name="circle-flags:us"}
 
-:icon{name="tabler:brand-matrix"} [@djwfyi:matrix.org]https://matrix.to/#/@djwfyi:matrix.org)
+* Moderator operations
+* Community management
+
+:icon{name="tabler:brand-matrix"} [@djwfyi:matrix.org](https://matrix.to/#/@djwfyi:matrix.org)
 
 ## Moderators
 
