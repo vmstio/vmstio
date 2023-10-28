@@ -10,7 +10,7 @@ All of the staff members of vmst·io are volunteers.
 
 ### Michael Stanclift 
 
-:icon{name="tabler:brand-mastodon"} <a rel="me" href="https://vmst.io/@vmstan">@vmstan</a>
+:icon{name="tabler:brand-mastodon"} <a rel="me" href="https://vmst.io/@vmstan">@vmstan@vmst.io</a>
 
 :icon{name="tabler:brand-matrix"} [@vmstan:matrix.org](https://matrix.to/#/@vmstan:matrix.org)
 
@@ -18,7 +18,7 @@ All of the staff members of vmst·io are volunteers.
 
 ### Daryl White 
 
-:icon{name="tabler:brand-mastodon"} <a rel="me" href="https://vmst.io/@djwfyi">@djwfyi</a>
+:icon{name="tabler:brand-mastodon"} <a rel="me" href="https://vmst.io/@djwfyi">@djwfyi@vmst.io</a>
 
 :icon{name="tabler:brand-matrix"} [@djwfyi:matrix.org](https://matrix.to/#/@djwfyi:matrix.org)
 
