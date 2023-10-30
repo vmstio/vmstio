@@ -8,19 +8,8 @@ All of the staff members of vmst·io are volunteers.
 
 ## Administrators
 
-#### Michael Stanclift :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@vmstan">@vmstan@vmst.io</a>
-
-:icon{name="cib:matrix"} [@vmstan:matrix.org](https://matrix.to/#/@vmstan:matrix.org)
-
-:icon{name="mdi:email"} [mx@vmstan.com](mailto:mx@vmstan.com)
-
-#### Daryl White :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@djwfyi">@djwfyi@vmst.io</a> 
-
-:icon{name="cib:matrix"} [@djwfyi:matrix.org](https://matrix.to/#/@djwfyi:matrix.org)
+* Michael Stanclift :icon{name="circle-flags:us"} <a rel="me" href="https://vmst.io/@vmstan">:icon{name="mdi:mastodon"}</a> [:icon{name="cib:matrix"}](https://matrix.to/#/@vmstan:matrix.org) [:icon{name="mdi:email"}](mailto:mx@vmstan.com)
+* Daryl White :icon{name="circle-flags:us"} <a rel="me" href="https://vmst.io/@djwfyi">:icon{name="mdi:mastodon"}</a> [:icon{name="cib:matrix"}](https://matrix.to/#/@djwfyi:matrix.org)
 
 ## Moderators
 
