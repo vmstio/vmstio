@@ -8,34 +8,19 @@ All of the staff members of vmst·io are volunteers.
 
 ## Administrators
 
-#### Michael Stanclift :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@vmstan">@vmstan@vmst.io</a>
-
-:icon{name="cib:matrix"} [@vmstan:matrix.org](https://matrix.to/#/@vmstan:matrix.org)
-
-:icon{name="mdi:email"} [mx@vmstan.com](mailto:mx@vmstan.com)
-
-#### Daryl White :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@djwfyi">@djwfyi@vmst.io</a> 
-
-:icon{name="cib:matrix"} [@djwfyi:matrix.org](https://matrix.to/#/@djwfyi:matrix.org)
+* Michael Stanclift [:icon{name="mdi:mastodon"}](https://vmst.io/@vmstan) [:icon{name="cib:matrix"}](https://matrix.to/#/@vmstan:matrix.org) [:icon{name="mdi:email"}](mailto:mx@vmstan.com)
+* Daryl White [:icon{name="mdi:mastodon"}](https://vmst.io/@djwfyi) [:icon{name="cib:matrix"}](https://matrix.to/#/@djwfyi:matrix.org)
 
 ## Moderators
 
-#### Erik Bussink :icon{name="circle-flags:ch"}
+* Erik Bussink [:icon{name="mdi:mastodon"}](https://vmst.io/@ErikBussink)
+* Brian Knudtson [:icon{name="mdi:mastodon"}](https://vmst.io/@bknudtson)
+* Sean Massey [:icon{name="mdi:mastodon"}](https://vmst.io/@seanpmassey)
+* Jim Millard [:icon{name="mdi:mastodon"}](https://vmst.io/@millardjk)
 
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@ErikBussink">@ErikBussink@vmst.io</a>
-
-#### Brian Knudtson :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@bknudtson">@bknudtson@vmst.io</a>  
-
-#### Sean Massey :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@seanpmassey">@seanpmassey@vmst.io</a>
-
-#### Jim Millard :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@millardjk">@millardjk@vmst.io</a>
+<a rel="me" href="https://vmst.io/@vmstan"></a>
+<a rel="me" href="https://vmst.io/@djwfyi"></a>
+<a rel="me" href="https://vmst.io/@ErikBussink"></a>
+<a rel="me" href="https://vmst.io/@bknudtson"></a>
+<a rel="me" href="https://vmst.io/@seanpmassey"></a>
+<a rel="me" href="https://vmst.io/@millardjk"></a>
