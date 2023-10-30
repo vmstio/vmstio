@@ -13,23 +13,14 @@ All of the staff members of vmst·io are volunteers.
 
 ## Moderators
 
-#### Erik Bussink :icon{name="circle-flags:ch"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@ErikBussink">@ErikBussink@vmst.io</a>
-
-#### Brian Knudtson :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@bknudtson">@bknudtson@vmst.io</a>  
-
-#### Sean Massey :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@seanpmassey">@seanpmassey@vmst.io</a>
-
-#### Jim Millard :icon{name="circle-flags:us"}
-
-:icon{name="mdi:mastodon"} <a rel="me" href="https://vmst.io/@millardjk">@millardjk@vmst.io</a>
-
-
+* Erik Bussink :icon{name="circle-flags:ch"} [:icon{name="mdi:mastodon"}](https://vmst.io/@ErikBussink)
+* Brian Knudtson :icon{name="circle-flags:us"} [:icon{name="mdi:mastodon"}](https://vmst.io/@bknudtson)
+* Sean Massey :icon{name="circle-flags:us"} [:icon{name="mdi:mastodon"}](https://vmst.io/@seanpmassey)
+* * Jim Millard :icon{name="circle-flags:us"} [:icon{name="mdi:mastodon"}](https://vmst.io/@millardjk)
 
 <a rel="me" href="https://vmst.io/@vmstan"></a>
 <a rel="me" href="https://vmst.io/@djwfyi"></a>
+<a rel="me" href="https://vmst.io/@ErikBussink"></a>
+<a rel="me" href="https://vmst.io/@bknudtson"></a>
+<a rel="me" href="https://vmst.io/@seanpmassey"></a>
+<a rel="me" href="https://vmst.io/@millardjk"></a>
