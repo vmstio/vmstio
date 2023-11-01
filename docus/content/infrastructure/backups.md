@@ -8,10 +8,10 @@ We backup the persistent data storage of vmst.io multiple times per day/week and
 
 ## Database Backups
 
-Posts made to [vmst.io](https://vmst.io) and messages sent via Slack are stored in backend Postgres databases with Redis used as a key value store and timeline cache for [vmst.io](https://vmst.io).
+Posts made to [vmst.io](https://vmst.io) are stored in backend Postgres databases with Redis used as a key value store and timeline cache.
 
 - For the backup of PostgreSQL we use `pg_dump` with some custom scripts that process each task and then fire off notifications to our backend Slack channels.
-- Database backups are currently made every day, and replicated across geographies.
+- Database backups are currently made every day, and replicated twice, across geographies.
 - In addition, Digital Ocean provides transaction level rollback functionality as part of their managed database service.
 
 ## Media/CDN Store Backups
@@ -23,7 +23,7 @@ Posts made to [vmst.io](https://vmst.io) and messages sent via Slack are stored 
 
 ## Configuration Backups
 
-- All configuration files for core applications, documentation and Flings are stored on GitHub with changes committed there before being applied to servers.
+- All configuration files for core applications, documentation and web clients are stored on GitHub with changes committed there before being applied to servers.
 
 ## Backup Image
 

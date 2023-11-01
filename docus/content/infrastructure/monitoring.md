@@ -11,12 +11,15 @@ We monitor the health and availability of our infrastructure in a few different 
 This powers our [status.vmst.io](https://status.vmst.io) page.
 It monitors the status of our external endpoints:
 
-- Mastodon ([vmst.io](https://vmst.io))
-- Streaming API ([streaming.vmst.io](https://streaming.vmst.io))
-- Media Storage ([cdn.vmst.io](https://cdn.vmst.io/vmstio.png))
-- Elk ([elk.vmst.io](https://elk.vmst.io))
-- Semaphore ([semaphore.vmst.io](https://semaphore.vmst.io))
-- Documentation ([docs.vmst.io](https://docs.vmst.io))
+- Mastodon Web UI
+- Mastodon API
+- Streaming API 
+- Translation API
+- Media Storage & CDN 
+- [Elk](/clients/elk)
+- [Semaphore](/clients/semaphore)
+- [Phanpy](/clients/phanpy)
+- Documentation
 
 Uptime is calculated for the last 30/90 days.
 

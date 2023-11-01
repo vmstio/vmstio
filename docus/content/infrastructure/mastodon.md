@@ -18,12 +18,11 @@ Our Web tier runs on the Digital Ocean managed Kubernetes platform.
 ### Puma
 
 What users perceive as "Mastodon" is a [Ruby on Rails](https://rubyonrails.org) and [React](https://react.dev) application (with [Puma](https://puma.io) running as the web/presentation layer) providing both ActivityPub/Federation and the web user experience.
-We use Ruby 3.2 and the other modules that are part of the standard [Dockerfile](https://github.com/mastodon/mastodon/blob/main/Dockerfile) build of Mastodon.
 
-Our Puma pods are set to scale with Kubernetes and not within Puma itself. We have Puma configured in `.env.production` and as follows:
+Our Puma pods are set to scale with Kubernetes and within Puma itself. We have Puma configured in `.env.production` and as follows:
 
 ```text
-WEB_CONCURRENCY=1
+WEB_CONCURRENCY=2
 MAX_THREADS=8
 ```
 
