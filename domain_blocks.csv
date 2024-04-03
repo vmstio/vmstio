@@ -23,7 +23,7 @@ cryptodon.lol,suspend,true,true,"",false
 cum.camp,suspend,true,true,"",true
 cum.salon,suspend,true,true,"",true
 decayable.ink,suspend,true,true,"",false
-detroitriotcity.com,suspend,true,true,"",true
+detroitriotcity.com,suspend,true,true,"",false
 eveningzoo.club,suspend,true,true,"",false
 feral.cafe,suspend,true,true,"",false
 fightthis.net,suspend,true,true,"",false
@@ -90,7 +90,6 @@ tastingtraffic.net,suspend,true,true,"",false
 thechimp.zone,suspend,true,true,"",false
 thepostearthdestination.com,suspend,true,true,"",false
 truthsocial.co.in,suspend,true,true,"",false
-twitter.toots.ro,suspend,false,false,"",false
 varishangout.net,suspend,true,true,"",false
 white.fly.dev,suspend,false,false,"",false
 wolfgirl.bar,suspend,true,true,"",false
@@ -98,180 +97,460 @@ worm.pink,suspend,true,true,"",true
 xn--p1abe3d.xn--80asehdb,suspend,true,true,"",false
 yggdrasil.social,suspend,true,true,"",false
 activitypub-proxy.cf,suspend,false,false,"",false
-mastodong.lol,silence,false,false,"",true
-minds.com,silence,false,false,"",false
-monads.online,silence,false,false,"",false
-seikora.one,silence,false,false,"",false
-seo.chat,silence,false,false,"",false
 wxw.moe,silence,false,false,"",false
-djsumdog.com,silence,false,false,"",true
-endtimebelievers.com,silence,false,false,"",false
-librenet.co.za,silence,false,false,"",false
-loveforlandlords.com,silence,false,false,"",false
-minidisc.tokyo,silence,false,false,"",false
-mrhands.horse,silence,false,false,"",false
-niscii.xyz,silence,false,false,"",false
-noagendasocial.nl,silence,false,false,"",false
-poast.tv,silence,false,false,"",false
-press.coop,silence,false,false,"",false
 qoto.org,silence,false,false,"",false
-rqd2.net,silence,false,false,"",false
-satoshishop.de,silence,false,false,"",false
+rqd2.net,suspend,false,false,"",false
 sheep.network,silence,false,false,"",false
-skinheads.eu,silence,false,false,"",true
-skinheads.io,silence,false,false,"",true
-skinheads.uk,silence,false,false,"",true
-troll.cafe,silence,false,false,"",false
-ursal.zone,silence,false,false,"",false
-whinge.house,silence,false,false,"",false
-botsin.space,silence,false,false,"",false
-elekk.xyz,silence,false,false,"",false
-kolektiva.social,silence,false,false,"",false
-mastodon.cloud,silence,false,false,"",false
-misskey.io,silence,false,false,"",false
+skinheads.eu,suspend,false,false,"",true
+skinheads.io,suspend,false,false,"",true
+skinheads.uk,suspend,false,false,"",true
+misskey.io,suspend,false,false,"",false
 syzito.xyz,silence,false,false,"",false
-witches.live,silence,false,false,"",false
-5dollah.click,silence,false,false,"",false
-bassam.social,silence,false,false,"",false
-bitcointv.com,silence,false,false,"",false
+5dollah.click,suspend,false,false,"",false
 boymoder.biz,suspend,false,false,"",true
-buildthatwallandmakeamericagreatagain.trumpislovetrumpis.life,silence,false,false,"",true
 burger.rodeo,suspend,false,false,"",false
-bussy.monster,silence,false,false,"",true
-cdrom.tokyo,silence,false,false,"",false
-darknight-coffee.org,silence,false,false,"",false
-decept.org,silence,false,false,"",false
-dickkickextremist.xyz,silence,false,false,"",true
-dobbs.town,silence,false,false,"",false
-dogsex.org,silence,false,false,"",true
-ebin.club,silence,false,false,"",false
-esmailelbob.xyz,silence,false,false,"",false
-fediverse-lite.com,silence,false,false,"",false
-fluffytail.org,silence,false,false,"",false
-freezepeach.online,silence,false,false,"",false
-furcel.club,silence,false,false,"",false
-fuwa.pink,silence,false,false,"",true
-ghetti.monster,silence,false,false,"",true
-gigaohm.bio,silence,false,false,"",false
-gravure.club,silence,false,false,"",false
-headpat.cafe,silence,false,false,"",false
-hedgehoghunter.club,silence,false,false,"",false
-hermit.cafe,silence,false,false,"",false
-hornyjail.pro,silence,false,false,"",true
-idolheaven.org,silence,false,false,"",false
-impeccable.social,silence,false,false,"",false
-jir.moe,silence,false,false,"",false
-justbros.xyz,silence,false,false,"",false
-jvpiter.net,silence,false,false,"",false
-khajiit.tech,silence,false,false,"",false
-kys.moe,silence,false,false,"",false
-lain.com,silence,false,false,"",false
-liberal.city,silence,false,false,"",false
-liberdon.com,silence,false,false,"",false
-loli.best,silence,false,false,"",true
-longyap.name.my,silence,false,false,"",false
-mastodon.la,silence,false,false,"",false
-miniwa.moe,silence,false,false,"",false
-mitra.social,silence,false,false,"",false
-morale.ch,silence,false,false,"",false
-mu.zaitcev.nu,silence,false,false,"",false
-nalocal519.social,silence,false,false,"",false
-needs.vodka,silence,false,false,"",false
-neomobius.com,silence,false,false,"",false
-ngrok.io,silence,false,false,"",false
-nightshift.social,silence,false,false,"",false
-nixnet.social,silence,false,false,"",false
-noagendatube.com,silence,false,false,"",false
-novoa.nagoya,silence,false,false,"",false
-nya.gay,silence,false,false,"",true
-otakufarms.com,silence,false,false,"",false
-paws.moe,silence,false,false,"",true
-pech.tech,silence,false,false,"",false
-peertube.se,silence,false,false,"",false
-peervideo.club,silence,false,false,"",false
-piazza.today,silence,false,false,"",false
-pirateradio.social,silence,false,false,"",false
-pouque.net,silence,false,false,"",false
-rage.lol,silence,false,false,"",false
-rageparty.club,silence,false,false,"",false
-rakket.app,silence,false,false,"",false
-ravergram.club,silence,false,false,"",false
+loli.best,suspend,false,false,"",true
+ngrok.io,suspend,false,false,"",false
 rayci.st,silence,false,false,"",false
-rebased.io,silence,false,false,"",false
-rebased.social,silence,false,false,"",false
-rebelbase.site,silence,false,false,"",false
-remnant.social,silence,false,false,"",false
-rodent.life,silence,false,false,"",false
-roysbeer.place,silence,false,false,"",false
-sad.cab,silence,false,false,"",false
-sharivegas.com,silence,false,false,"",false
-shrine.moe,silence,false,false,"",false
-sneak.berlin,silence,false,false,"",false
-sneed.vip,silence,false,false,"",false
-soc.ua-fediland.de,silence,false,false,"",false
-socialgoblins.club,silence,false,false,"",false
-spearman.xyz,silence,false,false,"",false
-stormcloak.info,silence,false,false,"",false
-suya.place,silence,false,false,"",false
-the9thcircle.club,silence,false,false,"",false
-theapex.social,silence,false,false,"",false
-thebag.social,silence,false,false,"",false
-theres.life,silence,false,false,"",false
-udongein.xyz,silence,false,false,"",true
-unbound.social,silence,false,false,"",false
-unperson.us,silence,false,false,"",false
-uwu.social,silence,false,false,"",false
-veenus.art,silence,false,false,"",false
-waskuisland.com,silence,false,false,"",false
-whitewomen.dog,silence,false,false,"",true
-workers.dev,silence,false,false,"",false
-xscape.top,silence,false,false,"",false
-dev-wiki.de,silence,false,false,"",false
+xscape.top,suspend,false,false,"",false
 epsilon.social,silence,false,false,"",false
-beefyboys.win,suspend,true,true,"",true
-stereophonic.space,suspend,true,true,"",true
-faggot.zone,suspend,false,false,"",false
+beefyboys.win,suspend,true,true,"",false
+stereophonic.space,suspend,true,true,"",false
+faggot.zone,suspend,false,false,"",true
 misskey-forkbomb.cf,suspend,false,false,"",false
-cryptotooter.com,silence,false,false,"",true
-devs.live,silence,false,false,"",true
-freewahaextremist.wtf,silence,false,false,"",true
-gitmo.life,silence,false,false,"",true
-notbird.site,silence,false,false,"",true
-pl.tkammer.de,silence,false,false,"",true
-redspinning.top,silence,false,false,"",true
-rigcz.club,silence,false,false,"",true
-somewhy.net,silence,false,false,"",true
-stars.eroaward.com,silence,false,false,"",true
-thoughtful.social,silence,false,false,"",true
-tiuxo.com,silence,false,false,"",true
-tokhmi.xyz,silence,false,false,"",true
-were.social,silence,false,false,"",true
-birds.garden,silence,false,false,"",true
-elonsucks.org,silence,false,false,"",true
+thoughtful.social,silence,false,false,"",false
 brid.gy,suspend,false,false,"",false
-poa.st,silence,false,false,"",false
-supernets.social,suspend,true,true,"",true
-kiwifarms.is,suspend,false,false,"",true
-paravielfalt.zone,suspend,false,false,"",true
+poa.st,suspend,false,false,"",false
+supernets.social,suspend,true,true,"",false
+kiwifarms.is,suspend,false,false,"",false
+paravielfalt.zone,suspend,false,false,"",false
 childlove.space,suspend,true,true,"",true
 communist.accountant,silence,false,false,"",false
 matrix.rocks,suspend,false,false,"",false
-bird.gensokyo.info,suspend,false,false,"",false
 pravda.me,suspend,false,false,"",false
 yandere.cc,suspend,false,false,"",false
-angrytoday.com,suspend,true,true,"",true
-cachapa.xyz,suspend,true,true,"",true
-cunnyborea.space,suspend,true,true,"",true
+angrytoday.com,suspend,true,true,"",false
+cachapa.xyz,suspend,true,true,"",false
+cunnyborea.space,suspend,true,true,"",false
 eientei.org,suspend,true,true,"",true
 hentai.baby,suspend,true,true,"",true
 natehiggers.online,suspend,true,true,"",true
 rape.pet,suspend,true,true,"",true
-cannibal.cafe,suspend,false,false,"",true
-cawfee.club,suspend,false,false,"",true
-gentoo.live,suspend,false,false,"",true
-mastodon.cf,suspend,false,false,"",true
-nationalist.social,suspend,false,false,"",true
 oddballs.online,suspend,false,false,"",false
 abraham.su,suspend,false,false,"",false
 sacred.harpy.faith,suspend,false,false,"",false
 social.icod.de,suspend,false,false,"",false
+noauthority.social,silence,false,false,"",false
+ghetti.monster,suspend,true,true,"",false
+whinge.town,suspend,true,true,"",false
+gameliberty.club,suspend,false,false,"",false
+m.mxin.moe,suspend,false,false,"",false
+cunnyborea.top,suspend,false,false,"",false
+friendsyu.me,suspend,false,false,"",false
+social.cutefunny.net,suspend,false,false,"",false
+cloudplane.app,suspend,false,false,"",false
+squabble.org,suspend,true,false,Spam (2024-02-15),false
+shotgunlife.social,suspend,true,false,Spam (2024-02-15),false
+dabzyum.masto.host,suspend,true,false,Spam (2024-02-15),false
+onlybsds.com,suspend,true,false,Spam (2024-02-15),false
+nycity.social,suspend,true,false,Spam (2024-02-15),false
+cmm.fyi,suspend,true,false,Spam (2024-02-15),false
+fusionpros.social,suspend,true,false,Spam (2024-02-15),false
+kokuusa.club,suspend,true,false,Spam (2024-02-15),false
+games.retrotalk.live,suspend,true,false,Spam (2024-02-15),false
+mastodon.zorqz.com,suspend,true,false,Spam (2024-02-15),false
+social.foederiert.de,suspend,true,false,Spam (2024-02-15),false
+kotodama.space,suspend,true,false,Spam (2024-02-15),false
+onion.social,suspend,true,false,Spam (2024-02-15),false
+0x3c.pl,suspend,true,false,Spam (2024-02-15),false
+witten.social,suspend,true,false,Spam (2024-02-15),false
+groupsebelah.com,suspend,true,false,Spam (2024-02-15),false
+430022.xyz,suspend,true,false,Spam (2024-02-15),false
+tech.retrotalk.live,suspend,true,false,Spam (2024-02-15),false
+edusocial.it,suspend,true,false,Spam (2024-02-15),false
+smooth.guru,suspend,true,false,Spam (2024-02-15),false
+spurlock.social,suspend,true,false,Spam (2024-02-15),false
+cherryberry.pink,suspend,true,false,Spam (2024-02-15),false
+kernkraft.social,suspend,true,false,Spam (2024-02-15),false
+mastodon.thedirtydis.co,suspend,true,false,Spam (2024-02-15),false
+daotodon.me,suspend,true,false,Spam (2024-02-15),false
+madworld.social,suspend,true,false,Spam (2024-02-15),false
+mastodon.io.seg.br,suspend,true,false,Spam (2024-02-15),false
+forum-lucifer.com,suspend,true,false,Spam (2024-02-15),false
+neuroscience-mastodon.com,suspend,true,false,Spam (2024-02-15),false
+mastodon.svgun.ru,suspend,true,false,Spam (2024-02-15),false
+devsrv.farhan.codes,suspend,true,false,Spam (2024-02-15),false
+game-tecx.de,suspend,true,false,Spam (2024-02-15),false
+phyrexia.ru,suspend,true,false,Spam (2024-02-15),false
+thewiring.com,suspend,true,false,Spam (2024-02-15),false
+don.neet.co.jp,suspend,true,false,Spam (2024-02-15),false
+besties.com,suspend,true,false,Spam (2024-02-15),false
+electroverse.tech,suspend,true,false,Spam (2024-02-15),false
+aether.run,suspend,true,false,Spam (2024-02-15),false
+closednetwork.social,suspend,true,false,Spam (2024-02-15),false
+digitaldata.social,suspend,true,false,Spam (2024-02-15),false
+dreamersreality.dev,suspend,true,false,Spam (2024-02-15),false
+hdty.in,suspend,true,false,Spam (2024-02-15),false
+i.transmit.love,suspend,true,false,Spam (2024-02-15),false
+library.love,suspend,true,false,Spam (2024-02-15),false
+mastodon-ero.xyz,suspend,true,false,Spam (2024-02-15),false
+mastodon.conquestuniverse.com,suspend,true,false,Spam (2024-02-15),false
+mastodon.integrata-stiftung.de,suspend,true,false,Spam (2024-02-15),false
+mastodon.miri.site,suspend,true,false,Spam (2024-02-15),false
+mastodon.snmsoc.org,suspend,true,false,Spam (2024-02-15),false
+mastodon.unpluggedrva.com,suspend,true,false,Spam (2024-02-15),false
+mentalhealthmasto.com,suspend,true,false,Spam (2024-02-15),false
+molaguay.xyz,suspend,true,false,Spam (2024-02-15),false
+nasface.cz,suspend,true,false,Spam (2024-02-15),false
+parkfans.network,suspend,true,false,Spam (2024-02-15),false
+social.tcpcat.net,suspend,true,false,Spam (2024-02-15),false
+s-h.social,suspend,false,false,Spam (2024-02-15),false
+tcpcat.net,suspend,true,false,Spam (2024-02-15),false
+teamhydra.social,suspend,true,false,Spam (2024-02-15),false
+toot.poedelwitz.de,suspend,true,false,Spam (2024-02-15),false
+tootnet.nl,suspend,true,false,Spam (2024-02-15),false
+tut.andreer.no,suspend,true,false,Spam (2024-02-15),false
+waterlily.tokyo,suspend,true,false,Spam (2024-02-15),false
+9kb.me,silence,false,false,Spam (2024-02-15),false
+archaeology.social,silence,false,false,Spam (2024-02-15),false
+m.techsocial.site,silence,false,false,Spam (2024-02-15),false
+scfzfilm.org,silence,false,false,Spam (2024-02-15),false
+076.moe,suspend,false,false,"",false
+1611.social,suspend,false,false,"",false
+adachi.party,suspend,false,false,"",false
+asteroidm.space,suspend,false,false,"",false
+banepo.st,suspend,false,false,"",false
+childlove.su,suspend,false,false,"",true
+chudbuds.lol,suspend,false,false,"",false
+contrapointsfan.club,suspend,false,false,"",false
+federated.fun,suspend,false,false,"",false
+ignorelist.com,suspend,false,false,"",false
+masochi.st,suspend,false,false,"",false
+mastertibbles.co.uk,suspend,false,false,"",false
+mastinator.com,suspend,false,false,"",false
+minds.com,suspend,false,false,"",false
+mirr0r.city,suspend,false,false,"",false
+obo.sh,suspend,false,false,"",false
+outpoa.st,suspend,false,false,"",false
+parcero.bond,suspend,false,false,"",false
+pibvt.net,suspend,false,false,"",false
+poweredbycocaine.com,suspend,false,false,"",false
+quanta.wiki,suspend,false,false,"",false
+refusal.llc,suspend,false,false,"",false
+repl.co,suspend,false,false,"",false
+republic.red,suspend,false,false,"",false
+rojogato.com,suspend,false,false,"",false
+ryona.agency,suspend,false,false,"",false
+scots.network,suspend,false,false,"",false
+sneed.social,suspend,false,false,"",false
+springbo.cc,suspend,false,false,"",false
+squid.kids,suspend,false,false,"",false
+trumpislovetrumpis.life,suspend,false,false,"",false
+wikileaks2.org,suspend,false,false,"",false
+youjo.love,suspend,false,false,"",false
+neomobius.com,suspend,false,false,dni,false
+twi.social,suspend,false,false,dni,false
+076.ne.jp,suspend,false,false,"",false
+asbestos.cafe,suspend,false,false,"",false
+cannibal.cafe,suspend,false,false,"",false
+collapsitarian.io,suspend,false,false,"",false
+cutefunny.net,suspend,false,false,"",false
+cybercriminal.eu,suspend,false,false,"",false
+cyberstorm.one,suspend,false,false,"",false
+husk.site,suspend,false,false,"",false
+intkos.link,suspend,false,false,"",false
+kawa-kun.com,suspend,false,false,"",false
+kitsunemimi.club,suspend,false,false,"",false
+kiwifarms.cc,suspend,false,false,"",false
+kurosawa.moe,suspend,false,false,"",false
+lewdieheaven.com,suspend,false,false,"",false
+lolicon.rocks,suspend,false,false,"",true
+lovingexpressions.net,suspend,false,false,"",false
+mouse.services,suspend,false,false,"",false
+nobodyhasthe.biz,suspend,false,false,"",false
+nyanide.com,suspend,false,false,"",false
+rapemeat.solutions,suspend,false,false,"",true
+rdrama.cc,suspend,false,false,"",false
+refusal.biz,suspend,false,false,"",false
+rot.gives,suspend,false,false,"",false
+schwartzwelt.xyz,suspend,false,false,"",false
+teci.world,suspend,false,false,"",false
+usualsuspects.lol,suspend,false,false,"",false
+wideboys.org,suspend,false,false,"",false
+zztails.gay,suspend,false,false,"",false
+mastodo.fi,silence,false,false,"",false
+101010.pl,silence,false,false,"",false
+berserker.town,silence,false,false,"",false
+10minutepleroma.com,suspend,true,true,"",true
+4aem.com,suspend,true,true,"",true
+80percent.social,suspend,true,true,"",true
+8777.ch,suspend,true,true,"",true
+addy.gg,suspend,true,true,"",true
+adtension.com,suspend,true,true,"",true
+agdersam.no,suspend,true,true,"",true
+alteregocreations.com,suspend,true,true,"",true
+ancreport.com,suspend,true,true,"",true
+ancreport.xyz,suspend,true,true,"",true
+asimon.org,suspend,true,true,"",true
+ating.press,suspend,true,true,"",true
+bassam.social,suspend,true,true,"",true
+battlepenguin.video,suspend,true,true,"",true
+beefyboys.club,suspend,true,true,"",true
+beepboop.ga,suspend,true,true,"",true
+bgzashtita.es,suspend,true,true,"",true
+birds.garden,suspend,true,true,"",true
+bitcointv.com,suspend,true,true,"",true
+blockedur.mom,suspend,true,true,"",true
+brainsoap.net,suspend,true,true,"",true
+calobar.club,suspend,true,true,"",true
+campduffel.social,suspend,true,true,"",true
+canary.tier0.example.com,suspend,true,true,"",true
+carnivore.social,suspend,true,true,"",true
+catgirl.life,suspend,true,true,"",true
+catposter.club,suspend,true,true,"",true
+cawfee.club,suspend,true,true,"",true
+cdrom.tokyo,suspend,true,true,"",true
+ckpg.space,suspend,true,true,"",true
+clube.social,suspend,true,true,"",true
+coolsite.win,suspend,true,true,"",true
+cottoncandy.cafe,suspend,true,true,"",true
+crucible.world,suspend,true,true,"",true
+cryptotooter.com,suspend,true,true,"",true
+cyberretards.xyz,suspend,true,true,"",true
+danksquad.org,suspend,true,true,"",true
+daspr.io,suspend,true,true,"",true
+declin.eu,suspend,true,true,"",true
+dembased.xyz,suspend,true,true,"",true
+dev-wiki.de,suspend,true,true,"",true
+d-fens.systems,suspend,true,true,"",true
+dickkickextremist.xyz,suspend,true,true,"",true
+dingdash.com,suspend,true,true,"",true
+djsumdog.com,suspend,true,true,"",true
+dobbs.town,suspend,true,true,"",true
+dotnet00.dev,suspend,true,true,"",true
+dragonpsi.xyz,suspend,true,true,"",true
+drow.be,suspend,true,true,"",true
+dtzbts.xyz,suspend,true,true,"",true
+ebin.club,suspend,true,true,"",true
+endtimebelievers.com,suspend,true,true,"",true
+enjoyer.network,suspend,true,true,"",true
+epenguin.com,suspend,true,true,"",true
+eskimo.com,suspend,true,true,"",true
+ey.business,suspend,true,true,"",true
+fbxl.net,suspend,true,true,"",true
+fedposters.club,suspend,true,true,"",true
+femboys.love,suspend,true,true,"",true
+firedragonstudios.com,suspend,true,true,"",true
+foxgirl.lol,suspend,true,true,"",true
+fr13nd5.com,suspend,true,true,"",true
+freespeech.club,suspend,true,true,"",true
+freetalklive.com,suspend,true,true,"",true
+freezepeach.xyz,suspend,true,true,"",true
+gab.ai,suspend,true,true,"",true
+gabe.rocks,suspend,true,true,"",true
+gamers.exposed,suspend,true,true,"",true
+gangstalking.services,suspend,true,true,"",true
+gensokyo.club,suspend,true,true,"",true
+gentoo.live,suspend,true,true,"",true
+glindr.org,suspend,true,true,"",true
+glowers.club,suspend,true,true,"",true
+gorf.pub,suspend,true,true,"",true
+goyim.app,suspend,true,true,"",true
+haeder.net,suspend,true,true,"",true
+hallsofamenti.io,suspend,true,true,"",true
+handholding.io,suspend,true,true,"",true
+handicapped.tk,suspend,true,true,"",true
+hedgehoghunter.club,suspend,true,true,"",true
+helladoge.com,suspend,true,true,"",true
+hendrixgames.com,suspend,true,true,"",true
+hirad.it,suspend,true,true,"",true
+homd.xyz,suspend,true,true,"",true
+honkwerx.tech,suspend,true,true,"",true
+hornyjail.pro,suspend,true,true,"",true
+icod.de,suspend,true,true,"",true
+imirhil.fr,suspend,true,true,"",true
+inferencium.net,suspend,true,true,"",true
+inumbra.xyz,suspend,true,true,"",true
+ironbug.org,suspend,true,true,"",true
+justbros.xyz,suspend,true,true,"",true
+kelarima.com,suspend,true,true,"",true
+kenhbit.com,suspend,true,true,"",true
+kiwifarms.net,suspend,true,true,"",true
+krackhou.se,suspend,true,true,"",true
+kyaruc.moe,suspend,true,true,"",true
+kys.moe,suspend,true,true,"",true
+lain.gay,suspend,true,true,"",true
+lain.la,suspend,true,true,"",true
+lain.sh,suspend,true,true,"",true
+letsalllovela.in,suspend,true,true,"",true
+librem.one,suspend,true,true,"",true
+librenet.co.za,suspend,true,true,"",true
+librosphere.fr,suspend,true,true,"",true
+logografos.com,suspend,true,true,"",true
+loli.church,suspend,true,true,"",true
+lolicon.win,suspend,true,true,"",true
+longyap.name.my,suspend,true,true,"",true
+loveforlandlords.com,suspend,true,true,"",true
+lucasvl.nl,suspend,true,true,"",true
+makemysarcophagus.com,suspend,true,true,"",true
+maladaptive.art,suspend,true,true,"",true
+marsey.club,suspend,true,true,"",true
+masthead.social,suspend,true,true,"",true
+mastodon.cf,suspend,true,true,"",true
+mastodong.lol,suspend,true,true,"",true
+mastodon.la,suspend,true,true,"",true
+mastodon.se,suspend,true,true,"",true
+meld.de,suspend,true,true,"",true
+meme.moe,suspend,true,true,"",true
+midnightride.rs,suspend,true,true,"",true
+midwaytrades.com,suspend,true,true,"",true
+miku-enthusiast.club,suspend,true,true,"",true
+minidisc.tokyo,suspend,true,true,"",true
+misono-ya.info,suspend,true,true,"",true
+mooo.com,suspend,true,true,"",true
+morale.ch,suspend,true,true,"",true
+mrhands.horse,suspend,true,true,"",true
+mulmeyun.church,suspend,true,true,"",true
+nalocal519.social,suspend,true,true,"",true
+narrativerry.xyz,suspend,true,true,"",true
+nationalist.social,suspend,true,true,"",true
+nazi.social,suspend,true,true,"",true
+needs.vodka,suspend,true,true,"",true
+nekocave.xyz,suspend,true,true,"",true
+nightshift.social,suspend,true,true,"",true
+niscii.xyz,suspend,true,true,"",true
+nixnet.social,suspend,true,true,"",true
+nnia.cc,suspend,true,true,"",true
+noagendasocial.nl,suspend,true,true,"",true
+noagendatube.com,suspend,true,true,"",true
+normie.cafe,suspend,true,true,"",true
+novoa.nagoya,suspend,true,true,"",true
+occultist.space,suspend,true,true,"",true
+onionfarms.org,suspend,true,true,"",true
+otakufarms.com,suspend,true,true,"",true
+oti.st,suspend,true,true,"",true
+outerkosm.us,suspend,true,true,"",true
+outrnat.nl,suspend,true,true,"",true
+pawlicker.com,suspend,true,true,"",true
+paypig.org,suspend,true,true,"",true
+peervideo.club,suspend,true,true,"",true
+pettanko.art,suspend,true,true,"",true
+piazza.today,suspend,true,true,"",true
+pizzaf.art,suspend,true,true,"",true
+plagu.ee,suspend,true,true,"",true
+poast.org,suspend,true,true,"",true
+poast.tv,suspend,true,true,"",true
+polaris-1.work,suspend,true,true,"",true
+pooper.social,suspend,true,true,"",true
+poridge.club,suspend,true,true,"",true
+preteengirls.biz,suspend,true,true,"",true
+privex.social,suspend,true,true,"",true
+prospeech.space,suspend,true,true,"",true
+pseudo-whiskey.bar,suspend,true,true,"",true
+psion.co,suspend,true,true,"",true
+pube.tk,suspend,true,true,"",true
+quodverum.com,suspend,true,true,"",true
+r18.social,suspend,true,true,"",true
+raccoon.quest,suspend,true,true,"",true
+rage.lol,suspend,true,true,"",true
+rakket.app,suspend,true,true,"",true
+rapefeminists.network,suspend,true,true,"",true
+rapemeat.express,suspend,true,true,"",true
+rebelbase.site,suspend,true,true,"",true
+roysbeer.place,suspend,true,true,"",true
+ruinouspowe.rs,suspend,true,true,"",true
+sad.cab,suspend,true,true,"",true
+satoshishop.de,suspend,true,true,"",true
+saynoto.lgbt,suspend,true,true,"",true
+shadowsocial.org,suspend,true,true,"",true
+sharivegas.com,suspend,true,true,"",true
+shaw.app,suspend,true,true,"",true
+shota.social,suspend,true,true,"",true
+shotatube.xyz,suspend,true,true,"",true
+shrimpcam.pw,suspend,true,true,"",true
+silliness.observer,suspend,true,true,"",true
+skyshanty.xyz,suspend,true,true,"",true
+slash.cl,suspend,true,true,"",true
+sleepy.cafe,suspend,true,true,"",true
+smuglo.li,suspend,true,true,"",true
+sneak.berlin,suspend,true,true,"",true
+someotherguy.xyz,suspend,true,true,"",true
+sonichu.com,suspend,true,true,"",true
+soykaf.com,suspend,true,true,"",true
+starnix.network,suspend,true,true,"",true
+staycuriousandkeepsmil.in,suspend,true,true,"",true
+taihou.website,suspend,true,true,"",true
+takesama.com,suspend,true,true,"",true
+terrible.place,suspend,true,true,"",true
+theapex.social,suspend,true,true,"",true
+thebag.social,suspend,true,true,"",true
+thenobody.club,suspend,true,true,"",true
+theres.life,suspend,true,true,"",true
+tkammer.de,suspend,true,true,"",true
+tooters.fun,suspend,true,true,"",true
+touha.me,suspend,true,true,"",true
+troll.cafe,suspend,true,true,"",true
+tyil.nl,suspend,true,true,"",true
+ua-fediland.de,suspend,true,true,"",true
+umbrellix.org,suspend,true,true,"",true
+unperson.us,suspend,true,true,"",true
+unsafe.space,suspend,true,true,"",true
+urspringer.de,suspend,true,true,"",true
+uwu.social,suspend,true,true,"",true
+vampiremaid.cafe,suspend,true,true,"",true
+vladtepesblog.com,suspend,true,true,"",true
+vrij.social,suspend,true,true,"",true
+vtuberfan.social,suspend,true,true,"",true
+wagesofsinisdeath.com,suspend,true,true,"",true
+waifuism.life,suspend,true,true,"",true
+weeaboo.space,suspend,true,true,"",true
+whinge.house,suspend,true,true,"",true
+whitewomen.dog,suspend,true,true,"",true
+workers.dev,suspend,true,true,"",true
+writehere.is,suspend,true,true,"",true
+xhais.love,suspend,true,true,"",true
+xmrposter.club,suspend,true,true,"",true
+press.coop,silence,false,false,"",false
+mashtodon.alterracloud.com,suspend,false,false,"",false
+mitra.social,suspend,true,true,"",true
+unbound.social,suspend,true,true,"",true
+liberdon.com,silence,false,false,"",false
+emacs.ch,silence,false,false,"",false
+mstdn.jp,silence,false,false,"",false
+ursal.zone,silence,false,false,"",false
+submarin.online,silence,false,false,"",false
+alterracloud.com,suspend,false,false,"",false
+boks.moe,suspend,false,false,"",false
+childpawn.shop,suspend,false,false,"",false
+comfyboy.club,suspend,false,false,"",false
+disqordia.space,silence,false,false,"",false
+eatthebugs.social,suspend,false,false,"",false
+esmailelbob.xyz,suspend,false,false,"",false
+firefaithfellowship.com,suspend,false,false,"",false
+gab.com,suspend,false,false,"",false
+gh0st.live,suspend,false,false,"",false
+greenish.red,suspend,false,false,"",false
+lgbtfree.zone,suspend,false,false,"",false
+meatbag.app,suspend,false,false,"",false
+moa.st,suspend,false,false,"",false
+monads.online,silence,false,false,"",false
+mxin.moe,suspend,false,false,"",false
+paradigm-x.tokyo,suspend,false,false,"",false
+pirateradio.social,suspend,false,false,"",false
+porntoot.com,silence,false,false,"",false
+pouque.net,suspend,false,false,"",false
+redplanetlabs.com,suspend,false,false,"",false
+servernerds.net,silence,false,false,"",false
+shortstackran.ch,suspend,false,false,"",false
+sperg.city,suspend,false,false,"",false
+thisisjoes.site,suspend,false,false,"",false
+toot.pt,suspend,false,false,"",false
+tummy.town,suspend,false,false,"",false
+turturea.online,suspend,false,false,"",false
+urchan.org,suspend,false,false,"",false
+wake.st,suspend,false,false,"",false
+willtrade.org,suspend,false,false,"",false
+irsoluciones.social,silence,false,false,"",false
+freecumextremist.com,suspend,false,false,iftas:hate-speech;online-harassment;explicit-content,true
+theblab.org,suspend,false,false,"",false
+zhub.link,suspend,false,false,"",false
