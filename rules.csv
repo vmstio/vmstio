@@ -1,0 +1,20 @@
+id,priority,deleted_at,text,created_at,updated_at,hint
+1,0,2022-11-07 20:11:27.227921,No advertising or excessive promotion.,2022-10-26 20:06:13.819369,2022-11-07 20:11:27.228249,
+2,0,2022-11-07 20:11:30.717303,"No pornography, gore or graphic violence.",2022-10-26 20:07:23.612645,2022-11-07 20:11:30.71761,
+3,0,2022-11-07 20:11:34.211824,"No racism, sexism, discrimination based on gender, sexual minority, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or national origin.",2022-10-26 20:08:00.204843,2022-11-07 20:11:34.212082,
+4,0,2022-11-07 19:41:54.336169,"No xenophobia, nationalism, casteism, or fascism; no sympathizing with or advocating for these things.",2022-10-26 20:08:24.587642,2022-11-07 19:41:54.336388,
+5,0,2022-11-07 20:11:38.863082,"No stalking or harassment. In general, if someone asks you to stop interacting with them, then stop.",2022-10-26 20:08:57.408362,2022-11-07 20:11:38.863255,
+6,0,2022-11-07 20:11:44.297383,"No posting (or threatening to post) other people's personally identifying information (""doxing"").",2022-10-26 20:09:30.522057,2022-11-07 20:11:44.297627,
+7,0,2022-11-07 20:11:47.975937,"No impersonation of other people, brands, etc, even for the purposes of parody. Be your whole, authentic self. ",2022-11-07 11:23:59.227809,2022-11-07 20:11:47.976137,
+8,0,2022-11-07 20:11:51.216868,"No xenophobia, casteism, or fascism; no sympathizing with or advocating for these things.",2022-11-07 19:41:48.809607,2022-11-07 20:11:51.217041,
+9,0,,Abuse & Extremism,2022-11-07 20:12:04.276345,2024-04-03 17:53:22.705375,"Do not engage in harmful behavior towards others, including harassment, discrimination, hate speech, or inciting violence."
+10,0,2024-12-11 16:56:18.081212,Impersonation,2022-11-07 20:12:13.590163,2024-12-11 16:56:18.082619,"Do not impersonate brands/companies, organizations, or other people."
+11,0,2024-12-11 16:55:57.826487,Bigotry,2022-11-07 20:12:26.409706,2024-12-11 16:55:57.827552,"Do not engage in casteism, homophobia, racism, sexism, transphobia, or xenophobia."
+12,0,2024-12-11 16:56:12.350597,Extremism,2022-11-07 20:12:35.459775,2024-12-11 16:56:12.351963,Do not incite violence against others or advocate violent ideologies.
+13,0,,Brands & Commerce,2022-11-07 20:12:46.707284,2024-04-03 17:36:13.537397,Do not post advertising or engage in excessive self-promotion of your brand or business.
+14,0,2024-12-11 16:56:25.140404,Sex & Violence,2022-11-07 20:12:57.610407,2024-12-11 16:56:25.141161,Do not post sexually explicit or graphic violent content.
+15,0,,Disinformation,2022-11-07 20:13:05.676978,2024-04-03 17:52:01.536925,Do not post content to deliberately deceive or mislead others.
+16,0,2024-12-11 16:56:32.279629,CSAM,2024-04-03 17:41:06.134255,2024-12-11 16:56:32.280053,Do not post or view CSAM including CG-CSAM or lolicon.
+17,0,2024-12-11 16:56:41.131422,Gore,2024-04-03 17:46:57.968129,2024-12-11 16:56:41.131744,"Do not post media showing blood, dead bodies, excessive violence, or open wounds."
+18,0,,Impersonation,2024-12-11 16:56:49.996851,2024-12-11 16:56:49.996851,"Do not impersonate brands/companies, organizations, or other people."
+19,0,,Sex & Violence,2024-12-11 16:57:03.427276,2024-12-11 16:57:03.427276,Do not post sexually explicit or graphic violent content.

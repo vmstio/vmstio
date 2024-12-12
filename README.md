@@ -6,20 +6,12 @@ Operational data for [vmst.io](https://vmst.io)
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=6c1d754bacec&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
 ## Description
-vmst·io is Mastodon for respectful technologists. Geeks and nerds of every type and stripe. Highly available, well federated, and community minded.
-
-## Rules
-- No harassment, dogpiling or doxxing of other users.
-- No impersonation of other people, companies, organizations, brands, etc.
-- No racism, sexism, homophobia, transphobia, xenophobia, or casteism.
-- No incitement of violence or advocacy of violent acts/ideologies.
-- No advertising, spam or excessive promotion.
-- No sexually explicit or graphically violent media.
-- No intentionally false or misleading information.
+Mastodon for geeks and nerds of every type and stripe.
 
 ## Administration
 
 - <a rel="me" href="https://vmst.io/@vmstan">@vmstan</a>
+- <a rel="me" href="https://vmst.io/@djwfyi">@djwfyi</a>
 
 ## Documentation
 

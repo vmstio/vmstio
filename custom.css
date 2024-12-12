@@ -6,7 +6,7 @@
 }
 
 .compose-form__publish-button-wrapper button:after, .button[href = "/publish"]:after {
-  content:'Toot!'; 
+  content:'Toot!';
   text-indent: 0;
   display: block;
   line-height: initial; /* New content takes up original line height */
